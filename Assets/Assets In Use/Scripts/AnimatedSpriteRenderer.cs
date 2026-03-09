@@ -43,7 +43,10 @@ public class AnimatedSpriteRenderer : MonoBehaviour
         }
 
         if (idle) {
-            spriteRenderer.sprite = idleSprite;
+            // idleSprite atanmamışsa mevcut sprite'ı koru
+            if (idleSprite != null) {
+                spriteRenderer.sprite = idleSprite;
+            }
         } else if (animationFrame >= 0 && animationFrame < animationSprites.Length) {
             spriteRenderer.sprite = animationSprites[animationFrame];
         }
