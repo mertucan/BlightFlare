@@ -54,7 +54,7 @@ public class RoomManager : MonoBehaviour
             if (RoomTransitionManager.instance != null)
             {
                 RoomTransitionManager.instance.RegisterMultiCellRoom(
-                    currentCell.cellList, convertedPosition, currentCell.roomShape);
+                    currentCell.cellList, convertedPosition, currentCell.roomShape, spawnedRoom);
             }
         }
 

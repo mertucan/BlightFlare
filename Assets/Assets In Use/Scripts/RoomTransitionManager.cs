@@ -18,6 +18,8 @@ public class RoomTransitionManager : MonoBehaviour
 
     private Dictionary<int, Vector2> roomPositions = new();
     private Dictionary<int, RoomShape> roomShapeMap = new();
+    private Dictionary<int, Room> cellToRoom = new();
+    private Room currentActiveRoom;
     private int currentRoomCellIndex = 45;
     private bool isTransitioning;
 
@@ -26,19 +28,24 @@ public class RoomTransitionManager : MonoBehaviour
         instance = this;
     }
 
-    public void RegisterMultiCellRoom(List<int> cellIndices, Vector2 worldPosition, RoomShape shape)
+    public void RegisterMultiCellRoom(List<int> cellIndices, Vector2 worldPosition, RoomShape shape, Room room)
     {
         foreach (int index in cellIndices)
         {
             roomPositions[index] = worldPosition;
             roomShapeMap[index] = shape;
+            cellToRoom[index] = room;
         }
+
+        room.SetCollidersActive(false);
     }
 
     public void ClearRooms()
     {
         roomPositions.Clear();
         roomShapeMap.Clear();
+        cellToRoom.Clear();
+        currentActiveRoom = null;
         currentRoomCellIndex = 45;
     }
 
@@ -51,12 +58,18 @@ public class RoomTransitionManager : MonoBehaviour
         player.position = startPos;
         currentRoomCellIndex = 45;
 
-        if (cameraController != null)
+        if (currentActiveRoom != null)
+            currentActiveRoom.SetCollidersActive(false);
+
+        if (cellToRoom.ContainsKey(45))
         {
-            var camPos = new Vector3(startPos.x, startPos.y, cameraController.transform.position.z);
-            cameraController.transform.position = camPos;
-            cameraController.SnapToPosition(startPos);
+            currentActiveRoom = cellToRoom[45];
+            currentActiveRoom.SetCollidersActive(true);
         }
+
+        RoomShape shape = roomShapeMap.ContainsKey(45) ? roomShapeMap[45] : RoomShape.OneByOne;
+        bool isLarge = shape != RoomShape.OneByOne;
+        cameraController?.SnapToRoom(startPos, GetRoomHalfSize(shape), isLarge);
     }
 
     public void TransitionToRoom(int targetCellIndex, EdgeDirection fromDirection)
@@ -72,7 +85,20 @@ public class RoomTransitionManager : MonoBehaviour
         player.position = roomCenter + entryOffset;
         currentRoomCellIndex = targetCellIndex;
 
-        cameraController?.SnapToPosition(roomCenter);
+        if (currentActiveRoom != null)
+            currentActiveRoom.SetCollidersActive(false);
+
+        if (cellToRoom.ContainsKey(targetCellIndex))
+        {
+            currentActiveRoom = cellToRoom[targetCellIndex];
+            currentActiveRoom.SetCollidersActive(true);
+        }
+
+        RoomShape shape = roomShapeMap.ContainsKey(targetCellIndex)
+            ? roomShapeMap[targetCellIndex]
+            : RoomShape.OneByOne;
+        bool isLarge = shape != RoomShape.OneByOne;
+        cameraController?.SnapToRoom(roomCenter, GetRoomHalfSize(shape), isLarge);
 
         StartCoroutine(CooldownRoutine());
     }
