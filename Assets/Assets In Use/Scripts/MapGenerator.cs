@@ -89,10 +89,7 @@ public class MapGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetupDungeon();
-        }
+
     }
 
     void SetupDungeon() 
