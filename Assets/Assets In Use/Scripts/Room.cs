@@ -192,7 +192,11 @@ public class Room : MonoBehaviour
 
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
 
-        door.transform.position = (Vector2)transform.position + positionOffset;
+        door.transform.localPosition = new Vector3(positionOffset.x, positionOffset.y, 0f);
+
+        float hScale = RoomManager.instance != null ? RoomManager.instance.roomHeightScale : 1f;
+        if (hScale > 0f && Mathf.Abs(hScale - 1f) > 0.001f)
+            door.transform.localScale = new Vector3(1f, 1f / hScale, 1f);
 
         SetupDoor(door, direction, currentCell.roomType == RoomType.Regular ? foundCell.roomType : currentCell.roomType);
         door.SetupTransition(direction, neighbourIndex);

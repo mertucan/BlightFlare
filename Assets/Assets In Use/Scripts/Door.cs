@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Door : MonoBehaviour
 {
@@ -30,12 +31,15 @@ public class Door : MonoBehaviour
         if (targetCellIndex < 0) return;
         if (!other.CompareTag("Player")) return;
 
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
         bool pressingCorrectKey = direction switch
         {
-            EdgeDirection.Up => Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow),
-            EdgeDirection.Down => Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow),
-            EdgeDirection.Left => Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow),
-            EdgeDirection.Right => Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow),
+            EdgeDirection.Up => kb[Key.W].isPressed || kb[Key.UpArrow].isPressed,
+            EdgeDirection.Down => kb[Key.S].isPressed || kb[Key.DownArrow].isPressed,
+            EdgeDirection.Left => kb[Key.A].isPressed || kb[Key.LeftArrow].isPressed,
+            EdgeDirection.Right => kb[Key.D].isPressed || kb[Key.RightArrow].isPressed,
             _ => false
         };
 

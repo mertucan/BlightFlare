@@ -12,6 +12,10 @@ public class RoomManager : MonoBehaviour
     public float offsetX;
     public float offsetY;
 
+    [Header("Room Scale")]
+    [Tooltip("Odaları dikeyde ölçekler (1.4 ≈ Isaac oranı)")]
+    public float roomHeightScale = 1.4f;
+
     [Header("Prefab References")]
     public Room roomPrefab;
     public Door doorPrefab;
@@ -37,15 +41,21 @@ public class RoomManager : MonoBehaviour
 
         createdRooms.Clear();
 
+        if (RoomTransitionManager.instance != null)
+            RoomTransitionManager.instance.SetHeightScale(roomHeightScale);
+
         foreach(var currentCell in spawnedCells)
         {
             var foundRoom = rooms.FirstOrDefault(x => x.roomShape == currentCell.roomShape && x.roomType == currentCell.roomType && DoesTileMatchCell(x.occupiedTiles, currentCell));
 
             var currentPosition = currentCell.transform.position;
 
-            var convertedPosition = new Vector2(currentPosition.x * offsetX, currentPosition.y * offsetY);
+            var convertedPosition = new Vector2(
+                currentPosition.x * offsetX,
+                currentPosition.y * offsetY * roomHeightScale);
 
             var spawnedRoom = Instantiate(roomPrefab, convertedPosition, Quaternion.identity);
+            spawnedRoom.transform.localScale = new Vector3(1f, roomHeightScale, 1f);
 
             spawnedRoom.SetupRoom(currentCell, foundRoom);
 

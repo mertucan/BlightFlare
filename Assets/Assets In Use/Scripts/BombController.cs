@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 public class BombController : MonoBehaviour
 {
     [Header("Bomb")]
-    public KeyCode inputKey = KeyCode.Space;
+    public Key bombKey = Key.Space;
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
     public int bombAmount = 1;
@@ -28,43 +29,35 @@ public class BombController : MonoBehaviour
 
     private void Update()
     {
-        if (bombsRemaining > 0 && Input.GetKeyDown(inputKey)) {
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
+        if (bombsRemaining > 0 && kb[bombKey].wasPressedThisFrame) {
             StartCoroutine(PlaceBomb());
         }
     }
 
     private IEnumerator PlaceBomb()
     {
-        // 1. Karakterin bulunduğu kareyi bul
         Vector3Int cell = destructibleTiles.WorldToCell(transform.position);
-
-        // 2. O karenin tam merkezini al (Ayağımızın altı)
         Vector3 spawnPos = destructibleTiles.GetCellCenterWorld(cell);
 
-        // 3. Bombayı oluştur
         GameObject bomb = Instantiate(bombPrefab, spawnPos, Quaternion.identity);
-        bomb.tag = "Bomb"; // Tag'i garantiye al
-
-        // Not: Bombanın "Trigger" (hayalet) olarak başlamasını artık 
-        // BombPush.cs scripti "Awake" içinde otomatik yapıyor.
+        bomb.tag = "Bomb";
 
         bombsRemaining--;
 
         yield return new WaitForSeconds(bombFuseTime);
 
-        // --- Patlama İşlemleri ---
-        
-        // Bomba kaymış olabilir, patlamayı güncel konumunda yap
         Vector2 explosionPos = Vector2.zero;
-        
-        // Bomba yok edilmemişse konumunu al (Null check)
+
         if (bomb != null) 
         {
             explosionPos = bomb.transform.position;
         }
         else
         {
-            explosionPos = spawnPos; // Güvenlik önlemi
+            explosionPos = spawnPos;
         }
 
         Explosion explosion = Instantiate(explosionPrefab, explosionPos, Quaternion.identity);

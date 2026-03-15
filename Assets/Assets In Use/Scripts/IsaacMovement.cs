@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class IsaacMovement : MonoBehaviour
@@ -8,10 +9,10 @@ public class IsaacMovement : MonoBehaviour
     public float speed = 5f;
 
     [Header("Input")]
-    public KeyCode inputUp = KeyCode.W;
-    public KeyCode inputDown = KeyCode.S;
-    public KeyCode inputLeft = KeyCode.A;
-    public KeyCode inputRight = KeyCode.D;
+    public Key moveUp = Key.W;
+    public Key moveDown = Key.S;
+    public Key moveLeft = Key.A;
+    public Key moveRight = Key.D;
 
     [System.Serializable]
     public struct DirectionSprites
@@ -34,17 +35,26 @@ public class IsaacMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         activeSprites = spritesDown;
+    }
+
+    private void OnEnable()
+    {
+        direction = Vector2.zero;
     }
 
     private void Update()
     {
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
         Vector2 inputVector = Vector2.zero;
 
-        if (Input.GetKey(inputUp))    inputVector.y += 1;
-        if (Input.GetKey(inputDown))  inputVector.y -= 1;
-        if (Input.GetKey(inputLeft))  inputVector.x -= 1;
-        if (Input.GetKey(inputRight)) inputVector.x += 1;
+        if (kb[moveUp].isPressed)    inputVector.y += 1;
+        if (kb[moveDown].isPressed)  inputVector.y -= 1;
+        if (kb[moveLeft].isPressed)  inputVector.x -= 1;
+        if (kb[moveRight].isPressed) inputVector.x += 1;
 
         if (inputVector != Vector2.zero)
         {
@@ -74,7 +84,6 @@ public class IsaacMovement : MonoBehaviour
     {
         direction = newDirection;
 
-        // Tüm yön sprite'larını gizle
         SetDirectionVisible(spritesUp,    sprites.body == spritesUp.body);
         SetDirectionVisible(spritesDown,  sprites.body == spritesDown.body);
         SetDirectionVisible(spritesLeft,  sprites.body == spritesLeft.body);
@@ -82,7 +91,6 @@ public class IsaacMovement : MonoBehaviour
 
         activeSprites = sprites;
 
-        // Hareket yoksa idle animasyonuna geç
         bool isIdle = direction == Vector2.zero;
         activeSprites.body.idle = isIdle;
         activeSprites.head.idle = isIdle;
@@ -113,7 +121,6 @@ public class IsaacMovement : MonoBehaviour
         SetDirectionVisible(spritesLeft,  false);
         SetDirectionVisible(spritesRight, false);
 
-        // Ölüm sprite'larını göster
         spriteDeathBody.enabled = true;
     }
 }

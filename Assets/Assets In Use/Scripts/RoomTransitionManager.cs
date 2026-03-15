@@ -11,7 +11,8 @@ public class RoomTransitionManager : MonoBehaviour
     public CameraController cameraController;
 
     [Header("Transition Settings")]
-    public float transitionCooldown = 0.3f;
+    public float transitionDuration = 0.4f;
+    public float transitionCooldown = 0.15f;
 
     [Header("Room Bounds")]
     public bool clampPlayerToRoom = true;
@@ -21,11 +22,18 @@ public class RoomTransitionManager : MonoBehaviour
     private Dictionary<int, Room> cellToRoom = new();
     private Room currentActiveRoom;
     private int currentRoomCellIndex = 45;
+    public int CurrentRoomIndex => currentRoomCellIndex;
     private bool isTransitioning;
+    private float heightScale = 1f;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    public void SetHeightScale(float scale)
+    {
+        heightScale = scale;
     }
 
     public void RegisterMultiCellRoom(List<int> cellIndices, Vector2 worldPosition, RoomShape shape, Room room)
@@ -55,7 +63,7 @@ public class RoomTransitionManager : MonoBehaviour
         if (!roomPositions.ContainsKey(45)) return;
 
         Vector2 startPos = roomPositions[45];
-        player.position = startPos;
+        TeleportPlayer(startPos);
         currentRoomCellIndex = 45;
 
         if (currentActiveRoom != null)
@@ -78,15 +86,24 @@ public class RoomTransitionManager : MonoBehaviour
         if (!roomPositions.ContainsKey(targetCellIndex)) return;
 
         isTransitioning = true;
+        StartCoroutine(TransitionRoutine(targetCellIndex, fromDirection));
+    }
 
-        Vector2 roomCenter = roomPositions[targetCellIndex];
-        Vector2 entryOffset = GetEntryOffset(fromDirection);
-
-        player.position = roomCenter + entryOffset;
-        currentRoomCellIndex = targetCellIndex;
+    private IEnumerator TransitionRoutine(int targetCellIndex, EdgeDirection fromDirection)
+    {
+        SetPlayerMovement(false);
 
         if (currentActiveRoom != null)
             currentActiveRoom.SetCollidersActive(false);
+
+        Vector2 newRoomCenter = roomPositions[targetCellIndex];
+        Vector2 entryOffset = GetEntryOffset(fromDirection);
+
+        TeleportPlayer(newRoomCenter + entryOffset);
+
+        yield return new WaitForFixedUpdate();
+
+        currentRoomCellIndex = targetCellIndex;
 
         if (cellToRoom.ContainsKey(targetCellIndex))
         {
@@ -98,13 +115,45 @@ public class RoomTransitionManager : MonoBehaviour
             ? roomShapeMap[targetCellIndex]
             : RoomShape.OneByOne;
         bool isLarge = shape != RoomShape.OneByOne;
-        cameraController?.SnapToRoom(roomCenter, GetRoomHalfSize(shape), isLarge);
 
-        StartCoroutine(CooldownRoutine());
+        cameraController?.SlideToRoom(newRoomCenter, GetRoomHalfSize(shape), isLarge, transitionDuration);
+
+        yield return new WaitForSeconds(transitionDuration);
+
+        SetPlayerMovement(true);
+
+        yield return new WaitForSeconds(transitionCooldown);
+        isTransitioning = false;
+    }
+
+    private void TeleportPlayer(Vector2 position)
+    {
+        var rb = player.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.position = position;
+        }
+
+        player.position = new Vector3(position.x, position.y, player.position.z);
+        Physics2D.SyncTransforms();
+    }
+
+    private void SetPlayerMovement(bool enabled)
+    {
+        if (player == null) return;
+
+        var mc = player.GetComponent<MovementController>();
+        if (mc != null) mc.enabled = enabled;
+
+        var im = player.GetComponent<IsaacMovement>();
+        if (im != null) im.enabled = enabled;
     }
 
     private void LateUpdate()
     {
+        if (isTransitioning) return;
         if (!clampPlayerToRoom || player == null) return;
         if (!roomPositions.ContainsKey(currentRoomCellIndex)) return;
 
@@ -124,8 +173,8 @@ public class RoomTransitionManager : MonoBehaviour
     {
         switch (doorDirection)
         {
-            case EdgeDirection.Up:    return new Vector2(0, -1.2f);
-            case EdgeDirection.Down:  return new Vector2(0, 1.2f);
+            case EdgeDirection.Up:    return new Vector2(0, -1.2f * heightScale);
+            case EdgeDirection.Down:  return new Vector2(0, 1.2f * heightScale);
             case EdgeDirection.Left:  return new Vector2(3.5f, 0);
             case EdgeDirection.Right: return new Vector2(-3.5f, 0);
         }
@@ -134,20 +183,16 @@ public class RoomTransitionManager : MonoBehaviour
 
     private Vector2 GetRoomHalfSize(RoomShape shape)
     {
-        switch (shape)
+        Vector2 baseSize = shape switch
         {
-            case RoomShape.OneByOne: return new Vector2(4.5f, 2.0f);
-            case RoomShape.OneByTwo: return new Vector2(4.5f, 4.5f);
-            case RoomShape.TwoByOne: return new Vector2(10.0f, 2.0f);
-            case RoomShape.TwoByTwo: return new Vector2(10.0f, 5.0f);
-            case RoomShape.LShape:   return new Vector2(10.0f, 5.0f);
-            default:                 return new Vector2(4.5f, 2.0f);
-        }
-    }
-
-    private IEnumerator CooldownRoutine()
-    {
-        yield return new WaitForSeconds(transitionCooldown);
-        isTransitioning = false;
+            RoomShape.OneByOne => new Vector2(4.5f, 2.0f),
+            RoomShape.OneByTwo => new Vector2(4.5f, 4.5f),
+            RoomShape.TwoByOne => new Vector2(10.0f, 2.0f),
+            RoomShape.TwoByTwo => new Vector2(10.0f, 5.0f),
+            RoomShape.LShape   => new Vector2(10.0f, 5.0f),
+            _                  => new Vector2(4.5f, 2.0f),
+        };
+        baseSize.y *= heightScale;
+        return baseSize;
     }
 }

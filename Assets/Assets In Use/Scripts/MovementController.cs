@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour
@@ -8,10 +9,10 @@ public class MovementController : MonoBehaviour
     public float speed = 5f;
 
     [Header("Input")]
-    public KeyCode inputUp = KeyCode.W;
-    public KeyCode inputDown = KeyCode.S;
-    public KeyCode inputLeft = KeyCode.A;
-    public KeyCode inputRight = KeyCode.D;
+    public Key moveUp = Key.W;
+    public Key moveDown = Key.S;
+    public Key moveLeft = Key.A;
+    public Key moveRight = Key.D;
 
     [Header("Sprites")]
     public AnimatedSpriteRenderer spriteRendererUp;
@@ -24,35 +25,30 @@ public class MovementController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         activeSpriteRenderer = spriteRendererDown;
+    }
+
+    private void OnEnable()
+    {
+        direction = Vector2.zero;
     }
 
     private void Update()
     {
-        // Giriş vektörünü her karede sıfırla
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
         Vector2 inputVector = Vector2.zero;
 
-        // else-if yerine ayrı if blokları kullanarak kombinasyonlara izin ver
-        if (Input.GetKey(inputUp)) {
-            inputVector.y += 1;
-        }
-        if (Input.GetKey(inputDown)) {
-            inputVector.y -= 1;
-        }
-        if (Input.GetKey(inputLeft)) {
-            inputVector.x -= 1;
-        }
-        if (Input.GetKey(inputRight)) {
-            inputVector.x += 1;
-        }
+        if (kb[moveUp].isPressed)    inputVector.y += 1;
+        if (kb[moveDown].isPressed)  inputVector.y -= 1;
+        if (kb[moveLeft].isPressed)  inputVector.x -= 1;
+        if (kb[moveRight].isPressed) inputVector.x += 1;
 
-        // Eğer herhangi bir giriş varsa
         if (inputVector != Vector2.zero) {
-            // Yönü normalize et (böylece çapraz giderken hız 1.4 katına çıkmaz)
             direction = inputVector.normalized;
 
-            // Çapraz giderken hangi sprite'ın görüneceğine karar ver
-            // Öncelik sırası: Yatay hareket varsa yan sprite, yoksa dikey sprite
             AnimatedSpriteRenderer targetSprite = activeSpriteRenderer;
 
             if (inputVector.x > 0) {
@@ -68,7 +64,6 @@ public class MovementController : MonoBehaviour
             SetDirection(direction, targetSprite);
         } 
         else {
-            // Hareket yoksa dur
             SetDirection(Vector2.zero, activeSpriteRenderer);
         }
     }
@@ -91,8 +86,6 @@ public class MovementController : MonoBehaviour
         spriteRendererRight.enabled = spriteRenderer == spriteRendererRight;
 
         activeSpriteRenderer = spriteRenderer;
-        
-        // Hareket vektörü sıfırsa idle animasyonuna geç
         activeSpriteRenderer.idle = direction == Vector2.zero;
     }
 

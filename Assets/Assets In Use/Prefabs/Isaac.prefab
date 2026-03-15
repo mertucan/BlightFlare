@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 1507305476386270651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.125, y: -21.25, z: 0}
+  m_LocalPosition: {x: 56.625, y: -29.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5840e75ee3ae56845a89a34660cd2f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BombController
-  inputKey: 32
+  bombKey: 1
   bombPrefab: {fileID: 3939017888894637700, guid: e10230ffd5e90c3489946b2652130401, type: 3}
   bombFuseTime: 3
   bombAmount: 1
@@ -251,10 +251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IsaacMovement
   speed: 5
-  inputUp: 119
-  inputDown: 115
-  inputLeft: 97
-  inputRight: 100
+  moveUp: 37
+  moveDown: 33
+  moveLeft: 15
+  moveRight: 18
   spritesUp:
     body: {fileID: 6045742501442394516}
     head: {fileID: 2515430804813957178}

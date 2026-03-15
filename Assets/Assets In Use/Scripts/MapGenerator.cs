@@ -172,6 +172,13 @@ public class MapGenerator : MonoBehaviour
 
         UpdateSpecialRoomVisuals();
         RoomManager.instance.SetupRooms(spawnedCells);
+
+        if (Minimap.instance == null)
+        {
+            var minimapGO = new GameObject("Minimap");
+            minimapGO.AddComponent<Minimap>();
+        }
+        Minimap.instance.BuildMinimap(spawnedCells);
     }
 
     void UpdateSpecialRoomVisuals() 
