@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Room", menuName = "Scriptable Objects/Room")]
@@ -9,5 +7,7 @@ public class RoomScriptable : ScriptableObject
     public RoomShape roomShape;
 
     public int[] occupiedTiles;
-    public Sprite[] roomVariations;
+
+    [Tooltip("Prefab olarak hazırlanmış oda tasarımları. Rastgele biri seçilir.")]
+    public GameObject[] roomDesignPrefabs;
 }

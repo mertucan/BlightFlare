@@ -15,5 +15,5 @@ MonoBehaviour:
   roomType: 0
   roomShape: 0
   occupiedTiles: 00000000
-  roomVariations:
-  - {fileID: 21300000, guid: 0e770ff9bb2539643b776ad6e85457a9, type: 3}
+  roomDesignPrefabs:
+  - {fileID: 3822254578997936868, guid: 9e140b1047618a847aa5ceb505bdf0a9, type: 3}

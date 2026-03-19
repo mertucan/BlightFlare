@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 083acc9634e168341b34cfc64980525b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6318342038823926711
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_0
+  - first:
+      213: -4458665519355842980
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_1
+  - first:
+      213: 9178233952827075508
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_2
+  - first:
+      213: 7468729340989063912
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_3
+  - first:
+      213: -2139218336534523765
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_4
+  - first:
+      213: -2309678267928489305
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_5
+  - first:
+      213: -7691657303232922477
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_6
+  - first:
+      213: 4201554807640043786
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_7
+  - first:
+      213: 80297400149139298
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_8
+  - first:
+      213: 2957249531648729023
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_9
+  - first:
+      213: -8873530128298339235
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_10
+  - first:
+      213: -960929920778017649
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_11
+  - first:
+      213: 3932099399264760416
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_12
+  - first:
+      213: -2563476274233509927
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_13
+  - first:
+      213: 3055529982278616851
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_14
+  - first:
+      213: -5239252891817769484
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_15
+  - first:
+      213: -4753362333815294263
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_16
+  - first:
+      213: 7580144843137747413
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_17
+  - first:
+      213: 6517735750085824400
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_18
+  - first:
+      213: 7920403619590817221
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_19
+  - first:
+      213: -6728646853587068443
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_20
+  - first:
+      213: -1960547959033808870
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_21
+  - first:
+      213: 3145568926497635518
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_22
+  - first:
+      213: 6025416338890839898
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_23
+  - first:
+      213: -4550376767041613033
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_24
+  - first:
+      213: 7226286821011860555
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_25
+  - first:
+      213: 2172494364158280160
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_26
+  - first:
+      213: 2315214736014390049
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_27
+  - first:
+      213: 5791644555179056542
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_28
+  - first:
+      213: 6450344538098913208
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_29
+  - first:
+      213: -4638321605907730811
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_30
+  - first:
+      213: 4582136866261247751
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_31
+  - first:
+      213: 71040837773729985
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_32
+  - first:
+      213: 4370398018650519750
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_33
+  - first:
+      213: 343738526508698235
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_34
+  - first:
+      213: 7027852913365456565
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_35
+  - first:
+      213: 719154358203575468
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_36
+  - first:
+      213: 8644252595563473806
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_37
+  - first:
+      213: -8122333246641506890
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_38
+  - first:
+      213: -7273915718442197644
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_39
+  - first:
+      213: -7260493250298475888
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_40
+  - first:
+      213: 6967968174492079020
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_41
+  - first:
+      213: -4740187648109407874
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_42
+  - first:
+      213: 3415930886395861507
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_43
+  - first:
+      213: 1369849525451728241
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_44
+  - first:
+      213: -8882825599004599621
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_45
+  - first:
+      213: -7211462569620600989
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_46
+  - first:
+      213: -2121065390775336322
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_47
+  - first:
+      213: -8244539502406067409
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_48
+  - first:
+      213: -2553283125890862999
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_49
+  - first:
+      213: 4598132254980759951
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_50
+  - first:
+      213: -5080785815902689711
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_51
+  - first:
+      213: 5553706971854980841
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_52
+  - first:
+      213: -2301761473088456069
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 234
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9448b76446db058a0800000000000000
+      internalID: -6318342038823926711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2705eff41c2c931428da6090102d2137
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_0: -6318342038823926711
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_1: -4458665519355842980
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_10: -8873530128298339235
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_11: -960929920778017649
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_12: 3932099399264760416
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_13: -2563476274233509927
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_14: 3055529982278616851
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_15: -5239252891817769484
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_16: -4753362333815294263
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_17: 7580144843137747413
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_18: 6517735750085824400
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_19: 7920403619590817221
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_2: 9178233952827075508
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_20: -6728646853587068443
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_21: -1960547959033808870
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_22: 3145568926497635518
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_23: 6025416338890839898
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_24: -4550376767041613033
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_25: 7226286821011860555
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_26: 2172494364158280160
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_27: 2315214736014390049
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_28: 5791644555179056542
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_29: 6450344538098913208
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_3: 7468729340989063912
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_30: -4638321605907730811
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_31: 4582136866261247751
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_32: 71040837773729985
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_33: 4370398018650519750
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_34: 343738526508698235
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_35: 7027852913365456565
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_36: 719154358203575468
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_37: 8644252595563473806
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_38: -8122333246641506890
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_39: -7273915718442197644
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_4: -2139218336534523765
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_40: -7260493250298475888
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_41: 6967968174492079020
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_42: -4740187648109407874
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_43: 3415930886395861507
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_44: 1369849525451728241
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_45: -8882825599004599621
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_46: -7211462569620600989
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_47: -2121065390775336322
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_48: -8244539502406067409
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_49: -2553283125890862999
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_5: -2309678267928489305
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_50: 4598132254980759951
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_51: -5080785815902689711
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_52: 5553706971854980841
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_53: -2301761473088456069
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_6: -7691657303232922477
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_7: 4201554807640043786
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_8: 80297400149139298
+      PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_9: 2957249531648729023
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

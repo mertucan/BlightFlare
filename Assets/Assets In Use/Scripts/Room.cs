@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum EdgeDirection
@@ -14,15 +12,13 @@ public enum EdgeDirection
 
 public class Room : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-
     private readonly List<(Vector2 offset, EdgeDirection dir)> placedDoorInfos = new();
-    private const float WallThickness = 0.5f;
+    private const float WallThickness = 0.3f;
     private const float DoorGapHalf = 0.8f;
 
     public void SetupRoom(Cell currentCell, RoomScriptable room)
     {
-        spriteRenderer.sprite = room.roomVariations[Random.Range(0, room.roomVariations.Length)];
+        InstantiateRoomDesign(room, currentCell.roomShape);
 
         if (currentCell.roomType == RoomType.Secret) return;
 
@@ -60,14 +56,50 @@ public class Room : MonoBehaviour
         GenerateWalls(currentCell.roomShape, currentCell);
     }
 
+    private void InstantiateRoomDesign(RoomScriptable room, RoomShape shape)
+    {
+        GameObject designPrefab = null;
+
+        if (room != null && room.roomDesignPrefabs != null && room.roomDesignPrefabs.Length > 0)
+        {
+            designPrefab = room.roomDesignPrefabs[Random.Range(0, room.roomDesignPrefabs.Length)];
+        }
+        else
+        {
+            var fallback = System.Array.Find(RoomManager.instance.rooms,
+                r => r != null && r.roomShape == shape && r.roomDesignPrefabs != null && r.roomDesignPrefabs.Length > 0);
+            if (fallback != null)
+                designPrefab = fallback.roomDesignPrefabs[Random.Range(0, fallback.roomDesignPrefabs.Length)];
+        }
+
+        if (designPrefab != null)
+        {
+            var design = Instantiate(designPrefab, transform);
+            design.transform.localPosition = Vector3.zero;
+            design.transform.localRotation = Quaternion.identity;
+
+            var renderers = design.GetComponentsInChildren<SpriteRenderer>();
+            if (renderers.Length > 0)
+            {
+                Bounds bounds = renderers[0].bounds;
+                for (int i = 1; i < renderers.Length; i++)
+                    bounds.Encapsulate(renderers[i].bounds);
+
+                Vector3 centerOffset = bounds.center - transform.position;
+                design.transform.localPosition = -centerOffset;
+            }
+        }
+    }
+
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
     {
         var currentCell = cell.cellList[0];
+        var half = RoomManager.instance.RoomInnerHalfSize;
 
-        TryPlaceDoor(currentCell, new Vector2(0, 1.75f), EdgeDirection.Up, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(0, -1.75f), EdgeDirection.Down, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(-4.25f, 0), EdgeDirection.Left, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(4.25f, 0), EdgeDirection.Right, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(0, half.y), EdgeDirection.Up, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(0, -half.y), EdgeDirection.Down, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(-half.x, 0), EdgeDirection.Left, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(half.x, 0), EdgeDirection.Right, floorplan, cellList, cell);
     }
 
     public void SetupOneByTwo(Cell cell, int[] floorplan, List<Cell> cellList)
@@ -193,10 +225,6 @@ public class Room : MonoBehaviour
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
 
         door.transform.localPosition = new Vector3(positionOffset.x, positionOffset.y, 0f);
-
-        float hScale = RoomManager.instance != null ? RoomManager.instance.roomHeightScale : 1f;
-        if (hScale > 0f && Mathf.Abs(hScale - 1f) > 0.001f)
-            door.transform.localScale = new Vector3(1f, 1f / hScale, 1f);
 
         SetupDoor(door, direction, currentCell.roomType == RoomType.Regular ? foundCell.roomType : currentCell.roomType);
         door.SetupTransition(direction, neighbourIndex);
@@ -365,15 +393,18 @@ public class Room : MonoBehaviour
 
     private Vector2 GetWallHalfSize(RoomShape shape)
     {
+        var inner = RoomManager.instance.RoomInnerHalfSize;
         return shape switch
         {
-            RoomShape.OneByOne => new Vector2(4.5f, 2.0f),
-            RoomShape.OneByTwo => new Vector2(4.5f, 4.5f),
-            RoomShape.TwoByOne => new Vector2(10.0f, 2.0f),
-            RoomShape.TwoByTwo => new Vector2(10.0f, 5.0f),
-            RoomShape.LShape => new Vector2(10.0f, 5.0f),
-            _ => new Vector2(4.5f, 2.0f),
+            RoomShape.OneByOne => inner,
+            RoomShape.OneByTwo => new Vector2(inner.x, inner.y * 2f + borderThickness()),
+            RoomShape.TwoByOne => new Vector2(inner.x * 2f + borderThickness(), inner.y),
+            RoomShape.TwoByTwo => new Vector2(inner.x * 2f + borderThickness(), inner.y * 2f + borderThickness()),
+            RoomShape.LShape => new Vector2(inner.x * 2f + borderThickness(), inner.y * 2f + borderThickness()),
+            _ => inner,
         };
+
+        static float borderThickness() => RoomManager.instance.borderThickness;
     }
 
     #endregion

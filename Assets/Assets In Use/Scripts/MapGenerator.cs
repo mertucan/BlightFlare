@@ -29,6 +29,10 @@ public class MapGenerator : MonoBehaviour
 
     private List<int> bigRoomIndexes;
 
+    [Header("Generation Settings")]
+    [Tooltip("Aktif olunca 2x1, 1x2, 2x2, L gibi büyük odalar da oluşturulur")]
+    [SerializeField] private bool generateLargeRooms = false;
+
     [Header("Sprite References")]
     [SerializeField] private Sprite item;
     [SerializeField] private Sprite shop;
@@ -268,11 +272,11 @@ public class MapGenerator : MonoBehaviour
         if (floorPlan[index] != 0 || GetNeighbourCount(index) > 1 || floorPlanCount > maxRooms || Random.value < 0.5f)
             return false;
 
-        if(Random.value < 0.3f && index != 45)
+        if (generateLargeRooms && Random.value < 0.3f && index != 45)
         {
-            foreach(var shape in roomShapes.OrderBy(_ => Random.value))
+            foreach (var shape in roomShapes.OrderBy(_ => Random.value))
             {
-                if(TryPlaceRoom(index, shape))
+                if (TryPlaceRoom(index, shape))
                 {
                     return true;
                 }

@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd1dfba2bb71fc43b5e9bb62b199661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  offsetX: 17
-  offsetY: 7
+  roomGap: 1
+  borderThickness: 1.7
   roomPrefab: {fileID: 2849868313178009030, guid: 4e376ce2bf7117d47b2ea54cf0f28456, type: 3}
   doorPrefab: {fileID: 1296053768979650753, guid: 5ac7f395fbf45dd4787359cf8b5e2a65, type: 3}
   doors:
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 3290471777747440170, guid: cd8961a3c1a863544ab2831ae422b82c, type: 3}
+  generateLargeRooms: 0
   item: {fileID: -1202685125, guid: 38f3c1bb574f8d0418aad564184fb4b2, type: 3}
   shop: {fileID: -382425187, guid: 38f3c1bb574f8d0418aad564184fb4b2, type: 3}
   boss: {fileID: 1332096903, guid: 38f3c1bb574f8d0418aad564184fb4b2, type: 3}
@@ -252,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd1dfba2bb71fc43b5e9bb62b199661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 21.25
-  offsetY: 10.625
+  roomGap: 1
+  borderThickness: 1.7
   roomPrefab: {fileID: 2849868313178009030, guid: 4e376ce2bf7117d47b2ea54cf0f28456, type: 3}
   doorPrefab: {fileID: 1296053768979650753, guid: 5ac7f395fbf45dd4787359cf8b5e2a65, type: 3}
   doors:

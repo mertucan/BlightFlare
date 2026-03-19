@@ -24,16 +24,10 @@ public class RoomTransitionManager : MonoBehaviour
     private int currentRoomCellIndex = 45;
     public int CurrentRoomIndex => currentRoomCellIndex;
     private bool isTransitioning;
-    private float heightScale = 1f;
 
     private void Awake()
     {
         instance = this;
-    }
-
-    public void SetHeightScale(float scale)
-    {
-        heightScale = scale;
     }
 
     public void RegisterMultiCellRoom(List<int> cellIndices, Vector2 worldPosition, RoomShape shape, Room room)
@@ -171,28 +165,34 @@ public class RoomTransitionManager : MonoBehaviour
 
     private Vector2 GetEntryOffset(EdgeDirection doorDirection)
     {
+        var half = RoomManager.instance != null
+            ? RoomManager.instance.RoomInnerHalfSize
+            : new Vector2(4f, 3f);
+
         switch (doorDirection)
         {
-            case EdgeDirection.Up:    return new Vector2(0, -1.2f * heightScale);
-            case EdgeDirection.Down:  return new Vector2(0, 1.2f * heightScale);
-            case EdgeDirection.Left:  return new Vector2(3.5f, 0);
-            case EdgeDirection.Right: return new Vector2(-3.5f, 0);
+            case EdgeDirection.Up:    return new Vector2(0, -half.y * 0.6f);
+            case EdgeDirection.Down:  return new Vector2(0, half.y * 0.6f);
+            case EdgeDirection.Left:  return new Vector2(half.x * 0.6f, 0);
+            case EdgeDirection.Right: return new Vector2(-half.x * 0.6f, 0);
         }
         return Vector2.zero;
     }
 
     private Vector2 GetRoomHalfSize(RoomShape shape)
     {
-        Vector2 baseSize = shape switch
+        var inner = RoomManager.instance != null
+            ? RoomManager.instance.RoomInnerHalfSize
+            : new Vector2(4f, 3f);
+
+        return shape switch
         {
-            RoomShape.OneByOne => new Vector2(4.5f, 2.0f),
-            RoomShape.OneByTwo => new Vector2(4.5f, 4.5f),
-            RoomShape.TwoByOne => new Vector2(10.0f, 2.0f),
-            RoomShape.TwoByTwo => new Vector2(10.0f, 5.0f),
-            RoomShape.LShape   => new Vector2(10.0f, 5.0f),
-            _                  => new Vector2(4.5f, 2.0f),
+            RoomShape.OneByOne => inner,
+            RoomShape.OneByTwo => new Vector2(inner.x, inner.y * 2.2f),
+            RoomShape.TwoByOne => new Vector2(inner.x * 2.2f, inner.y),
+            RoomShape.TwoByTwo => new Vector2(inner.x * 2.2f, inner.y * 2.2f),
+            RoomShape.LShape   => new Vector2(inner.x * 2.2f, inner.y * 2.2f),
+            _                  => inner,
         };
-        baseSize.y *= heightScale;
-        return baseSize;
     }
 }

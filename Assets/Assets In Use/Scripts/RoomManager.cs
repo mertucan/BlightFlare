@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,13 +7,13 @@ public class RoomManager : MonoBehaviour
 {
     private List<Room> createdRooms;
 
-    [Header("Offset Variables")]
-    public float offsetX;
-    public float offsetY;
+    [Header("Room Spacing")]
+    [Tooltip("Odalar arası ekstra boşluk (oda boyutuna eklenir)")]
+    public float roomGap = 0.5f;
 
-    [Header("Room Scale")]
-    [Tooltip("Odaları dikeyde ölçekler (1.4 ≈ Isaac oranı)")]
-    public float roomHeightScale = 1.4f;
+    [Header("Room Border")]
+    [Tooltip("Oda kenarındaki duvar kalınlığı (sprite'ın dış kenarından oynanabilir alana kadar)")]
+    public float borderThickness = 1.5f;
 
     [Header("Prefab References")]
     public Room roomPrefab;
@@ -26,6 +25,10 @@ public class RoomManager : MonoBehaviour
 
     public static RoomManager instance;
 
+    public Vector2 RoomInnerHalfSize { get; private set; }
+
+    private const float CellSize = 0.5f;
+
     private void Awake()
     {
         instance = this;
@@ -34,28 +37,32 @@ public class RoomManager : MonoBehaviour
 
     public void SetupRooms(List<Cell> spawnedCells)
     {
-        for(int i = createdRooms.Count - 1; i >= 0; i--)
+        for (int i = createdRooms.Count - 1; i >= 0; i--)
         {
             Destroy(createdRooms[i].gameObject);
         }
 
         createdRooms.Clear();
 
-        if (RoomTransitionManager.instance != null)
-            RoomTransitionManager.instance.SetHeightScale(roomHeightScale);
+        Vector2 measuredSize = MeasureRoomDesignSize();
+        float spacingX = measuredSize.x + roomGap;
+        float spacingY = measuredSize.y + roomGap;
 
-        foreach(var currentCell in spawnedCells)
+        RoomInnerHalfSize = new Vector2(
+            measuredSize.x / 2f - borderThickness,
+            measuredSize.y / 2f - borderThickness);
+
+        foreach (var currentCell in spawnedCells)
         {
             var foundRoom = rooms.FirstOrDefault(x => x.roomShape == currentCell.roomShape && x.roomType == currentCell.roomType && DoesTileMatchCell(x.occupiedTiles, currentCell));
 
             var currentPosition = currentCell.transform.position;
 
             var convertedPosition = new Vector2(
-                currentPosition.x * offsetX,
-                currentPosition.y * offsetY * roomHeightScale);
+                (currentPosition.x / CellSize) * spacingX,
+                (currentPosition.y / CellSize) * spacingY);
 
             var spawnedRoom = Instantiate(roomPrefab, convertedPosition, Quaternion.identity);
-            spawnedRoom.transform.localScale = new Vector3(1f, roomHeightScale, 1f);
 
             spawnedRoom.SetupRoom(currentCell, foundRoom);
 
@@ -72,6 +79,33 @@ public class RoomManager : MonoBehaviour
         {
             RoomTransitionManager.instance.PlacePlayerAtStart();
         }
+    }
+
+    private Vector2 MeasureRoomDesignSize()
+    {
+        foreach (var room in rooms)
+        {
+            if (room == null || room.roomDesignPrefabs == null || room.roomDesignPrefabs.Length == 0)
+                continue;
+
+            var temp = Instantiate(room.roomDesignPrefabs[0], Vector3.one * 9999f, Quaternion.identity);
+            var renderers = temp.GetComponentsInChildren<SpriteRenderer>();
+
+            if (renderers.Length > 0)
+            {
+                Bounds bounds = renderers[0].bounds;
+                for (int i = 1; i < renderers.Length; i++)
+                    bounds.Encapsulate(renderers[i].bounds);
+
+                Vector2 size = new Vector2(bounds.size.x, bounds.size.y);
+                Destroy(temp);
+                return size;
+            }
+
+            Destroy(temp);
+        }
+
+        return new Vector2(13f, 10f);
     }
 
     private bool DoesTileMatchCell(int[] occupiedTiles, Cell cell)
