@@ -14,6 +14,13 @@ public class RoomTransitionManager : MonoBehaviour
     public float transitionDuration = 0.4f;
     public float transitionCooldown = 0.15f;
 
+    [Header("Entry Position")]
+    [Tooltip("Kapıdan ne kadar içeri ışınlanacağı (unit cinsinden)")]
+    public float doorEntryInset = 0.01f;
+
+    [Tooltip("Geçiş sırasında karakterin kapıdan içeri kayma mesafesi")]
+    public float playerSlideDistance = 1.5f;
+
     [Header("Room Bounds")]
     public bool clampPlayerToRoom = true;
 
@@ -87,15 +94,38 @@ public class RoomTransitionManager : MonoBehaviour
     {
         SetPlayerMovement(false);
 
+        var rb = player != null ? player.GetComponent<Rigidbody2D>() : null;
+        RigidbodyType2D prevBodyType = RigidbodyType2D.Dynamic;
+        RigidbodyInterpolation2D prevInterp = RigidbodyInterpolation2D.None;
+
+        if (rb != null)
+        {
+            prevBodyType = rb.bodyType;
+            prevInterp = rb.interpolation;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.interpolation = RigidbodyInterpolation2D.None;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
         if (currentActiveRoom != null)
             currentActiveRoom.SetCollidersActive(false);
 
-        Vector2 newRoomCenter = roomPositions[targetCellIndex];
-        Vector2 entryOffset = GetEntryOffset(fromDirection);
+        RoomShape targetShape = roomShapeMap.ContainsKey(targetCellIndex)
+            ? roomShapeMap[targetCellIndex]
+            : RoomShape.OneByOne;
 
-        TeleportPlayer(newRoomCenter + entryOffset);
+        Vector2 newRoomCenter = roomPositions[targetCellIndex];
+        Vector2 entryOffset = GetEntryOffset(fromDirection, targetShape);
+        Vector2 doorPosition = newRoomCenter + entryOffset;
+
+        SetPlayerPos(doorPosition, rb);
+        Physics2D.SyncTransforms();
 
         yield return new WaitForFixedUpdate();
+
+        SetPlayerPos(doorPosition, rb);
+        Physics2D.SyncTransforms();
 
         currentRoomCellIndex = targetCellIndex;
 
@@ -105,14 +135,36 @@ public class RoomTransitionManager : MonoBehaviour
             currentActiveRoom.SetCollidersActive(true);
         }
 
-        RoomShape shape = roomShapeMap.ContainsKey(targetCellIndex)
-            ? roomShapeMap[targetCellIndex]
-            : RoomShape.OneByOne;
-        bool isLarge = shape != RoomShape.OneByOne;
+        bool isLarge = targetShape != RoomShape.OneByOne;
 
-        cameraController?.SlideToRoom(newRoomCenter, GetRoomHalfSize(shape), isLarge, transitionDuration);
+        cameraController?.SlideToRoom(newRoomCenter, GetRoomHalfSize(targetShape), isLarge, transitionDuration);
 
-        yield return new WaitForSeconds(transitionDuration);
+        Vector2 slideDir = GetInwardDirection(fromDirection);
+        Vector2 slideEnd = doorPosition + slideDir * playerSlideDistance;
+        float slideDuration = Mathf.Min(transitionDuration * 0.5f, 0.25f);
+        float elapsed = 0f;
+
+        while (elapsed < slideDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / slideDuration));
+            SetPlayerPos(Vector2.Lerp(doorPosition, slideEnd, t), rb);
+            yield return null;
+        }
+
+        SetPlayerPos(slideEnd, rb);
+
+        float remaining = transitionDuration - slideDuration;
+        if (remaining > 0f)
+            yield return new WaitForSeconds(remaining);
+
+        if (rb != null)
+        {
+            rb.bodyType = prevBodyType;
+            rb.interpolation = prevInterp;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
 
         SetPlayerMovement(true);
 
@@ -122,16 +174,50 @@ public class RoomTransitionManager : MonoBehaviour
 
     private void TeleportPlayer(Vector2 position)
     {
+        if (player == null) return;
+
         var rb = player.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
+            var prevType = rb.bodyType;
+            var prevInterp = rb.interpolation;
+
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-            rb.position = position;
-        }
+            rb.interpolation = RigidbodyInterpolation2D.None;
+            rb.bodyType = RigidbodyType2D.Kinematic;
 
+            player.position = new Vector3(position.x, position.y, player.position.z);
+            rb.position = position;
+            Physics2D.SyncTransforms();
+
+            rb.bodyType = prevType;
+            rb.interpolation = prevInterp;
+        }
+        else
+        {
+            player.position = new Vector3(position.x, position.y, player.position.z);
+            Physics2D.SyncTransforms();
+        }
+    }
+
+    private void SetPlayerPos(Vector2 position, Rigidbody2D rb)
+    {
+        if (player == null) return;
         player.position = new Vector3(position.x, position.y, player.position.z);
-        Physics2D.SyncTransforms();
+        if (rb != null) rb.position = position;
+    }
+
+    private Vector2 GetInwardDirection(EdgeDirection fromDirection)
+    {
+        return fromDirection switch
+        {
+            EdgeDirection.Up    => Vector2.up,
+            EdgeDirection.Down  => Vector2.down,
+            EdgeDirection.Left  => Vector2.left,
+            EdgeDirection.Right => Vector2.right,
+            _ => Vector2.zero,
+        };
     }
 
     private void SetPlayerMovement(bool enabled)
@@ -163,18 +249,17 @@ public class RoomTransitionManager : MonoBehaviour
         player.position = pos;
     }
 
-    private Vector2 GetEntryOffset(EdgeDirection doorDirection)
+    private Vector2 GetEntryOffset(EdgeDirection doorDirection, RoomShape targetShape)
     {
-        var half = RoomManager.instance != null
-            ? RoomManager.instance.RoomInnerHalfSize
-            : new Vector2(4f, 3f);
+        Vector2 half = GetRoomHalfSize(targetShape);
+        float inset = doorEntryInset;
 
         switch (doorDirection)
         {
-            case EdgeDirection.Up:    return new Vector2(0, -half.y * 0.6f);
-            case EdgeDirection.Down:  return new Vector2(0, half.y * 0.6f);
-            case EdgeDirection.Left:  return new Vector2(half.x * 0.6f, 0);
-            case EdgeDirection.Right: return new Vector2(-half.x * 0.6f, 0);
+            case EdgeDirection.Up:    return new Vector2(0, -half.y + inset);
+            case EdgeDirection.Down:  return new Vector2(0,  half.y - inset);
+            case EdgeDirection.Left:  return new Vector2( half.x - inset, 0);
+            case EdgeDirection.Right: return new Vector2(-half.x + inset, 0);
         }
         return Vector2.zero;
     }

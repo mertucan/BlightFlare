@@ -20,7 +20,9 @@ public class Door : MonoBehaviour
 
         var col = gameObject.AddComponent<BoxCollider2D>();
         col.isTrigger = true;
-        col.size = new Vector2(1.0f, 1.0f);
+
+        bool isHorizontal = dir == EdgeDirection.Left || dir == EdgeDirection.Right;
+        col.size = isHorizontal ? new Vector2(1.5f, 1.2f) : new Vector2(1.2f, 1.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D other) => TryTransition(other);
