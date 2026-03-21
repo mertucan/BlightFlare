@@ -280,6 +280,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Rooms - Basement_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 157
+        width: 233
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2b5190acf52ec4d963f87f52749b31
+      internalID: -4458665519355842980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []

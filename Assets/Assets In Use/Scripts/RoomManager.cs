@@ -54,7 +54,15 @@ public class RoomManager : MonoBehaviour
 
         foreach (var currentCell in spawnedCells)
         {
-            var foundRoom = rooms.FirstOrDefault(x => x.roomShape == currentCell.roomShape && x.roomType == currentCell.roomType && DoesTileMatchCell(x.occupiedTiles, currentCell));
+            var matchingRooms = rooms
+            .Where(x => x.roomShape == currentCell.roomShape 
+                    && x.roomType == currentCell.roomType 
+                    && DoesTileMatchCell(x.occupiedTiles, currentCell))
+            .ToArray();
+
+            var foundRoom = matchingRooms.Length > 0 
+            ? matchingRooms[UnityEngine.Random.Range(0, matchingRooms.Length)] 
+            : null;
 
             var currentPosition = currentCell.transform.position;
 
