@@ -224,6 +224,8 @@ public class Room : MonoBehaviour
 
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
 
+        door.gameObject.tag = "Door";
+
         door.transform.localPosition = new Vector3(positionOffset.x, positionOffset.y, 0f);
 
         SetupDoor(door, direction, currentCell.roomType == RoomType.Regular ? foundCell.roomType : currentCell.roomType);
@@ -375,6 +377,7 @@ public class Room : MonoBehaviour
         float mid = (start + end) / 2f;
 
         GameObject wall = new("Wall");
+        wall.tag = "Wall";
         wall.transform.SetParent(transform);
 
         if (isHorizontal)

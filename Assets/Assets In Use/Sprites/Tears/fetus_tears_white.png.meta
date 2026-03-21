@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 92aae6c319754804e9be11c9808b9b50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2570244744970878445
+    second: fetus_tears_white_0
+  - first:
+      213: -5793127301705696976
+    second: fetus_tears_white_1
+  - first:
+      213: -1469326578366852667
+    second: fetus_tears_white_2
+  - first:
+      213: -5261792978059528613
+    second: fetus_tears_white_3
+  - first:
+      213: -8594049710332764390
+    second: fetus_tears_white_4
+  - first:
+      213: 443973755219647271
+    second: fetus_tears_white_5
+  - first:
+      213: 5245896185889971423
+    second: fetus_tears_white_6
+  - first:
+      213: 3572594181510544094
+    second: fetus_tears_white_7
+  - first:
+      213: 5587004764164795018
+    second: fetus_tears_white_8
+  - first:
+      213: -7688505363605614336
+    second: fetus_tears_white_9
+  - first:
+      213: -784381999447212223
+    second: fetus_tears_white_10
+  - first:
+      213: 7355455647811059820
+    second: fetus_tears_white_11
+  - first:
+      213: 4506473689416320685
+    second: fetus_tears_white_12
+  - first:
+      213: 8576065410206851305
+    second: fetus_tears_white_13
+  - first:
+      213: 4826211416573514940
+    second: fetus_tears_white_14
+  - first:
+      213: 2893602564925498314
+    second: fetus_tears_white_15
+  - first:
+      213: 1263695859380291346
+    second: fetus_tears_white_16
+  - first:
+      213: -7055124931496921856
+    second: fetus_tears_white_17
+  - first:
+      213: 1148316915764529305
+    second: fetus_tears_white_18
+  - first:
+      213: 7867052829960030633
+    second: fetus_tears_white_19
+  - first:
+      213: 3805695030948077728
+    second: fetus_tears_white_20
+  - first:
+      213: 4096022078879632637
+    second: fetus_tears_white_21
+  - first:
+      213: -8755266150409742754
+    second: fetus_tears_white_22
+  - first:
+      213: 2362576875474291165
+    second: fetus_tears_white_23
+  - first:
+      213: -3342960679312625967
+    second: fetus_tears_white_24
+  - first:
+      213: -8430647985062341372
+    second: fetus_tears_white_25
+  - first:
+      213: -6319794989564439956
+    second: fetus_tears_white_26
+  - first:
+      213: 4268902197853984047
+    second: fetus_tears_white_27
+  - first:
+      213: 2190082060602732654
+    second: fetus_tears_white_28
+  - first:
+      213: -1086908767916025648
+    second: fetus_tears_white_29
+  - first:
+      213: -1937600473285807876
+    second: fetus_tears_white_30
+  - first:
+      213: -716910073941174064
+    second: fetus_tears_white_31
+  - first:
+      213: -5789469183857309011
+    second: fetus_tears_white_32
+  - first:
+      213: 5379229214178021405
+    second: fetus_tears_white_33
+  - first:
+      213: 4969411260113929060
+    second: fetus_tears_white_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fetus_tears_white_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 200
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312423ea508a45cd0800000000000000
+      internalID: -2570244744970878445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 199
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039f633996daa9fa0800000000000000
+      internalID: -5793127301705696976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 197
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c157650347eb9be0800000000000000
+      internalID: -1469326578366852667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 195
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56fd152a2b5af6b0800000000000000
+      internalID: -5261792978059528613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 191
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f1199525dcbb880800000000000000
+      internalID: -8594049710332764390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 168
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b967137cf492600800000000000000
+      internalID: 443973755219647271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 167
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc5c8089ca2dc840800000000000000
+      internalID: 5245896185889971423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 165
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda309bca77649130800000000000000
+      internalID: 3572594181510544094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_8
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 163
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a25765b37098d40800000000000000
+      internalID: 5587004764164795018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 159
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0011a947b11fc4590800000000000000
+      internalID: -7688505363605614336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 136
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ffcb23ab05d15f0800000000000000
+      internalID: -784381999447212223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 135
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c604be8d0f3d31660800000000000000
+      internalID: 7355455647811059820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 133
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6cd47b1f53a8e30800000000000000
+      internalID: 4506473689416320685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_13
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 131
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0e4e97d0e440770800000000000000
+      internalID: 8576065410206851305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 127
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb49cc786b52af240800000000000000
+      internalID: 4826211416573514940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 104
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac32b8ba334282820800000000000000
+      internalID: 2893602564925498314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_16
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 103
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2178e7250bc898110800000000000000
+      internalID: 1263695859380291346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 101
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005bf142149271e90800000000000000
+      internalID: -7055124931496921856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_18
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 99
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99887bd9624afef00800000000000000
+      internalID: 1148316915764529305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 95
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9cffe0ed26d2d60800000000000000
+      internalID: 7867052829960030633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_20
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0212b977b80d430800000000000000
+      internalID: 3805695030948077728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_21
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 71
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc07cb016ef7d830800000000000000
+      internalID: 4096022078879632637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 69
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5653d6d2db0f7680800000000000000
+      internalID: -8755266150409742754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_23
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 67
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd98239962f89c020800000000000000
+      internalID: 2362576875474291165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_24
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 64
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dee87359fa6b91d0800000000000000
+      internalID: -3342960679312625967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 40
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4051ff73352500b80800000000000000
+      internalID: -8430647985062341372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_26
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 39
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62d7b1d0f39b48a0800000000000000
+      internalID: -6319794989564439956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 37
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2598fb6eef2e3b30800000000000000
+      internalID: 4268902197853984047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_28
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 35
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e607e23d70cb46e10800000000000000
+      internalID: 2190082060602732654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 32
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d89b19fb368ae0f0800000000000000
+      internalID: -1086908767916025648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 8
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0bb29a2a24c15e0800000000000000
+      internalID: -1937600473285807876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_31
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 7
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d856da06160d06f0800000000000000
+      internalID: -716910073941174064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 5
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa4d12837ca7afa0800000000000000
+      internalID: -5789469183857309011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 3
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d101c7c487cd6aa40800000000000000
+      internalID: 5379229214178021405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fetus_tears_white_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463cae54635e6f440800000000000000
+      internalID: 4969411260113929060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fetus_tears_white_0: -2570244744970878445
+      fetus_tears_white_1: -5793127301705696976
+      fetus_tears_white_10: -784381999447212223
+      fetus_tears_white_11: 7355455647811059820
+      fetus_tears_white_12: 4506473689416320685
+      fetus_tears_white_13: 8576065410206851305
+      fetus_tears_white_14: 4826211416573514940
+      fetus_tears_white_15: 2893602564925498314
+      fetus_tears_white_16: 1263695859380291346
+      fetus_tears_white_17: -7055124931496921856
+      fetus_tears_white_18: 1148316915764529305
+      fetus_tears_white_19: 7867052829960030633
+      fetus_tears_white_2: -1469326578366852667
+      fetus_tears_white_20: 3805695030948077728
+      fetus_tears_white_21: 4096022078879632637
+      fetus_tears_white_22: -8755266150409742754
+      fetus_tears_white_23: 2362576875474291165
+      fetus_tears_white_24: -3342960679312625967
+      fetus_tears_white_25: -8430647985062341372
+      fetus_tears_white_26: -6319794989564439956
+      fetus_tears_white_27: 4268902197853984047
+      fetus_tears_white_28: 2190082060602732654
+      fetus_tears_white_29: -1086908767916025648
+      fetus_tears_white_3: -5261792978059528613
+      fetus_tears_white_30: -1937600473285807876
+      fetus_tears_white_31: -716910073941174064
+      fetus_tears_white_32: -5789469183857309011
+      fetus_tears_white_33: 5379229214178021405
+      fetus_tears_white_34: 4969411260113929060
+      fetus_tears_white_4: -8594049710332764390
+      fetus_tears_white_5: 443973755219647271
+      fetus_tears_white_6: 5245896185889971423
+      fetus_tears_white_7: 3572594181510544094
+      fetus_tears_white_8: 5587004764164795018
+      fetus_tears_white_9: -7688505363605614336
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: ddb6a92e5d7f3fc4a99a1c0706456bb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7442882882270577589
+    second: glaucoma_tears_0
+  - first:
+      213: -3761547050359571228
+    second: glaucoma_tears_1
+  - first:
+      213: 50985390760889798
+    second: glaucoma_tears_2
+  - first:
+      213: 7720355721840675990
+    second: glaucoma_tears_3
+  - first:
+      213: 6990667080319109300
+    second: glaucoma_tears_4
+  - first:
+      213: 7443871827711294512
+    second: glaucoma_tears_5
+  - first:
+      213: 26267066481757106
+    second: glaucoma_tears_6
+  - first:
+      213: -3065097907089773169
+    second: glaucoma_tears_7
+  - first:
+      213: -4540470116907461431
+    second: glaucoma_tears_8
+  - first:
+      213: 415297878324093298
+    second: glaucoma_tears_9
+  - first:
+      213: 7474222590052528874
+    second: glaucoma_tears_10
+  - first:
+      213: 3750230303423084959
+    second: glaucoma_tears_11
+  - first:
+      213: -3385559830451447894
+    second: glaucoma_tears_12
+  - first:
+      213: -7948935585339275134
+    second: glaucoma_tears_13
+  - first:
+      213: 7298601560316601771
+    second: glaucoma_tears_14
+  - first:
+      213: 1373236480824972972
+    second: glaucoma_tears_15
+  - first:
+      213: -3466760724040510459
+    second: glaucoma_tears_16
+  - first:
+      213: 6029470677815016422
+    second: glaucoma_tears_17
+  - first:
+      213: 952845885708885382
+    second: glaucoma_tears_18
+  - first:
+      213: -2395276164617906915
+    second: glaucoma_tears_19
+  - first:
+      213: -8334110141663363749
+    second: glaucoma_tears_20
+  - first:
+      213: -7071389804840650249
+    second: glaucoma_tears_21
+  - first:
+      213: -8688619488745256580
+    second: glaucoma_tears_22
+  - first:
+      213: -1915640757359262492
+    second: glaucoma_tears_23
+  - first:
+      213: 3048631299355610172
+    second: glaucoma_tears_24
+  - first:
+      213: 7122727398417358752
+    second: glaucoma_tears_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glaucoma_tears_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 108
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c3d61e37195b890800000000000000
+      internalID: -7442882882270577589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 107
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec366123ec4ccbc0800000000000000
+      internalID: -3761547050359571228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 107
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd890951f225b000800000000000000
+      internalID: 50985390760889798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 106
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cc7f3ff96342b60800000000000000
+      internalID: 7720355721840675990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 106
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b80071eba6d30160800000000000000
+      internalID: 6990667080319109300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 105
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cf44cecf1fd4760800000000000000
+      internalID: 7443871827711294512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 105
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbcfeef1c15d5000800000000000000
+      internalID: 26267066481757106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 104
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dee1e61b59675d0800000000000000
+      internalID: -3065097907089773169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 71
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c454703c720df0c0800000000000000
+      internalID: -4540470116907461431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 70
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2712b71583f63c500800000000000000
+      internalID: 415297878324093298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 69
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2f74478d5c9b760800000000000000
+      internalID: 7474222590052528874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 68
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f993075679e7b0430800000000000000
+      internalID: 3750230303423084959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 67
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa71c1c85431401d0800000000000000
+      internalID: -3385559830451447894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 44
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288046d4335bfa190800000000000000
+      internalID: -7948935585339275134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 43
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba568cf0377d94560800000000000000
+      internalID: 7298601560316601771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_15
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca61e28bd47be0310800000000000000
+      internalID: 1373236480824972972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_16
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 42
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5041a4a3d7793efc0800000000000000
+      internalID: -3466760724040510459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 42
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb3ccec2abfca350800000000000000
+      internalID: 6029470677815016422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_18
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 41
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68dde5fd840393d00800000000000000
+      internalID: 952845885708885382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 41
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d155dfcd40542ced0800000000000000
+      internalID: -2395276164617906915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_20
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 40
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dbc2f6bfa475c80800000000000000
+      internalID: -8334110141663363749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_21
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9772630706ddd90800000000000000
+      internalID: -7071389804840650249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_22
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 6
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c798dc8fb92db6780800000000000000
+      internalID: -8688619488745256580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 5
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4475471e64a65e0800000000000000
+      internalID: -1915640757359262492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_24
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 4
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c8a31b30aee4a20800000000000000
+      internalID: 3048631299355610172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glaucoma_tears_25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0afdb9eb4d209d260800000000000000
+      internalID: 7122727398417358752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glaucoma_tears_0: -7442882882270577589
+      glaucoma_tears_1: -3761547050359571228
+      glaucoma_tears_10: 7474222590052528874
+      glaucoma_tears_11: 3750230303423084959
+      glaucoma_tears_12: -3385559830451447894
+      glaucoma_tears_13: -7948935585339275134
+      glaucoma_tears_14: 7298601560316601771
+      glaucoma_tears_15: 1373236480824972972
+      glaucoma_tears_16: -3466760724040510459
+      glaucoma_tears_17: 6029470677815016422
+      glaucoma_tears_18: 952845885708885382
+      glaucoma_tears_19: -2395276164617906915
+      glaucoma_tears_2: 50985390760889798
+      glaucoma_tears_20: -8334110141663363749
+      glaucoma_tears_21: -7071389804840650249
+      glaucoma_tears_22: -8688619488745256580
+      glaucoma_tears_23: -1915640757359262492
+      glaucoma_tears_24: 3048631299355610172
+      glaucoma_tears_25: 7122727398417358752
+      glaucoma_tears_3: 7720355721840675990
+      glaucoma_tears_4: 6990667080319109300
+      glaucoma_tears_5: 7443871827711294512
+      glaucoma_tears_6: 26267066481757106
+      glaucoma_tears_7: -3065097907089773169
+      glaucoma_tears_8: -4540470116907461431
+      glaucoma_tears_9: 415297878324093298
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

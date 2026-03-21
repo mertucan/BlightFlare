@@ -1,0 +1,1651 @@
+fileFormatVersion: 2
+guid: d199702fb32678149855a9b3a79d066b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1915691803953419827
+    second: scythe_tears_0
+  - first:
+      213: 6671014737906143898
+    second: scythe_tears_1
+  - first:
+      213: 553106203030218967
+    second: scythe_tears_2
+  - first:
+      213: 6418905694958929123
+    second: scythe_tears_3
+  - first:
+      213: -6493131640002798782
+    second: scythe_tears_4
+  - first:
+      213: -4877722661390702319
+    second: scythe_tears_5
+  - first:
+      213: -8283158901679164945
+    second: scythe_tears_6
+  - first:
+      213: 30633795188647059
+    second: scythe_tears_7
+  - first:
+      213: -5550253906785292131
+    second: scythe_tears_8
+  - first:
+      213: 6045048736843643023
+    second: scythe_tears_9
+  - first:
+      213: 5273681344202476954
+    second: scythe_tears_10
+  - first:
+      213: -8816680441237614884
+    second: scythe_tears_11
+  - first:
+      213: -7899441009669171036
+    second: scythe_tears_12
+  - first:
+      213: 4912630373178939486
+    second: scythe_tears_13
+  - first:
+      213: -8695916666555947478
+    second: scythe_tears_14
+  - first:
+      213: -8516115909915212718
+    second: scythe_tears_15
+  - first:
+      213: -834094195074734999
+    second: scythe_tears_16
+  - first:
+      213: 8274847156286701301
+    second: scythe_tears_17
+  - first:
+      213: 5656902017732911735
+    second: scythe_tears_18
+  - first:
+      213: 7385535509418030635
+    second: scythe_tears_19
+  - first:
+      213: -6823696482004445434
+    second: scythe_tears_20
+  - first:
+      213: 39976471771386627
+    second: scythe_tears_21
+  - first:
+      213: -3628843345141682954
+    second: scythe_tears_22
+  - first:
+      213: -3503929076702628018
+    second: scythe_tears_23
+  - first:
+      213: 6983497886443846178
+    second: scythe_tears_24
+  - first:
+      213: -1072229362195017625
+    second: scythe_tears_25
+  - first:
+      213: -2432672193015747352
+    second: scythe_tears_26
+  - first:
+      213: 3118261276371048949
+    second: scythe_tears_27
+  - first:
+      213: 5402964084686905499
+    second: scythe_tears_28
+  - first:
+      213: -7741183334307517422
+    second: scythe_tears_29
+  - first:
+      213: 216400058268299073
+    second: scythe_tears_30
+  - first:
+      213: 4460533214094721238
+    second: scythe_tears_31
+  - first:
+      213: 8661291909507396377
+    second: scythe_tears_32
+  - first:
+      213: 4275139437711003175
+    second: scythe_tears_33
+  - first:
+      213: -8254922645250783374
+    second: scythe_tears_34
+  - first:
+      213: 4210329709442370861
+    second: scythe_tears_35
+  - first:
+      213: -8347629835102361560
+    second: scythe_tears_36
+  - first:
+      213: 5400034335526037281
+    second: scythe_tears_37
+  - first:
+      213: -1961562670032075018
+    second: scythe_tears_38
+  - first:
+      213: -426475213496549145
+    second: scythe_tears_39
+  - first:
+      213: -2124225959581071009
+    second: scythe_tears_40
+  - first:
+      213: 6045972662539856043
+    second: scythe_tears_41
+  - first:
+      213: 6880636068083413645
+    second: scythe_tears_42
+  - first:
+      213: -4045310565716512086
+    second: scythe_tears_43
+  - first:
+      213: 6442041945921195810
+    second: scythe_tears_44
+  - first:
+      213: -159276346901021361
+    second: scythe_tears_45
+  - first:
+      213: 6125723959421544538
+    second: scythe_tears_46
+  - first:
+      213: 633566559243492181
+    second: scythe_tears_47
+  - first:
+      213: -8974235313491043839
+    second: scythe_tears_48
+  - first:
+      213: 5549581636368053031
+    second: scythe_tears_49
+  - first:
+      213: -2711926392117299444
+    second: scythe_tears_50
+  - first:
+      213: -6076115716914238909
+    second: scythe_tears_51
+  - first:
+      213: 8458933129870237110
+    second: scythe_tears_52
+  - first:
+      213: -5982659529869325499
+    second: scythe_tears_53
+  - first:
+      213: 2442956352214599685
+    second: scythe_tears_54
+  - first:
+      213: 2547508845936897580
+    second: scythe_tears_55
+  - first:
+      213: -7417806378245717181
+    second: scythe_tears_56
+  - first:
+      213: 7633904404028222657
+    second: scythe_tears_57
+  - first:
+      213: -5588433002236120833
+    second: scythe_tears_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scythe_tears_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 657
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33655c1cb87e59a10800000000000000
+      internalID: 1915691803953419827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 663
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a929a404f84349c50800000000000000
+      internalID: 6671014737906143898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 645
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d86ea249270da700800000000000000
+      internalID: 553106203030218967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 646
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e442c288b8841950800000000000000
+      internalID: 6418905694958929123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 648
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b98cdec23c3e5a0800000000000000
+      internalID: -6493131640002798782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 520
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1192fee2519de4cb0800000000000000
+      internalID: -4877722661390702319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 536
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe17c4f6dde4c0d80800000000000000
+      internalID: -8283158901679164945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_7
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 551
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39467504645dc6000800000000000000
+      internalID: 30633795188647059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 542
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90b6d07a7989f2b0800000000000000
+      internalID: -5550253906785292131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_9
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 538
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f883d715cc354e350800000000000000
+      internalID: 6045048736843643023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_10
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 412
+        width: 58
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d0bcbcd31ef2940800000000000000
+      internalID: 5273681344202476954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_11
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 417
+        width: 70
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdec5e9f9dbd4a580800000000000000
+      internalID: -8816680441237614884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_12
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 404
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a81486314c8f5290800000000000000
+      internalID: -7899441009669171036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 404
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e581022db4b2d2440800000000000000
+      internalID: 4912630373178939486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_14
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 406
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26a88d5dd5e15780800000000000000
+      internalID: -8695916666555947478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 278
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254837343bda0d980800000000000000
+      internalID: -8516115909915212718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 290
+        width: 70
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964ea51bfb3bc64f0800000000000000
+      internalID: -834094195074734999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_17
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 301
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5febe1985a926d270800000000000000
+      internalID: 8274847156286701301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_18
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 294
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7722920e96a518e40800000000000000
+      internalID: 5656902017732911735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_19
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 291
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2635e26a61be7660800000000000000
+      internalID: 7385535509418030635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 199
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607da0ff33c5d41a0800000000000000
+      internalID: -6823696482004445434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_21
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 202
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3039e47a3660e8000800000000000000
+      internalID: 39976471771386627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_22
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 194
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc2a4b3432c3adc0800000000000000
+      internalID: -3628843345141682954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_23
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 193
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e473af0c11b8f5fc0800000000000000
+      internalID: -3503929076702628018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_24
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 195
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a3d2bd35e5ae060800000000000000
+      internalID: 6983497886443846178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_25
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 195
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7605f94731dae11f0800000000000000
+      internalID: -1072229362195017625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_26
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 203
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec635087896d3ed0800000000000000
+      internalID: -2432672193015747352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_27
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 211
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9d3fe0c1a464b20800000000000000
+      internalID: 3118261276371048949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_28
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 207
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90e4f9753f2bfa40800000000000000
+      internalID: 5402964084686905499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_29
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 205
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c2d61a5cac19490800000000000000
+      internalID: -7741183334307517422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_30
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 141
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fa47ad4bec00300800000000000000
+      internalID: 216400058268299073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 143
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d082f6435ff6ed30800000000000000
+      internalID: 4460533214094721238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_32
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 139
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913372a2a17133870800000000000000
+      internalID: 8661291909507396377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_33
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 136
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e070efaa8545b30800000000000000
+      internalID: 4275139437711003175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 138
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277cf71379f907d80800000000000000
+      internalID: -8254922645250783374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_35
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 138
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d069e30981e6a30800000000000000
+      internalID: 4210329709442370861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_36
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 144
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828654284e2472c80800000000000000
+      internalID: -8347629835102361560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_37
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 150
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12721f71e96c0fa40800000000000000
+      internalID: 5400034335526037281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_38
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 147
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f64218f42127c4e0800000000000000
+      internalID: -1961562670032075018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_39
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 145
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0870a8d0bd41af0800000000000000
+      internalID: -426475213496549145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_40
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 98
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59c1809ebb3582e0800000000000000
+      internalID: -2124225959581071009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 99
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba829688a1c97e350800000000000000
+      internalID: 6045972662539856043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_42
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 96
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d823ada7c0eec7f50800000000000000
+      internalID: 6880636068083413645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_43
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 83
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa23554397b2cd7c0800000000000000
+      internalID: -4045310565716512086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_44
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 96
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f8cc6b40bb66950800000000000000
+      internalID: 6442041945921195810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4db7d1a1032acdf0800000000000000
+      internalID: -159276346901021361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 100
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58ab615c71f20550800000000000000
+      internalID: 6125723959421544538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_47
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 104
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b5649cd61eac800800000000000000
+      internalID: 633566559243492181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_48
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 102
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a9998a78c157380800000000000000
+      internalID: -8974235313491043839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_49
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 101
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723bfb76813140d40800000000000000
+      internalID: 5549581636368053031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_50
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 80
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0777d4905d4d5ad0800000000000000
+      internalID: -2711926392117299444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_51
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34aa827b2fc4daba0800000000000000
+      internalID: -6076115716914238909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_52
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 79
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdd2b04dda246570800000000000000
+      internalID: 8458933129870237110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_53
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 79
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b8806ead259fca0800000000000000
+      internalID: -5982659529869325499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5080987ebdf17e120800000000000000
+      internalID: 2442956352214599685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_55
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2eeb305cc19a5320800000000000000
+      internalID: 2547508845936897580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_56
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 81
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34389047668ae0990800000000000000
+      internalID: -7417806378245717181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_57
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 82
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc646bfb9311f960800000000000000
+      internalID: 7633904404028222657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scythe_tears_58
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 81
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff075a21bc5e172b0800000000000000
+      internalID: -5588433002236120833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      scythe_tears_0: 1915691803953419827
+      scythe_tears_1: 6671014737906143898
+      scythe_tears_10: 5273681344202476954
+      scythe_tears_11: -8816680441237614884
+      scythe_tears_12: -7899441009669171036
+      scythe_tears_13: 4912630373178939486
+      scythe_tears_14: -8695916666555947478
+      scythe_tears_15: -8516115909915212718
+      scythe_tears_16: -834094195074734999
+      scythe_tears_17: 8274847156286701301
+      scythe_tears_18: 5656902017732911735
+      scythe_tears_19: 7385535509418030635
+      scythe_tears_2: 553106203030218967
+      scythe_tears_20: -6823696482004445434
+      scythe_tears_21: 39976471771386627
+      scythe_tears_22: -3628843345141682954
+      scythe_tears_23: -3503929076702628018
+      scythe_tears_24: 6983497886443846178
+      scythe_tears_25: -1072229362195017625
+      scythe_tears_26: -2432672193015747352
+      scythe_tears_27: 3118261276371048949
+      scythe_tears_28: 5402964084686905499
+      scythe_tears_29: -7741183334307517422
+      scythe_tears_3: 6418905694958929123
+      scythe_tears_30: 216400058268299073
+      scythe_tears_31: 4460533214094721238
+      scythe_tears_32: 8661291909507396377
+      scythe_tears_33: 4275139437711003175
+      scythe_tears_34: -8254922645250783374
+      scythe_tears_35: 4210329709442370861
+      scythe_tears_36: -8347629835102361560
+      scythe_tears_37: 5400034335526037281
+      scythe_tears_38: -1961562670032075018
+      scythe_tears_39: -426475213496549145
+      scythe_tears_4: -6493131640002798782
+      scythe_tears_40: -2124225959581071009
+      scythe_tears_41: 6045972662539856043
+      scythe_tears_42: 6880636068083413645
+      scythe_tears_43: -4045310565716512086
+      scythe_tears_44: 6442041945921195810
+      scythe_tears_45: -159276346901021361
+      scythe_tears_46: 6125723959421544538
+      scythe_tears_47: 633566559243492181
+      scythe_tears_48: -8974235313491043839
+      scythe_tears_49: 5549581636368053031
+      scythe_tears_5: -4877722661390702319
+      scythe_tears_50: -2711926392117299444
+      scythe_tears_51: -6076115716914238909
+      scythe_tears_52: 8458933129870237110
+      scythe_tears_53: -5982659529869325499
+      scythe_tears_54: 2442956352214599685
+      scythe_tears_55: 2547508845936897580
+      scythe_tears_56: -7417806378245717181
+      scythe_tears_57: 7633904404028222657
+      scythe_tears_58: -5588433002236120833
+      scythe_tears_6: -8283158901679164945
+      scythe_tears_7: 30633795188647059
+      scythe_tears_8: -5550253906785292131
+      scythe_tears_9: 6045048736843643023
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

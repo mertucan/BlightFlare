@@ -110,7 +110,7 @@ public class IsaacMovement : MonoBehaviour
         }
     }
 
-    private void DeathSequence()
+    public void DeathSequence()
     {
         enabled = false;
         var bombCtrl = GetComponent<BombController>();

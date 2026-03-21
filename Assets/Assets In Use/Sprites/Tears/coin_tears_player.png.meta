@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: c7aadcc185d4b1543874fc3fca83865b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2252942817330856277
+    second: coin_tears_player_0
+  - first:
+      213: 3514761176786844453
+    second: coin_tears_player_1
+  - first:
+      213: -9000359658721394499
+    second: coin_tears_player_2
+  - first:
+      213: 1822181222703177047
+    second: coin_tears_player_3
+  - first:
+      213: -2736561374200631941
+    second: coin_tears_player_4
+  - first:
+      213: 4277844579312220742
+    second: coin_tears_player_5
+  - first:
+      213: -3171342262008595521
+    second: coin_tears_player_6
+  - first:
+      213: -5881337300141780478
+    second: coin_tears_player_7
+  - first:
+      213: 3255553807128968006
+    second: coin_tears_player_8
+  - first:
+      213: 2583817512465913629
+    second: coin_tears_player_9
+  - first:
+      213: -4579639023935035037
+    second: coin_tears_player_10
+  - first:
+      213: -975930037764529468
+    second: coin_tears_player_11
+  - first:
+      213: 5147463241167241787
+    second: coin_tears_player_12
+  - first:
+      213: -8828623262973192692
+    second: coin_tears_player_13
+  - first:
+      213: 174414056796695880
+    second: coin_tears_player_14
+  - first:
+      213: 9101559577617822825
+    second: coin_tears_player_15
+  - first:
+      213: 1439486788054509623
+    second: coin_tears_player_16
+  - first:
+      213: 868502500139185697
+    second: coin_tears_player_17
+  - first:
+      213: -1373596876040601699
+    second: coin_tears_player_18
+  - first:
+      213: 7837660907292824823
+    second: coin_tears_player_19
+  - first:
+      213: -6694170568332306799
+    second: coin_tears_player_20
+  - first:
+      213: 7096698915405091116
+    second: coin_tears_player_21
+  - first:
+      213: 6883493198027379490
+    second: coin_tears_player_22
+  - first:
+      213: 8464492191691912519
+    second: coin_tears_player_23
+  - first:
+      213: -5085830950231101076
+    second: coin_tears_player_24
+  - first:
+      213: -8781037664991450880
+    second: coin_tears_player_25
+  - first:
+      213: -5832829236358982957
+    second: coin_tears_player_26
+  - first:
+      213: 3970704745278234703
+    second: coin_tears_player_27
+  - first:
+      213: 5665816386594191731
+    second: coin_tears_player_28
+  - first:
+      213: 8727104193273728373
+    second: coin_tears_player_29
+  - first:
+      213: -3735401728384535777
+    second: coin_tears_player_30
+  - first:
+      213: 7639527454399989657
+    second: coin_tears_player_31
+  - first:
+      213: -2873325210827874856
+    second: coin_tears_player_32
+  - first:
+      213: -6759390908464303339
+    second: coin_tears_player_33
+  - first:
+      213: -6808127549402235169
+    second: coin_tears_player_34
+  - first:
+      213: -3140200967699827294
+    second: coin_tears_player_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coin_tears_player_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 170
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baef9b9b170fbb0e0800000000000000
+      internalID: -2252942817330856277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 170
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bb6b41ba0f6c030800000000000000
+      internalID: 3514761176786844453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 170
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0c72b839c481380800000000000000
+      internalID: -9000359658721394499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 171
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d1c9fea20b94910800000000000000
+      internalID: 1822181222703177047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 171
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d67b8dde7c50ad0800000000000000
+      internalID: -2736561374200631941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 172
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a3c3adaf4fd5b30800000000000000
+      internalID: 4277844579312220742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 137
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb3bc3e3012df3d0800000000000000
+      internalID: -3171342262008595521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_7
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 137
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2025bccd2ea416ea0800000000000000
+      internalID: -5881337300141780478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 138
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bb71d50fc0e2d20800000000000000
+      internalID: 3255553807128968006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_9
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 139
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17d6f286509bd320800000000000000
+      internalID: 2583817512465913629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 140
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369e5da529ad170c0800000000000000
+      internalID: -4579639023935035037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 141
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c269652dccc472f0800000000000000
+      internalID: -975930037764529468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 103
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b328720ab867f6740800000000000000
+      internalID: 5147463241167241787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 104
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c069bba1bed6a7580800000000000000
+      internalID: -8828623262973192692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 105
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84da33b19a4ab6200800000000000000
+      internalID: 174414056796695880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 106
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964f6f5b63c3f4e70800000000000000
+      internalID: 9101559577617822825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_16
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 107
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7386bd46b951af310800000000000000
+      internalID: 1439486788054509623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_17
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 108
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126b55f1c6a8d0c00800000000000000
+      internalID: 868502500139185697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 70
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f730b3be000fce0800000000000000
+      internalID: -1373596876040601699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 71
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f49729c117f4cc60800000000000000
+      internalID: 7837660907292824823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 72
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1969da8d5578913a0800000000000000
+      internalID: -6694170568332306799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_21
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 73
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21de9a401a8c7260800000000000000
+      internalID: 7096698915405091116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 74
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2235d32e794178f50800000000000000
+      internalID: 6883493198027379490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_23
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 75
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7453dd13dcae77570800000000000000
+      internalID: 8464492191691912519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61b9c752bf7b69b0800000000000000
+      internalID: -5085830950231101076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 37
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009ebd284cc732680800000000000000
+      internalID: -8781037664991450880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 38
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d25f4396b0ad0fa0800000000000000
+      internalID: -5832829236358982957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 39
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40644a9de6ca1730800000000000000
+      internalID: 3970704745278234703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 41
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379b88d1cf501ae40800000000000000
+      internalID: 5665816386594191731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_29
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 42
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d07ed8607ec1970800000000000000
+      internalID: 8727104193273728373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1372464bef292cc0800000000000000
+      internalID: -3735401728384535777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_31
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9970b5b6ebd050a60800000000000000
+      internalID: 7639527454399989657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_32
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 4
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd1e6cb1f5ef18d0800000000000000
+      internalID: -2873325210827874856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_33
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 5
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513faf218c1d132a0800000000000000
+      internalID: -6759390908464303339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_34
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 8
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde3458901ca481a0800000000000000
+      internalID: -6808127549402235169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_tears_player_35
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 10
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5f9ec7bd3cb64d0800000000000000
+      internalID: -3140200967699827294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      coin_tears_player_0: -2252942817330856277
+      coin_tears_player_1: 3514761176786844453
+      coin_tears_player_10: -4579639023935035037
+      coin_tears_player_11: -975930037764529468
+      coin_tears_player_12: 5147463241167241787
+      coin_tears_player_13: -8828623262973192692
+      coin_tears_player_14: 174414056796695880
+      coin_tears_player_15: 9101559577617822825
+      coin_tears_player_16: 1439486788054509623
+      coin_tears_player_17: 868502500139185697
+      coin_tears_player_18: -1373596876040601699
+      coin_tears_player_19: 7837660907292824823
+      coin_tears_player_2: -9000359658721394499
+      coin_tears_player_20: -6694170568332306799
+      coin_tears_player_21: 7096698915405091116
+      coin_tears_player_22: 6883493198027379490
+      coin_tears_player_23: 8464492191691912519
+      coin_tears_player_24: -5085830950231101076
+      coin_tears_player_25: -8781037664991450880
+      coin_tears_player_26: -5832829236358982957
+      coin_tears_player_27: 3970704745278234703
+      coin_tears_player_28: 5665816386594191731
+      coin_tears_player_29: 8727104193273728373
+      coin_tears_player_3: 1822181222703177047
+      coin_tears_player_30: -3735401728384535777
+      coin_tears_player_31: 7639527454399989657
+      coin_tears_player_32: -2873325210827874856
+      coin_tears_player_33: -6759390908464303339
+      coin_tears_player_34: -6808127549402235169
+      coin_tears_player_35: -3140200967699827294
+      coin_tears_player_4: -2736561374200631941
+      coin_tears_player_5: 4277844579312220742
+      coin_tears_player_6: -3171342262008595521
+      coin_tears_player_7: -5881337300141780478
+      coin_tears_player_8: 3255553807128968006
+      coin_tears_player_9: 2583817512465913629
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
