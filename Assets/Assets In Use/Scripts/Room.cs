@@ -90,17 +90,17 @@ public class Room : MonoBehaviour
             }
         }
     }
-
+    private const float DoorInset = 0.3f; // Bu değeri değiştir
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
-    {
-        var currentCell = cell.cellList[0];
-        var half = RoomManager.instance.RoomInnerHalfSize;
+{
+    var currentCell = cell.cellList[0];
+    var half = RoomManager.instance.RoomInnerHalfSize;
 
-        TryPlaceDoor(currentCell, new Vector2(0, half.y), EdgeDirection.Up, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(0, -half.y), EdgeDirection.Down, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(-half.x, 0), EdgeDirection.Left, floorplan, cellList, cell);
-        TryPlaceDoor(currentCell, new Vector2(half.x, 0), EdgeDirection.Right, floorplan, cellList, cell);
-    }
+    TryPlaceDoor(currentCell, new Vector2(0, half.y - DoorInset), EdgeDirection.Up, floorplan, cellList, cell);
+    TryPlaceDoor(currentCell, new Vector2(0, -half.y + DoorInset), EdgeDirection.Down, floorplan, cellList, cell);
+    TryPlaceDoor(currentCell, new Vector2(-half.x + DoorInset, 0), EdgeDirection.Left, floorplan, cellList, cell);
+    TryPlaceDoor(currentCell, new Vector2(half.x - DoorInset, 0), EdgeDirection.Right, floorplan, cellList, cell);
+}
 
     public void SetupOneByTwo(Cell cell, int[] floorplan, List<Cell> cellList)
     {

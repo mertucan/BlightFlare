@@ -1,0 +1,1057 @@
+fileFormatVersion: 2
+guid: eef43535cd68a2342b247de5e4e96cfc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3544468311287071549
+    second: Duke_of_Flies_0
+  - first:
+      213: 6533027573665774723
+    second: Duke_of_Flies_1
+  - first:
+      213: -1967412805191434447
+    second: Duke_of_Flies_2
+  - first:
+      213: 2658845733168381487
+    second: Duke_of_Flies_3
+  - first:
+      213: 8084874874358074371
+    second: Duke_of_Flies_4
+  - first:
+      213: -2448300078894962785
+    second: Duke_of_Flies_5
+  - first:
+      213: 7786592956685523908
+    second: Duke_of_Flies_6
+  - first:
+      213: 4414716014123073369
+    second: Duke_of_Flies_7
+  - first:
+      213: -6348393494314543922
+    second: Duke_of_Flies_8
+  - first:
+      213: -7545183468924512264
+    second: Duke_of_Flies_9
+  - first:
+      213: -1766378442138228493
+    second: Duke_of_Flies_10
+  - first:
+      213: 7657139617773876600
+    second: Duke_of_Flies_11
+  - first:
+      213: 5943538695774908574
+    second: Duke_of_Flies_12
+  - first:
+      213: 5325436450344638756
+    second: Duke_of_Flies_13
+  - first:
+      213: 5361870297566539930
+    second: Duke_of_Flies_14
+  - first:
+      213: -3335679239158671146
+    second: Duke_of_Flies_15
+  - first:
+      213: -3893721299782992909
+    second: Duke_of_Flies_16
+  - first:
+      213: -8150382044919226126
+    second: Duke_of_Flies_17
+  - first:
+      213: 8287119675489681184
+    second: Duke_of_Flies_18
+  - first:
+      213: 6505611607792877971
+    second: Duke_of_Flies_19
+  - first:
+      213: 9213060328990410896
+    second: Duke_of_Flies_20
+  - first:
+      213: -3141056137777595520
+    second: Duke_of_Flies_21
+  - first:
+      213: -2712421876369760192
+    second: Duke_of_Flies_22
+  - first:
+      213: -8616068756825181307
+    second: Duke_of_Flies_23
+  - first:
+      213: 1050315125332815566
+    second: Duke_of_Flies_24
+  - first:
+      213: 1355726301706105497
+    second: Duke_of_Flies_25
+  - first:
+      213: -6046331403237575388
+    second: Duke_of_Flies_26
+  - first:
+      213: 3625485922912643724
+    second: Duke_of_Flies_27
+  - first:
+      213: 2991546233077125366
+    second: Duke_of_Flies_28
+  - first:
+      213: -2007911776591831220
+    second: Duke_of_Flies_29
+  - first:
+      213: -6212401390204078009
+    second: Duke_of_Flies_30
+  - first:
+      213: -7824914634281731243
+    second: Duke_of_Flies_31
+  - first:
+      213: 7598652966618764293
+    second: Duke_of_Flies_32
+  - first:
+      213: -2630170860370823251
+    second: Duke_of_Flies_33
+  - first:
+      213: 629524525681001070
+    second: Duke_of_Flies_34
+  - first:
+      213: -292031543552005045
+    second: Duke_of_Flies_35
+  - first:
+      213: 6675552048081020611
+    second: Duke_of_Flies_36
+  - first:
+      213: -1120646464142332111
+    second: Duke_of_Flies_37
+  - first:
+      213: 959298564718137588
+    second: Duke_of_Flies_38
+  - first:
+      213: 752524674356188503
+    second: Duke_of_Flies_39
+  - first:
+      213: 3764839620241227275
+    second: Duke_of_Flies_40
+  - first:
+      213: -2569280008944774450
+    second: Duke_of_Flies_41
+  - first:
+      213: -1145767773364935657
+    second: Duke_of_Flies_42
+  - first:
+      213: -5952529975213367027
+    second: Duke_of_Flies_43
+  - first:
+      213: 5418429232976937400
+    second: Duke_of_Flies_44
+  - first:
+      213: 3924176759750221928
+    second: Duke_of_Flies_45
+  - first:
+      213: 7682656251106786470
+    second: Duke_of_Flies_46
+  - first:
+      213: -7217739639688749250
+    second: Duke_of_Flies_47
+  - first:
+      213: -6027935175691369775
+    second: Duke_of_Flies_48
+  - first:
+      213: -4796760928760512413
+    second: Duke_of_Flies_49
+  - first:
+      213: 7439973354709037902
+    second: Duke_of_Flies_50
+  - first:
+      213: 7018211170998820821
+    second: Duke_of_Flies_51
+  - first:
+      213: 8158281206086984866
+    second: Duke_of_Flies_52
+  - first:
+      213: 6967308978205360460
+    second: Duke_of_Flies_53
+  - first:
+      213: 6307074084936418707
+    second: Duke_of_Flies_54
+  - first:
+      213: -5480872980068905549
+    second: Duke_of_Flies_55
+  - first:
+      213: 5152582473731845280
+    second: Duke_of_Flies_56
+  - first:
+      213: -7327526108529250931
+    second: Duke_of_Flies_57
+  - first:
+      213: 4631122868426496029
+    second: Duke_of_Flies_58
+  - first:
+      213: 2739089720286480931
+    second: Duke_of_Flies_59
+  - first:
+      213: -4586063094382672833
+    second: Duke_of_Flies_60
+  - first:
+      213: 4935456440863276173
+    second: Duke_of_Flies_61
+  - first:
+      213: 9131655006641407089
+    second: Duke_of_Flies_62
+  - first:
+      213: -6656499714018057456
+    second: Duke_of_Flies_63
+  - first:
+      213: -2207037866416450792
+    second: Duke_of_Flies_64
+  - first:
+      213: 8765207821823129036
+    second: Duke_of_Flies_65
+  - first:
+      213: 4225632640333065603
+    second: Duke_of_Flies_66
+  - first:
+      213: -1701482268506985847
+    second: Duke_of_Flies_67
+  - first:
+      213: 1346707211210575312
+    second: Duke_of_Flies_68
+  - first:
+      213: -4447182660201063068
+    second: Duke_of_Flies_69
+  - first:
+      213: -8524360882195261232
+    second: Duke_of_Flies_70
+  - first:
+      213: 275449764358529363
+    second: Duke_of_Flies_71
+  - first:
+      213: 1665162458377902718
+    second: Duke_of_Flies_72
+  - first:
+      213: -3773522059254446540
+    second: Duke_of_Flies_73
+  - first:
+      213: 1268158525444382495
+    second: Duke_of_Flies_74
+  - first:
+      213: -7459387227083145294
+    second: Duke_of_Flies_75
+  - first:
+      213: -7737470837631034304
+    second: Duke_of_Flies_76
+  - first:
+      213: 7441915757294216721
+    second: Duke_of_Flies_77
+  - first:
+      213: 3877071612336988853
+    second: Duke_of_Flies_78
+  - first:
+      213: -8200404728469163837
+    second: Duke_of_Flies_79
+  - first:
+      213: 7274718826567849876
+    second: Duke_of_Flies_80
+  - first:
+      213: 3671915033527185238
+    second: Duke_of_Flies_81
+  - first:
+      213: -8138734321855967496
+    second: Duke_of_Flies_82
+  - first:
+      213: 409795937930519156
+    second: Duke_of_Flies_83
+  - first:
+      213: 1943281571945084388
+    second: Duke_of_Flies_84
+  - first:
+      213: 8845284197399760501
+    second: Duke_of_Flies_85
+  - first:
+      213: 2197606525144928476
+    second: Duke_of_Flies_86
+  - first:
+      213: -2715721444190639245
+    second: Duke_of_Flies_87
+  - first:
+      213: 3247436817294380394
+    second: Duke_of_Flies_88
+  - first:
+      213: 6873155113373113593
+    second: Duke_of_Flies_89
+  - first:
+      213: 4451731101194959655
+    second: Duke_of_Flies_90
+  - first:
+      213: -3435565768197749136
+    second: Duke_of_Flies_91
+  - first:
+      213: -3884119989841570041
+    second: Duke_of_Flies_92
+  - first:
+      213: 962249172782144416
+    second: Duke_of_Flies_93
+  - first:
+      213: -2784300537855954212
+    second: Duke_of_Flies_94
+  - first:
+      213: 7164144856059332691
+    second: Duke_of_Flies_95
+  - first:
+      213: 1279125933266402691
+    second: Duke_of_Flies_96
+  - first:
+      213: -5239606047735912461
+    second: Duke_of_Flies_97
+  - first:
+      213: -8939253238317172094
+    second: Duke_of_Flies_98
+  - first:
+      213: 2881895541895896207
+    second: Duke_of_Flies_99
+  - first:
+      213: -1134359862961382807
+    second: Duke_of_Flies_100
+  - first:
+      213: -8254248753015034552
+    second: Duke_of_Flies_101
+  - first:
+      213: -8306031773227974742
+    second: Duke_of_Flies_102
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Duke_of_Flies_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 517
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97a7e5cc04e50ed0800000000000000
+      internalID: -2448300078894962785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 516
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb9cc9f9098f0c60800000000000000
+      internalID: 7786592956685523908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 518
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7da917c9f1a4790800000000000000
+      internalID: -7545183468924512264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 517
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f861716a209c77e0800000000000000
+      internalID: -1766378442138228493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 453
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42995b87c30c7e940800000000000000
+      internalID: 5325436450344638756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 453
+        width: 68
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90fb2290a0396a40800000000000000
+      internalID: 5361870297566539930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_17
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 454
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f02ed476b604ee80800000000000000
+      internalID: -8150382044919226126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_18
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 454
+        width: 68
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f76b41073c10370800000000000000
+      internalID: 8287119675489681184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_39
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 322
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75597bb4431817a00800000000000000
+      internalID: 752524674356188503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_40
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 321
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e7bc800b56f3430800000000000000
+      internalID: 3764839620241227275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 315
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01ea80868d546da0800000000000000
+      internalID: -5952529975213367027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_44
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 316
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1ce28eda0223b40800000000000000
+      internalID: 5418429232976937400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_47
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 258
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f9817f90075db90800000000000000
+      internalID: -7217739639688749250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_48
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 258
+        width: 68
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d285d325e8785ca0800000000000000
+      internalID: -6027935175691369775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_51
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 253
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df101e30e1b56160800000000000000
+      internalID: 7018211170998820821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_52
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 254
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a46f825889083170800000000000000
+      internalID: 8158281206086984866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_75
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 129
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf7f97a6deea7890800000000000000
+      internalID: -7459387227083145294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_76
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 130
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cde0f944bfe9490800000000000000
+      internalID: -7737470837631034304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_79
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 119
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c07929d85f423e80800000000000000
+      internalID: -8200404728469163837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_80
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 120
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4975c6aca3ef4f460800000000000000
+      internalID: 7274718826567849876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_83
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 67
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4722fbefb33efa500800000000000000
+      internalID: 409795937930519156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_84
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 68
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e579523b4ce7fa10800000000000000
+      internalID: 1943281571945084388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_87
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 57
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b2b1a2cb1df4ad0800000000000000
+      internalID: -2715721444190639245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duke_of_Flies_88
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 58
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d4b556496311d20800000000000000
+      internalID: 3247436817294380394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 010c7e472dde574429cc8867246c4728
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Duke_of_Flies_0: -3544468311287071549
+      Duke_of_Flies_1: 6533027573665774723
+      Duke_of_Flies_10: -1766378442138228493
+      Duke_of_Flies_100: -1134359862961382807
+      Duke_of_Flies_101: -8254248753015034552
+      Duke_of_Flies_102: -8306031773227974742
+      Duke_of_Flies_11: 7657139617773876600
+      Duke_of_Flies_12: 5943538695774908574
+      Duke_of_Flies_13: 5325436450344638756
+      Duke_of_Flies_14: 5361870297566539930
+      Duke_of_Flies_15: -3335679239158671146
+      Duke_of_Flies_16: -3893721299782992909
+      Duke_of_Flies_17: -8150382044919226126
+      Duke_of_Flies_18: 8287119675489681184
+      Duke_of_Flies_19: 6505611607792877971
+      Duke_of_Flies_2: -1967412805191434447
+      Duke_of_Flies_20: 9213060328990410896
+      Duke_of_Flies_21: -3141056137777595520
+      Duke_of_Flies_22: -2712421876369760192
+      Duke_of_Flies_23: -8616068756825181307
+      Duke_of_Flies_24: 1050315125332815566
+      Duke_of_Flies_25: 1355726301706105497
+      Duke_of_Flies_26: -6046331403237575388
+      Duke_of_Flies_27: 3625485922912643724
+      Duke_of_Flies_28: 2991546233077125366
+      Duke_of_Flies_29: -2007911776591831220
+      Duke_of_Flies_3: 2658845733168381487
+      Duke_of_Flies_30: -6212401390204078009
+      Duke_of_Flies_31: -7824914634281731243
+      Duke_of_Flies_32: 7598652966618764293
+      Duke_of_Flies_33: -2630170860370823251
+      Duke_of_Flies_34: 629524525681001070
+      Duke_of_Flies_35: -292031543552005045
+      Duke_of_Flies_36: 6675552048081020611
+      Duke_of_Flies_37: -1120646464142332111
+      Duke_of_Flies_38: 959298564718137588
+      Duke_of_Flies_39: 752524674356188503
+      Duke_of_Flies_4: 8084874874358074371
+      Duke_of_Flies_40: 3764839620241227275
+      Duke_of_Flies_41: -2569280008944774450
+      Duke_of_Flies_42: -1145767773364935657
+      Duke_of_Flies_43: -5952529975213367027
+      Duke_of_Flies_44: 5418429232976937400
+      Duke_of_Flies_45: 3924176759750221928
+      Duke_of_Flies_46: 7682656251106786470
+      Duke_of_Flies_47: -7217739639688749250
+      Duke_of_Flies_48: -6027935175691369775
+      Duke_of_Flies_49: -4796760928760512413
+      Duke_of_Flies_5: -2448300078894962785
+      Duke_of_Flies_50: 7439973354709037902
+      Duke_of_Flies_51: 7018211170998820821
+      Duke_of_Flies_52: 8158281206086984866
+      Duke_of_Flies_53: 6967308978205360460
+      Duke_of_Flies_54: 6307074084936418707
+      Duke_of_Flies_55: -5480872980068905549
+      Duke_of_Flies_56: 5152582473731845280
+      Duke_of_Flies_57: -7327526108529250931
+      Duke_of_Flies_58: 4631122868426496029
+      Duke_of_Flies_59: 2739089720286480931
+      Duke_of_Flies_6: 7786592956685523908
+      Duke_of_Flies_60: -4586063094382672833
+      Duke_of_Flies_61: 4935456440863276173
+      Duke_of_Flies_62: 9131655006641407089
+      Duke_of_Flies_63: -6656499714018057456
+      Duke_of_Flies_64: -2207037866416450792
+      Duke_of_Flies_65: 8765207821823129036
+      Duke_of_Flies_66: 4225632640333065603
+      Duke_of_Flies_67: -1701482268506985847
+      Duke_of_Flies_68: 1346707211210575312
+      Duke_of_Flies_69: -4447182660201063068
+      Duke_of_Flies_7: 4414716014123073369
+      Duke_of_Flies_70: -8524360882195261232
+      Duke_of_Flies_71: 275449764358529363
+      Duke_of_Flies_72: 1665162458377902718
+      Duke_of_Flies_73: -3773522059254446540
+      Duke_of_Flies_74: 1268158525444382495
+      Duke_of_Flies_75: -7459387227083145294
+      Duke_of_Flies_76: -7737470837631034304
+      Duke_of_Flies_77: 7441915757294216721
+      Duke_of_Flies_78: 3877071612336988853
+      Duke_of_Flies_79: -8200404728469163837
+      Duke_of_Flies_8: -6348393494314543922
+      Duke_of_Flies_80: 7274718826567849876
+      Duke_of_Flies_81: 3671915033527185238
+      Duke_of_Flies_82: -8138734321855967496
+      Duke_of_Flies_83: 409795937930519156
+      Duke_of_Flies_84: 1943281571945084388
+      Duke_of_Flies_85: 8845284197399760501
+      Duke_of_Flies_86: 2197606525144928476
+      Duke_of_Flies_87: -2715721444190639245
+      Duke_of_Flies_88: 3247436817294380394
+      Duke_of_Flies_89: 6873155113373113593
+      Duke_of_Flies_9: -7545183468924512264
+      Duke_of_Flies_90: 4451731101194959655
+      Duke_of_Flies_91: -3435565768197749136
+      Duke_of_Flies_92: -3884119989841570041
+      Duke_of_Flies_93: 962249172782144416
+      Duke_of_Flies_94: -2784300537855954212
+      Duke_of_Flies_95: 7164144856059332691
+      Duke_of_Flies_96: 1279125933266402691
+      Duke_of_Flies_97: -5239606047735912461
+      Duke_of_Flies_98: -8939253238317172094
+      Duke_of_Flies_99: 2881895541895896207
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

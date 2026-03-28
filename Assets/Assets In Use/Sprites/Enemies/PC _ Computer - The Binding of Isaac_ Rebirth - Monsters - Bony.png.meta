@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 4ceea0243eba5de489bcc5c014c98897
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9214113784592936917
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_0
+  - first:
+      213: -5025937604497545976
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_1
+  - first:
+      213: -6390571319507109339
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_2
+  - first:
+      213: -2562016500527269407
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_3
+  - first:
+      213: 3568956813059173902
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_4
+  - first:
+      213: 6371809854053710745
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_5
+  - first:
+      213: -281323683925941319
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_6
+  - first:
+      213: -3684041551534680082
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_7
+  - first:
+      213: -7189114997925870295
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_8
+  - first:
+      213: -5885556700724859214
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_9
+  - first:
+      213: -8040982918787257578
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_10
+  - first:
+      213: 1525965159864400952
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_11
+  - first:
+      213: 4886646437526553835
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_12
+  - first:
+      213: -4660825109406910276
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_13
+  - first:
+      213: 97124816090047469
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_14
+  - first:
+      213: -343826653379617487
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_15
+  - first:
+      213: 3250435402515146650
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_16
+  - first:
+      213: 2522292464449307714
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_17
+  - first:
+      213: 4333388245246428892
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_18
+  - first:
+      213: 4682857367181959476
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_19
+  - first:
+      213: 1099167946312667745
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_20
+  - first:
+      213: -5399002593867882866
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_21
+  - first:
+      213: 4008886060116047369
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df21ba2bab1fdf70800000000000000
+      internalID: 9214113784592936917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 118
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80565a49068404ab0800000000000000
+      internalID: -5025937604497545976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 120
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52abafc5e312057a0800000000000000
+      internalID: -6390571319507109339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9f1612193e17cd0800000000000000
+      internalID: -2562016500527269407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 95
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e2a15ff4b778130800000000000000
+      internalID: 3568956813059173902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 95
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b743f8d473d6850800000000000000
+      internalID: 6371809854053710745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 93
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3a0b89999881cf0800000000000000
+      internalID: -281323683925941319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 94
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee71ffe4ab7afdcc0800000000000000
+      internalID: -3684041551534680082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_8
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 95
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925023bbff12b3c90800000000000000
+      internalID: -7189114997925870295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 95
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2beefdb1d5d425ea0800000000000000
+      internalID: -5885556700724859214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 95
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ba3b863a0b86090800000000000000
+      internalID: -8040982918787257578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83cf65d5a315d2510800000000000000
+      internalID: 1525965159864400952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 62
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4c2bb5b0bd0d340800000000000000
+      internalID: 4886646437526553835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb87491d14c615fb0800000000000000
+      internalID: -4660825109406910276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de32ce1718e095100800000000000000
+      internalID: 97124816090047469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 31
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d1ffcfa7b7a3bf0800000000000000
+      internalID: -343826653379617487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 31
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97e44ce6cddb1d20800000000000000
+      internalID: 3250435402515146650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_17
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 31
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244452bf1abf00320800000000000000
+      internalID: 2522292464449307714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 31
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd644c756a9432c30800000000000000
+      internalID: 4333388245246428892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 31
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431a3b0f6f9dcf040800000000000000
+      internalID: 4682857367181959476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_20
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 31
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162567c6c67014f00800000000000000
+      internalID: 1099167946312667745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e971bfeb3e215b0800000000000000
+      internalID: -5399002593867882866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_22
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9067b36b1ac62a730800000000000000
+      internalID: 4008886060116047369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_0: 9214113784592936917
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_1: -5025937604497545976
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_10: -8040982918787257578
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_11: 1525965159864400952
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_12: 4886646437526553835
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_13: -4660825109406910276
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_14: 97124816090047469
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_15: -343826653379617487
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_16: 3250435402515146650
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_17: 2522292464449307714
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_18: 4333388245246428892
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_19: 4682857367181959476
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_2: -6390571319507109339
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_20: 1099167946312667745
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_21: -5399002593867882866
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_22: 4008886060116047369
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_3: -2562016500527269407
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_4: 3568956813059173902
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_5: 6371809854053710745
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_6: -281323683925941319
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_7: -3684041551534680082
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_8: -7189114997925870295
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Bony_9: -5885556700724859214
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -175,6 +175,7 @@ MonoBehaviour:
   rooms:
   - {fileID: 11400000, guid: 0e6e0cff00231f54daff5f002aade875, type: 2}
   - {fileID: 11400000, guid: a2574c5776ded1a4a8783e639aa091da, type: 2}
+  - {fileID: 11400000, guid: c32c8becf4f7d0744b45d8e512c34d28, type: 2}
 --- !u!1 &1274070243
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +256,8 @@ MonoBehaviour:
   rooms:
   - {fileID: 11400000, guid: a2574c5776ded1a4a8783e639aa091da, type: 2}
   - {fileID: 11400000, guid: 0e6e0cff00231f54daff5f002aade875, type: 2}
+  - {fileID: 11400000, guid: c32c8becf4f7d0744b45d8e512c34d28, type: 2}
+  - {fileID: 11400000, guid: 3bc7561c09daeb1499d5032d5bc68fe4, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
