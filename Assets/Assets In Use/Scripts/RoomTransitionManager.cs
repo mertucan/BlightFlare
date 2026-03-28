@@ -83,6 +83,8 @@ public class RoomTransitionManager : MonoBehaviour
 
     public void TransitionToRoom(int targetCellIndex, EdgeDirection fromDirection)
     {
+        Debug.Log($"TransitionToRoom çağrıldı. target: {targetCellIndex}, isTransitioning: {isTransitioning}, roomPositions içinde: {roomPositions.ContainsKey(targetCellIndex)}");
+        
         if (isTransitioning) return;
         if (!roomPositions.ContainsKey(targetCellIndex)) return;
 
@@ -237,15 +239,30 @@ public class RoomTransitionManager : MonoBehaviour
         if (!clampPlayerToRoom || player == null) return;
         if (!roomPositions.ContainsKey(currentRoomCellIndex)) return;
 
+        // Player herhangi bir Door trigger'ı içindeyse clamp yapma
+        var playerCol = player.GetComponent<Collider2D>();
+        if (playerCol != null)
+        {
+            var results = new List<Collider2D>();
+            playerCol.Overlap(ContactFilter2D.noFilter, results);
+            foreach (var col in results)
+            {
+                if (col != null && col.CompareTag("Door"))
+                    return;
+            }
+        }
+
         Vector2 center = roomPositions[currentRoomCellIndex];
         RoomShape shape = roomShapeMap.ContainsKey(currentRoomCellIndex)
             ? roomShapeMap[currentRoomCellIndex]
             : RoomShape.OneByOne;
         Vector2 halfSize = GetRoomHalfSize(shape);
 
+        // Clamp sınırlarını biraz genişlet ki kapılara ulaşılabilsin
+        float margin = 1.5f;
         Vector3 pos = player.position;
-        pos.x = Mathf.Clamp(pos.x, center.x - halfSize.x, center.x + halfSize.x);
-        pos.y = Mathf.Clamp(pos.y, center.y - halfSize.y, center.y + halfSize.y);
+        pos.x = Mathf.Clamp(pos.x, center.x - halfSize.x - margin, center.x + halfSize.x + margin);
+        pos.y = Mathf.Clamp(pos.y, center.y - halfSize.y - margin, center.y + halfSize.y + margin);
         player.position = pos;
     }
 

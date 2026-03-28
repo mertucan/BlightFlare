@@ -90,7 +90,7 @@ public class Room : MonoBehaviour
             }
         }
     }
-    private const float DoorInset = 0.3f; // Bu değeri değiştir
+    private const float DoorInset = 0.2f; // Bu değeri değiştir
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
     {
         var currentCell = cell.cellList[0];
@@ -128,6 +128,18 @@ public class Room : MonoBehaviour
         TryPlaceDoor(cellB, new Vector2(5f, 1.5f), EdgeDirection.Up, floorplan, cellList, cell);
         TryPlaceDoor(cellB, new Vector2(5f, -1.5f), EdgeDirection.Down, floorplan, cellList, cell);
         TryPlaceDoor(cellB, new Vector2(9.75f, 0f), EdgeDirection.Right, floorplan, cellList, cell);
+    }
+
+    private EdgeDirection GetOppositeDirection(EdgeDirection dir)
+    {
+        return dir switch
+        {
+            EdgeDirection.Up    => EdgeDirection.Down,
+            EdgeDirection.Down  => EdgeDirection.Up,
+            EdgeDirection.Left  => EdgeDirection.Right,
+            EdgeDirection.Right => EdgeDirection.Left,
+            _                   => dir
+        };
     }
 
     public void SetupTwoByTwo(Cell cell, int[] floorplan, List<Cell> cellList)
@@ -238,9 +250,11 @@ public class Room : MonoBehaviour
 
     private RoomType GetDominantRoomType(RoomType a, RoomType b)
     {
-        // Regular en düşük öncelik, diğerleri kendi sprite'larını göstermeli
-        if (a != RoomType.Regular) return a;
-        if (b != RoomType.Regular) return b;
+        // Kapı sprite'ı olmayan/olmaması gereken tipler
+        bool IsNeutral(RoomType t) => t == RoomType.Regular || t == RoomType.Start || t == RoomType.Boss;
+
+        if (!IsNeutral(a)) return a;
+        if (!IsNeutral(b)) return b;
         return RoomType.Regular;
     }
 
@@ -248,34 +262,29 @@ public class Room : MonoBehaviour
     {
         var doorTypes = GetDoorOptions(roomType);
 
-        switch (direction)
+        Sprite chosenSprite = direction switch
         {
-            case EdgeDirection.Up:
-                door.SetDoorSprite(doorTypes.upDoor);
-                break;
+            EdgeDirection.Up    => doorTypes.upDoor,
+            EdgeDirection.Down  => doorTypes.downDoor,
+            EdgeDirection.Left  => doorTypes.leftDoor,
+            EdgeDirection.Right => doorTypes.rightDoor,
+            _                   => null
+        };
 
-            case EdgeDirection.Down:
-                door.SetDoorSprite(doorTypes.downDoor);
-                break;
+        if (chosenSprite == null)
+            Debug.LogWarning($"Sprite null! RoomType: {roomType}, Direction: {direction}");
 
-            case EdgeDirection.Left:
-                door.SetDoorSprite(doorTypes.leftDoor);
-                break;
-
-            case EdgeDirection.Right:
-                door.SetDoorSprite(doorTypes.rightDoor);
-                break;
-
-            default:
-                break;
-        }
+        door.SetDoorSprite(chosenSprite);
     }
 
     private DoorScriptable GetDoorOptions(RoomType roomType)
     {
         var door = RoomManager.instance.doors.FirstOrDefault(x => x.roomType == roomType);
         if (door == null)
+        {
+            Debug.LogWarning($"DoorScriptable bulunamadı: {roomType}, Regular'a fallback yapıldı.");
             door = RoomManager.instance.doors.FirstOrDefault(x => x.roomType == RoomType.Regular);
+        }
         return door;
     }
 
@@ -429,6 +438,11 @@ public class Room : MonoBehaviour
     {
         var colliders = GetComponentsInChildren<Collider2D>();
         foreach (var col in colliders)
+        {
+            // Kapıları ve trigger'ları atlat, sadece duvarları aç/kapat
+            if (col.gameObject.CompareTag("Door")) continue;
+            if (col.isTrigger) continue;
             col.enabled = active;
+        }
     }
 }

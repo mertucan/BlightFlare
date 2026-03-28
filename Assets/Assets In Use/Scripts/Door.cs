@@ -42,16 +42,18 @@ public class Door : MonoBehaviour
         var kb = Keyboard.current;
         if (kb == null) return;
 
-        bool pressingCorrectKey = direction switch
+        bool pressingAnyValidKey = direction switch
         {
-            EdgeDirection.Up => kb[Key.W].isPressed || kb[Key.UpArrow].isPressed,
-            EdgeDirection.Down => kb[Key.S].isPressed || kb[Key.DownArrow].isPressed,
-            EdgeDirection.Left => kb[Key.A].isPressed || kb[Key.LeftArrow].isPressed,
-            EdgeDirection.Right => kb[Key.D].isPressed || kb[Key.RightArrow].isPressed,
+            EdgeDirection.Up or EdgeDirection.Down =>
+                kb[Key.W].isPressed || kb[Key.UpArrow].isPressed ||
+                kb[Key.S].isPressed || kb[Key.DownArrow].isPressed,
+            EdgeDirection.Left or EdgeDirection.Right =>
+                kb[Key.A].isPressed || kb[Key.LeftArrow].isPressed ||
+                kb[Key.D].isPressed || kb[Key.RightArrow].isPressed,
             _ => false
         };
 
-        if (!pressingCorrectKey) return;
+        if (!pressingAnyValidKey) return;
 
         RoomTransitionManager.instance?.TransitionToRoom(targetCellIndex, direction);
     }

@@ -213,4 +213,11 @@ public class DOF_AI : MonoBehaviour
                 return clip.length;
         return 1f;
     }
+
+    public void SetActive(bool active)
+    {
+        isActivated = active;
+        if (!active && rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
 }

@@ -78,9 +78,10 @@ public class BombController : MonoBehaviour
         if (length <= 0) return;
         position += direction;
 
-        if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
+        Collider2D hit = Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask);
+        if (hit != null)
         {
-            ClearDestructible(position);
+            ClearDestructible(hit);  // hit'i direkt gönderiyoruz
             return;
         }
 
@@ -92,16 +93,22 @@ public class BombController : MonoBehaviour
         Explode(position, direction, length - 1);
     }
 
-    private void ClearDestructible(Vector2 position)
+    private void ClearDestructible(Collider2D hit)
     {
-        Vector3Int cell = destructibleTiles.WorldToCell(position);
+        // Önce tilemap tile kontrolü
+        Vector3Int cell = destructibleTiles.WorldToCell(hit.transform.position);
         TileBase tile = destructibleTiles.GetTile(cell);
-
         if (tile != null)
         {
-            Destructible destructible = Instantiate(destructiblePrefab, position, Quaternion.identity);
-            destructible.Explode(); // ← Bunu ekle
             destructibleTiles.SetTile(cell, null);
+            return;
+        }
+
+        // Prefab taş kontrolü
+        Destructible destructible = hit.GetComponent<Destructible>();
+        if (destructible != null)
+        {
+            destructible.Explode();
         }
     }
 

@@ -198,6 +198,7 @@ MonoBehaviour:
   - Wall
   - Door
   - Player
+  - Destructible
   enemyLayerName: Enemy
   ignoreBabyProjectile: 1
   ignorePooterProjectile: 1

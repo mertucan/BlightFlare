@@ -652,6 +652,13 @@ public class BabyAI : MonoBehaviour
         isActivated        = true;
     }
 
+    public void SetActive(bool active)
+    {
+        isActivated = active;
+        if (!active && rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
+
     #endregion
 
 #if UNITY_EDITOR

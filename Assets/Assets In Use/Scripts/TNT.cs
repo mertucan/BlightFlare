@@ -97,6 +97,18 @@ public class TNT : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isExploding) return;
+
+        // Destructible tag'li objeleri yok et
+        if (other.CompareTag("Destructible"))
+        {
+            Destructible destructible = other.GetComponent<Destructible>();
+            if (destructible != null)
+            {
+                destructible.Explode();
+            }
+            return;
+        }
+
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
 
         if (ignoreBabyProjectile   && other.GetComponent<BabyProjectile>()   != null) return;

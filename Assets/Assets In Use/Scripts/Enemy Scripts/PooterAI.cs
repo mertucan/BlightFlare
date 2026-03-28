@@ -417,4 +417,11 @@ public class PooterAI : MonoBehaviour
         transform.position = spawnPosition;
         isActivated = true;
     }
+
+    public void SetActive(bool active)
+    {
+        isActivated = active;
+        if (!active && rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
 }
