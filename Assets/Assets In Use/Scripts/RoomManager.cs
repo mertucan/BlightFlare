@@ -81,6 +81,11 @@ public class RoomManager : MonoBehaviour
                 RoomTransitionManager.instance.RegisterMultiCellRoom(
                     currentCell.cellList, convertedPosition, currentCell.roomShape, spawnedRoom);
             }
+
+            if (foundRoom == null)
+                Debug.LogWarning($"Eşleşen room bulunamadı! Type: {currentCell.roomType}, Shape: {currentCell.roomShape}");
+            else
+                Debug.Log($"Eşleşti: {foundRoom.name} → Type: {currentCell.roomType}");
         }
 
         if (RoomTransitionManager.instance != null)

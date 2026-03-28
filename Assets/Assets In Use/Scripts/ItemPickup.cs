@@ -16,15 +16,27 @@ public class ItemPickup : MonoBehaviour
         switch (type)
         {
             case ItemType.ExtraBomb:
-                player.GetComponent<BombController>().AddBomb();
+                if (player.TryGetComponent<BombController>(out BombController bombController))
+                {
+                    bombController.AddBomb();
+                }
                 break;
 
             case ItemType.BlastRadius:
-                player.GetComponent<BombController>().explosionRadius++;
+                if (player.TryGetComponent<BombController>(out BombController bombRadiusController))
+                {
+                    bombRadiusController.explosionRadius++;
+                }
                 break;
 
             case ItemType.SpeedIncrease:
-                player.GetComponent<MovementController>().speed++;
+                // Burayı IsaacMovement olarak güncelledik!
+                if (player.TryGetComponent<IsaacMovement>(out IsaacMovement movementController))
+                {
+                    // Not: Eğer IsaacMovement içindeki hız değişkeninizin adı 'speed' değilse 
+                    // (örneğin 'moveSpeed' ise), aşağıdaki 'speed' yazısını da ona göre değiştirmelisiniz.
+                    movementController.speed++; 
+                }
                 break;
         }
 

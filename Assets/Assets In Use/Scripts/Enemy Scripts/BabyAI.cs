@@ -118,7 +118,7 @@ public class BabyAI : MonoBehaviour
 
     private Vector2 wanderTarget;
     private float   wanderChangeTimer;
-
+    private bool isActivated = false;
     // ═══════════════════════════════════════════
     #region Unity Callbacks
 
@@ -148,6 +148,7 @@ public class BabyAI : MonoBehaviour
     private void Update()
     {
         if (isDead) return;
+        if (!isActivated) return;
         if (player == null) TryFindPlayer();
         if (player == null) return;
 
@@ -172,6 +173,7 @@ public class BabyAI : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDead || rb == null) return;
+        if (!isActivated) { rb.linearVelocity = Vector2.zero; return; }
         if (player == null) { rb.linearVelocity = Vector2.zero; return; }
 
         Vector2 toPlayer = (Vector2)player.position - rb.position;
@@ -636,6 +638,18 @@ public class BabyAI : MonoBehaviour
     {
         GameObject go = GameObject.FindGameObjectWithTag(playerTag);
         if (go != null) player = go.transform;
+    }
+
+    public void Activate()
+    {
+        isActivated = true;
+    }
+
+    public void Activate(Vector2 spawnPosition)
+    {
+        rb.position        = spawnPosition;
+        transform.position = spawnPosition;
+        isActivated        = true;
     }
 
     #endregion

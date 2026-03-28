@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4707ec6bcb84fed428e044aa80a5e3e1, type: 3}
+  m_Sprite: {fileID: 6391095552842310465, guid: f3e694b611e4a8541ba4c61a3a1bdb05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,17 +128,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.019821167, y: -0.01981926}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.87890625, y: 0.85546875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7423401, y: 0.7819786}
   m_EdgeRadius: 0
 --- !u!114 &2762397480869906387
 MonoBehaviour:
@@ -152,18 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fd141a6cdb32d40876d52672683416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
-  idleSprite: {fileID: 21300000, guid: 4707ec6bcb84fed428e044aa80a5e3e1, type: 3}
+  idleSprite: {fileID: 6391095552842310465, guid: f3e694b611e4a8541ba4c61a3a1bdb05, type: 3}
+  idleAnimationSprites:
+  - {fileID: 6391095552842310465, guid: f3e694b611e4a8541ba4c61a3a1bdb05, type: 3}
   animationSprites:
-  - {fileID: 440004201269631737, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: 6428096427953393541, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: 8603011222089355523, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: 2274631966701665123, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: -5598041726246172800, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: -5070355926835817348, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
-  - {fileID: -5028786312047504514, guid: 8482cc10c037d2846a26e45ca1a26d7b, type: 3}
+  - {fileID: 6391095552842310465, guid: f3e694b611e4a8541ba4c61a3a1bdb05, type: 3}
+  - {fileID: -35790877300267166, guid: fc05116233b9bba4db3bab84e22f2ffa, type: 3}
   animationTime: 0.16666667
+  idleAnimationTime: 0.5
   loop: 0
-  idle: 0
+  idle: 1
 --- !u!114 &1102907941782833353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Destructible
   destructionTime: 1
-  itemSpawnChance: 0.2
+  itemSpawnChance: 0.4
   spawnableItems:
   - {fileID: 7266525813312433372, guid: 29385601a56e22b4faac44675679793e, type: 3}
   - {fileID: 5681734161811793622, guid: f832a23e62e95c4449daa85b028d43d5, type: 3}

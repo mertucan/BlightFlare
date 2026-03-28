@@ -105,12 +105,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -6682810932111838233, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -3413229030585691211, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &1507305476386270651
@@ -238,8 +239,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.35, y: -0.25}
-  m_Radius: 0.2760129
+  m_Offset: {x: 0.35, y: -0.36}
+  m_Radius: 0.21491915
 --- !u!114 &3362211361538513942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,12 +376,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -2869675492435608873, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &2541861280917294178
@@ -554,7 +556,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -3651131777281703602, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -562,7 +565,7 @@ MonoBehaviour:
   - {fileID: 4728631874199098210, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -5234069021470304434, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &5263817891255508304
@@ -736,7 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -7031906294235522722, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -749,7 +753,7 @@ MonoBehaviour:
   - {fileID: -9130040218360136460, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -4122591957134236972, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &6547175326304144966
@@ -971,7 +975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -7031906294235522722, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -984,7 +989,7 @@ MonoBehaviour:
   - {fileID: -9130040218360136460, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -4122591957134236972, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &8269777808088763968
@@ -1092,7 +1097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: 8872296099691320452, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -1100,7 +1106,7 @@ MonoBehaviour:
   - {fileID: -8291179784509663396, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: 983367615562425362, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &8536825282414228714
@@ -1208,12 +1214,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: 7320452250680286590, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -1387014017998403522, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1
 --- !u!1 &8803791365019410367
@@ -1353,11 +1360,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites: []
+  idleAnimationSprites:
+  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationSprites:
   - {fileID: -3619280217375235411, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -6259973333095471497, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   animationTime: 0.25
-  idleAnimationTime: 0.5
+  idleAnimationTime: 10
   loop: 1
   idle: 1

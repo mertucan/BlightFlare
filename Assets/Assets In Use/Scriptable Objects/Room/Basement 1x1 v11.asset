@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbb95e612cc46004cb25f53976e832d8, type: 3}
-  m_Name: Bloody Basement 1x1 1
+  m_Name: Basement 1x1 v11
   m_EditorClassIdentifier: 
   roomType: 0
   roomShape: 0
   occupiedTiles: 00000000
   roomDesignPrefabs:
-  - {fileID: 3822254578997936868, guid: c20abf9bb973c634cbc4d4d2e4ce4408, type: 3}
+  - {fileID: 3822254578997936868, guid: f76b26ded099bb74fb8fd07f20268a6d, type: 3}

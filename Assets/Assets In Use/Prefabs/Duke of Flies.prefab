@@ -197,7 +197,7 @@ MonoBehaviour:
   moveSpeed: 2
   pooterPrefab: {fileID: 2585854878084996225, guid: 28f4f4b8cdec28040b879205ffc041e6, type: 3}
   firePoint: {fileID: 3309335459083729711}
-  spawnRadius: 1.5
+  spawnRadius: 1
   maxPooters: 2
   spawnCooldown: 15
   bombsToKill: 5
@@ -207,6 +207,7 @@ MonoBehaviour:
   deathEffectPrefab: {fileID: 0}
   spriteRenderer: {fileID: 7170731224489788779}
   playerTag: Player
+  deathActivateObjects: []
 --- !u!1 &6763808362857353971
 GameObject:
   m_ObjectHideFlags: 0

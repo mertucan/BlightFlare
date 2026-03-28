@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Door
   - Enemy
+  - TNT
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Background
   - Minimap
   - Enemy
-  - 
+  - TNT
   - 
   - 
   - 

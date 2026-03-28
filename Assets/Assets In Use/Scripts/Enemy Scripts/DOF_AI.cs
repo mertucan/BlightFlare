@@ -24,6 +24,9 @@ public class DOF_AI : MonoBehaviour
 
     [Header("Isaac Temas Hasarı")]
     [SerializeField] private string playerTag = "Player";
+    [Header("Ölünce Aktif Olacaklar")]
+    [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
+    [SerializeField] private Collider2D tunnelCollider2D;
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -57,13 +60,11 @@ public class DOF_AI : MonoBehaviour
         float angle = diagonals[Random.Range(0, diagonals.Length)] * Mathf.Deg2Rad;
         moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
         spawnTimer = spawnCooldown;
-
-        isActivated = true;
     }
 
     private void Update()
     {
-        if (isAttacking || isDead) return;
+        if (!isActivated ||isAttacking || isDead) return;
 
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0f)
@@ -78,7 +79,7 @@ public class DOF_AI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isAttacking || isDead) return;
+        if (!isActivated || isAttacking || isDead) return;
         rb.linearVelocity = moveDirection * moveSpeed;
     }
 
@@ -151,6 +152,9 @@ public class DOF_AI : MonoBehaviour
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+
+        if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = true;
+        if (tunnelCollider2D != null)     tunnelCollider2D.enabled = true;
 
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;

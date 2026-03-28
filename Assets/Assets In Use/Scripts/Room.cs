@@ -92,15 +92,15 @@ public class Room : MonoBehaviour
     }
     private const float DoorInset = 0.3f; // Bu değeri değiştir
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
-{
-    var currentCell = cell.cellList[0];
-    var half = RoomManager.instance.RoomInnerHalfSize;
+    {
+        var currentCell = cell.cellList[0];
+        var half = RoomManager.instance.RoomInnerHalfSize;
 
-    TryPlaceDoor(currentCell, new Vector2(0, half.y - DoorInset), EdgeDirection.Up, floorplan, cellList, cell);
-    TryPlaceDoor(currentCell, new Vector2(0, -half.y + DoorInset), EdgeDirection.Down, floorplan, cellList, cell);
-    TryPlaceDoor(currentCell, new Vector2(-half.x + DoorInset, 0), EdgeDirection.Left, floorplan, cellList, cell);
-    TryPlaceDoor(currentCell, new Vector2(half.x - DoorInset, 0), EdgeDirection.Right, floorplan, cellList, cell);
-}
+        TryPlaceDoor(currentCell, new Vector2(0, half.y - DoorInset), EdgeDirection.Up, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(0, -half.y + DoorInset), EdgeDirection.Down, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(-half.x + DoorInset, 0), EdgeDirection.Left, floorplan, cellList, cell);
+        TryPlaceDoor(currentCell, new Vector2(half.x - DoorInset, 0), EdgeDirection.Right, floorplan, cellList, cell);
+    }
 
     public void SetupOneByTwo(Cell cell, int[] floorplan, List<Cell> cellList)
     {
@@ -210,28 +210,38 @@ public class Room : MonoBehaviour
         }
     }
 
-    private void TryPlaceDoor(int fromIndex, Vector2 positionOffset, EdgeDirection direction, int[] floorplan, List<Cell> cellList, Cell currentCell)
+    private void TryPlaceDoor(int fromIndex, Vector2 positionOffset, EdgeDirection direction, 
+    int[] floorplan, List<Cell> cellList, Cell currentCell)
     {
         int neighbourIndex = fromIndex + GetOffset(direction);
 
         if (neighbourIndex < 0 || neighbourIndex >= floorplan.Length) return;
-
         if (floorplan[neighbourIndex] != 1) return;
 
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
 
+        if (foundCell == null) return; // null guard eklendi
         if (foundCell.roomType == RoomType.Secret) return;
 
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
-
         door.gameObject.tag = "Door";
-
         door.transform.localPosition = new Vector3(positionOffset.x, positionOffset.y, 0f);
 
-        SetupDoor(door, direction, currentCell.roomType == RoomType.Regular ? foundCell.roomType : currentCell.roomType);
+        // İki odanın tipini karşılaştır, hangisi daha "özel" ise onu kullan
+        RoomType displayType = GetDominantRoomType(currentCell.roomType, foundCell.roomType);
+
+        SetupDoor(door, direction, displayType);
         door.SetupTransition(direction, neighbourIndex);
 
         placedDoorInfos.Add((positionOffset, direction));
+    }
+
+    private RoomType GetDominantRoomType(RoomType a, RoomType b)
+    {
+        // Regular en düşük öncelik, diğerleri kendi sprite'larını göstermeli
+        if (a != RoomType.Regular) return a;
+        if (b != RoomType.Regular) return b;
+        return RoomType.Regular;
     }
 
     private void SetupDoor(Door door, EdgeDirection direction, RoomType roomType)
@@ -263,7 +273,10 @@ public class Room : MonoBehaviour
 
     private DoorScriptable GetDoorOptions(RoomType roomType)
     {
-        return RoomManager.instance.doors.FirstOrDefault(x => x.roomType == roomType);
+        var door = RoomManager.instance.doors.FirstOrDefault(x => x.roomType == roomType);
+        if (door == null)
+            door = RoomManager.instance.doors.FirstOrDefault(x => x.roomType == RoomType.Regular);
+        return door;
     }
 
     private int GetOffset(EdgeDirection direction)

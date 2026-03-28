@@ -65,6 +65,7 @@ public class PooterAI : MonoBehaviour
     public bool isAttacking;
     public bool isDead;
     public bool projectileFiredByAnimationEvent;
+    private bool isActivated = false;
 
     [Header("Debug Logs")]
     public bool enableDebugLogs = true;
@@ -109,6 +110,7 @@ public class PooterAI : MonoBehaviour
 
     private void Update()
     {
+        if (!isActivated) return;
         if (isDead) return;
 
         if (player == null) TryFindPlayer();
@@ -138,6 +140,7 @@ public class PooterAI : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDead || rb == null) return;
+        if (!isActivated) { rb.linearVelocity = Vector2.zero; return; }
         if (player == null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -401,5 +404,17 @@ public class PooterAI : MonoBehaviour
     {
         if (!enableDebugLogs) return;
         Debug.LogWarning($"[PooterAI:{name}] {message}");
+    }
+
+    public void Activate()
+    {
+        isActivated = true;
+    }
+
+    public void Activate(Vector2 spawnPosition)
+    {
+        rb.position = spawnPosition;
+        transform.position = spawnPosition;
+        isActivated = true;
     }
 }

@@ -116,6 +116,10 @@ public class MapGenerator : MonoBehaviour
 
         VisitCell(45);
 
+        var startCell = spawnedCells.FirstOrDefault(c => c.index == 45);
+        if (startCell != null)
+            startCell.SetRoomType(RoomType.Start);
+
         GenerateDungeon();
     }
 

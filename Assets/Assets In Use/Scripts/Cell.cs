@@ -9,7 +9,8 @@ public enum RoomType
     Item,
     Shop,
     Boss,
-    Secret
+    Secret,
+    Start
 }
 
 public enum RoomShape
