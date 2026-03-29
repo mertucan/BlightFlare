@@ -91,10 +91,10 @@ public class RoomTransitionManager : MonoBehaviour
         isTransitioning = true;
         StartCoroutine(TransitionRoutine(targetCellIndex, fromDirection));
     }
-
     private IEnumerator TransitionRoutine(int targetCellIndex, EdgeDirection fromDirection)
     {
         SetPlayerMovement(false);
+        DestroyAllProjectiles();
 
         var rb = player != null ? player.GetComponent<Rigidbody2D>() : null;
         RigidbodyType2D prevBodyType = RigidbodyType2D.Dynamic;
@@ -172,6 +172,14 @@ public class RoomTransitionManager : MonoBehaviour
 
         yield return new WaitForSeconds(transitionCooldown);
         isTransitioning = false;
+    }
+    private void DestroyAllProjectiles()
+    {
+        foreach (var p in FindObjectsByType<BabyProjectile>(FindObjectsSortMode.None))
+            Destroy(p.gameObject);
+
+        foreach (var p in FindObjectsByType<PooterProjectile>(FindObjectsSortMode.None))
+            Destroy(p.gameObject);
     }
 
     private void TeleportPlayer(Vector2 position)

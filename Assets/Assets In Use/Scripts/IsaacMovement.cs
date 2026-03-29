@@ -114,10 +114,18 @@ public class IsaacMovement : MonoBehaviour
             DeathSequence();
         }
     }
-
+    private bool isDead = false;
     public void DeathSequence()
     {
+        if (isDead) return; // ← çift çağrıyı engeller
+        isDead = true;
+
         enabled = false;
+
+        // Collider'ı kapat — ölü karaktere bir daha çarpmasın
+        var col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
         var bombCtrl = GetComponent<BombController>();
         if (bombCtrl != null) bombCtrl.enabled = false;
 
@@ -128,7 +136,6 @@ public class IsaacMovement : MonoBehaviour
 
         spriteDeathBody.enabled = true;
 
-        // 💀 Ölüm sesi
         PlayDeathSound();
     }
 
