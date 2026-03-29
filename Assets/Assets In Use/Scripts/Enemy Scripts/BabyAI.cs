@@ -120,6 +120,17 @@ public class BabyAI : MonoBehaviour
     private float   wanderChangeTimer;
     private bool isActivated = false;
     // ═══════════════════════════════════════════
+    // ─────────────────────────────────────────────
+    // SOUNDS
+    // ─────────────────────────────────────────────
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] teleportClips;
+    public int selectedTeleportClip = 0;
+    public AudioClip[] deathClips;
+    public int selectedDeathClip = 0;
+    public AudioClip[] attackClips;
+    public int selectedAttackClip = 0;
     #region Unity Callbacks
 
     private void Awake()
@@ -379,6 +390,7 @@ public class BabyAI : MonoBehaviour
     {
         isAttacking = true;
         SetAttackAnim(true);
+        PlayAttackSound(); // ← buraya
         projectileFiredByAnimationEvent = false;
 
         float elapsed = 0f;
@@ -477,6 +489,8 @@ public class BabyAI : MonoBehaviour
         transform.position = (Vector3)newPos;
         rb.linearVelocity  = Vector2.zero;
         smoothDampVelocity = Vector2.zero;
+
+        PlayTeleportSound(); // ← buraya
 
         // ── FADE IN: Şeffaf → Beyaz ──────────────────
         t = 0f;
@@ -601,6 +615,17 @@ public class BabyAI : MonoBehaviour
             rb.simulated      = false;
         }
 
+        // Sesi ayrı bir objeye taşı, sonra sil
+        if (audioSource != null && deathClips != null && 
+            selectedDeathClip < deathClips.Length && 
+            deathClips[selectedDeathClip] != null)
+        {
+            AudioSource.PlayClipAtPoint(
+                deathClips[selectedDeathClip], 
+                transform.position
+            );
+        }
+
         Destroy(gameObject);
     }
 
@@ -614,6 +639,16 @@ public class BabyAI : MonoBehaviour
 
     // ═══════════════════════════════════════════
     #region Helpers
+    private void PlaySound(AudioClip[] clips, int index)
+    {
+        if (audioSource == null || clips == null || clips.Length == 0) return;
+        if (index < 0 || index >= clips.Length) return;
+        audioSource.PlayOneShot(clips[index]);
+    }
+
+    public void PlayTeleportSound()  => PlaySound(teleportClips, selectedTeleportClip);
+    public void PlayDeathSound()     => PlaySound(deathClips,    selectedDeathClip);
+    public void PlayAttackSound()    => PlaySound(attackClips,   selectedAttackClip);
 
     private void SetSpriteColor(Color c)
     {

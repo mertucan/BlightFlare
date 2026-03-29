@@ -190,6 +190,9 @@ public class DOF_AI : MonoBehaviour
 
         GameObject pooter = Instantiate(pooterPrefab, spawnPos, Quaternion.identity);
         activePooters.Add(pooter);
+
+        var pooterAI = pooter.GetComponent<PooterAI>(); // kendi script adınla değiştir
+        if (pooterAI != null) pooterAI.Activate();
     }
 
     // Pozisyonsuz Activate — DOF zaten doğru yerdeyse (prefab olarak room içine koyulmuşsa)

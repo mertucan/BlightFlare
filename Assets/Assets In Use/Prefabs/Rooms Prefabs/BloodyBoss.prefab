@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   playerTag: Player
+  nextSceneName: End
 --- !u!1 &3822254578997936868
 GameObject:
   m_ObjectHideFlags: 0

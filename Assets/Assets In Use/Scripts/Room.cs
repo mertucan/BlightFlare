@@ -251,7 +251,7 @@ public class Room : MonoBehaviour
     private RoomType GetDominantRoomType(RoomType a, RoomType b)
     {
         // Kapı sprite'ı olmayan/olmaması gereken tipler
-        bool IsNeutral(RoomType t) => t == RoomType.Regular || t == RoomType.Start || t == RoomType.Boss;
+        bool IsNeutral(RoomType t) => t == RoomType.Regular || t == RoomType.Start;
 
         if (!IsNeutral(a)) return a;
         if (!IsNeutral(b)) return b;

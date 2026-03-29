@@ -81,6 +81,10 @@ public class PooterAI : MonoBehaviour
     private Color originalColor = Color.white;
     private string lastMoveState;
     private float nextStateLogTime;
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] attackClips;
+    public int selectedAttackClip = 0;
 
     private void Awake()
     {
@@ -211,6 +215,7 @@ public class PooterAI : MonoBehaviour
         isAttacking = true;
         projectileFiredByAnimationEvent = false;
         SetAttackAnim(true);
+        PlayAttackSound();
 
         float timeout = Mathf.Max(attackWindupSeconds, attackEventTimeoutSeconds);
         float elapsed = 0f;
@@ -423,5 +428,12 @@ public class PooterAI : MonoBehaviour
         isActivated = active;
         if (!active && rb != null)
             rb.linearVelocity = Vector2.zero;
+    }
+
+    public void PlayAttackSound()
+    {
+        if (audioSource == null || attackClips == null || attackClips.Length == 0) return;
+        if (selectedAttackClip < 0 || selectedAttackClip >= attackClips.Length) return;
+        audioSource.PlayOneShot(attackClips[selectedAttackClip]);
     }
 }

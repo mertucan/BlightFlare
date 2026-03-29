@@ -22,6 +22,11 @@ public class BombController : MonoBehaviour
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
 
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] explosionClips; // İstediğin kadar ses ekle
+    public int selectedClipIndex = 0;  // Inspector'dan hangisinin çalacağını seç
+
     private void OnEnable()
     {
         bombsRemaining = bombAmount;
@@ -49,16 +54,10 @@ public class BombController : MonoBehaviour
 
         yield return new WaitForSeconds(bombFuseTime);
 
-        Vector2 explosionPos = Vector2.zero;
+        Vector2 explosionPos = bomb != null ? bomb.transform.position : (Vector2)spawnPos;
 
-        if (bomb != null) 
-        {
-            explosionPos = bomb.transform.position;
-        }
-        else
-        {
-            explosionPos = spawnPos;
-        }
+        // 💥 Patlama anında ses çal
+        PlayExplosionSound();
 
         Explosion explosion = Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         explosion.SetActiveRenderer(explosion.start);
@@ -73,6 +72,14 @@ public class BombController : MonoBehaviour
         bombsRemaining++;
     }
 
+    private void PlayExplosionSound()
+    {
+        if (audioSource == null || explosionClips.Length == 0) return;
+        if (selectedClipIndex < 0 || selectedClipIndex >= explosionClips.Length) return;
+
+        audioSource.PlayOneShot(explosionClips[selectedClipIndex]);
+    }
+
     private void Explode(Vector2 position, Vector2 direction, int length)
     {
         if (length <= 0) return;
@@ -81,7 +88,7 @@ public class BombController : MonoBehaviour
         Collider2D hit = Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask);
         if (hit != null)
         {
-            ClearDestructible(hit);  // hit'i direkt gönderiyoruz
+            ClearDestructible(hit);
             return;
         }
 
@@ -95,7 +102,6 @@ public class BombController : MonoBehaviour
 
     private void ClearDestructible(Collider2D hit)
     {
-        // Önce tilemap tile kontrolü
         Vector3Int cell = destructibleTiles.WorldToCell(hit.transform.position);
         TileBase tile = destructibleTiles.GetTile(cell);
         if (tile != null)
@@ -104,7 +110,6 @@ public class BombController : MonoBehaviour
             return;
         }
 
-        // Prefab taş kontrolü
         Destructible destructible = hit.GetComponent<Destructible>();
         if (destructible != null)
         {

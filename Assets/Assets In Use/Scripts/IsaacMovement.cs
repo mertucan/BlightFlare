@@ -30,6 +30,11 @@ public class IsaacMovement : MonoBehaviour
     [Header("Death Sprites")]
     public AnimatedSpriteRenderer spriteDeathBody;
 
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] deathClips;
+    public int selectedDeathClipIndex = 0;
+
     private DirectionSprites activeSprites;
 
     private void Awake()
@@ -122,5 +127,16 @@ public class IsaacMovement : MonoBehaviour
         SetDirectionVisible(spritesRight, false);
 
         spriteDeathBody.enabled = true;
+
+        // 💀 Ölüm sesi
+        PlayDeathSound();
+    }
+
+    private void PlayDeathSound()
+    {
+        if (audioSource == null || deathClips.Length == 0) return;
+        if (selectedDeathClipIndex < 0 || selectedDeathClipIndex >= deathClips.Length) return;
+
+        audioSource.PlayOneShot(deathClips[selectedDeathClipIndex]);
     }
 }

@@ -11,6 +11,10 @@ public class ItemPickup : MonoBehaviour
 
     public ItemType type;
 
+    [Header("Sounds")]
+    public AudioClip[] pickupClips;
+    public int selectedPickupClip = 0;
+
     private void OnItemPickup(GameObject player)
     {
         switch (type)
@@ -30,14 +34,25 @@ public class ItemPickup : MonoBehaviour
                 break;
 
             case ItemType.SpeedIncrease:
-                // Burayı IsaacMovement olarak güncelledik!
                 if (player.TryGetComponent<IsaacMovement>(out IsaacMovement movementController))
                 {
-                    // Not: Eğer IsaacMovement içindeki hız değişkeninizin adı 'speed' değilse 
-                    // (örneğin 'moveSpeed' ise), aşağıdaki 'speed' yazısını da ona göre değiştirmelisiniz.
-                    movementController.speed++; 
+                    movementController.speed++;
                 }
                 break;
+        }
+
+        if (pickupClips != null && pickupClips.Length > 0 &&
+            selectedPickupClip < pickupClips.Length &&
+            pickupClips[selectedPickupClip] != null)
+        {
+            Debug.Log("Ses çalınıyor: " + pickupClips[selectedPickupClip].name);
+            AudioSource.PlayClipAtPoint(pickupClips[selectedPickupClip], transform.position);
+        }
+        else
+        {
+            Debug.LogWarning("Ses çalamadı! Clips: " + 
+                (pickupClips == null ? "null" : pickupClips.Length.ToString()) + 
+                " Index: " + selectedPickupClip);
         }
 
         Destroy(gameObject);
@@ -45,9 +60,9 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
             OnItemPickup(other.gameObject);
         }
     }
-
 }

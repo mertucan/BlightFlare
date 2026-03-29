@@ -9,9 +9,7 @@ public class TNT : MonoBehaviour
     [Header("Explosion Animation")]
     public Sprite[] explosionFrames;
     public float explosionFPS = 12f;
-    [Tooltip("Animasyon bittikten sonra kalan sprite. Boş bırakılırsa obje tamamen yok edilir.")]
     public Sprite afterExplosionSprite;
-    [Tooltip("Kalıntı sprite kaç saniye sonra yok edilsin? 0 = sonsuza kadar kalır.")]
     public float afterExplosionLifetime = 0f;
 
     [Header("Explosion")]
@@ -19,15 +17,16 @@ public class TNT : MonoBehaviour
     public float explosionTriggerDuration = 0.45f;
     public GameObject explosionVFXPrefab;
 
+    [Header("Sounds")]
+    public AudioClip[] explosionClips;
+    public int selectedExplosionClip = 0;
+
     [Header("Push Settings")]
     public string pushableByTag = "Player";
-    [Tooltip("Bu hızın üstüne çıkamaz (uçmayı önler).")]
     public float maxPushSpeed = 2.5f;
-    [Tooltip("Yüksek değer = hızlı yavaşlama. 4-6 arası önerilir.")]
     public float drag = 5f;
 
     [Header("Blocking Tags")]
-    [Tooltip("TNT bu tag'lere sahip objelerin üstünden geçemez.")]
     public string[] blockingTags = { "Wall", "Door", "Player" };
 
     [Header("Enemy Layer")]
@@ -40,13 +39,11 @@ public class TNT : MonoBehaviour
     [Header("Debug")]
     public bool showExplosionGizmo = true;
 
-    // ── Internal ──────────────────────────────────────────────────
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D    rb;
     private Collider2D     col;
     private bool           isExploding;
 
-    // ─────────────────────────────────────────────────────────────
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -55,18 +52,15 @@ public class TNT : MonoBehaviour
 
         rb.gravityScale           = 0f;
         rb.freezeRotation         = true;
-        rb.linearDamping          = drag;   // ← Sürtünme: itti bırak, hızla durur
+        rb.linearDamping          = drag;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-
-        // Düşman layer'ı TNT layer'ıyla çarpışmasın (üstünden kayar)
         int enemyLayer = LayerMask.NameToLayer(enemyLayerName);
         int tntLayer   = gameObject.layer;
         if (enemyLayer >= 0 && tntLayer >= 0)
             Physics2D.IgnoreLayerCollision(enemyLayer, tntLayer, true);
     }
 
-    // ─── Hız Tavanı ──────────────────────────────────────────────
     private void FixedUpdate()
     {
         if (isExploding) return;
@@ -75,9 +69,6 @@ public class TNT : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * maxPushSpeed;
     }
 
-    // ─── Çarpışma Filtresi ────────────────────────────────────────
-    // blockingTags listesindekiler → normal fizik (geçilemez)
-    // Geri kalan her şey → ignore (üstünden kayılır)
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isExploding) return;
@@ -86,26 +77,21 @@ public class TNT : MonoBehaviour
 
         foreach (string blocking in blockingTags)
         {
-            if (hitTag == blocking) return; // Geçme, fizik çalışsın
+            if (hitTag == blocking) return;
         }
 
-        // Listedeki tag değilse → ignore et (düşmanlar, nötr objeler vs.)
         Physics2D.IgnoreCollision(col, collision.collider, true);
     }
 
-    // ─── Patlama Tetikleyici ─────────────────────────────────────
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isExploding) return;
 
-        // Destructible tag'li objeleri yok et
         if (other.CompareTag("Destructible"))
         {
             Destructible destructible = other.GetComponent<Destructible>();
             if (destructible != null)
-            {
                 destructible.Explode();
-            }
             return;
         }
 
@@ -117,13 +103,23 @@ public class TNT : MonoBehaviour
         StartCoroutine(ExplodeRoutine());
     }
 
-    // ─── Patlama Sekansı ─────────────────────────────────────────
     private IEnumerator ExplodeRoutine()
     {
         isExploding       = true;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType       = RigidbodyType2D.Static;
         col.enabled       = false;
+
+        // 💥 Patlama sesi — obje silinse de çalar
+        if (explosionClips != null && explosionClips.Length > 0 &&
+            selectedExplosionClip < explosionClips.Length &&
+            explosionClips[selectedExplosionClip] != null)
+        {
+            AudioSource.PlayClipAtPoint(
+                explosionClips[selectedExplosionClip], 
+                transform.position
+            );
+        }
 
         SpawnExplosionTrigger(transform.position);
 
@@ -133,25 +129,21 @@ public class TNT : MonoBehaviour
         if (explosionFrames != null && explosionFrames.Length > 0)
             yield return StartCoroutine(PlayExplosionAnimation());
 
-        // ─── Kalıntı ─────────────────────────────────────────────────
         if (afterExplosionSprite != null)
         {
-            rb.simulated = false;   // Rigidbody2D'yi fiziğden çıkarır
-            col.enabled  = false;   // Collider'ı kapatır
-
+            rb.simulated          = false;
+            col.enabled           = false;
             spriteRenderer.sprite = afterExplosionSprite;
 
             if (afterExplosionLifetime > 0f)
                 Destroy(gameObject, afterExplosionLifetime);
 
-            // Coroutine burada biter, Destroy(gameObject) çağrılmaz
             yield break;
         }
 
         Destroy(gameObject);
     }
 
-    // ─── Patlama Sprite Animasyonu ────────────────────────────────
     private IEnumerator PlayExplosionAnimation()
     {
         if (spriteRenderer == null || explosionFrames == null || explosionFrames.Length == 0)
@@ -167,7 +159,6 @@ public class TNT : MonoBehaviour
         }
     }
 
-    // ─── Explosion Trigger ────────────────────────────────────────
     private void SpawnExplosionTrigger(Vector2 position)
     {
         GameObject expGO         = new GameObject("TNT_ExplosionTrigger");
@@ -185,7 +176,6 @@ public class TNT : MonoBehaviour
         Destroy(expGO, explosionTriggerDuration);
     }
 
-    // ─── Editor Gizmo ────────────────────────────────────────────
     private void OnDrawGizmosSelected()
     {
         if (!showExplosionGizmo) return;
