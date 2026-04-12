@@ -6,7 +6,7 @@ public class BabyProjectile : MonoBehaviour
 {
     [Header("Projectile Settings")]
     public float speed = 4f;
-    public int damage = 1;
+    public int damage = 1;               // half-heart birimi
     public float lifetime = 5f;
     public string projectileLayerName = "Explosion";
     public LayerMask wallLayer;
@@ -25,12 +25,12 @@ public class BabyProjectile : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
-        rb.gravityScale = 0f;
+        rb.gravityScale           = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.interpolation          = RigidbodyInterpolation2D.Interpolate;
 
         int layer = LayerMask.NameToLayer(projectileLayerName);
         if (layer >= 0) gameObject.layer = layer;
@@ -47,8 +47,8 @@ public class BabyProjectile : MonoBehaviour
     public void Initialize(Vector2 direction)
     {
         if (direction.sqrMagnitude < 0.0001f) direction = Vector2.right;
-        moveDirection = direction.normalized;
-        rb.linearVelocity = moveDirection * speed;
+        moveDirection      = direction.normalized;
+        rb.linearVelocity  = moveDirection * speed;
     }
 
     private void FixedUpdate()
@@ -61,24 +61,23 @@ public class BabyProjectile : MonoBehaviour
     {
         if (isImpacting) return;
 
-        // Oyuncuya çarptıysa hasar ver ve yok ol
         if (other.CompareTag("Player"))
         {
+            // Can sistemine hasar bildir
             IsaacMovement isaac = other.GetComponent<IsaacMovement>();
-            if (isaac != null) isaac.DeathSequence();
+            if (isaac != null) isaac.ApplyDamage(damage);
             Destroy(gameObject);
             return;
         }
 
-        // Kendi düşmanına çarpmasın
         if (other.CompareTag("Enemy") || other.GetComponent<BabyAI>() != null) return;
 
         bool wallMaskDefined = wallLayer.value != 0;
-        bool isWall = wallMaskDefined && ((wallLayer.value & (1 << other.gameObject.layer)) != 0);
+        bool isWall          = wallMaskDefined && ((wallLayer.value & (1 << other.gameObject.layer)) != 0);
         bool roomMaskDefined = roomColliderLayer.value != 0;
-        bool isRoom = roomMaskDefined && ((roomColliderLayer.value & (1 << other.gameObject.layer)) != 0);
-        bool solidHit = !other.isTrigger && !other.CompareTag("Enemy")
-                        && other.gameObject.layer != LayerMask.NameToLayer("Enemy");
+        bool isRoom          = roomMaskDefined && ((roomColliderLayer.value & (1 << other.gameObject.layer)) != 0);
+        bool solidHit        = !other.isTrigger && !other.CompareTag("Enemy")
+                               && other.gameObject.layer != LayerMask.NameToLayer("Enemy");
 
         if (isWall || isRoom || solidHit || (!wallMaskDefined && destroyOnAnyNonPlayerTriggerWhenWallMaskEmpty))
             ImpactAndDestroy();
@@ -92,9 +91,9 @@ public class BabyProjectile : MonoBehaviour
             return;
         }
 
-        isImpacting = true;
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated = false;
+        isImpacting           = true;
+        rb.linearVelocity     = Vector2.zero;
+        rb.simulated          = false;
         if (col != null) col.enabled = false;
 
         bloodAnimator.SetTrigger("Impact");

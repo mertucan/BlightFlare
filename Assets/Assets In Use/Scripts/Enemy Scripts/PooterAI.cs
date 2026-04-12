@@ -297,25 +297,17 @@ public class PooterAI : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDead) return;
-        if (collision.gameObject.CompareTag(playerTag))
-        {
-            var isaac = collision.gameObject.GetComponent<IsaacMovement>();
-            if (isaac != null) isaac.DeathSequence();
-        }
+        var isaac = collision.gameObject.GetComponent<IsaacMovement>();
+        if (isaac != null) isaac.ApplyDamage(1);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (isDead) return;
-        if (collision.gameObject.CompareTag(playerTag))
-        {
-            var isaac = collision.gameObject.GetComponent<IsaacMovement>();
-            if (isaac != null) isaac.DeathSequence();
-        }
+        var isaac = collision.gameObject.GetComponent<IsaacMovement>();
+        if (isaac != null) isaac.ApplyDamage(1);
     }
 
-    private void TakeDamage(int damage, Vector2 knockDir)
+    public void TakeDamage(int damage, Vector2 knockDir)
     {
         currentHP -= Mathf.Max(1, damage);
         if (rb != null) rb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);

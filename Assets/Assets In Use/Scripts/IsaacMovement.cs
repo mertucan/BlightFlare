@@ -107,43 +107,55 @@ public class IsaacMovement : MonoBehaviour
         sprites.head.enabled = visible;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // ─── Hasar Alma (Can sistemine yönlendirir) ───────────────────────────────
+    /// <summary>
+    /// Tüm dış sistemler (düşmanlar, bombalar, tuzaklar vb.) bu metodu çağırır.
+    /// Hasar PlayerHealth üzerinden işlenir; can sıfırlanınca DeathSequence çağrılır.
+    /// </summary>
+    public void ApplyDamage(int halfHearts = 1)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
-        {
-            DeathSequence();
-        }
+        PlayerHealth health = GetComponent<PlayerHealth>();
+        if (health != null)
+            health.TakeDamage(halfHearts);
     }
+ 
+    // ─── Ölüm Dizisi (Yalnızca PlayerHealth tarafından çağrılır) ─────────────
     private bool isDead = false;
+ 
     public void DeathSequence()
     {
-        if (isDead) return; // ← çift çağrıyı engeller
+        if (isDead) return;
         isDead = true;
-
+ 
         enabled = false;
-
-        // Collider'ı kapat — ölü karaktere bir daha çarpmasın
+ 
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
-
+ 
         var bombCtrl = GetComponent<BombController>();
         if (bombCtrl != null) bombCtrl.enabled = false;
-
+ 
         SetDirectionVisible(spritesUp,    false);
         SetDirectionVisible(spritesDown,  false);
         SetDirectionVisible(spritesLeft,  false);
         SetDirectionVisible(spritesRight, false);
-
-        spriteDeathBody.enabled = true;
-
+ 
+        if (spriteDeathBody != null) spriteDeathBody.enabled = true;
+ 
         PlayDeathSound();
     }
-
+ 
     private void PlayDeathSound()
     {
-        if (audioSource == null || deathClips.Length == 0) return;
+        if (audioSource == null || deathClips == null || deathClips.Length == 0) return;
         if (selectedDeathClipIndex < 0 || selectedDeathClipIndex >= deathClips.Length) return;
-
         audioSource.PlayOneShot(deathClips[selectedDeathClipIndex]);
+    }
+ 
+    // Explosion katmanına (kendi bombaları) çarpınca hasar al
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+            ApplyDamage(1);
     }
 }

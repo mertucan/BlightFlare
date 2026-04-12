@@ -10,7 +10,6 @@ public class BombController : MonoBehaviour
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
     public int bombAmount = 1;
-    private int bombsRemaining;
 
     [Header("Explosion")]
     public Explosion explosionPrefab;
@@ -18,18 +17,33 @@ public class BombController : MonoBehaviour
     public float explosionDuration = 1f;
     public int explosionRadius = 1;
 
+    [Header("Bob's Curse")]
+    public bool hasPoisonCloud = false;
+    public GameObject poisonCloudPrefab;
+
     [Header("Destructible")]
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
 
     [Header("Sounds")]
     public AudioSource audioSource;
-    public AudioClip[] explosionClips; // İstediğin kadar ses ekle
-    public int selectedClipIndex = 0;  // Inspector'dan hangisinin çalacağını seç
+    public AudioClip[] explosionClips;
+    public int selectedClipIndex = 0;
 
-    private void OnEnable()
+    // Kaç bomba şu an bırakılabilir (eş zamanlı limit)
+    private int bombsRemaining;
+    // Başlangıçta bir kez ayarlandı mı?
+    private bool initialized = false;
+
+    private void Start()
     {
-        bombsRemaining = bombAmount;
+        // OnEnable değil Start'ta başlatıyoruz —
+        // böylece AddBomb() ile eklenen bombalar OnEnable'da sıfırlanmıyor.
+        if (!initialized)
+        {
+            bombsRemaining = bombAmount;
+            initialized = true;
+        }
     }
 
     private void Update()
@@ -37,15 +51,14 @@ public class BombController : MonoBehaviour
         var kb = Keyboard.current;
         if (kb == null) return;
 
-        if (bombsRemaining > 0 && kb[bombKey].wasPressedThisFrame) {
+        if (bombsRemaining > 0 && kb[bombKey].wasPressedThisFrame)
             StartCoroutine(PlaceBomb());
-        }
     }
 
     private IEnumerator PlaceBomb()
     {
-        Vector3Int cell = destructibleTiles.WorldToCell(transform.position);
-        Vector3 spawnPos = destructibleTiles.GetCellCenterWorld(cell);
+        Vector3Int cell     = destructibleTiles.WorldToCell(transform.position);
+        Vector3    spawnPos = destructibleTiles.GetCellCenterWorld(cell);
 
         GameObject bomb = Instantiate(bombPrefab, spawnPos, Quaternion.identity);
         bomb.tag = "Bomb";
@@ -54,21 +67,26 @@ public class BombController : MonoBehaviour
 
         yield return new WaitForSeconds(bombFuseTime);
 
-        Vector2 explosionPos = bomb != null ? bomb.transform.position : (Vector2)spawnPos;
+        Vector2 explosionPos = bomb != null
+            ? (Vector2)bomb.transform.position
+            : (Vector2)spawnPos;
 
-        // 💥 Patlama anında ses çal
         PlayExplosionSound();
 
         Explosion explosion = Instantiate(explosionPrefab, explosionPos, Quaternion.identity);
         explosion.SetActiveRenderer(explosion.start);
         explosion.DestroyAfter(explosionDuration);
 
-        Explode(explosionPos, Vector2.up, explosionRadius);
-        Explode(explosionPos, Vector2.down, explosionRadius);
-        Explode(explosionPos, Vector2.left, explosionRadius);
+        Explode(explosionPos, Vector2.up,    explosionRadius);
+        Explode(explosionPos, Vector2.down,  explosionRadius);
+        Explode(explosionPos, Vector2.left,  explosionRadius);
         Explode(explosionPos, Vector2.right, explosionRadius);
 
         Destroy(bomb);
+
+        if (hasPoisonCloud && poisonCloudPrefab != null)
+            Instantiate(poisonCloudPrefab, explosionPos, Quaternion.identity);
+
         bombsRemaining++;
     }
 
@@ -76,7 +94,6 @@ public class BombController : MonoBehaviour
     {
         if (audioSource == null || explosionClips.Length == 0) return;
         if (selectedClipIndex < 0 || selectedClipIndex >= explosionClips.Length) return;
-
         audioSource.PlayOneShot(explosionClips[selectedClipIndex]);
     }
 
@@ -85,7 +102,9 @@ public class BombController : MonoBehaviour
         if (length <= 0) return;
         position += direction;
 
-        Collider2D hit = Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask);
+        Collider2D hit = Physics2D.OverlapBox(
+            position, Vector2.one / 2f, 0f, explosionLayerMask);
+
         if (hit != null)
         {
             ClearDestructible(hit);
@@ -103,7 +122,7 @@ public class BombController : MonoBehaviour
     private void ClearDestructible(Collider2D hit)
     {
         Vector3Int cell = destructibleTiles.WorldToCell(hit.transform.position);
-        TileBase tile = destructibleTiles.GetTile(cell);
+        TileBase   tile = destructibleTiles.GetTile(cell);
         if (tile != null)
         {
             destructibleTiles.SetTile(cell, null);
@@ -112,11 +131,12 @@ public class BombController : MonoBehaviour
 
         Destructible destructible = hit.GetComponent<Destructible>();
         if (destructible != null)
-        {
             destructible.Explode();
-        }
     }
 
+    /// <summary>
+    /// Item alınınca çağrılır. Her çağrıda +1 eş zamanlı bomba hakkı ekler.
+    /// </summary>
     public void AddBomb()
     {
         bombAmount++;

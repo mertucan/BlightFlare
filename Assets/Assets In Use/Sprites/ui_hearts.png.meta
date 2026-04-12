@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 579462e587c80024697a41ed413e4567
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -43133766990087939
+    second: ui_hearts_0
+  - first:
+      213: -2373106096299296214
+    second: ui_hearts_1
+  - first:
+      213: -5621703942636736119
+    second: ui_hearts_2
+  - first:
+      213: -7498749079062879609
+    second: ui_hearts_3
+  - first:
+      213: -6943959688062046086
+    second: ui_hearts_4
+  - first:
+      213: 4319367286232488260
+    second: ui_hearts_5
+  - first:
+      213: 4430392041011364401
+    second: ui_hearts_6
+  - first:
+      213: -2083434386970918734
+    second: ui_hearts_7
+  - first:
+      213: -4814395946957793032
+    second: ui_hearts_8
+  - first:
+      213: 2113131170491655064
+    second: ui_hearts_9
+  - first:
+      213: 1262259062330817883
+    second: ui_hearts_10
+  - first:
+      213: -6587558509024134243
+    second: ui_hearts_11
+  - first:
+      213: 3059775970559346139
+    second: ui_hearts_12
+  - first:
+      213: -6151871373297552089
+    second: ui_hearts_13
+  - first:
+      213: 4132523960109539901
+    second: ui_hearts_14
+  - first:
+      213: 5922602520244183251
+    second: ui_hearts_15
+  - first:
+      213: 797975658293802000
+    second: ui_hearts_16
+  - first:
+      213: -6505286504480978707
+    second: ui_hearts_17
+  - first:
+      213: -8664503068486286696
+    second: ui_hearts_18
+  - first:
+      213: -8453408574340740361
+    second: ui_hearts_19
+  - first:
+      213: 4651694258201230933
+    second: ui_hearts_20
+  - first:
+      213: -4273847189330811431
+    second: ui_hearts_21
+  - first:
+      213: 4323600828365149817
+    second: ui_hearts_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_hearts_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df83bb44112c66ff0800000000000000
+      internalID: -43133766990087939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_hearts_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a34c32498011fd0800000000000000
+      internalID: -2373106096299296214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_hearts_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98179ba9c02bbf1b0800000000000000
+      internalID: -5621703942636736119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_hearts_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7826ba251771fe790800000000000000
+      internalID: -7498749079062879609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_hearts_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70fd62547912af90800000000000000
+      internalID: -6943959688062046086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_hearts_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 16
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72574ba749920aaa0800000000000000
+      internalID: -6151871373297552089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c6d295e3a12f7a04984c9cb7a27db5b6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_hearts_0: -43133766990087939
+      ui_hearts_1: -2373106096299296214
+      ui_hearts_10: 1262259062330817883
+      ui_hearts_11: -6587558509024134243
+      ui_hearts_12: 3059775970559346139
+      ui_hearts_13: -6151871373297552089
+      ui_hearts_14: 4132523960109539901
+      ui_hearts_15: 5922602520244183251
+      ui_hearts_16: 797975658293802000
+      ui_hearts_17: -6505286504480978707
+      ui_hearts_18: -8664503068486286696
+      ui_hearts_19: -8453408574340740361
+      ui_hearts_2: -5621703942636736119
+      ui_hearts_20: 4651694258201230933
+      ui_hearts_21: -4273847189330811431
+      ui_hearts_22: 4323600828365149817
+      ui_hearts_3: -7498749079062879609
+      ui_hearts_4: -6943959688062046086
+      ui_hearts_5: 4319367286232488260
+      ui_hearts_6: 4430392041011364401
+      ui_hearts_7: -2083434386970918734
+      ui_hearts_8: -4814395946957793032
+      ui_hearts_9: 2113131170491655064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

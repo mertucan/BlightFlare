@@ -128,7 +128,8 @@ GameObject:
   - component: {fileID: 7792630423502160976}
   - component: {fileID: 3362211361538513942}
   - component: {fileID: 5438953930966666103}
-  m_Layer: 0
+  - component: {fileID: 1822693994676520472}
+  m_Layer: 14
   m_Name: Isaac
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -204,6 +205,8 @@ MonoBehaviour:
     m_Bits: 64
   explosionDuration: 1
   explosionRadius: 1
+  hasPoisonCloud: 0
+  poisonCloudPrefab: {fileID: 1904695668465121277, guid: bae2e2adb7f0b5e499d054e1078e4164, type: 3}
   destructibleTiles: {fileID: 0}
   destructiblePrefab: {fileID: 1102907941782833353, guid: c17bc88ab6066f24d8cec55e60179510, type: 3}
   audioSource: {fileID: 5438953930966666103}
@@ -377,6 +380,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1822693994676520472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507305476386270651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e6a73ab57d1a4a9f770af0c5c6b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHearts: 6
+  currentHearts: 6
 --- !u!1 &1763515889719855838
 GameObject:
   m_ObjectHideFlags: 0

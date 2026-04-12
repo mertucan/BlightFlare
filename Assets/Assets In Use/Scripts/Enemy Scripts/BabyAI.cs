@@ -632,7 +632,7 @@ public class BabyAI : MonoBehaviour
     private void KillPlayer(GameObject playerObj)
     {
         IsaacMovement isaac = playerObj.GetComponent<IsaacMovement>();
-        if (isaac != null) isaac.DeathSequence();
+        if (isaac != null) isaac.ApplyDamage(1);
     }
 
     #endregion

@@ -5,11 +5,10 @@ using UnityEngine;
 public class PooterProjectile : MonoBehaviour
 {
     public float speed = 4.5f;
-    public int damage = 1;
+    public int damage = 1;               // half-heart birimi
     public float lifetime = 6f;
     public string projectileLayerName = "Explosion";
     public LayerMask wallLayer;
-    [Tooltip("Room/Stage collider layer mask. Degerse duvara carpmis gibi destroy eder.")]
     public LayerMask roomColliderLayer;
     public bool destroyOnAnyNonPlayerTriggerWhenWallMaskEmpty;
     public Animator bloodAnimator;
@@ -23,21 +22,18 @@ public class PooterProjectile : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
-        rb.gravityScale = 0f;
+        rb.gravityScale           = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.interpolation          = RigidbodyInterpolation2D.Interpolate;
 
         int projectileLayer = LayerMask.NameToLayer(projectileLayerName);
         if (projectileLayer >= 0) gameObject.layer = projectileLayer;
 
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
-        if (sr != null)
-        {
-            sr.sortingOrder = 50;
-        }
+        if (sr != null) sr.sortingOrder = 50;
     }
 
     private void OnEnable()
@@ -48,7 +44,7 @@ public class PooterProjectile : MonoBehaviour
     public void Initialize(Vector2 direction)
     {
         if (direction.sqrMagnitude < 0.0001f) direction = Vector2.right;
-        moveDirection = direction.normalized;
+        moveDirection     = direction.normalized;
         rb.linearVelocity = moveDirection * speed;
     }
 
@@ -65,8 +61,7 @@ public class PooterProjectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             IsaacMovement isaac = other.GetComponent<IsaacMovement>();
-            if (isaac != null) isaac.DeathSequence();
-
+            if (isaac != null) isaac.ApplyDamage(damage);
             Destroy(gameObject);
             return;
         }
@@ -74,10 +69,11 @@ public class PooterProjectile : MonoBehaviour
         if (other.CompareTag("Enemy") || other.GetComponent<PooterAI>() != null) return;
 
         bool wallMaskDefined = wallLayer.value != 0;
-        bool isWall = wallMaskDefined && ((wallLayer.value & (1 << other.gameObject.layer)) != 0);
+        bool isWall          = wallMaskDefined && ((wallLayer.value & (1 << other.gameObject.layer)) != 0);
         bool roomMaskDefined = roomColliderLayer.value != 0;
-        bool isRoomCollider = roomMaskDefined && ((roomColliderLayer.value & (1 << other.gameObject.layer)) != 0);
-        bool solidRoomHit = !other.isTrigger && !other.CompareTag("Enemy") && other.gameObject.layer != LayerMask.NameToLayer("Enemy");
+        bool isRoomCollider  = roomMaskDefined && ((roomColliderLayer.value & (1 << other.gameObject.layer)) != 0);
+        bool solidRoomHit    = !other.isTrigger && !other.CompareTag("Enemy")
+                               && other.gameObject.layer != LayerMask.NameToLayer("Enemy");
 
         if (isWall || isRoomCollider || solidRoomHit || (!wallMaskDefined && destroyOnAnyNonPlayerTriggerWhenWallMaskEmpty))
             ImpactAndDestroy();
@@ -91,9 +87,9 @@ public class PooterProjectile : MonoBehaviour
             return;
         }
 
-        isImpacting = true;
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated = false;
+        isImpacting           = true;
+        rb.linearVelocity     = Vector2.zero;
+        rb.simulated          = false;
         if (col != null) col.enabled = false;
 
         bloodAnimator.SetTrigger("Impact");

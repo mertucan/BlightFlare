@@ -110,7 +110,7 @@ public class DOF_AI : MonoBehaviour
     private void TryKillPlayer(GameObject player)
     {
         var isaac = player.GetComponent<IsaacMovement>();
-        if (isaac != null) isaac.DeathSequence();
+        if (isaac != null) isaac.ApplyDamage(1);
     }
 
     // Explosion layer'ındaki trigger'a girince bomba hasarı al
@@ -161,7 +161,15 @@ public class DOF_AI : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
-
+        if (tunnelSpriteRenderer != null)
+        {
+            tunnelSpriteRenderer.enabled = true;
+            Debug.Log("Tunnel sprite açıldı: " + tunnelSpriteRenderer.gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("tunnelSpriteRenderer NULL!");
+        }
         Destroy(gameObject);
     }
 
