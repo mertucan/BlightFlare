@@ -181,6 +181,8 @@ MonoBehaviour:
   - {fileID: 7266525813312433372, guid: 29385601a56e22b4faac44675679793e, type: 3}
   - {fileID: 5681734161811793622, guid: f832a23e62e95c4449daa85b028d43d5, type: 3}
   - {fileID: 1671571660335848563, guid: 9c2bdb21ab8265641bc0fc2d66b5f0f1, type: 3}
+  - {fileID: 999322540562995690, guid: fc4289fea0028fd4b8f3f7d0403dbd4b, type: 3}
+  - {fileID: 4258491141441633227, guid: a003495668e04814f88cd101a67b38f7, type: 3}
   explosionClips:
   - {fileID: 8300000, guid: eb72cd1470fab0c4e8f855f77b48b011, type: 3}
   selectedExplosionClip: 0

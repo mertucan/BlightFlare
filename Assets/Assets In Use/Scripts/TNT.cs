@@ -27,7 +27,7 @@ public class TNT : MonoBehaviour
     public float drag = 5f;
 
     [Header("Blocking Tags")]
-    public string[] blockingTags = { "Wall", "Door", "Player" };
+    public string[] blockingTags = { "Wall", "Door", "Player", "Rock", "Destructible" };
 
     [Header("Enemy Layer")]
     public string enemyLayerName = "Enemy";
@@ -69,17 +69,20 @@ public class TNT : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * maxPushSpeed;
     }
 
+    // ✅ YENİ — listede olan her şeyle çarpışır, listede olmayan geçilir
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isExploding) return;
 
         string hitTag = collision.gameObject.tag;
 
+        // Geçilebilir tag'ler — örn: tetikleyiciler, zemin olmayan objeler
         foreach (string blocking in blockingTags)
         {
-            if (hitTag == blocking) return;
+            if (hitTag == blocking) return; // bu tag'e sahipse çarpışmayı koru
         }
 
+        // Listede yoksa çarpışmayı yoksay (düşmanlar, mermiler vs.)
         Physics2D.IgnoreCollision(col, collision.collider, true);
     }
 
@@ -87,14 +90,11 @@ public class TNT : MonoBehaviour
     {
         if (isExploding) return;
 
-        if (other.CompareTag("Destructible"))
-        {
-            Destructible destructible = other.GetComponent<Destructible>();
-            if (destructible != null)
-                destructible.Explode();
-            return;
-        }
+        // ✅ Destructible'ı SADECE patlama sonrası explosion trigger'ı patlatır.
+        // TNT'nin kendi collider'ı Destructible'a çarpınca bir şey yapmaz.
+        // (Eski kodda burada direkt Explode() çağrılıyordu — bu itince patlatıyordu)
 
+        // Sadece Explosion layer'ından gelen tetikleyiciler TNT'yi patlatır
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
 
         if (ignoreBabyProjectile   && other.GetComponent<BabyProjectile>()   != null) return;
@@ -110,7 +110,6 @@ public class TNT : MonoBehaviour
         rb.bodyType       = RigidbodyType2D.Static;
         col.enabled       = false;
 
-        // 💥 Patlama sesi — obje silinse de çalar
         if (explosionClips != null && explosionClips.Length > 0 &&
             selectedExplosionClip < explosionClips.Length &&
             explosionClips[selectedExplosionClip] != null)
