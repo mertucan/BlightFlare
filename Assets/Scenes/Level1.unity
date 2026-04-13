@@ -555,6 +555,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c418453372ca124e8eb495fe11e2879, type: 2}
   - {fileID: 11400000, guid: 664b5ed65739f4b458f9b89da7eba028, type: 2}
   - {fileID: 11400000, guid: 78a1b35d313aca142ba8a1a622c5eb1f, type: 2}
+  closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
 --- !u!114 &561791957
 MonoBehaviour:
   m_ObjectHideFlags: 0

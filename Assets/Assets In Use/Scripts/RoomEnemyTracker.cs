@@ -15,7 +15,6 @@ public class RoomEnemyTracker : MonoBehaviour
     public void Initialize(GameObject prefab)
     {
         closedDoorPrefab = prefab;
-        // Kapılar henüz eklenmedi, burada alma
     }
 
     private void Start()
@@ -53,20 +52,16 @@ public class RoomEnemyTracker : MonoBehaviour
         {
             hasEnemies = false;
             UpdateDoorLocks();
-            Debug.Log($"[RoomEnemyTracker] Tüm düşmanlar öldü, kapılar açıldı.");
+            Debug.Log("[RoomEnemyTracker] Tüm düşmanlar öldü, kapılar açıldı.");
         }
     }
 
     public void OnPlayerEntered()
     {
         playerInRoom = true;
-
         if (!initialized) return;
-
-        RefreshDoors(); // Her girişte kapıları taze al
-        
-        if (hasEnemies)
-            UpdateDoorLocks();
+        RefreshDoors();
+        UpdateDoorLocks();
     }
 
     public void OnPlayerExited()
@@ -83,17 +78,28 @@ public class RoomEnemyTracker : MonoBehaviour
     private void UpdateDoorLocks()
     {
         bool shouldLock = hasEnemies && playerInRoom;
-        
-
         var room = GetComponent<Room>();
-        Debug.Log($"[DoorLock] roomType: {room?.roomType}, shouldLock: {shouldLock}, roomName: {gameObject.name}");
-        bool isShop = room != null && room.roomType == RoomType.Shop;
+        bool thisIsShop = room != null && room.roomType == RoomType.Shop;
 
         foreach (var door in doors)
         {
             if (door == null) continue;
-            bool doorLeadsToShop = door.targetRoomType == RoomType.Shop;
-            door.SetLocked(shouldLock, doorLeadsToShop ? null : closedDoorPrefab);
+
+            if (thisIsShop)
+            {
+                door.ShowOpenedShopVisual();
+                door.SetLocked(false, null);
+                continue;
+            }
+
+            if (door.targetRoomType == RoomType.Shop)
+            {
+                door.MarkAsShopDoor();
+                door.SetLocked(true, null);
+                continue;
+            }
+
+            door.SetLocked(shouldLock, closedDoorPrefab);
         }
     }
 }

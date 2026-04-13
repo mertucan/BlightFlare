@@ -60,6 +60,7 @@ public class Room : MonoBehaviour
 
         GenerateWalls(currentCell.roomShape, currentCell);
         var tracker = gameObject.AddComponent<RoomEnemyTracker>();
+        Debug.Log($"[Room] openedShopDoorPrefab null mu: {RoomManager.instance.openedShopDoorPrefab == null}");
         tracker.Initialize(RoomManager.instance.closedDoorPrefab);
     }
 
@@ -453,7 +454,6 @@ public class Room : MonoBehaviour
         var colliders = GetComponentsInChildren<Collider2D>();
         foreach (var col in colliders)
         {
-            // Kapıları ve trigger'ları atlat, sadece duvarları aç/kapat
             if (col.gameObject.CompareTag("Door")) continue;
             if (col.isTrigger) continue;
             col.enabled = active;

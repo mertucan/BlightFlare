@@ -30,6 +30,8 @@ public class RoomManager : MonoBehaviour
     public Vector2 RoomInnerHalfSize { get; private set; }
 
     private const float CellSize = 0.5f;
+    [Header("Shop Door")]
+    public GameObject openedShopDoorPrefab;
 
     private void Awake()
     {

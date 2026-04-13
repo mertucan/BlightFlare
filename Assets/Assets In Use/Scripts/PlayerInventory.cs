@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -6,14 +7,36 @@ using UnityEngine;
 /// </summary>
 public class PlayerInventory : MonoBehaviour
 {
-    public int keys    { get; private set; } = 0;
-    public int pennies { get; private set; } = 0;
+    public int keys { get; private set; } = 1;
+    public int pennies { get; private set; } = 1;
 
     private HeartUI _heartUI;
 
+    public static PlayerInventory instance;
+
     private void Awake()
     {
-        _heartUI = FindFirstObjectByType<HeartUI>();
+        instance = this;
+        // Eğer HeartUI inaktifse bile bulabilmesi için parametre ekledik:
+        _heartUI = FindFirstObjectByType<HeartUI>(FindObjectsInactive.Include);
+    }
+
+    private IEnumerator Start()
+    {
+        // Diğer tüm scriptlerin (özellikle HeartUI'ın) Start metotlarının bitmesini bekle
+        yield return new WaitForEndOfFrame();
+
+        // HeartUI bulundu mu diye kontrol et
+        if (_heartUI == null)
+        {
+            Debug.LogError("HATA: HeartUI bulunamadı! Sahnede HeartUI scripti olan bir obje olduğundan emin ol.");
+        }
+        else
+        {
+            Debug.Log("Başarı: HeartUI bulundu, değerler güncelleniyor...");
+            _heartUI.UpdateKey(keys);
+            _heartUI.UpdatePennies(pennies);
+        }
     }
 
     public void AddKey(int amount = 1)
@@ -26,5 +49,13 @@ public class PlayerInventory : MonoBehaviour
     {
         pennies += amount;
         _heartUI?.UpdatePennies(pennies);
+    }
+
+    public bool UseKey()
+    {
+        if (keys <= 0) return false;
+        keys--;
+        _heartUI?.UpdateKey(keys);
+        return true;
     }
 }
