@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5453348919352033792}
   - component: {fileID: 5355932114863003626}
   - component: {fileID: 2849868313178009030}
+  - component: {fileID: 6866638527072194787}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -104,3 +105,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e5b98ef9608c246bcfcc0d2beb9327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6866638527072194787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180230854969124179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc83a6d12288e447b2b4f4c4d4cf796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomEnemyTracker
+  closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}

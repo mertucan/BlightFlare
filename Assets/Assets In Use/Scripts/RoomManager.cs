@@ -22,6 +22,8 @@ public class RoomManager : MonoBehaviour
     [Header("Scriptable Object References")]
     public DoorScriptable[] doors;
     public RoomScriptable[] rooms;
+    [Header("Closed Door")]
+    public GameObject closedDoorPrefab;
 
     public static RoomManager instance;
 

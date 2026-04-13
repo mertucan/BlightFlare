@@ -1686,6 +1686,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1182477241}
+    - targetCorrespondingSourceObject: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1182477249}
   m_SourcePrefab: {fileID: 100100000, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
 --- !u!1 &985731960
 GameObject:
@@ -1894,6 +1897,18 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 5438953930966666103, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
   m_PrefabInstance: {fileID: 935421216}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1182477249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023500058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359fc167da7164c4c95d2925d02173d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!1 &1269024656
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,9 +15,14 @@ public class Room : MonoBehaviour
     private readonly List<(Vector2 offset, EdgeDirection dir)> placedDoorInfos = new();
     private const float WallThickness = 0.3f;
     private const float DoorGapHalf = 0.8f;
-
+    [HideInInspector] public RoomType roomType;
+    public void SetRoomType(RoomType type)
+    {
+        roomType = type;
+    }
     public void SetupRoom(Cell currentCell, RoomScriptable room)
     {
+        roomType = currentCell.roomType;
         InstantiateRoomDesign(room, currentCell.roomShape);
 
         if (currentCell.roomType == RoomType.Secret) return;
@@ -54,6 +59,8 @@ public class Room : MonoBehaviour
         }
 
         GenerateWalls(currentCell.roomShape, currentCell);
+        var tracker = gameObject.AddComponent<RoomEnemyTracker>();
+        tracker.Initialize(RoomManager.instance.closedDoorPrefab);
     }
 
     private void InstantiateRoomDesign(RoomScriptable room, RoomShape shape)
@@ -77,6 +84,12 @@ public class Room : MonoBehaviour
             var design = Instantiate(designPrefab, transform);
             design.transform.localPosition = Vector3.zero;
             design.transform.localRotation = Quaternion.identity;
+
+            Debug.Log($"[RoomDesign] '{designPrefab.name}' instantiate edildi. Parent: {design.transform.parent?.name}");
+            var pooters = design.GetComponentsInChildren<PooterAI>(true);
+            var babies = design.GetComponentsInChildren<BabyAI>(true);
+            var dofs = design.GetComponentsInChildren<DOF_AI>(true);
+            Debug.Log($"[RoomDesign] Prefab içinde → Pooter: {pooters.Length}, Baby: {babies.Length}, DOF: {dofs.Length}");
 
             var renderers = design.GetComponentsInChildren<SpriteRenderer>();
             if (renderers.Length > 0)
@@ -244,6 +257,7 @@ public class Room : MonoBehaviour
 
         SetupDoor(door, direction, displayType);
         door.SetupTransition(direction, neighbourIndex);
+        door.targetRoomType = foundCell.roomType;
 
         placedDoorInfos.Add((positionOffset, direction));
     }

@@ -199,7 +199,7 @@ public class MapGenerator : MonoBehaviour
                 cell.SetRoomType(RoomType.Item);
             }
 
-            if(cell.index == shopRoomIndex)
+            if (cell.index == shopRoomIndex)
             {
                 cell.SetSpecialRoomSprite(shop);
                 cell.SetRoomType(RoomType.Shop);

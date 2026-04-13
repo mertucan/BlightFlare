@@ -79,8 +79,21 @@ public class RoomTransitionManager : MonoBehaviour
         RoomShape shape = roomShapeMap.ContainsKey(45) ? roomShapeMap[45] : RoomShape.OneByOne;
         bool isLarge = shape != RoomShape.OneByOne;
         cameraController?.SnapToRoom(startPos, GetRoomHalfSize(shape), isLarge);
+
+        // Start() bitmesini bekle, sonra tracker'ı bilgilendir
+        StartCoroutine(NotifyStartRoomTrackerNextFrame());
     }
 
+    private System.Collections.IEnumerator NotifyStartRoomTrackerNextFrame()
+    {
+        yield return null;
+        if (cellToRoom.ContainsKey(45))
+        {
+            var tracker = cellToRoom[45].GetComponent<RoomEnemyTracker>();
+            tracker?.OnPlayerEntered();
+            Debug.Log($"[RTM] Start odası tracker'ı bilgilendirildi");
+        }
+    }
     public void TransitionToRoom(int targetCellIndex, EdgeDirection fromDirection)
     {
         Debug.Log($"TransitionToRoom çağrıldı. target: {targetCellIndex}, isTransitioning: {isTransitioning}, roomPositions içinde: {roomPositions.ContainsKey(targetCellIndex)}");
@@ -129,7 +142,19 @@ public class RoomTransitionManager : MonoBehaviour
         SetPlayerPos(doorPosition, rb);
         Physics2D.SyncTransforms();
 
+        // Önceki odadan çık
+        var leavingTracker = cellToRoom.ContainsKey(currentRoomCellIndex)
+            ? cellToRoom[currentRoomCellIndex]?.GetComponent<RoomEnemyTracker>()
+            : null;
+        leavingTracker?.OnPlayerExited();
+
         currentRoomCellIndex = targetCellIndex;
+
+        // Yeni odaya gir
+        var enteringTracker = cellToRoom.ContainsKey(targetCellIndex)
+            ? cellToRoom[targetCellIndex]?.GetComponent<RoomEnemyTracker>()
+            : null;
+        enteringTracker?.OnPlayerEntered();
 
         if (cellToRoom.ContainsKey(targetCellIndex))
         {
