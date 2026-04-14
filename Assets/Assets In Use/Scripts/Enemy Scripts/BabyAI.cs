@@ -30,6 +30,15 @@ public class BabyAI : MonoBehaviour
     public Transform firePoint;
 
     // ─────────────────────────────────────────────
+    // ROOM INSET PER SIDE
+    // ─────────────────────────────────────────────
+    [Header("Room Inset Per Side")]
+    public float roomInsetLeft   = 2.0f;
+    public float roomInsetRight  = 2.5f;
+    public float roomInsetBottom = 2.0f;
+    public float roomInsetTop    = 2.0f;
+
+    // ─────────────────────────────────────────────
     // TELEPORT
     // ─────────────────────────────────────────────
     [Header("Teleport")]
@@ -43,8 +52,6 @@ public class BabyAI : MonoBehaviour
     public float teleportMaxDistFromPlayer = 6f;
     public float teleportValidationRadius  = 0.3f;
     public int   teleportMaxAttempts       = 60;
-    [Tooltip("Duvar kalınlığı kadar içe daralt.")]
-    public float roomInset = 1.0f;
 
     // ─────────────────────────────────────────────
     // MOVEMENT & WANDER
@@ -118,8 +125,8 @@ public class BabyAI : MonoBehaviour
 
     private Vector2 wanderTarget;
     private float   wanderChangeTimer;
-    private bool isActivated = false;
-    // ═══════════════════════════════════════════
+    private bool    isActivated = false;
+
     // ─────────────────────────────────────────────
     // SOUNDS
     // ─────────────────────────────────────────────
@@ -131,6 +138,8 @@ public class BabyAI : MonoBehaviour
     public int selectedDeathClip = 0;
     public AudioClip[] attackClips;
     public int selectedAttackClip = 0;
+
+    // ═══════════════════════════════════════════
     #region Unity Callbacks
 
     private void Awake()
@@ -151,8 +160,11 @@ public class BabyAI : MonoBehaviour
 
         CacheAnimatorParams();
         TryFindPlayer();
-        GatherRoomBounds();
+    }
 
+    private void Start()
+    {
+        GatherRoomBounds();
         if (isSpawnLeader) SpawnGroup();
     }
 
@@ -203,11 +215,9 @@ public class BabyAI : MonoBehaviour
     {
         if (isDead) return;
 
-        // Kendi mermilerini yoksay (BabyProjectile VEYA PooterProjectile)
-        if (other.GetComponent<BabyProjectile>()   != null) return;
-        if (other.GetComponent<PooterProjectile>()  != null) return;
+        if (other.GetComponent<BabyProjectile>()  != null) return;
+        if (other.GetComponent<PooterProjectile>() != null) return;
 
-        // Sadece Explosion layer'ındaki objeler hasar verir
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
 
         Vector2 knockDir = ((Vector2)transform.position - (Vector2)other.transform.position).normalized;
@@ -228,7 +238,6 @@ public class BabyAI : MonoBehaviour
 
     private void OnDisable()
     {
-        // Sahne değişimi veya nesne disable'da rengi sıfırla
         if (spriteRenderer != null) spriteRenderer.color = originalColor;
     }
 
@@ -238,30 +247,17 @@ public class BabyAI : MonoBehaviour
     #region Room Bounds
 
     /// <summary>
-    /// Baby'nin etrafındaki Wall/Door collider'larından, her yönde
-    /// baby'yi çevreleyen EN YAKIN sınırı bulur.
-    ///
-    /// Sol  sınır = baby'nin solundaki collider'ların sağ kenarlarının en büyüğü
-    /// Sağ  sınır = baby'nin sağındaki collider'ların sol kenarlarının en küçüğü
-    /// Alt  sınır = baby'nin altındaki collider'ların üst kenarlarının en büyüğü
-    /// Üst  sınır = baby'nin üstündeki collider'ların alt kenarlarının en küçüğü
-    ///
-    /// Bu şekilde kapı açıklıkları veya köşeler probleme yol açmaz.
-    /// </summary>
-    /// <summary>
-    /// Baby'nin pozisyonuyla dikey/yatay olarak ÇAKIŞAN duvar/kapı
-    /// collider'larından oda sınırlarını hesaplar.
-    /// Komşu odaların duvarları çakışma şartını sağlamadığından elenir.
-    ///
-    /// Sol/Sağ sınır  → baby'nin y değerini dikey olarak kapsayan collider'lar
-    /// Alt/Üst sınır  → baby'nin x değerini yatay olarak kapsayan collider'lar
+    /// Sadece Wall tag'li collider'lardan oda sınırlarını hesaplar.
+    /// Door collider'ları sınır hesabına KATILMAZ — yalnızca
+    /// IsPositionValid içindeki engel kontrolünde kullanılır.
+    /// Böylece kapı açıklığından roomSafeRect dışarı taşmaz.
     /// </summary>
     private void GatherRoomBounds()
     {
-        Vector2 origin = transform.position;
-        float   search = 40f;
+        Vector2 origin    = transform.position;
+        float   search    = 40f;
+        float   tolerance = 0.5f;
 
-        // Başlangıçta çok uzak değerler — bulunamazsa fallback
         float bestLeft  = origin.x - 8f;
         float bestRight = origin.x + 8f;
         float bestDown  = origin.y - 5f;
@@ -271,32 +267,42 @@ public class BabyAI : MonoBehaviour
         foreach (var col in nearby)
         {
             if (col == ownCollider) continue;
-            if (!col.CompareTag(wallTag) && !col.CompareTag(doorTag)) continue;
+
+            // ── Sadece Wall tag'li collider'lar sınır hesabına girer ──
+            if (!col.CompareTag(wallTag)) continue;
 
             Bounds b = col.bounds;
 
             // SOL: collider baby'nin solunda VE dikey olarak baby'yi kapsıyor
-            if (b.max.x <= origin.x && b.min.y <= origin.y && b.max.y >= origin.y)
+            if (b.max.x <= origin.x &&
+                b.min.y <= origin.y + tolerance &&
+                b.max.y >= origin.y - tolerance)
                 bestLeft = Mathf.Max(bestLeft, b.max.x);
 
             // SAĞ: collider baby'nin sağında VE dikey olarak baby'yi kapsıyor
-            if (b.min.x >= origin.x && b.min.y <= origin.y && b.max.y >= origin.y)
+            if (b.min.x >= origin.x &&
+                b.min.y <= origin.y + tolerance &&
+                b.max.y >= origin.y - tolerance)
                 bestRight = Mathf.Min(bestRight, b.min.x);
 
             // AŞAĞI: collider baby'nin altında VE yatay olarak baby'yi kapsıyor
-            if (b.max.y <= origin.y && b.min.x <= origin.x && b.max.x >= origin.x)
+            if (b.max.y <= origin.y &&
+                b.min.x <= origin.x + tolerance &&
+                b.max.x >= origin.x - tolerance)
                 bestDown = Mathf.Max(bestDown, b.max.y);
 
             // YUKARI: collider baby'nin üstünde VE yatay olarak baby'yi kapsıyor
-            if (b.min.y >= origin.y && b.min.x <= origin.x && b.max.x >= origin.x)
+            if (b.min.y >= origin.y &&
+                b.min.x <= origin.x + tolerance &&
+                b.max.x >= origin.x - tolerance)
                 bestUp = Mathf.Min(bestUp, b.min.y);
         }
 
         roomSafeRect = Rect.MinMaxRect(
-            bestLeft  + roomInset,
-            bestDown  + roomInset,
-            bestRight - roomInset,
-            bestUp    - roomInset);
+            bestLeft  + roomInsetLeft,
+            bestDown  + roomInsetBottom,
+            bestRight - roomInsetRight,
+            bestUp    - roomInsetTop);
     }
 
     private bool IsPositionValid(Vector2 pos)
@@ -307,7 +313,8 @@ public class BabyAI : MonoBehaviour
         foreach (var hit in hits)
         {
             if (hit == ownCollider) continue;
-            // Wall veya Door tag'li collider içindeyse geçersiz (trigger olsa da)
+            if (hit.isTrigger) continue;
+            // Solid Wall veya Door içindeyse geçersiz
             if (hit.CompareTag(wallTag) || hit.CompareTag(doorTag)) return false;
         }
         return true;
@@ -390,7 +397,7 @@ public class BabyAI : MonoBehaviour
     {
         isAttacking = true;
         SetAttackAnim(true);
-        PlayAttackSound(); // ← buraya
+        PlayAttackSound();
         projectileFiredByAnimationEvent = false;
 
         float elapsed = 0f;
@@ -484,13 +491,13 @@ public class BabyAI : MonoBehaviour
         yield return new WaitForSeconds(teleportHoldDuration);
         if (isDead) { FinishTeleport(); yield break; }
 
-        Vector2 newPos    = FindTeleportPosition();
+        Vector2 newPos     = FindTeleportPosition();
         rb.position        = newPos;
         transform.position = (Vector3)newPos;
         rb.linearVelocity  = Vector2.zero;
         smoothDampVelocity = Vector2.zero;
 
-        PlayTeleportSound(); // ← buraya
+        PlayTeleportSound();
 
         // ── FADE IN: Şeffaf → Beyaz ──────────────────
         t = 0f;
@@ -520,7 +527,6 @@ public class BabyAI : MonoBehaviour
         teleportCooldownTimer = Random.Range(teleportCooldownMin, teleportCooldownMax);
     }
 
-    // Teleport'un her çıkış yolunda çağrılır — renk ve flag garantili sıfırlanır
     private void FinishTeleport()
     {
         SetSpriteColor(originalColor);
@@ -564,10 +570,10 @@ public class BabyAI : MonoBehaviour
         if (babyPrefab == null || spawnCount <= 0) return;
         for (int i = 0; i < spawnCount; i++)
         {
-            float   angle   = (360f / spawnCount) * i * Mathf.Deg2Rad;
-            Vector2 offset  = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * spawnRadius;
-            GameObject sp   = Instantiate(babyPrefab, transform.position + (Vector3)offset, Quaternion.identity);
-            BabyAI     ai   = sp.GetComponent<BabyAI>();
+            float      angle  = (360f / spawnCount) * i * Mathf.Deg2Rad;
+            Vector2    offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * spawnRadius;
+            GameObject sp     = Instantiate(babyPrefab, transform.position + (Vector3)offset, Quaternion.identity);
+            BabyAI     ai     = sp.GetComponent<BabyAI>();
             if (ai != null) ai.isSpawnLeader = false;
         }
     }
@@ -593,7 +599,6 @@ public class BabyAI : MonoBehaviour
         if (spriteRenderer == null) yield break;
         SetSpriteColor(hitFlashColor);
         yield return new WaitForSeconds(Mathf.Max(0f, hitFlashDuration));
-        // Teleport başlamışsa rengi değiştirme
         if (!isTeleporting) SetSpriteColor(originalColor);
     }
 
@@ -615,15 +620,11 @@ public class BabyAI : MonoBehaviour
             rb.simulated      = false;
         }
 
-        // Sesi ayrı bir objeye taşı, sonra sil
-        if (audioSource != null && deathClips != null && 
-            selectedDeathClip < deathClips.Length && 
+        if (audioSource != null && deathClips != null &&
+            selectedDeathClip < deathClips.Length &&
             deathClips[selectedDeathClip] != null)
         {
-            AudioSource.PlayClipAtPoint(
-                deathClips[selectedDeathClip], 
-                transform.position
-            );
+            AudioSource.PlayClipAtPoint(deathClips[selectedDeathClip], transform.position);
         }
 
         Destroy(gameObject);
@@ -639,6 +640,7 @@ public class BabyAI : MonoBehaviour
 
     // ═══════════════════════════════════════════
     #region Helpers
+
     private void PlaySound(AudioClip[] clips, int index)
     {
         if (audioSource == null || clips == null || clips.Length == 0) return;
@@ -646,9 +648,9 @@ public class BabyAI : MonoBehaviour
         audioSource.PlayOneShot(clips[index]);
     }
 
-    public void PlayTeleportSound()  => PlaySound(teleportClips, selectedTeleportClip);
-    public void PlayDeathSound()     => PlaySound(deathClips,    selectedDeathClip);
-    public void PlayAttackSound()    => PlaySound(attackClips,   selectedAttackClip);
+    public void PlayTeleportSound() => PlaySound(teleportClips, selectedTeleportClip);
+    public void PlayDeathSound()    => PlaySound(deathClips,    selectedDeathClip);
+    public void PlayAttackSound()   => PlaySound(attackClips,   selectedAttackClip);
 
     private void SetSpriteColor(Color c)
     {

@@ -203,6 +203,10 @@ MonoBehaviour:
   attackStateName: BabyAttack
   projectilePrefab: {fileID: 5781911556398316290, guid: 40122cc4508774f4f83577d72fc1bcf1, type: 3}
   firePoint: {fileID: 3309335459083729711}
+  roomInsetLeft: 2.5
+  roomInsetRight: 2.5
+  roomInsetBottom: 2
+  roomInsetTop: 2
   teleportCooldownMin: 3
   teleportCooldownMax: 6
   teleportFadeOutDuration: 0.2
@@ -213,7 +217,6 @@ MonoBehaviour:
   teleportMaxDistFromPlayer: 6
   teleportValidationRadius: 0.35
   teleportMaxAttempts: 10
-  roomInset: 0.6
   smoothTime: 0.55
   attackMoveMultiplier: 0
   teleportMoveMultiplier: 0

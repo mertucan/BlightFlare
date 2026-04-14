@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,12 +31,68 @@ public class IsaacMovement : MonoBehaviour
     [Header("Death Sprites")]
     public AnimatedSpriteRenderer spriteDeathBody;
 
+    [Header("Damage Flash")]
+    [Tooltip("Hasar anında atanan renk (varsayılan: beyazımsı)")]
+    public Color flashColor = new Color(1f, 0.85f, 0.85f, 1f);
+
     [Header("Sounds")]
     public AudioSource audioSource;
     public AudioClip[] deathClips;
     public int selectedDeathClipIndex = 0;
 
     private DirectionSprites activeSprites;
+
+    // ─── Tüm yönlerin SpriteRenderer'larını döndüren yardımcı ────────────────
+    private SpriteRenderer[] GetAllSpriteRenderers()
+    {
+        return new[]
+        {
+            spritesUp.body    ? spritesUp.body.GetComponent<SpriteRenderer>()    : null,
+            spritesUp.head    ? spritesUp.head.GetComponent<SpriteRenderer>()    : null,
+            spritesDown.body  ? spritesDown.body.GetComponent<SpriteRenderer>()  : null,
+            spritesDown.head  ? spritesDown.head.GetComponent<SpriteRenderer>()  : null,
+            spritesLeft.body  ? spritesLeft.body.GetComponent<SpriteRenderer>()  : null,
+            spritesLeft.head  ? spritesLeft.head.GetComponent<SpriteRenderer>()  : null,
+            spritesRight.body ? spritesRight.body.GetComponent<SpriteRenderer>() : null,
+            spritesRight.head ? spritesRight.head.GetComponent<SpriteRenderer>() : null,
+        };
+    }
+
+    private void SetAllSpritesColor(Color color)
+    {
+        foreach (var sr in GetAllSpriteRenderers())
+            if (sr != null) sr.color = color;
+    }
+
+    // ─── Hasar Flash ─────────────────────────────────────────────────────────
+    /// <summary>
+    /// PlayerHealth tarafından çağrılır. Spritelara anlık beyazımsı renk
+    /// verir; <paramref name="duration"/> saniye içinde normal renge döner.
+    /// </summary>
+    public void TriggerDamageFlash(float duration)
+    {
+        StopCoroutine(nameof(DamageFlashRoutine));
+        StartCoroutine(DamageFlashRoutine(duration));
+    }
+
+    private IEnumerator DamageFlashRoutine(float duration)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            // Hasar renginden normal renge yumuşak geçiş
+            SetAllSpritesColor(Color.Lerp(flashColor, Color.white, t));
+            yield return null;
+        }
+
+        SetAllSpritesColor(Color.white);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
 
     private void Awake()
     {
@@ -107,52 +164,50 @@ public class IsaacMovement : MonoBehaviour
         sprites.head.enabled = visible;
     }
 
-    // ─── Hasar Alma (Can sistemine yönlendirir) ───────────────────────────────
-    /// <summary>
-    /// Tüm dış sistemler (düşmanlar, bombalar, tuzaklar vb.) bu metodu çağırır.
-    /// Hasar PlayerHealth üzerinden işlenir; can sıfırlanınca DeathSequence çağrılır.
-    /// </summary>
+    // ─── Hasar Alma ──────────────────────────────────────────────────────────
     public void ApplyDamage(int halfHearts = 1)
     {
         PlayerHealth health = GetComponent<PlayerHealth>();
         if (health != null)
             health.TakeDamage(halfHearts);
     }
- 
-    // ─── Ölüm Dizisi (Yalnızca PlayerHealth tarafından çağrılır) ─────────────
+
+    // ─── Ölüm Dizisi ─────────────────────────────────────────────────────────
     private bool isDead = false;
- 
+
     public void DeathSequence()
     {
         if (isDead) return;
         isDead = true;
- 
+
+        StopCoroutine(nameof(DamageFlashRoutine));
+        SetAllSpritesColor(Color.white);
+
         enabled = false;
- 
+
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
- 
+
         var bombCtrl = GetComponent<BombController>();
         if (bombCtrl != null) bombCtrl.enabled = false;
- 
+
         SetDirectionVisible(spritesUp,    false);
         SetDirectionVisible(spritesDown,  false);
         SetDirectionVisible(spritesLeft,  false);
         SetDirectionVisible(spritesRight, false);
- 
+
         if (spriteDeathBody != null) spriteDeathBody.enabled = true;
- 
+
         PlayDeathSound();
     }
- 
+
     private void PlayDeathSound()
     {
         if (audioSource == null || deathClips == null || deathClips.Length == 0) return;
         if (selectedDeathClipIndex < 0 || selectedDeathClipIndex >= deathClips.Length) return;
         audioSource.PlayOneShot(deathClips[selectedDeathClipIndex]);
     }
- 
-    // Explosion katmanına (kendi bombaları) çarpınca hasar al
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))

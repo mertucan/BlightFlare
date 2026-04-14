@@ -18,9 +18,14 @@ public class Destructible : MonoBehaviour
     {
         if (_exploded) return;
         if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
-            Explode();
-    }
+        {
+            // Enemy projectile'larını yoksay
+            if (other.GetComponent<PooterProjectile>() != null) return;
+            if (other.GetComponent<BabyProjectile>() != null) return;
 
+            Explode();
+        }
+    }
     public void Explode()
     {
         if (_exploded) return;

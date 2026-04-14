@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class SpikeTrap : MonoBehaviour
 {
-    [Tooltip("Her temaста kaç half-heart hasar verilsin?")]
+    [Tooltip("Her temasta kaç half-heart hasar verilsin?")]
     public int damageAmount = 1;
 
-    private void OnTriggerEnter2D(Collider2D temas)
+    private void OnCollisionEnter2D(Collision2D temas)
     {
-        if (!temas.CompareTag("Player")) return;
+        if (!temas.collider.CompareTag("Player")) return;
 
-        IsaacMovement isaac = temas.GetComponent<IsaacMovement>();
+        IsaacMovement isaac = temas.collider.GetComponent<IsaacMovement>();
         if (isaac != null) isaac.ApplyDamage(damageAmount);
     }
 }

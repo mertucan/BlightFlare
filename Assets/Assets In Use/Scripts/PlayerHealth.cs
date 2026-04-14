@@ -51,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
             // Can gitti ama ölmedi → hasar sesi çal
             PlayDamageSound();
             invincibilityTimer = invincibilityDuration;
+            GetComponent<IsaacMovement>()?.TriggerDamageFlash(invincibilityDuration);
         }
     }
 
