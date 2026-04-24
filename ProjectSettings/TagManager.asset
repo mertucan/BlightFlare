@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Enemy
   - TNT
+  - PlayerBomb
   layers:
   - Default
   - TransparentFX
