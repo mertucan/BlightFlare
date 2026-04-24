@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 3362211361538513942}
   - component: {fileID: 5438953930966666103}
   - component: {fileID: 1822693994676520472}
+  - component: {fileID: 2625075944104700610}
+  - component: {fileID: 8007331047904645825}
   m_Layer: 14
   m_Name: Isaac
   m_TagString: Player
@@ -279,6 +281,7 @@ MonoBehaviour:
     body: {fileID: 8481421001712060484}
     head: {fileID: 7091907535483523508}
   spriteDeathBody: {fileID: 2174307271394248246}
+  flashColor: {r: 0.990566, g: 0.6868548, b: 0.6868548, a: 1}
   audioSource: {fileID: 5438953930966666103}
   deathClips:
   - {fileID: 8300000, guid: a8e163aeeb1b67849a2f7e3fe96d8f52, type: 3}
@@ -394,6 +397,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHearts: 6
   currentHearts: 6
+  audioSource: {fileID: 5438953930966666103}
+  damageClips:
+  - {fileID: 8300000, guid: 67dafe835c62af04696fe0d3ace1fe20, type: 3}
+  selectedDamageClipIndex: 0
+  invincibilityDuration: 1.2
+--- !u!114 &2625075944104700610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507305476386270651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e6a73ab57d1a4a9f770af0c5c6b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHearts: 6
+  currentHearts: 6
+  audioSource: {fileID: 0}
+  damageClips: []
+  selectedDamageClipIndex: 0
+  invincibilityDuration: 1.2
+--- !u!114 &8007331047904645825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507305476386270651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359fc167da7164c4c95d2925d02173d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!1 &1763515889719855838
 GameObject:
   m_ObjectHideFlags: 0

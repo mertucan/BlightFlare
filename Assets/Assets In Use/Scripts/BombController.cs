@@ -30,15 +30,11 @@ public class BombController : MonoBehaviour
     public AudioClip[] explosionClips;
     public int selectedClipIndex = 0;
 
-    // Kaç bomba şu an bırakılabilir (eş zamanlı limit)
     private int bombsRemaining;
-    // Başlangıçta bir kez ayarlandı mı?
     private bool initialized = false;
 
     private void Start()
     {
-        // OnEnable değil Start'ta başlatıyoruz —
-        // böylece AddBomb() ile eklenen bombalar OnEnable'da sıfırlanmıyor.
         if (!initialized)
         {
             bombsRemaining = bombAmount;
@@ -77,10 +73,17 @@ public class BombController : MonoBehaviour
         explosion.SetActiveRenderer(explosion.start);
         explosion.DestroyAfter(explosionDuration);
 
-        Explode(explosionPos, Vector2.up,    explosionRadius);
-        Explode(explosionPos, Vector2.down,  explosionRadius);
-        Explode(explosionPos, Vector2.left,  explosionRadius);
-        Explode(explosionPos, Vector2.right, explosionRadius);
+        // Patlama noktalarını topla, SecretRoomWall'ları bildir
+        var explodedPositions = new System.Collections.Generic.List<Vector2>();
+        explodedPositions.Add(explosionPos);
+
+        Explode(explosionPos, Vector2.up,    explosionRadius, explodedPositions);
+        Explode(explosionPos, Vector2.down,  explosionRadius, explodedPositions);
+        Explode(explosionPos, Vector2.left,  explosionRadius, explodedPositions);
+        Explode(explosionPos, Vector2.right, explosionRadius, explodedPositions);
+
+        // Tüm patlama noktalarına yakın SecretRoomWall'ları tetikle
+        NotifySecretWalls(explodedPositions);
 
         Destroy(bomb);
 
@@ -90,6 +93,35 @@ public class BombController : MonoBehaviour
         bombsRemaining++;
     }
 
+    /// <summary>
+    /// Patlama noktaları listesine yakın tüm SecretRoomWall'ları bulur ve tetikler.
+    /// </summary>
+    private void NotifySecretWalls(System.Collections.Generic.List<Vector2> positions)
+    {
+        // Sahnedeki tüm SecretRoomWall'ları bul
+        var allWalls = FindObjectsByType<SecretRoomWall>(FindObjectsSortMode.None);
+
+        foreach (var wall in allWalls)
+        {
+            if (wall == null) continue;
+
+            Vector2 wallPos = wall.transform.position;
+
+            foreach (var pos in positions)
+            {
+                // Patlama noktasına yeterince yakınsa tetikle
+                // explosionRadius * ~oda tile boyutu — biraz toleranslı tut
+                if (Vector2.Distance(wallPos, pos) <= 1.5f)
+                {
+                    Debug.Log($"[BombController] SecretRoomWall tetiklendi → " +
+                              $"wall:{wall.gameObject.name}, wallPos:{wallPos}, explosionPos:{pos}");
+                    wall.TriggerByExplosion();
+                    break;
+                }
+            }
+        }
+    }
+
     private void PlayExplosionSound()
     {
         if (audioSource == null || explosionClips.Length == 0) return;
@@ -97,7 +129,8 @@ public class BombController : MonoBehaviour
         audioSource.PlayOneShot(explosionClips[selectedClipIndex]);
     }
 
-    private void Explode(Vector2 position, Vector2 direction, int length)
+    private void Explode(Vector2 position, Vector2 direction, int length,
+        System.Collections.Generic.List<Vector2> explodedPositions = null)
     {
         if (length <= 0) return;
         position += direction;
@@ -116,7 +149,9 @@ public class BombController : MonoBehaviour
         explosion.SetDirection(direction);
         explosion.DestroyAfter(explosionDuration);
 
-        Explode(position, direction, length - 1);
+        explodedPositions?.Add(position);
+
+        Explode(position, direction, length - 1, explodedPositions);
     }
 
     private void ClearDestructible(Collider2D hit)
@@ -134,9 +169,6 @@ public class BombController : MonoBehaviour
             destructible.Explode();
     }
 
-    /// <summary>
-    /// Item alınınca çağrılır. Her çağrıda +1 eş zamanlı bomba hakkı ekler.
-    /// </summary>
     public void AddBomb()
     {
         bombAmount++;

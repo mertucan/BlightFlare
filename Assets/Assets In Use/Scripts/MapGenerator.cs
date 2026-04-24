@@ -77,7 +77,6 @@ public class MapGenerator : MonoBehaviour
         new int[] {-1, -10, -11}
     };
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
@@ -90,18 +89,12 @@ public class MapGenerator : MonoBehaviour
         SetupDungeon();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() { }
 
-    }
-
-    void SetupDungeon() 
+    void SetupDungeon()
     {
-        for(int i = 0; i < spawnedCells.Count; i++)
-        {
+        for (int i = 0; i < spawnedCells.Count; i++)
             Destroy(spawnedCells[i].gameObject);
-        }
 
         spawnedCells.Clear();
 
@@ -125,7 +118,7 @@ public class MapGenerator : MonoBehaviour
 
     void GenerateDungeon()
     {
-        while(cellQueue.Count > 0)
+        while (cellQueue.Count > 0)
         {
             int index = cellQueue.Dequeue();
             int x = index % 10;
@@ -141,14 +134,13 @@ public class MapGenerator : MonoBehaviour
                 endRooms.Add(index);
         }
 
-        if(floorPlanCount < minRooms)
+        if (floorPlanCount < minRooms)
         {
             SetupDungeon();
             return;
         }
 
         CleanEndRoomsList();
-
         SetupSpecialRooms();
     }
 
@@ -157,17 +149,15 @@ public class MapGenerator : MonoBehaviour
         endRooms.RemoveAll(item => bigRoomIndexes.Contains(item) || GetNeighbourCount(item) > 1);
     }
 
-    void SetupSpecialRooms() 
+    void SetupSpecialRooms()
     {
         bossRoomIndex = endRooms.Count > 0 ? endRooms[endRooms.Count - 1] : -1;
 
-        if(bossRoomIndex != -1)
-        {
+        if (bossRoomIndex != -1)
             endRooms.RemoveAt(endRooms.Count - 1);
-        }
 
-        itemRoomIndex = RandomEndRoom();
-        shopRoomIndex = RandomEndRoom();
+        itemRoomIndex   = RandomEndRoom();
+        shopRoomIndex   = RandomEndRoom();
         secretRoomIndex = PickSecretRoom();
 
         if (itemRoomIndex == -1 || shopRoomIndex == -1 || bossRoomIndex == -1 || secretRoomIndex == -1)
@@ -175,6 +165,15 @@ public class MapGenerator : MonoBehaviour
             SetupDungeon();
             return;
         }
+
+        // ── DÜZELTME ────────────────────────────────────────────────────────
+        // SpawnRoom tek başına floorPlan'ı güncellemiyordu.
+        // Normal odalar TryAddSecretWall'da floorPlan[secretRoomIndex] == 1
+        // kontrolünü geçemeyip SecretRoomWall ekleyemiyordu.
+        // Çözüm: SpawnRoom'dan ÖNCE floorPlan'ı 1 olarak işaretle.
+        // ─────────────────────────────────────────────────────────────────────
+        floorPlan[secretRoomIndex] = 1;
+        Debug.Log($"[MapGenerator] Gizli oda floorPlan'a eklendi → index:{secretRoomIndex}");
 
         SpawnRoom(secretRoomIndex);
 
@@ -189,11 +188,11 @@ public class MapGenerator : MonoBehaviour
         Minimap.instance.BuildMinimap(spawnedCells);
     }
 
-    void UpdateSpecialRoomVisuals() 
-    { 
-        foreach(var cell in spawnedCells)
+    void UpdateSpecialRoomVisuals()
+    {
+        foreach (var cell in spawnedCells)
         {
-            if(cell.index == itemRoomIndex)
+            if (cell.index == itemRoomIndex)
             {
                 cell.SetSpecialRoomSprite(item);
                 cell.SetRoomType(RoomType.Item);
@@ -205,13 +204,13 @@ public class MapGenerator : MonoBehaviour
                 cell.SetRoomType(RoomType.Shop);
             }
 
-            if(cell.index == bossRoomIndex)
+            if (cell.index == bossRoomIndex)
             {
                 cell.SetSpecialRoomSprite(boss);
                 cell.SetRoomType(RoomType.Boss);
             }
 
-            if(cell.index == secretRoomIndex)
+            if (cell.index == secretRoomIndex)
             {
                 cell.SetSpecialRoomSprite(secret);
                 cell.SetRoomType(RoomType.Secret);
@@ -225,40 +224,36 @@ public class MapGenerator : MonoBehaviour
 
         int randomRoom = Random.Range(0, endRooms.Count);
         int index = endRooms[randomRoom];
-
         endRooms.RemoveAt(randomRoom);
-
         return index;
     }
 
     int PickSecretRoom()
     {
-        for(int attempt = 0; attempt < 900; attempt++)
+        for (int attempt = 0; attempt < 900; attempt++)
         {
             int x = Mathf.FloorToInt(Random.Range(0f, 1f) * 9) + 1;
             int y = Mathf.FloorToInt(Random.Range(0f, 1f) * 8) + 2;
 
             int index = y * 10 + x;
 
-            if (floorPlan[index] != 0)
-            {
-                continue;
-            }
+            if (floorPlan[index] != 0) continue;
 
-            if (bossRoomIndex == index - 1 || bossRoomIndex == index + 1 || bossRoomIndex == index + 10 || bossRoomIndex == index - 10)
-            {
+            if (bossRoomIndex == index - 1 || bossRoomIndex == index + 1 ||
+                bossRoomIndex == index + 10 || bossRoomIndex == index - 10)
                 continue;
-            }
 
-            if (index - 1 < 0 || index + 1 > floorPlan.Length || index - 10 < 0 || index + 10 > floorPlan.Length)
-            {
+            if (index - 1 < 0 || index + 1 > floorPlan.Length ||
+                index - 10 < 0 || index + 10 > floorPlan.Length)
                 continue;
-            }
 
             int neighbours = GetNeighbourCount(index);
 
-            if (neighbours >= 3 || (attempt > 300 && neighbours >= 2) || (attempt > 600 && neighbours >= 1))
+            if (neighbours >= 3 ||
+                (attempt > 300 && neighbours >= 2) ||
+                (attempt > 600 && neighbours >= 1))
             {
+                Debug.Log($"[MapGenerator] Gizli oda seçildi → index:{index}, komşu sayısı:{neighbours}, deneme:{attempt}");
                 return index;
             }
         }
@@ -281,9 +276,7 @@ public class MapGenerator : MonoBehaviour
             foreach (var shape in roomShapes.OrderBy(_ => Random.value))
             {
                 if (TryPlaceRoom(index, shape))
-                {
                     return true;
-                }
             }
         }
 
@@ -317,19 +310,15 @@ public class MapGenerator : MonoBehaviour
     {
         List<int> currentRoomIndexes = new List<int>() { origin };
 
-        foreach(var offset in offsets)
+        foreach (var offset in offsets)
         {
             int currentIndexChecked = origin + offset;
 
-            if(currentIndexChecked - 10 < 0 || currentIndexChecked + 10 >= floorPlan.Length)
-            {
+            if (currentIndexChecked - 10 < 0 || currentIndexChecked + 10 >= floorPlan.Length)
                 return false;
-            }
 
             if (floorPlan[currentIndexChecked] != 0)
-            {
                 return false;
-            }
 
             if (currentIndexChecked == origin) continue;
             if (currentIndexChecked % 10 == 0) continue;
@@ -339,17 +328,15 @@ public class MapGenerator : MonoBehaviour
 
         if (currentRoomIndexes.Count == 1) return false;
 
-        foreach(int index in currentRoomIndexes)
+        foreach (int index in currentRoomIndexes)
         {
             floorPlan[index] = 1;
             floorPlanCount++;
             cellQueue.Enqueue(index);
-
             bigRoomIndexes.Add(index);
         }
 
         SpawnLargeRoom(currentRoomIndexes);
-
         return true;
     }
 
@@ -361,7 +348,7 @@ public class MapGenerator : MonoBehaviour
         int combinedY = default;
         float offset = cellSize / 2f;
 
-        for(int i = 0; i < largeRoomIndexes.Count; i++)
+        for (int i = 0; i < largeRoomIndexes.Count; i++)
         {
             int x = largeRoomIndexes[i] % 10;
             int y = largeRoomIndexes[i] / 10;
@@ -369,16 +356,15 @@ public class MapGenerator : MonoBehaviour
             combinedY += y;
         }
 
-        if(largeRoomIndexes.Count == 4)
+        if (largeRoomIndexes.Count == 4)
         {
             Vector2 position = new Vector2(combinedX / 4 * cellSize + offset, -combinedY / 4 * cellSize - offset);
-
             newCell = Instantiate(cellPrefab, position, Quaternion.identity);
             newCell.SetRoomSprite(largeRoom);
             newCell.SetRoomShape(RoomShape.TwoByTwo);
         }
 
-        if(largeRoomIndexes.Count == 3)
+        if (largeRoomIndexes.Count == 3)
         {
             Vector2 position = new Vector2(combinedX / 3 * cellSize + offset, -combinedY / 3 * cellSize - offset);
             newCell = Instantiate(cellPrefab, position, Quaternion.identity);

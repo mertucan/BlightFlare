@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 561791958}
   - component: {fileID: 561791957}
   - component: {fileID: 561791956}
+  - component: {fileID: 561791959}
   m_Layer: 0
   m_Name: Map Generator
   m_TagString: Untagged
@@ -557,6 +558,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78a1b35d313aca142ba8a1a622c5eb1f, type: 2}
   closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
   openedShopDoorPrefab: {fileID: 7295604412751457430, guid: 0c187ca9bf9688f4d8af536b52884329, type: 3}
+  openedSecretDoorPrefab: {fileID: 484832768564172559, guid: 9dddbdcf95a23a44885f4757fc08c9fb, type: 3}
+  secretExplosionClips:
+  - {fileID: 8300000, guid: eb72cd1470fab0c4e8f855f77b48b011, type: 3}
 --- !u!114 &561791957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +598,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &561791959
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561791955}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &596636794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,30 +1667,10 @@ PrefabInstance:
       propertyPath: destructibleTiles
       value: 
       objectReference: {fileID: 1269024660}
-    - target: {fileID: 580013146184101759, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      propertyPath: poisonCloudPrefab
-      value: 
-      objectReference: {fileID: 1904695668465121277, guid: bae2e2adb7f0b5e499d054e1078e4164, type: 3}
     - target: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
       propertyPath: m_Name
       value: Isaac
       objectReference: {fileID: 0}
-    - target: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822693994676520472, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 1182477243}
-    - target: {fileID: 1822693994676520472, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      propertyPath: damageClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822693994676520472, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      propertyPath: 'damageClips.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 67dafe835c62af04696fe0d3ace1fe20, type: 3}
     - target: {fileID: 6804595416584243139, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
       propertyPath: m_LocalPosition.x
       value: 77.7
@@ -1684,13 +1714,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1182477241}
-    - targetCorrespondingSourceObject: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1182477249}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
 --- !u!1 &985731960
 GameObject:
@@ -1729,11 +1753,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
---- !u!1 &1023500058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1507305476386270651, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-  m_PrefabInstance: {fileID: 935421216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1073076972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,41 +1895,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6804595416584243139, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
   m_PrefabInstance: {fileID: 935421216}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1182477241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023500058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9e6a73ab57d1a4a9f770af0c5c6b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHearts: 6
-  currentHearts: 6
-  audioSource: {fileID: 0}
-  damageClips: []
-  selectedDamageClipIndex: 0
-  invincibilityDuration: 1.2
---- !u!82 &1182477243 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5438953930966666103, guid: 6e1b341082dfa944a813e27bc8aef801, type: 3}
-  m_PrefabInstance: {fileID: 935421216}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1182477249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023500058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359fc167da7164c4c95d2925d02173d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!1 &1269024656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,7 +6309,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2095711064
 MonoBehaviour:

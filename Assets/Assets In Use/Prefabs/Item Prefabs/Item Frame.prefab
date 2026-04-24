@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3325471266289535920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.56, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0.704, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c61c68c6519541479353579acf4eecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemFloat
-  amplitude: 0.15
-  frequency: 1.2
+  amplitude: 0.1
+  frequency: 0.8
 --- !u!114 &2738127316670446854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,9 +273,10 @@ MonoBehaviour:
   emptyFrameSprite: {fileID: 2107640073, guid: 0f986711200fa2f41bbec96f8e54adc8, type: 3}
   audioSource: {fileID: 4955489295899137894}
   pickupClip: {fileID: 8300000, guid: 610e7288485f1bd43b7b1fb762daf30e, type: 3}
-  riseSpeed: 3
+  riseDistance: 0.35
   riseDuration: 0.4
   fadeDuration: 0.3
+  disableColliderAfterPickup: 0
 --- !u!61 &3772494989767762641
 BoxCollider2D:
   m_ObjectHideFlags: 0

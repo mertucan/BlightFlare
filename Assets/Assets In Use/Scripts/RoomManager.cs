@@ -22,16 +22,38 @@ public class RoomManager : MonoBehaviour
     [Header("Scriptable Object References")]
     public DoorScriptable[] doors;
     public RoomScriptable[] rooms;
+
     [Header("Closed Door")]
     public GameObject closedDoorPrefab;
+
+    [Header("Shop Door")]
+    public GameObject openedShopDoorPrefab;
+
+    // ──────────────────────────────────────────────────────────────────────────
+    //  GİZLİ ODA AYARLARI
+    //  Inspector'da şunları doldurun:
+    //    • secretOpenedDoorPrefab → Bomba patladığında duvarın yerinde çıkacak
+    //                               sprite-only prefab (sadece SpriteRenderer,
+    //                               Collider OLMAMALI). Prefabın varsayılan yönü
+    //                               YUKARI bakıyor olmalı; kod gerekli rotasyonu
+    //                               otomatik uygular.
+    //    • secretExplosionClips   → Açılışta çalacak ses klipleri (opsiyonel).
+    // ──────────────────────────────────────────────────────────────────────────
+    [Header("Secret Room")]
+    [Tooltip("Gizli oda duvarı kırıldığında spawn edilecek açık kapı prefabı")]
+    public GameObject openedSecretDoorPrefab;
+
+    [Tooltip("Gizli oda açılma sesi klipleri (boş bırakılabilir)")]
+    public AudioClip[] secretExplosionClips;
+
+    // Geriye dönük uyumluluk için property alias
+    public GameObject secretOpenedDoorPrefab => openedSecretDoorPrefab;
 
     public static RoomManager instance;
 
     public Vector2 RoomInnerHalfSize { get; private set; }
 
     private const float CellSize = 0.5f;
-    [Header("Shop Door")]
-    public GameObject openedShopDoorPrefab;
 
     private void Awake()
     {
@@ -42,10 +64,7 @@ public class RoomManager : MonoBehaviour
     public void SetupRooms(List<Cell> spawnedCells)
     {
         for (int i = createdRooms.Count - 1; i >= 0; i--)
-        {
             Destroy(createdRooms[i].gameObject);
-        }
-
         createdRooms.Clear();
 
         Vector2 measuredSize = MeasureRoomDesignSize();
@@ -59,14 +78,14 @@ public class RoomManager : MonoBehaviour
         foreach (var currentCell in spawnedCells)
         {
             var matchingRooms = rooms
-            .Where(x => x.roomShape == currentCell.roomShape 
-                    && x.roomType == currentCell.roomType 
-                    && DoesTileMatchCell(x.occupiedTiles, currentCell))
-            .ToArray();
+                .Where(x => x.roomShape == currentCell.roomShape
+                         && x.roomType  == currentCell.roomType
+                         && DoesTileMatchCell(x.occupiedTiles, currentCell))
+                .ToArray();
 
-            var foundRoom = matchingRooms.Length > 0 
-            ? matchingRooms[UnityEngine.Random.Range(0, matchingRooms.Length)] 
-            : null;
+            var foundRoom = matchingRooms.Length > 0
+                ? matchingRooms[UnityEngine.Random.Range(0, matchingRooms.Length)]
+                : null;
 
             var currentPosition = currentCell.transform.position;
 
@@ -75,9 +94,7 @@ public class RoomManager : MonoBehaviour
                 (currentPosition.y / CellSize) * spacingY);
 
             var spawnedRoom = Instantiate(roomPrefab, convertedPosition, Quaternion.identity);
-
             spawnedRoom.SetupRoom(currentCell, foundRoom);
-
             createdRooms.Add(spawnedRoom);
 
             if (RoomTransitionManager.instance != null)
@@ -93,9 +110,7 @@ public class RoomManager : MonoBehaviour
         }
 
         if (RoomTransitionManager.instance != null)
-        {
             RoomTransitionManager.instance.PlacePlayerAtStart();
-        }
     }
 
     private Vector2 MeasureRoomDesignSize()
@@ -105,7 +120,7 @@ public class RoomManager : MonoBehaviour
             if (room == null || room.roomDesignPrefabs == null || room.roomDesignPrefabs.Length == 0)
                 continue;
 
-            var temp = Instantiate(room.roomDesignPrefabs[0], Vector3.one * 9999f, Quaternion.identity);
+            var temp      = Instantiate(room.roomDesignPrefabs[0], Vector3.one * 9999f, Quaternion.identity);
             var renderers = temp.GetComponentsInChildren<SpriteRenderer>();
 
             if (renderers.Length > 0)
@@ -127,17 +142,15 @@ public class RoomManager : MonoBehaviour
 
     private bool DoesTileMatchCell(int[] occupiedTiles, Cell cell)
     {
-        if(occupiedTiles.Length != cell.cellList.Count)
-            return false;
+        if (occupiedTiles.Length != cell.cellList.Count) return false;
 
         int minIndex = cell.cellList.Min();
         List<int> normalizedCell = new List<int>();
 
-        foreach(int index in cell.cellList)
+        foreach (int index in cell.cellList)
         {
             int dx = (index % 10) - (minIndex % 10);
             int dy = (index / 10) - (minIndex / 10);
-
             normalizedCell.Add(dy * 10 + dx);
         }
 
