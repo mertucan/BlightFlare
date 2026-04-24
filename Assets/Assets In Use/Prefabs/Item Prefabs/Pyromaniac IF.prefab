@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4682410911251573276}
   - component: {fileID: 9121828642307466151}
   - component: {fileID: 6969918574761431171}
-  - component: {fileID: 2738127316670446854}
+  - component: {fileID: 9157007822810151879}
   m_Layer: 6
   m_Name: Item
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3325471266289535920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.704, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.704, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 531679483, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
+  m_Sprite: {fileID: 8373805363917326335, guid: 76e7937c34b261147998d6c2b9af8d9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemFloat
   amplitude: 0.1
   frequency: 0.8
---- !u!114 &2738127316670446854
+--- !u!114 &9157007822810151879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,24 +116,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3325471266289535920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07a8c2075fbc4ed45b8758def6114d91, type: 3}
+  m_Script: {fileID: 11500000, guid: a54ea3e0ad96edb4994860d36807eee8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BobsCurse
-  bobsCurseBombPrefab: {fileID: 3939017888894637700, guid: efbc8aeb783ca5641ad4539bb4b84334, type: 3}
-  poisonCloudPrefab: {fileID: 1904695668465121277, guid: bae2e2adb7f0b5e499d054e1078e4164, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Pyromaniac
   bonusBombs: 1
   headSpritesUp:
-  - {fileID: -793073331, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
-  - {fileID: 1865128645, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
+  - {fileID: -1713367135, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  - {fileID: 366329456, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
   headSpritesDown:
-  - {fileID: 5208202573579213364, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
-  - {fileID: 1912371360, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
+  - {fileID: 6170072575094033387, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  - {fileID: 405536054, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
   headSpritesLeft:
-  - {fileID: -1943097078, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
-  - {fileID: 1306827402, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
+  - {fileID: 1910236029, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  - {fileID: -1480738469, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
   headSpritesRight:
-  - {fileID: -802863861, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
-  - {fileID: -1975310867, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
+  - {fileID: -1429394151, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  - {fileID: 1848192242, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  isActive: 0
 --- !u!1 &8434055760191881865
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +148,7 @@ GameObject:
   - component: {fileID: 3772494989767762641}
   - component: {fileID: 4955489295899137894}
   m_Layer: 6
-  m_Name: Item Frame
+  m_Name: Pyromaniac IF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -29,26 +29,21 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int halfHearts = 1)
     {
         if (currentHearts <= 0) return;
-
-        // Dokunulmazlık süresi aktifse hasar alma
         if (invincibilityTimer > 0f) return;
 
         currentHearts -= halfHearts;
         currentHearts  = Mathf.Max(0, currentHearts);
 
-        // UI'ı güncelle
         HeartUI ui = FindFirstObjectByType<HeartUI>();
         if (ui != null) ui.UpdateHearts(currentHearts);
 
         if (currentHearts <= 0)
         {
-            // Ölünce hasar sesi değil, IsaacMovement'taki ölüm sesi çalar
             var movement = GetComponent<IsaacMovement>();
             if (movement != null) movement.DeathSequence();
         }
         else
         {
-            // Can gitti ama ölmedi → hasar sesi çal
             PlayDamageSound();
             invincibilityTimer = invincibilityDuration;
             GetComponent<IsaacMovement>()?.TriggerDamageFlash(invincibilityDuration);

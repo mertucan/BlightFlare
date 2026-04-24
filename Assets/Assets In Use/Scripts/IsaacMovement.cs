@@ -210,7 +210,37 @@ public class IsaacMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")
+            && other.CompareTag("PlayerBomb"))
+        {
+            // Kendi bombamız — Pyromaniac kontrolü
+            var pyro = GetComponent<Pyromaniac>();
+            if (pyro != null && pyro.isActive)
+            {
+                if (!pyro.hasHealedThisExplosion)
+                {
+                    Debug.Log("[Pyromaniac] Flag false, HealFromExplosion çağrılıyor.");
+                    pyro.hasHealedThisExplosion = true;
+                    pyro.HealFromExplosion(gameObject);
+                    var bombCtrl = GetComponent<BombController>();
+                    float duration = bombCtrl != null ? bombCtrl.explosionDuration : 1f;
+                    StartCoroutine(pyro.ResetHealFlag(duration));
+                }
+                else
+                {
+                    Debug.Log("[Pyromaniac] Flag true, heal atlandı.");
+                }
+            }
+            else
+            {
+                ApplyDamage(1);
+            }
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")
+                && !other.CompareTag("PlayerBomb"))
+        {
+            // Düşman patlaması veya tuzak — her zaman hasar ver
             ApplyDamage(1);
+        }
     }
 }
