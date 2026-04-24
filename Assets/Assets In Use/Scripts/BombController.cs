@@ -84,6 +84,7 @@ public class BombController : MonoBehaviour
 
         // Tüm patlama noktalarına yakın SecretRoomWall'ları tetikle
         NotifySecretWalls(explodedPositions);
+        UnlockDoorsInExplosion(explodedPositions);
 
         Destroy(bomb);
 
@@ -116,6 +117,37 @@ public class BombController : MonoBehaviour
                     Debug.Log($"[BombController] SecretRoomWall tetiklendi → " +
                               $"wall:{wall.gameObject.name}, wallPos:{wallPos}, explosionPos:{pos}");
                     wall.TriggerByExplosion();
+                    break;
+                }
+            }
+        }
+    }
+
+    private void UnlockDoorsInExplosion(System.Collections.Generic.List<Vector2> positions)
+    {
+        var allDoors = FindObjectsByType<Door>(FindObjectsSortMode.None);
+
+        foreach (var door in allDoors)
+        {
+            if (door == null) continue;
+
+            // Gizli oda duvarlarını bu sistemle açma — onları SecretRoomWall yönetiyor
+            if (door.GetComponent<SecretRoomWall>() != null) continue;
+
+            Vector2 doorPos = door.transform.position;
+
+            foreach (var pos in positions)
+            {
+                if (Vector2.Distance(doorPos, pos) <= 1.5f)
+                {
+                    // Odanın RoomEnemyTracker'ını bul ve kapıyı listeden çıkar
+                    var tracker = door.GetComponentInParent<RoomEnemyTracker>();
+                    if (tracker != null)
+                        tracker.ForceUnlockDoor(door);
+                    else
+                        door.SetLocked(false, null);
+
+                    Debug.Log($"[BombController] Kapı bombayla açıldı → {door.gameObject.name}");
                     break;
                 }
             }

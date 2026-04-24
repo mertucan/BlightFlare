@@ -99,7 +99,23 @@ public class RoomEnemyTracker : MonoBehaviour
                 continue;
             }
 
+            // Gizli oda kapıları her zaman açık kalmalı
+            if (door.targetRoomType == RoomType.Secret)
+            {
+                door.SetLocked(false, null);
+                continue;
+            }
+
             door.SetLocked(shouldLock, closedDoorPrefab);
         }
+    }
+
+    public void ForceUnlockDoor(Door door)
+    {
+        // Bu kapıyı kalıcı olarak listeden çıkar ki
+        // UpdateDoorLocks onu tekrar kilitlemesin
+        doors.Remove(door);
+        door.SetLocked(false, null);
+        Debug.Log($"[RoomEnemyTracker] Kapı kalıcı olarak açıldı → {door.gameObject.name}");
     }
 }
