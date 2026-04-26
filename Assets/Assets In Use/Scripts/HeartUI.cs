@@ -28,8 +28,15 @@ public class HeartUI : MonoBehaviour
     public TMP_Text penniesText;
 
     [Header("Holy Mantle UI")]
-    [Tooltip("Son kalp slotunun sağ kenarından HolyMantle ikonuna piksel boşluk.")]
     public float holyMantleOffsetX = 10f;
+    [Tooltip("Bir satırda kaç kalp slotu olacak.")]
+    public int heartsPerRow = 5;
+    [Tooltip("2. satırın 1. satıra göre Y offset'i (negatif = aşağı).")]
+    public float secondRowOffsetY = -90f;
+    private float _holyMantleBaseY;
+    private bool  _holyMantleBaseYCaptured = false;
+    [Tooltip("HolyMantle ikonunun 2. satırda ne kadar aşağı ineceği.")]
+    public float holyMantleRowOffsetY = -45f;
 
     private void Start()
     {
@@ -107,9 +114,6 @@ public class HeartUI : MonoBehaviour
         RectTransform panelRT = heartsPanel as RectTransform;
         if (panelRT == null) yield break;
 
-        Canvas.ForceUpdateCanvases();
-        LayoutRebuilder.ForceRebuildLayoutImmediate(panelRT);
-
         int childCount = heartsPanel.childCount;
         if (childCount == 0) yield break;
 
@@ -117,22 +121,37 @@ public class HeartUI : MonoBehaviour
                                             .GetComponent<RectTransform>();
         if (lastSlotRT == null) yield break;
 
-        Vector3[] corners = new Vector3[4];
-        lastSlotRT.GetWorldCorners(corners);
-        float screenRightX = corners[2].x;
-
-        // Canvas scale: kaç screen pixel = 1 canvas unit
         Canvas rootCanvas = mantleRT.GetComponentInParent<Canvas>().rootCanvas;
         float canvasScale = rootCanvas.transform.localScale.x;
 
-        // screen pixel → canvas unit (UI objesi top-left anchor'da, anchoredPosition = screen pixel / scale)
+        // Son slotun sağ-üst köşesi (screen pixel)
+        Vector3[] corners = new Vector3[4];
+        lastSlotRT.GetWorldCorners(corners);
+        float screenRightX = corners[2].x; // sağ-üst
+        float screenTopY   = corners[1].y; // sol-üst (aynı Y seviyesi)
+
         float targetX = (screenRightX / canvasScale) + holyMantleOffsetX;
+
+        // Y: son slotun hangi satırda olduğunu bul
+        int lastIndex = childCount - 1;
+        int row = lastIndex / heartsPerRow;
+        // HolyMantleIcon'un başlangıç Y'si (sadece 1 satır varken doğru olan değer)
+        // row 0 ise Y değişmez, row 1+ ise secondRowOffsetY kadar aşağı in
+        // Başlangıç Y'sini ilk kez kaydet
+        if (!_holyMantleBaseYCaptured)
+        {
+            _holyMantleBaseY = mantleRT.anchoredPosition.y;
+            _holyMantleBaseYCaptured = true;
+        }
+
+        float targetY = _holyMantleBaseY + (row * holyMantleRowOffsetY);
 
         Vector2 pos = mantleRT.anchoredPosition;
         pos.x = targetX;
+        pos.y = targetY;
         mantleRT.anchoredPosition = pos;
 
-        Debug.Log($"[HeartUI] screenRightX:{screenRightX} canvasScale:{canvasScale} targetX:{targetX}");
+        Debug.Log($"[HeartUI] row:{row} targetX:{targetX} targetY:{targetY} baseY:{_holyMantleBaseY}");
     }
 
     private void BuildHeartSlots()
@@ -142,13 +161,42 @@ public class HeartUI : MonoBehaviour
         foreach (Transform child in heartsPanel)
             Destroy(child.gameObject);
 
+        // HorizontalLayoutGroup varsa kapat — manual layout yapıyoruz
+        var hlg = heartsPanel.GetComponent<HorizontalLayoutGroup>();
+        if (hlg != null) hlg.enabled = false;
+
         int slotCount = Mathf.CeilToInt(maxHalfHearts / 2f);
         _slotImages = new Image[slotCount];
+
+        // Slot boyutunu prefab'dan oku
+        RectTransform prefabRT = heartSlotPrefab.GetComponent<RectTransform>();
+        float slotW   = prefabRT != null ? prefabRT.rect.width  : 50f;
+        float slotH   = prefabRT != null ? prefabRT.rect.height : 50f;
+        float spacingX = slotW + 5f; // yatay boşluk — Inspector'dan ayarlamak istersen field ekle
 
         for (int i = 0; i < slotCount; i++)
         {
             GameObject go = Instantiate(heartSlotPrefab, heartsPanel);
             go.name = $"HeartSlot_{i}";
+
+            RectTransform rt = go.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                // Anchor + pivot: top-left
+                rt.anchorMin = new Vector2(0, 1);
+                rt.anchorMax = new Vector2(0, 1);
+                rt.pivot     = new Vector2(0, 1);
+
+                int col = i % heartsPerRow;
+                int row = i / heartsPerRow;
+
+                rt.anchoredPosition = new Vector2(
+                    col * spacingX,
+                    row * secondRowOffsetY
+                );
+                rt.sizeDelta = new Vector2(slotW, slotH);
+            }
+
             _slotImages[i] = go.GetComponent<Image>();
         }
     }
