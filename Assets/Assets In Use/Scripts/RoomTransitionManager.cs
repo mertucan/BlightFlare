@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine;
 public class RoomTransitionManager : MonoBehaviour
 {
     public static RoomTransitionManager instance;
+
+    // ── Holy Mantle ve oda-bazlı efektler için event ──────────────────────
+    public static event Action OnRoomChanged;
 
     [Header("References")]
     public Transform player;
@@ -42,8 +46,8 @@ public class RoomTransitionManager : MonoBehaviour
         foreach (int index in cellIndices)
         {
             roomPositions[index] = worldPosition;
-            roomShapeMap[index] = shape;
-            cellToRoom[index] = room;
+            roomShapeMap[index]  = shape;
+            cellToRoom[index]    = room;
         }
 
         room.SetCollidersActive(false);
@@ -54,7 +58,7 @@ public class RoomTransitionManager : MonoBehaviour
         roomPositions.Clear();
         roomShapeMap.Clear();
         cellToRoom.Clear();
-        currentActiveRoom = null;
+        currentActiveRoom    = null;
         currentRoomCellIndex = 45;
     }
 
@@ -76,51 +80,52 @@ public class RoomTransitionManager : MonoBehaviour
             currentActiveRoom.SetCollidersActive(true);
         }
 
-        RoomShape shape = roomShapeMap.ContainsKey(45) ? roomShapeMap[45] : RoomShape.OneByOne;
-        bool isLarge = shape != RoomShape.OneByOne;
+        RoomShape shape  = roomShapeMap.ContainsKey(45) ? roomShapeMap[45] : RoomShape.OneByOne;
+        bool      isLarge = shape != RoomShape.OneByOne;
         cameraController?.SnapToRoom(startPos, GetRoomHalfSize(shape), isLarge);
 
-        // Start() bitmesini bekle, sonra tracker'ı bilgilendir
         StartCoroutine(NotifyStartRoomTrackerNextFrame());
     }
 
-    private System.Collections.IEnumerator NotifyStartRoomTrackerNextFrame()
+    private IEnumerator NotifyStartRoomTrackerNextFrame()
     {
         yield return null;
         if (cellToRoom.ContainsKey(45))
         {
             var tracker = cellToRoom[45].GetComponent<RoomEnemyTracker>();
             tracker?.OnPlayerEntered();
-            Debug.Log($"[RTM] Start odası tracker'ı bilgilendirildi");
+            Debug.Log("[RTM] Start odası tracker'ı bilgilendirildi");
         }
     }
+
     public void TransitionToRoom(int targetCellIndex, EdgeDirection fromDirection)
     {
         Debug.Log($"TransitionToRoom çağrıldı. target: {targetCellIndex}, isTransitioning: {isTransitioning}, roomPositions içinde: {roomPositions.ContainsKey(targetCellIndex)}");
-        
+
         if (isTransitioning) return;
         if (!roomPositions.ContainsKey(targetCellIndex)) return;
 
         isTransitioning = true;
         StartCoroutine(TransitionRoutine(targetCellIndex, fromDirection));
     }
+
     private IEnumerator TransitionRoutine(int targetCellIndex, EdgeDirection fromDirection)
     {
         SetPlayerMovement(false);
         DestroyAllProjectiles();
 
         var rb = player != null ? player.GetComponent<Rigidbody2D>() : null;
-        RigidbodyType2D prevBodyType = RigidbodyType2D.Dynamic;
+        RigidbodyType2D        prevBodyType = RigidbodyType2D.Dynamic;
         RigidbodyInterpolation2D prevInterp = RigidbodyInterpolation2D.None;
 
         if (rb != null)
         {
-            prevBodyType = rb.bodyType;
-            prevInterp = rb.interpolation;
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            rb.interpolation = RigidbodyInterpolation2D.None;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            prevBodyType         = rb.bodyType;
+            prevInterp           = rb.interpolation;
+            rb.linearVelocity    = Vector2.zero;
+            rb.angularVelocity   = 0f;
+            rb.interpolation     = RigidbodyInterpolation2D.None;
+            rb.bodyType          = RigidbodyType2D.Kinematic;
         }
 
         if (currentActiveRoom != null)
@@ -131,8 +136,8 @@ public class RoomTransitionManager : MonoBehaviour
             : RoomShape.OneByOne;
 
         Vector2 newRoomCenter = roomPositions[targetCellIndex];
-        Vector2 entryOffset = GetEntryOffset(fromDirection, targetShape);
-        Vector2 doorPosition = newRoomCenter + entryOffset;
+        Vector2 entryOffset   = GetEntryOffset(fromDirection, targetShape);
+        Vector2 doorPosition  = newRoomCenter + entryOffset;
 
         SetPlayerPos(doorPosition, rb);
         Physics2D.SyncTransforms();
@@ -162,19 +167,23 @@ public class RoomTransitionManager : MonoBehaviour
             currentActiveRoom.SetCollidersActive(true);
         }
 
-        bool isLarge = targetShape != RoomShape.OneByOne;
+        // ── Holy Mantle ve oda-bazlı efektleri bilgilendir ────────────────
+        OnRoomChanged?.Invoke();
+        Debug.Log("[RTM] OnRoomChanged event'i fırlatıldı.");
+        // ─────────────────────────────────────────────────────────────────
 
+        bool isLarge = targetShape != RoomShape.OneByOne;
         cameraController?.SlideToRoom(newRoomCenter, GetRoomHalfSize(targetShape), isLarge, transitionDuration);
 
-        Vector2 slideDir = GetInwardDirection(fromDirection);
-        Vector2 slideEnd = doorPosition + slideDir * playerSlideDistance;
-        float slideDuration = Mathf.Min(transitionDuration * 0.5f, 0.25f);
-        float elapsed = 0f;
+        Vector2 slideDir     = GetInwardDirection(fromDirection);
+        Vector2 slideEnd     = doorPosition + slideDir * playerSlideDistance;
+        float   slideDuration = Mathf.Min(transitionDuration * 0.5f, 0.25f);
+        float   elapsed       = 0f;
 
         while (elapsed < slideDuration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / slideDuration));
+            float t  = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / slideDuration));
             SetPlayerPos(Vector2.Lerp(doorPosition, slideEnd, t), rb);
             yield return null;
         }
@@ -187,10 +196,10 @@ public class RoomTransitionManager : MonoBehaviour
 
         if (rb != null)
         {
-            rb.bodyType = prevBodyType;
-            rb.interpolation = prevInterp;
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
+            rb.bodyType          = prevBodyType;
+            rb.interpolation     = prevInterp;
+            rb.linearVelocity    = Vector2.zero;
+            rb.angularVelocity   = 0f;
         }
 
         SetPlayerMovement(true);
@@ -198,6 +207,7 @@ public class RoomTransitionManager : MonoBehaviour
         yield return new WaitForSeconds(transitionCooldown);
         isTransitioning = false;
     }
+
     private void DestroyAllProjectiles()
     {
         foreach (var p in FindObjectsByType<BabyProjectile>(FindObjectsSortMode.None))
@@ -214,19 +224,19 @@ public class RoomTransitionManager : MonoBehaviour
         var rb = player.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            var prevType = rb.bodyType;
+            var prevType  = rb.bodyType;
             var prevInterp = rb.interpolation;
 
-            rb.linearVelocity = Vector2.zero;
+            rb.linearVelocity  = Vector2.zero;
             rb.angularVelocity = 0f;
-            rb.interpolation = RigidbodyInterpolation2D.None;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.interpolation   = RigidbodyInterpolation2D.None;
+            rb.bodyType        = RigidbodyType2D.Kinematic;
 
             player.position = new Vector3(position.x, position.y, player.position.z);
-            rb.position = position;
+            rb.position     = position;
             Physics2D.SyncTransforms();
 
-            rb.bodyType = prevType;
+            rb.bodyType    = prevType;
             rb.interpolation = prevInterp;
         }
         else
@@ -251,7 +261,7 @@ public class RoomTransitionManager : MonoBehaviour
             EdgeDirection.Down  => Vector2.down,
             EdgeDirection.Left  => Vector2.left,
             EdgeDirection.Right => Vector2.right,
-            _ => Vector2.zero,
+            _                   => Vector2.zero,
         };
     }
 
@@ -272,7 +282,6 @@ public class RoomTransitionManager : MonoBehaviour
         if (!clampPlayerToRoom || player == null) return;
         if (!roomPositions.ContainsKey(currentRoomCellIndex)) return;
 
-        // Player herhangi bir Door trigger'ı içindeyse clamp yapma
         var playerCol = player.GetComponent<Collider2D>();
         if (playerCol != null)
         {
@@ -285,15 +294,14 @@ public class RoomTransitionManager : MonoBehaviour
             }
         }
 
-        Vector2 center = roomPositions[currentRoomCellIndex];
-        RoomShape shape = roomShapeMap.ContainsKey(currentRoomCellIndex)
+        Vector2   center   = roomPositions[currentRoomCellIndex];
+        RoomShape shape    = roomShapeMap.ContainsKey(currentRoomCellIndex)
             ? roomShapeMap[currentRoomCellIndex]
             : RoomShape.OneByOne;
-        Vector2 halfSize = GetRoomHalfSize(shape);
+        Vector2 halfSize   = GetRoomHalfSize(shape);
 
-        // Clamp sınırlarını biraz genişlet ki kapılara ulaşılabilsin
-        float margin = 1.5f;
-        Vector3 pos = player.position;
+        float   margin = 1.5f;
+        Vector3 pos    = player.position;
         pos.x = Mathf.Clamp(pos.x, center.x - halfSize.x - margin, center.x + halfSize.x + margin);
         pos.y = Mathf.Clamp(pos.y, center.y - halfSize.y - margin, center.y + halfSize.y + margin);
         player.position = pos;
@@ -301,17 +309,17 @@ public class RoomTransitionManager : MonoBehaviour
 
     private Vector2 GetEntryOffset(EdgeDirection doorDirection, RoomShape targetShape)
     {
-        Vector2 half = GetRoomHalfSize(targetShape);
-        float inset = doorEntryInset;
+        Vector2 half  = GetRoomHalfSize(targetShape);
+        float   inset = doorEntryInset;
 
-        switch (doorDirection)
+        return doorDirection switch
         {
-            case EdgeDirection.Up:    return new Vector2(0, -half.y + inset);
-            case EdgeDirection.Down:  return new Vector2(0,  half.y - inset);
-            case EdgeDirection.Left:  return new Vector2( half.x - inset, 0);
-            case EdgeDirection.Right: return new Vector2(-half.x + inset, 0);
-        }
-        return Vector2.zero;
+            EdgeDirection.Up    => new Vector2(0,           -half.y + inset),
+            EdgeDirection.Down  => new Vector2(0,            half.y - inset),
+            EdgeDirection.Left  => new Vector2( half.x - inset, 0),
+            EdgeDirection.Right => new Vector2(-half.x + inset, 0),
+            _                   => Vector2.zero,
+        };
     }
 
     private Vector2 GetRoomHalfSize(RoomShape shape)
@@ -323,7 +331,7 @@ public class RoomTransitionManager : MonoBehaviour
         return shape switch
         {
             RoomShape.OneByOne => inner,
-            RoomShape.OneByTwo => new Vector2(inner.x, inner.y * 2.2f),
+            RoomShape.OneByTwo => new Vector2(inner.x,        inner.y * 2.2f),
             RoomShape.TwoByOne => new Vector2(inner.x * 2.2f, inner.y),
             RoomShape.TwoByTwo => new Vector2(inner.x * 2.2f, inner.y * 2.2f),
             RoomShape.LShape   => new Vector2(inner.x * 2.2f, inner.y * 2.2f),

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da730381f69886142803dae12920052b
+guid: 77cf480169d45684787a77f34aed1209
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2639811153542188262
-    second: holy_mantle_0
+      213: -2817642328477022762
+    second: holymantle_item_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 175
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: holy_mantle_0
+      name: holymantle_item_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 71
-        width: 30
-        height: 30
+        x: 62
+        y: 42
+        width: 140
+        height: 164
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ec0ff0024e72a420800000000000000
-      internalID: 2639811153542188262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holy_mantle_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 71
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36d389592acd97b458c23932066decfe
-      internalID: 1959804660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holy_mantle_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 72
-        width: 30
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71ec28a017c588a4baf3f43f0710e6c7
-      internalID: 109124501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holy_mantle_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 71
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c075798deeb80244faa233beb0a7c679
-      internalID: -1062982998
+      spriteID: 6d5c5031b39b5e8d0800000000000000
+      internalID: -2817642328477022762
       vertices: []
       indices: 
       edges: []
@@ -191,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0620d185ab6acdb4fb63374185d807c3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -201,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      holy_mantle_0: 2639811153542188262
-      holy_mantle_1: 1959804660
-      holy_mantle_2: 109124501
-      holy_mantle_3: -1062982998
-      holy_mantle_4: -2008569827
+      holymantle_item_0: -2817642328477022762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

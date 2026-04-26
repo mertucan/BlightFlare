@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
-    public int maxHearts = 6;       // Maksimum can (half-heart birimi)
-    public int currentHearts = 6;   // Mevcut can
+    public int maxHearts = 6;
+    public int currentHearts = 6;
 
     [Header("Damage Sound")]
     public AudioSource audioSource;
@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     public int selectedDamageClipIndex = 0;
 
     [Header("Invincibility")]
-    [Tooltip("Hasar aldıktan sonra geçici dokunulmazlık süresi (saniye).")]
     public float invincibilityDuration = 1.2f;
 
     private float invincibilityTimer = 0f;
@@ -25,11 +24,29 @@ public class PlayerHealth : MonoBehaviour
             invincibilityTimer -= Time.deltaTime;
     }
 
-    /// <summary>Half-heart cinsinden hasar ver.</summary>
     public void TakeDamage(int halfHearts = 1)
     {
+        // Her TakeDamage çağrısını logla — ses nereden geliyor bulmak için
+        Debug.Log($"[PlayerHealth] TakeDamage({halfHearts}) çağrıldı. " +
+                  $"currentHearts:{currentHearts}, invTimer:{invincibilityTimer:F2}", gameObject);
+
         if (currentHearts <= 0) return;
-        if (invincibilityTimer > 0f) return;
+        if (invincibilityTimer > 0f)
+        {
+            Debug.Log("[PlayerHealth] İnvincibility aktif, hasar engellendi.");
+            return;
+        }
+
+        // ── Holy Mantle kontrolü ──────────────────────────────────────────
+        var mantle = GetComponent<HolyMantleEffect>();
+        if (mantle != null && mantle.TryBlockDamage())
+        {
+            invincibilityTimer = invincibilityDuration;
+            GetComponent<IsaacMovement>()?.TriggerDamageFlash(invincibilityDuration);
+            Debug.Log("[PlayerHealth] Holy Mantle hasarı engelledi!");
+            return;
+        }
+        // ─────────────────────────────────────────────────────────────────
 
         currentHearts -= halfHearts;
         currentHearts  = Mathf.Max(0, currentHearts);
@@ -50,17 +67,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    /// <summary>Can ekle (max'ı aşmaz).</summary>
     public void Heal(int halfHearts = 1)
     {
         currentHearts = Mathf.Min(currentHearts + halfHearts, maxHearts);
-
         HeartUI ui = FindFirstObjectByType<HeartUI>();
         if (ui != null) ui.UpdateHearts(currentHearts);
     }
 
     private void PlayDamageSound()
     {
+        Debug.Log($"[PlayerHealth] PlayDamageSound — clip:{(damageClips != null && damageClips.Length > 0 ? damageClips[selectedDamageClipIndex]?.name : "null")}");
         if (audioSource == null || damageClips == null || damageClips.Length == 0) return;
         if (selectedDamageClipIndex < 0 || selectedDamageClipIndex >= damageClips.Length) return;
         audioSource.PlayOneShot(damageClips[selectedDamageClipIndex]);
