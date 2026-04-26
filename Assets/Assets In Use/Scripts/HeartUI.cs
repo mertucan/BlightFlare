@@ -1,17 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class HeartUI : MonoBehaviour
 {
-    // ─────────────────────────────────────────
-    // HEARTS
-    // ─────────────────────────────────────────
     [Header("Hearts – Panel")]
-    [Tooltip("Kalp ikonlarının yerleşeceği panel (Horizontal Layout Group önerilir).")]
     public Transform heartsPanel;
-
-    [Tooltip("İçinde Image bileşeni olan prefab. Her slot için bir tane oluşturulur.")]
     public GameObject heartSlotPrefab;
 
     [Header("Hearts – Sprites")]
@@ -20,34 +15,22 @@ public class HeartUI : MonoBehaviour
     public Sprite emptyHeartSprite;
 
     [Header("Hearts – Settings")]
-    [Tooltip("Maksimum half-heart birimi. PlayerHealth.maxHearts ile eşleştir.")]
     public int maxHalfHearts = 6;
 
     private Image[] _slotImages;
 
-    // ─────────────────────────────────────────
-    // KEY
-    // ─────────────────────────────────────────
     [Header("Key")]
-    [Tooltip("Anahtar sprite'ını gösteren Image bileşeni.")]
     public Image keyIcon;
-
-    [Tooltip("Anahtar sayısını gösteren TMP (başlangıçta '0').")]
     public TMP_Text keyText;
 
-    // ─────────────────────────────────────────
-    // PENNIES
-    // ─────────────────────────────────────────
     [Header("Pennies")]
-    [Tooltip("Para sprite'ını gösteren Image bileşeni.")]
     public Image penniesIcon;
-
-    [Tooltip("Para miktarını gösteren TMP (başlangıçta '0').")]
     public TMP_Text penniesText;
 
-    // ═════════════════════════════════════════
-    // UNITY
-    // ═════════════════════════════════════════
+    [Header("Holy Mantle UI")]
+    [Tooltip("Son kalp slotunun sağ kenarından HolyMantle ikonuna piksel boşluk.")]
+    public float holyMantleOffsetX = 10f;
+
     private void Start()
     {
         BuildHeartSlots();
@@ -56,19 +39,10 @@ public class HeartUI : MonoBehaviour
         int currentHearts = ph != null ? ph.currentHearts : maxHalfHearts;
         UpdateHearts(currentHearts);
 
-        // Başlangıç değerleri
         UpdateKey(0);
         UpdatePennies(0);
     }
 
-    // ═════════════════════════════════════════
-    // PUBLIC API
-    // ═════════════════════════════════════════
-
-    /// <summary>
-    /// currentHalfHearts değerine göre kalp ikonlarını günceller.
-    /// 0 = tüm kalpler boş, maxHalfHearts = tüm kalpler tam.
-    /// </summary>
     public void UpdateHearts(int currentHalfHearts)
     {
         if (_slotImages == null) return;
@@ -92,27 +66,75 @@ public class HeartUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Ekrandaki anahtar sayısını günceller. Sprite sabit, sadece sayı değişir.
-    /// </summary>
     public void UpdateKey(int count)
     {
-        if (keyText != null)
-            keyText.text = count.ToString();
+        if (keyText != null) keyText.text = count.ToString();
+    }
+
+    public void UpdatePennies(int amount)
+    {
+        if (penniesText != null) penniesText.text = amount.ToString();
+    }
+
+    public void RebuildSlots()
+    {
+        BuildHeartSlots();
+
+        PlayerHealth ph = FindFirstObjectByType<PlayerHealth>();
+        if (ph != null) UpdateHearts(ph.currentHearts);
     }
 
     /// <summary>
-    /// Ekrandaki penny miktarını günceller. Sprite sabit, sadece sayı değişir.
+    /// HolyMantleUI ikonunu bir frame sonra doğru konuma taşır.
+    /// BloodBag ve HolyMantle bu metodu çağırır.
     /// </summary>
-    public void UpdatePennies(int amount)
+    public void RepositionHolyMantleAfterFrame()
     {
-        if (penniesText != null)
-            penniesText.text = amount.ToString();
+        StartCoroutine(RepositionNextFrame());
     }
 
-    // ═════════════════════════════════════════
-    // PRIVATE
-    // ═════════════════════════════════════════
+    private IEnumerator RepositionNextFrame()
+    {
+        yield return null;
+        yield return null;
+
+        HolyMantleUI mantleUI = Object.FindFirstObjectByType<HolyMantleUI>();
+        if (mantleUI == null) yield break;
+
+        RectTransform mantleRT = mantleUI.GetComponent<RectTransform>();
+        if (mantleRT == null) yield break;
+
+        RectTransform panelRT = heartsPanel as RectTransform;
+        if (panelRT == null) yield break;
+
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(panelRT);
+
+        int childCount = heartsPanel.childCount;
+        if (childCount == 0) yield break;
+
+        RectTransform lastSlotRT = heartsPanel.GetChild(childCount - 1)
+                                            .GetComponent<RectTransform>();
+        if (lastSlotRT == null) yield break;
+
+        Vector3[] corners = new Vector3[4];
+        lastSlotRT.GetWorldCorners(corners);
+        float screenRightX = corners[2].x;
+
+        // Canvas scale: kaç screen pixel = 1 canvas unit
+        Canvas rootCanvas = mantleRT.GetComponentInParent<Canvas>().rootCanvas;
+        float canvasScale = rootCanvas.transform.localScale.x;
+
+        // screen pixel → canvas unit (UI objesi top-left anchor'da, anchoredPosition = screen pixel / scale)
+        float targetX = (screenRightX / canvasScale) + holyMantleOffsetX;
+
+        Vector2 pos = mantleRT.anchoredPosition;
+        pos.x = targetX;
+        mantleRT.anchoredPosition = pos;
+
+        Debug.Log($"[HeartUI] screenRightX:{screenRightX} canvasScale:{canvasScale} targetX:{targetX}");
+    }
+
     private void BuildHeartSlots()
     {
         if (heartsPanel == null) return;

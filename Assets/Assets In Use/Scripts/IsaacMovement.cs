@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class IsaacMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Vector2 direction = Vector2.zero;
+    public Vector2 direction = Vector2.zero;
     public float speed = 5f;
 
     [Header("Input")]

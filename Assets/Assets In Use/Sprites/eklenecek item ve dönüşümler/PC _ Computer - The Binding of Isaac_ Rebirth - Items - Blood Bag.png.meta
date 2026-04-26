@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: 39609eed6671fae468b4ffc9683b580d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -819520520788800306
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_0
+  - first:
+      213: -3356519115441821575
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_1
+  - first:
+      213: -8932458345600061567
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_2
+  - first:
+      213: -2799279730611218823
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_3
+  - first:
+      213: 2971102688319279572
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_4
+  - first:
+      213: 492797618766631423
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_5
+  - first:
+      213: -5792472129182148551
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_6
+  - first:
+      213: 6818734091685170905
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_7
+  - first:
+      213: -109861668936550254
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_8
+  - first:
+      213: -1435871145767548786
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_9
+  - first:
+      213: -3593721305926327604
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_10
+  - first:
+      213: -2604731961518490528
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_11
+  - first:
+      213: 1581221056919810536
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_12
+  - first:
+      213: -8196100756712543690
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_13
+  - first:
+      213: -5082024936321415803
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_14
+  - first:
+      213: -679521842859607136
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_15
+  - first:
+      213: 2409934984381817930
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_16
+  - first:
+      213: 982657953895631542
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_17
+  - first:
+      213: -6605140449112939063
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_18
+  - first:
+      213: 8012038492243754918
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_19
+  - first:
+      213: 4593502176292700
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_20
+  - first:
+      213: 5453892986615740429
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_21
+  - first:
+      213: 7208996957013012634
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_22
+  - first:
+      213: -2340841700602776903
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_23
+  - first:
+      213: -6201196868856106347
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_24
+  - first:
+      213: 6819594675773086090
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_25
+  - first:
+      213: -2490221431823515811
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_26
+  - first:
+      213: 1575742816630171358
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_27
+  - first:
+      213: -5897437827333833838
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_28
+  - first:
+      213: -3527193603749609226
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_29
+  - first:
+      213: -8178940697756639412
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_30
+  - first:
+      213: 7737383367619582827
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_31
+  - first:
+      213: 5090747894183118262
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_32
+  - first:
+      213: 1395133523087962788
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 71
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc8d38ad6a70a4f0800000000000000
+      internalID: -819520520788800306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 72
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97697fd8ae5f629d0800000000000000
+      internalID: -2799279730611218823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 71
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d19a78472a7b3920800000000000000
+      internalID: 2971102688319279572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 72
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff15eb4c2d4c6d600800000000000000
+      internalID: 492797618766631423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_6
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 71
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9385fb0d9410d9fa0800000000000000
+      internalID: -5792472129182148551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 70
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de8db8778201ae50800000000000000
+      internalID: 6818734091685170905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a446dd3991fc17120800000000000000
+      internalID: 2409934984381817930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3bac6f07906f2fe4ea1dca07e44f1671
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_0: -819520520788800306
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_1: -3356519115441821575
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_10: -3593721305926327604
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_11: -2604731961518490528
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_12: 1581221056919810536
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_13: -8196100756712543690
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_14: -5082024936321415803
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_15: -679521842859607136
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_16: 2409934984381817930
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_17: 982657953895631542
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_18: -6605140449112939063
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_19: 8012038492243754918
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_2: -8932458345600061567
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_20: 4593502176292700
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_21: 5453892986615740429
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_22: 7208996957013012634
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_23: -2340841700602776903
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_24: -6201196868856106347
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_25: 6819594675773086090
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_26: -2490221431823515811
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_27: 1575742816630171358
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_28: -5897437827333833838
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_29: -3527193603749609226
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_3: -2799279730611218823
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_30: -8178940697756639412
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_31: 7737383367619582827
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_32: 5090747894183118262
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_33: 1395133523087962788
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_4: 2971102688319279572
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_5: 492797618766631423
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_6: -5792472129182148551
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_7: 6818734091685170905
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_8: -109861668936550254
+      PC _ Computer - The Binding of Isaac_ Rebirth - Items - Blood Bag_9: -1435871145767548786
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
