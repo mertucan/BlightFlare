@@ -5841,6 +5841,10 @@ MonoBehaviour:
   keyText: {fileID: 2077860506}
   penniesIcon: {fileID: 1647224752}
   penniesText: {fileID: 1073076973}
+  holyMantleOffsetX: 0
+  heartsPerRow: 5
+  secondRowOffsetY: -90
+  holyMantleRowOffsetY: -45
 --- !u!114 &1639191792
 MonoBehaviour:
   m_ObjectHideFlags: 0

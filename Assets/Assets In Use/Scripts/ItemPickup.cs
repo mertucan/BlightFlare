@@ -37,7 +37,12 @@ public class ItemPickup : MonoBehaviour
 
             case ItemType.SpeedIncrease:
                 if (player.TryGetComponent<IsaacMovement>(out IsaacMovement movementController))
+                {
                     movementController.speed++;
+                    var taurus = player.GetComponent<Taurus>();
+                    if (taurus != null)
+                        taurus.OnSpeedPickup(movementController.speed);
+                }
                 break;
 
             // ─── Yeni tipler ───────────────────────────────────────────────

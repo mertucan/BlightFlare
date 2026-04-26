@@ -62,11 +62,17 @@ public class RoomEnemyTracker : MonoBehaviour
         if (!initialized) return;
         RefreshDoors();
         UpdateDoorLocks();
+        var taurus = FindObjectOfType<Taurus>();
+        if (taurus != null && hasEnemies)
+            taurus.OnEnemyRoomEntered();
     }
 
     public void OnPlayerExited()
     {
         playerInRoom = false;
+        var taurus = FindObjectOfType<Taurus>();
+        if (taurus != null)
+            taurus.OnRoomExited();
     }
 
     private void RefreshDoors()
