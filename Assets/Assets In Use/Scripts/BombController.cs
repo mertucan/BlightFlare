@@ -10,7 +10,13 @@ public class BombController : MonoBehaviour
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
     public int bombAmount = 1;
-
+    [Header("Bobby Bomb")]
+    public bool hasBobbyBomb = false;
+    public float bobbyMoveSpeed    = 2.5f;
+    public float bobbySearchRadius = 15f;
+    public float bobbySearchDelay  = 0.15f;
+    public int   bobbySearchRetries = 5;
+    public float bobbyRetryInterval = 0.1f;
     [Header("Explosion")]
     public Explosion explosionPrefab;
     public LayerMask explosionLayerMask;
@@ -58,6 +64,35 @@ public class BombController : MonoBehaviour
 
         GameObject bomb = Instantiate(bombPrefab, spawnPos, Quaternion.identity);
         bomb.tag = "Bomb";
+
+        if (hasBobbyBomb)
+        {
+            if (bomb.GetComponent<Rigidbody2D>() == null)
+            {
+                var rb = bomb.AddComponent<Rigidbody2D>();
+                rb.gravityScale   = 0f;
+                rb.freezeRotation = true;
+            }
+
+            // Component yoksa ekle — AddComponent otomatik OnEnable'ı çağırır
+            var bb = bomb.GetComponent<BobbyBombBehaviour>()
+                    ?? bomb.AddComponent<BobbyBombBehaviour>();
+
+            bb.moveSpeed     = bobbyMoveSpeed;
+            bb.searchRadius  = bobbySearchRadius;
+            bb.searchDelay   = bobbySearchDelay;
+            bb.searchRetries = bobbySearchRetries;
+            bb.retryInterval = bobbyRetryInterval;
+            bb.fuseTime      = bombFuseTime;
+        }
+
+        // ── Bob's Curse yeşil blink ──────────────────────────────────────
+        if (hasPoisonCloud)
+        {
+            var bc = bomb.GetComponent<BobsCurseBomb>()
+                    ?? bomb.AddComponent<BobsCurseBomb>();
+            bc.fuseTime = bombFuseTime;
+        }
 
         bombsRemaining--;
 

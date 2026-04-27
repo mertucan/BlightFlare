@@ -53,7 +53,6 @@ public class Seraphim : MonoBehaviour, IItem
     private const float BOB_AMPLITUDE = 0.05f;
     private const float BOB_SPEED     = 2f;   // radyan/saniye (ayarlanabilir)
     private float _bobPhase = 0f;
-    private bool  _bobGoingUp = false;         // önce aşağı, sonra yukarı
 
     // ── Animasyon ────────────────────────────────────────────────────────────
     private const float FPS = 4f;
