@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -159,7 +159,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -211,12 +211,12 @@ TextureImporter:
       name: seraphim_transformation_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 156
-        width: 30
-        height: 27
+        x: 12
+        y: 58
+        width: 40
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: seraphim_transformation_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 155
-        width: 30
-        height: 26
+        x: 75
+        y: 59
+        width: 40
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: seraphim_transformation_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 156
-        width: 30
-        height: 27
+        x: 140
+        y: 63
+        width: 40
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: seraphim_transformation_3
       rect:
         serializedVersion: 2
-        x: 209
-        y: 155
-        width: 30
-        height: 26
+        x: 203
+        y: 69
+        width: 42
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: seraphim_transformation_4
       rect:
         serializedVersion: 2
-        x: 273
-        y: 156
-        width: 30
-        height: 27
+        x: 267
+        y: 68
+        width: 43
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: seraphim_transformation_5
       rect:
         serializedVersion: 2
-        x: 337
-        y: 155
-        width: 30
-        height: 26
+        x: 329
+        y: 66
+        width: 46
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: seraphim_transformation_6
       rect:
         serializedVersion: 2
-        x: 401
-        y: 156
-        width: 30
-        height: 27
+        x: 395
+        y: 65
+        width: 43
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -362,37 +362,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seraphim_transformation_7
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 155
-        width: 30
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9db7d1cd9f45c690800000000000000
-      internalID: -7582566858627760737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: seraphim_transformation_8
       rect:
         serializedVersion: 2
-        x: 12
-        y: 108
-        width: 40
-        height: 23
+        x: 9
+        y: 101
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,12 +387,12 @@ TextureImporter:
       name: seraphim_transformation_9
       rect:
         serializedVersion: 2
-        x: 77
-        y: 111
-        width: 38
-        height: 20
+        x: 74
+        y: 101
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,12 +409,12 @@ TextureImporter:
       name: seraphim_transformation_10
       rect:
         serializedVersion: 2
-        x: 139
-        y: 116
-        width: 42
-        height: 18
+        x: 136
+        y: 101
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -454,11 +432,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 202
-        y: 116
-        width: 44
-        height: 25
+        y: 101
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,12 +453,12 @@ TextureImporter:
       name: seraphim_transformation_12
       rect:
         serializedVersion: 2
-        x: 266
-        y: 116
-        width: 44
-        height: 25
+        x: 265
+        y: 102
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -497,12 +475,12 @@ TextureImporter:
       name: seraphim_transformation_13
       rect:
         serializedVersion: 2
-        x: 329
-        y: 116
-        width: 46
-        height: 18
+        x: 330
+        y: 103
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -519,12 +497,12 @@ TextureImporter:
       name: seraphim_transformation_14
       rect:
         serializedVersion: 2
-        x: 395
-        y: 116
-        width: 42
-        height: 15
+        x: 394
+        y: 103
+        width: 45
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -546,7 +524,7 @@ TextureImporter:
         width: 22
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -560,323 +538,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seraphim_transformation_16
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 60
-        width: 20
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32db4d54126d8ea10800000000000000
-      internalID: 1939035077976833315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_17
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 60
-        width: 20
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b68828d0924800c0800000000000000
-      internalID: -4609361028744444235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_18
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 63
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a475b1a02dcd113b0800000000000000
-      internalID: -5543406871645563062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_19
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 63
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53e0d734f056c5d60800000000000000
-      internalID: 7880284564222709301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_20
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 70
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05adffd38d8fbfe90800000000000000
-      internalID: -6990720388925760944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_21
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 70
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ebf52e5ddd2f6e80800000000000000
-      internalID: -8183271569118331931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_22
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 71
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2107e57ce519da2c0800000000000000
-      internalID: -4418715823122780142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_23
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 71
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67c28896538415130800000000000000
-      internalID: 3553700975213030518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_24
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 69
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15dfe2c98cc3bc4c0800000000000000
-      internalID: -4266249389691962031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_25
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 69
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 456a59f835045d630800000000000000
-      internalID: 3951134975722890836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_26
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 70
-        width: 23
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 55e38e8f7563c7d90800000000000000
-      internalID: -7098739161176719787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_27
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 70
-        width: 23
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 920beb7283c656830800000000000000
-      internalID: 4063773227212517417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_28
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 68
-        width: 21
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c04c76270b8cfc60800000000000000
-      internalID: 7853304713054011584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seraphim_transformation_29
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 68
-        width: 21
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85b1cc0817f2718e0800000000000000
-      internalID: -1722856167907255464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: seraphim_transformation_30
       rect:
         serializedVersion: 2
         x: 12
         y: 12
-        width: 28
-        height: 23
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -894,11 +564,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 77
-        y: 15
-        width: 27
-        height: 20
+        y: 12
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -916,11 +586,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 139
-        y: 20
-        width: 29
-        height: 18
+        y: 14
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -938,11 +608,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 202
-        y: 20
+        y: 14
         width: 30
-        height: 25
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -960,11 +630,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 266
-        y: 20
+        y: 15
         width: 30
-        height: 25
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -982,11 +652,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 329
-        y: 20
-        width: 31
-        height: 18
+        y: 14
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1004,11 +674,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 395
-        y: 20
-        width: 29
-        height: 15
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1025,7 +695,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0dde9dc1a98870443a719af090f2c16e
     internalID: 0
     vertices: []
     indices: 
