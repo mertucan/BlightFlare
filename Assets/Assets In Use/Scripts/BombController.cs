@@ -17,6 +17,9 @@ public class BombController : MonoBehaviour
     public float bobbySearchDelay  = 0.15f;
     public int   bobbySearchRetries = 5;
     public float bobbyRetryInterval = 0.1f;
+    [Header("Hot Bomb")]
+    public bool hasHotBomb = false;
+    public GameObject fireHazardPrefab;
     [Header("Explosion")]
     public Explosion explosionPrefab;
     public LayerMask explosionLayerMask;
@@ -123,6 +126,9 @@ public class BombController : MonoBehaviour
         UnlockDoorsInExplosion(explodedPositions);
 
         Destroy(bomb);
+
+        if (hasHotBomb && fireHazardPrefab != null)
+            Instantiate(fireHazardPrefab, explosionPos, Quaternion.identity);
 
         if (hasPoisonCloud && poisonCloudPrefab != null)
             Instantiate(poisonCloudPrefab, explosionPos, Quaternion.identity);
