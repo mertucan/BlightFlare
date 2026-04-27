@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: c7f4c172ac4af024483fcabbf008d3b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3623456089048840555
+    second: blood of martyr_0
+  - first:
+      213: 5178805536544760185
+    second: blood of martyr_1
+  - first:
+      213: 6016144224180704642
+    second: blood of martyr_2
+  - first:
+      213: -8380961214255701384
+    second: blood of martyr_3
+  - first:
+      213: 6125399273253683121
+    second: blood of martyr_4
+  - first:
+      213: 3547271922540815001
+    second: blood of martyr_5
+  - first:
+      213: 842244224733825854
+    second: blood of martyr_6
+  - first:
+      213: 6890588840827108485
+    second: blood of martyr_7
+  - first:
+      213: -1288669436868204098
+    second: blood of martyr_8
+  - first:
+      213: 7767992438321130641
+    second: blood of martyr_9
+  - first:
+      213: 21304921654690922
+    second: blood of martyr_10
+  - first:
+      213: 4481137762560865162
+    second: blood of martyr_11
+  - first:
+      213: -8337106295864254287
+    second: blood of martyr_12
+  - first:
+      213: -8300937303203742644
+    second: blood of martyr_13
+  - first:
+      213: 1395865969438353975
+    second: blood of martyr_14
+  - first:
+      213: -6284485417809515990
+    second: blood of martyr_15
+  - first:
+      213: 4880086082850512698
+    second: blood of martyr_16
+  - first:
+      213: -8105990397978944539
+    second: blood of martyr_17
+  - first:
+      213: -6096699522538722394
+    second: blood of martyr_18
+  - first:
+      213: 1621668085141576980
+    second: blood of martyr_19
+  - first:
+      213: 3604452333220119635
+    second: blood of martyr_20
+  - first:
+      213: 2071471371338403590
+    second: blood of martyr_21
+  - first:
+      213: -7511389071801118256
+    second: blood of martyr_22
+  - first:
+      213: 4794856312548994794
+    second: blood of martyr_23
+  - first:
+      213: -8658191623098016108
+    second: blood of martyr_24
+  - first:
+      213: 3287073723946140009
+    second: blood of martyr_25
+  - first:
+      213: 7862181781942146271
+    second: blood of martyr_26
+  - first:
+      213: 4389289040633038242
+    second: blood of martyr_27
+  - first:
+      213: -222064802815455221
+    second: blood of martyr_28
+  - first:
+      213: 2584924887872495920
+    second: blood of martyr_29
+  - first:
+      213: -4499847246267350083
+    second: blood of martyr_30
+  - first:
+      213: -7792989967131906399
+    second: blood of martyr_31
+  - first:
+      213: 3826514894874000175
+    second: blood of martyr_32
+  - first:
+      213: -6273330997518338543
+    second: blood of martyr_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blood of martyr_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 75
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b697bf67d1a194230800000000000000
+      internalID: 3623456089048840555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 38
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9619e89f9bd1ee0800000000000000
+      internalID: -1288669436868204098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 38
+        width: 28
+        height: 34
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64023f96b0bb4000800000000000000
+      internalID: 21304921654690922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 38
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0a65ceef5ac4c80800000000000000
+      internalID: -8337106295864254287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_14
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 38
+        width: 28
+        height: 34
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73aed6e14bc1f5310800000000000000
+      internalID: 1395865969438353975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 73
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cf5b2e2c9b09e4aa07b4a2c97bff67
+      internalID: 5178805536544760185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 77
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce455ac28e3cde94880943c07248858d
+      internalID: 6016144224180704642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 75
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0162a0d491b9d11469c092933b2d64fd
+      internalID: -8380961214255701384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 75
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b161e8f414c5404eb470145c7898cdc
+      internalID: 6125399273253683121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 73
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3bd6298443ab747a4b1e61e06f8194
+      internalID: 3547271922540815001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 77
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c71468a35ede942b6084600729a257
+      internalID: 842244224733825854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 75
+        width: 27
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e59bca6f05c3c54190c37a43b4759d6
+      internalID: 6890588840827108485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_9
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 37
+        width: 28
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2946868a8477f744dbd6ccf28f7cd115
+      internalID: 7767992438321130641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 37
+        width: 28
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c21e58da9c6cdb4f900f4190eeeb98f
+      internalID: 4481137762560865162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_13
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 37
+        width: 28
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2a7cf33788d1246bf5b2b6f9cb0a60
+      internalID: -8300937303203742644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 37
+        width: 28
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc87863596a5dd448a1f1842b3cc24d5
+      internalID: -6284485417809515990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 8
+        width: 27
+        height: 16
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5c0cc1a287acd44b20d31886b52d0c
+      internalID: 4880086082850512698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_17
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 16
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2bc46799fc1bc4c9ed064405b5eec0
+      internalID: -8105990397978944539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_18
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 14
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aae6b81fc942f41b4114dfe4be6cd4
+      internalID: -6096699522538722394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_19
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 14
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbae41e07393444390e72965540c5b2
+      internalID: 1621668085141576980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_20
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 16
+        width: 5
+        height: 6
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7d05141cdb4434bb3eecf4249703d3
+      internalID: 3604452333220119635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631a8634ea63c3d4ba567076e8b11496
+      internalID: 2071471371338403590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_22
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 16
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f6b51a8804a984eb1fa7d859d62d4b
+      internalID: -7511389071801118256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 14
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81903a4e723ffd34cb38aae8ca8986ea
+      internalID: 4794856312548994794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_24
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 30
+        height: 28
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cf52ff2fb659143a9c401d9c73875a
+      internalID: -8658191623098016108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2
+        width: 6
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c921e5a58e801439d5f655e4662d8d
+      internalID: 3287073723946140009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_26
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2
+        width: 5
+        height: 6
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e967a3438f2adc4e95dd58d0fd020a6
+      internalID: 7862181781942146271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_27
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e69b22accb1b8a4c9e785b2d39204c2
+      internalID: 4389289040633038242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_28
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 2
+        width: 9
+        height: 6
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c619086a6f7bb42b4b785e5ca6bb26
+      internalID: -222064802815455221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_29
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d286a736db5caf4aa3633ab7a7777f0
+      internalID: 2584924887872495920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_30
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 2
+        width: 9
+        height: 6
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5626b44254bd3684db6b18e3bc349cfb
+      internalID: -4499847246267350083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_31
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 2
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b996a5ffb5a1af649a7e6f150a648b20
+      internalID: -7792989967131906399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_32
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2
+        width: 9
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b34405bc55b014e9928ff1f0e11ab5
+      internalID: 3826514894874000175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood of martyr_33
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.47, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2856cc8972059459a168685ac16c89
+      internalID: -6273330997518338543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7fb0560126badc348848a19d0d100e0c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4699999988079071,"y":0.4000000059604645},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      blood of martyr_0: 3623456089048840555
+      blood of martyr_1: 5178805536544760185
+      blood of martyr_10: 21304921654690922
+      blood of martyr_11: 4481137762560865162
+      blood of martyr_12: -8337106295864254287
+      blood of martyr_13: -8300937303203742644
+      blood of martyr_14: 1395865969438353975
+      blood of martyr_15: -6284485417809515990
+      blood of martyr_16: 4880086082850512698
+      blood of martyr_17: -8105990397978944539
+      blood of martyr_18: -6096699522538722394
+      blood of martyr_19: 1621668085141576980
+      blood of martyr_2: 6016144224180704642
+      blood of martyr_20: 3604452333220119635
+      blood of martyr_21: 2071471371338403590
+      blood of martyr_22: -7511389071801118256
+      blood of martyr_23: 4794856312548994794
+      blood of martyr_24: -8658191623098016108
+      blood of martyr_25: 3287073723946140009
+      blood of martyr_26: 7862181781942146271
+      blood of martyr_27: 4389289040633038242
+      blood of martyr_28: -222064802815455221
+      blood of martyr_29: 2584924887872495920
+      blood of martyr_3: -8380961214255701384
+      blood of martyr_30: -4499847246267350083
+      blood of martyr_31: -7792989967131906399
+      blood of martyr_32: 3826514894874000175
+      blood of martyr_33: -6273330997518338543
+      blood of martyr_4: 6125399273253683121
+      blood of martyr_5: 3547271922540815001
+      blood of martyr_6: 842244224733825854
+      blood of martyr_7: 6890588840827108485
+      blood of martyr_8: -1288669436868204098
+      blood of martyr_9: 7767992438321130641
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
