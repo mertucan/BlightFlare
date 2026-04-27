@@ -1,0 +1,471 @@
+fileFormatVersion: 2
+guid: c91581b1b3ca21b49a81ed5d6641a240
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5253643939005287565
+    second: ceremonial robe_0
+  - first:
+      213: -2261662637355057051
+    second: ceremonial robe_1
+  - first:
+      213: 4773676582518399146
+    second: ceremonial robe_2
+  - first:
+      213: 9007608046895831697
+    second: ceremonial robe_3
+  - first:
+      213: -3271724079939685093
+    second: ceremonial robe_4
+  - first:
+      213: -9008246257052305523
+    second: ceremonial robe_5
+  - first:
+      213: 3307647524773048490
+    second: ceremonial robe_6
+  - first:
+      213: 8711565011927954169
+    second: ceremonial robe_7
+  - first:
+      213: 2026868347363109891
+    second: ceremonial robe_8
+  - first:
+      213: -5243751930150676066
+    second: ceremonial robe_9
+  - first:
+      213: 2213535860347792779
+    second: ceremonial robe_10
+  - first:
+      213: 2536734146827865791
+    second: ceremonial robe_11
+  - first:
+      213: -938032469579434801
+    second: ceremonial robe_12
+  - first:
+      213: -5809854004105567766
+    second: ceremonial robe_13
+  - first:
+      213: 479127507657743461
+    second: ceremonial robe_14
+  - first:
+      213: -7668728849233129003
+    second: ceremonial robe_15
+  - first:
+      213: 7446211517326331534
+    second: ceremonial robe_16
+  - first:
+      213: -6851753196490945280
+    second: ceremonial robe_17
+  - first:
+      213: 4299918906440961258
+    second: ceremonial robe_18
+  - first:
+      213: -8701318646454378777
+    second: ceremonial robe_19
+  - first:
+      213: -8712561770268843276
+    second: ceremonial robe_20
+  - first:
+      213: 2425949476751354732
+    second: ceremonial robe_21
+  - first:
+      213: 8858389531443082056
+    second: ceremonial robe_22
+  - first:
+      213: 4042595956391325410
+    second: ceremonial robe_23
+  - first:
+      213: -176686322448227537
+    second: ceremonial robe_24
+  - first:
+      213: -3125674314529716039
+    second: ceremonial robe_25
+  - first:
+      213: -6874447188716942605
+    second: ceremonial robe_26
+  - first:
+      213: 5597664533865938078
+    second: ceremonial robe_27
+  - first:
+      213: -3304548401165567605
+    second: ceremonial robe_28
+  - first:
+      213: -3538081351798226595
+    second: ceremonial robe_29
+  - first:
+      213: 3492028895162195371
+    second: ceremonial robe_30
+  - first:
+      213: -4982004489767162478
+    second: ceremonial robe_31
+  - first:
+      213: -5199453547490842412
+    second: ceremonial robe_32
+  - first:
+      213: 5268380096914733718
+    second: ceremonial robe_33
+  - first:
+      213: -3617788516654482365
+    second: ceremonial robe_34
+  - first:
+      213: 2281628469646506712
+    second: ceremonial robe_35
+  - first:
+      213: 8460046075994980957
+    second: ceremonial robe_36
+  - first:
+      213: 7997964374317163960
+    second: ceremonial robe_37
+  - first:
+      213: 5901805202666470571
+    second: ceremonial robe_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ceremonial robe_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 222
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c4bc8d351b8e840800000000000000
+      internalID: 5253643939005287565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 222
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560cdaa60d5fc90e0800000000000000
+      internalID: -2261662637355057051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 222
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa02c9d4f818f3240800000000000000
+      internalID: 4773676582518399146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 222
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a1d275bc3710d70800000000000000
+      internalID: 9007608046895831697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 220
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b157a1c98408892d0800000000000000
+      internalID: -3271724079939685093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 220
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87b727c1c74cf280800000000000000
+      internalID: -9008246257052305523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 189
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa03c4c26ef17ed20800000000000000
+      internalID: 3307647524773048490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_7
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 189
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2ffa5f832b5e870800000000000000
+      internalID: 8711565011927954169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ceremonial robe_8
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 4
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30caf0be502e02c10800000000000000
+      internalID: 2026868347363109891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd10244487f65cd41bb618f5e1a0bf33
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ceremonial robe_0: 5253643939005287565
+      ceremonial robe_1: -2261662637355057051
+      ceremonial robe_10: 2213535860347792779
+      ceremonial robe_11: 2536734146827865791
+      ceremonial robe_12: -938032469579434801
+      ceremonial robe_13: -5809854004105567766
+      ceremonial robe_14: 479127507657743461
+      ceremonial robe_15: -7668728849233129003
+      ceremonial robe_16: 7446211517326331534
+      ceremonial robe_17: -6851753196490945280
+      ceremonial robe_18: 4299918906440961258
+      ceremonial robe_19: -8701318646454378777
+      ceremonial robe_2: 4773676582518399146
+      ceremonial robe_20: -8712561770268843276
+      ceremonial robe_21: 2425949476751354732
+      ceremonial robe_22: 8858389531443082056
+      ceremonial robe_23: 4042595956391325410
+      ceremonial robe_24: -176686322448227537
+      ceremonial robe_25: -3125674314529716039
+      ceremonial robe_26: -6874447188716942605
+      ceremonial robe_27: 5597664533865938078
+      ceremonial robe_28: -3304548401165567605
+      ceremonial robe_29: -3538081351798226595
+      ceremonial robe_3: 9007608046895831697
+      ceremonial robe_30: 3492028895162195371
+      ceremonial robe_31: -4982004489767162478
+      ceremonial robe_32: -5199453547490842412
+      ceremonial robe_33: 5268380096914733718
+      ceremonial robe_34: -3617788516654482365
+      ceremonial robe_35: 2281628469646506712
+      ceremonial robe_36: 8460046075994980957
+      ceremonial robe_37: 7997964374317163960
+      ceremonial robe_38: 5901805202666470571
+      ceremonial robe_4: -3271724079939685093
+      ceremonial robe_5: -9008246257052305523
+      ceremonial robe_6: 3307647524773048490
+      ceremonial robe_7: 8711565011927954169
+      ceremonial robe_8: 2026868347363109891
+      ceremonial robe_9: -5243751930150676066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
