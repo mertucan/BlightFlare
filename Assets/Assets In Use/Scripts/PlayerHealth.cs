@@ -56,6 +56,19 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHearts <= 0)
         {
+            // Fizigi hemen durdur
+            var rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.bodyType = RigidbodyType2D.Kinematic; // artik hic bir force etkilemesin
+            }
+
+            // Collider'lari kapat - dusман/mermi carpmaya devam etmesin
+            foreach (var col in GetComponents<Collider2D>())
+                col.enabled = false;
+
             var movement = GetComponent<IsaacMovement>();
             if (movement != null) movement.DeathSequence();
         }

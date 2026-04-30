@@ -29,6 +29,8 @@ public class RoomEnemyTracker : MonoBehaviour
             enemies.Add(d.gameObject);
         foreach (var s in GetComponentsInChildren<SuckerAI>(true))
             enemies.Add(s.gameObject);
+        foreach (var h in GetComponentsInChildren<HostAI>(true))   // ← YENİ
+            enemies.Add(h.gameObject);
 
         hasEnemies = enemies.Count > 0;
         initialized = true;

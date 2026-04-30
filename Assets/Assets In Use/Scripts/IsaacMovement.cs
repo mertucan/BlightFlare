@@ -180,6 +180,10 @@ public class IsaacMovement : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
         StopCoroutine(nameof(DamageFlashRoutine));
         SetAllSpritesColor(Color.white);
 

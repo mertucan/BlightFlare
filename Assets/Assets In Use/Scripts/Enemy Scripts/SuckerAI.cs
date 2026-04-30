@@ -28,11 +28,11 @@ public class SuckerAI : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     [Header("Steering")]
-    [Tooltip("Duvarlardan kaçınma yarıçapı")]
+    public string wallTag = "Wall";
+    public string doorTag = "Door"; // ← yeni
     public float wallAvoidRadius = 1.2f;
     [Tooltip("Duvar kaçınma kuvveti")]
     public float wallAvoidWeight = 2.5f;
-    public string wallTag = "Wall";
     public float smoothTime = 0.25f;
 
     [Header("Panic (değdikten sonra geri kaç)")]
@@ -192,6 +192,7 @@ public class SuckerAI : MonoBehaviour
         TakeDamage(1, knockDir);
     }
 
+    // ─── Hasar alma ──────────────────────────────────────────────
     public void TakeDamage(int damage, Vector2 knockDir = default)
     {
         if (isDead) return;
@@ -199,12 +200,52 @@ public class SuckerAI : MonoBehaviour
         currentHP -= Mathf.Max(1, damage);
 
         if (rb != null && knockDir != Vector2.zero)
-            rb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);
+            StartCoroutine(SafeKnockback(knockDir));
 
         if (flashRoutine != null) StopCoroutine(flashRoutine);
         flashRoutine = StartCoroutine(HitFlashRoutine());
 
         if (currentHP <= 0) Die();
+    }
+
+    // ─── Knockback'i duvarlarla sınırla ──────────────────────────
+    private IEnumerator SafeKnockback(Vector2 knockDir)
+    {
+        rb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);
+
+        // Birkaç frame bekle, fizik işlensin
+        yield return new WaitForFixedUpdate();
+        yield return new WaitForFixedUpdate();
+
+        // Duvar/kapı ihlali varsa geri it
+        ClampPositionOutsideWalls();
+    }
+
+    private void ClampPositionOutsideWalls()
+    {
+        // Kendi collider bounds'una göre overlap kontrolü
+        Vector2 pos = rb.position;
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useTriggers = false;
+
+        Collider2D[] hits = new Collider2D[8];
+        int count = col.Overlap(filter, hits);
+
+        for (int i = 0; i < count; i++)
+        {
+            Collider2D hit = hits[i];
+            if (hit == null || hit == col) continue;
+            if (!hit.CompareTag(wallTag) && !hit.CompareTag(doorTag)) continue;
+
+            // Penetrasyon vektörünü hesapla ve dışarı it
+            ColliderDistance2D dist = Physics2D.Distance(col, hit);
+            if (dist.isOverlapped)
+            {
+                pos += dist.normal * dist.distance; // distance negatif gelir overlap'te
+            }
+        }
+
+        rb.position = pos;
     }
 
     private IEnumerator HitFlashRoutine()
