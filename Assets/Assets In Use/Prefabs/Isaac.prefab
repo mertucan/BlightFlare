@@ -201,6 +201,14 @@ MonoBehaviour:
   bombPrefab: {fileID: 3939017888894637700, guid: e10230ffd5e90c3489946b2652130401, type: 3}
   bombFuseTime: 3
   bombAmount: 1
+  hasBobbyBomb: 0
+  bobbyMoveSpeed: 2.5
+  bobbySearchRadius: 15
+  bobbySearchDelay: 0.15
+  bobbySearchRetries: 5
+  bobbyRetryInterval: 0.1
+  hasHotBomb: 0
+  fireHazardPrefab: {fileID: 3753293821117044374, guid: 10fe8cf64b96610429a032c2715a82cc, type: 3}
   explosionPrefab: {fileID: 805732483383335703, guid: 7d7e9c7ce1308484e863a8b4489e090f, type: 3}
   explosionLayerMask:
     serializedVersion: 2
@@ -215,6 +223,9 @@ MonoBehaviour:
   explosionClips:
   - {fileID: 8300000, guid: af956f4eb6aaa5545b60ddc7ff1ad4d8, type: 3}
   selectedClipIndex: 0
+  bombBlockingLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!58 &7792630423502160976
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -263,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a5277c4f94bec46a201639c1814809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IsaacMovement
+  direction: {x: 0, y: 0}
   speed: 5
   moveUp: 37
   moveDown: 33

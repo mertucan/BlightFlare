@@ -118,7 +118,11 @@ public class ItemPickup : MonoBehaviour
 
             case ItemType.BlastRadius:
                 if (player.TryGetComponent<BombController>(out BombController bombRadiusController))
-                    bombRadiusController.explosionRadius++;
+                {
+                    if (bombRadiusController.explosionRadius < 3)
+                        bombRadiusController.explosionRadius++;
+                    // 3'e ulaşmışsa hiçbir şey yapma (item yine de yok olur)
+                }
                 break;
 
             case ItemType.SpeedIncrease:

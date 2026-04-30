@@ -12,6 +12,7 @@ TagManager:
   - TNT
   - PlayerBomb
   - Trap
+  - Heart
   layers:
   - Default
   - TransparentFX

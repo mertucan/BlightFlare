@@ -13,19 +13,17 @@ public class Destructible : MonoBehaviour
 
     private bool _exploded = false;
 
-    // ─── Explosion layer'ından gelen trigger'ı yakala ──────────────────────
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_exploded) return;
         if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
-            // Enemy projectile'larını yoksay
             if (other.GetComponent<PooterProjectile>() != null) return;
             if (other.GetComponent<BabyProjectile>() != null) return;
-
             Explode();
         }
     }
+
     public void Explode()
     {
         if (_exploded) return;
@@ -33,14 +31,17 @@ public class Destructible : MonoBehaviour
 
         if (spawnableItems != null && spawnableItems.Length > 0 && Random.value < itemSpawnChance)
         {
-            int randomIndex = Random.Range(0, spawnableItems.Length);
-            Instantiate(spawnableItems[randomIndex], transform.position, Quaternion.identity);
+            GameObject[] validItems = GetValidSpawnableItems();
+            if (validItems.Length > 0)
+            {
+                int randomIndex = Random.Range(0, validItems.Length);
+                Instantiate(validItems[randomIndex], transform.position, Quaternion.identity);
+            }
         }
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) sr.enabled = false;
 
-        // ✅ Collider'ı hemen kapat — destructionTime bekleme
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
@@ -52,5 +53,28 @@ public class Destructible : MonoBehaviour
         }
 
         Destroy(gameObject, destructionTime);
+    }
+
+    private GameObject[] GetValidSpawnableItems()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        bool blastRadiusCapped = false;
+
+        if (player != null && player.TryGetComponent<BombController>(out BombController bc))
+            blastRadiusCapped = bc.explosionRadius >= 3;
+
+        var valid = new System.Collections.Generic.List<GameObject>();
+        foreach (var item in spawnableItems)
+        {
+            if (item == null) continue;
+
+            if (blastRadiusCapped
+                && item.TryGetComponent<ItemPickup>(out ItemPickup ip)
+                && ip.type == ItemPickup.ItemType.BlastRadius)
+                continue;
+
+            valid.Add(item);
+        }
+        return valid.ToArray();
     }
 }
