@@ -13,6 +13,7 @@ public class EnemyRoomTrigger : MonoBehaviour
     private DOF_AI[]    dofEnemies;
     private SuckerAI[]  suckers;
     private HostAI[]    hosts;      // ← YENİ
+    private BoomFlyAI[] boomflies; // ← YENİ
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class EnemyRoomTrigger : MonoBehaviour
         dofEnemies = GetComponentsInChildren<DOF_AI>(true);
         suckers    = GetComponentsInChildren<SuckerAI>(true);
         hosts      = GetComponentsInChildren<HostAI>(true);   // ← YENİ
+        boomflies  = GetComponentsInChildren<BoomFlyAI>(true); // ← YENİ
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,5 +44,6 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var d in dofEnemies) if (d != null) d.SetActive(active);
         foreach (var s in suckers)    if (s != null) s.SetActive(active);
         foreach (var h in hosts)      if (h != null) h.SetActive(active);  // ← YENİ
+        foreach (var bf in boomflies) if (bf != null) bf.SetActive(active); // ← YENİ
     }
 }
