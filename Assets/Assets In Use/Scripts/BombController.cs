@@ -10,16 +10,19 @@ public class BombController : MonoBehaviour
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
     public int bombAmount = 1;
+
     [Header("Bobby Bomb")]
     public bool hasBobbyBomb = false;
-    public float bobbyMoveSpeed    = 2.5f;
-    public float bobbySearchRadius = 15f;
-    public float bobbySearchDelay  = 0.15f;
+    public float bobbyMoveSpeed     = 2.5f;
+    public float bobbySearchRadius  = 15f;
+    public float bobbySearchDelay   = 0.15f;
     public int   bobbySearchRetries = 5;
     public float bobbyRetryInterval = 0.1f;
+
     [Header("Hot Bomb")]
     public bool hasHotBomb = false;
     public GameObject fireHazardPrefab;
+
     [Header("Explosion")]
     public Explosion explosionPrefab;
     public LayerMask explosionLayerMask;
@@ -39,8 +42,16 @@ public class BombController : MonoBehaviour
     public AudioClip[] explosionClips;
     public int selectedClipIndex = 0;
 
+    [Header("Bomb Placement")]
+    [Tooltip("Wall ve Door layer'larını buraya ekleyin. Bomba bu layer'larla çakışan hücreye konmaz.")]
+    public LayerMask bombBlockingLayers;
+
     private int bombsRemaining;
     private bool initialized = false;
+    private IsaacMovement isaacMovement;
+
+    // Idle'da da doğru yönü bilmek için son geçerli hareket yönü
+    private Vector2 lastFacingDir = Vector2.down;
 
     private void Start()
     {
@@ -49,10 +60,16 @@ public class BombController : MonoBehaviour
             bombsRemaining = bombAmount;
             initialized = true;
         }
+
+        isaacMovement = GetComponent<IsaacMovement>();
     }
 
     private void Update()
     {
+        // IsaacMovement.direction sıfır olmadığında güncelle
+        if (isaacMovement != null && isaacMovement.direction != Vector2.zero)
+            lastFacingDir = isaacMovement.direction;
+
         var kb = Keyboard.current;
         if (kb == null) return;
 
@@ -62,8 +79,14 @@ public class BombController : MonoBehaviour
 
     private IEnumerator PlaceBomb()
     {
-        Vector3Int cell     = destructibleTiles.WorldToCell(transform.position);
-        Vector3    spawnPos = destructibleTiles.GetCellCenterWorld(cell);
+        Vector3Int originCell = destructibleTiles.WorldToCell(transform.position);
+        Vector3    spawnPos   = FindValidBombPosition(originCell, lastFacingDir);
+
+        if (spawnPos == Vector3.zero)
+        {
+            Debug.LogWarning("[BombController] Bomba için uygun hücre bulunamadı.");
+            yield break;
+        }
 
         GameObject bomb = Instantiate(bombPrefab, spawnPos, Quaternion.identity);
         bomb.tag = "Bomb";
@@ -72,12 +95,11 @@ public class BombController : MonoBehaviour
         {
             if (bomb.GetComponent<Rigidbody2D>() == null)
             {
-                var rb = bomb.AddComponent<Rigidbody2D>();
-                rb.gravityScale   = 0f;
-                rb.freezeRotation = true;
+                var rb2d = bomb.AddComponent<Rigidbody2D>();
+                rb2d.gravityScale   = 0f;
+                rb2d.freezeRotation = true;
             }
 
-            // Component yoksa ekle — AddComponent otomatik OnEnable'ı çağırır
             var bb = bomb.GetComponent<BobbyBombBehaviour>()
                     ?? bomb.AddComponent<BobbyBombBehaviour>();
 
@@ -89,7 +111,6 @@ public class BombController : MonoBehaviour
             bb.fuseTime      = bombFuseTime;
         }
 
-        // ── Bob's Curse yeşil blink ──────────────────────────────────────
         if (hasPoisonCloud)
         {
             var bc = bomb.GetComponent<BobsCurseBomb>()
@@ -112,7 +133,6 @@ public class BombController : MonoBehaviour
         explosion.SetActiveRenderer(explosion.start);
         explosion.DestroyAfter(explosionDuration);
 
-        // Patlama noktalarını topla, SecretRoomWall'ları bildir
         var explodedPositions = new System.Collections.Generic.List<Vector2>();
         explodedPositions.Add(explosionPos);
 
@@ -121,7 +141,6 @@ public class BombController : MonoBehaviour
         Explode(explosionPos, Vector2.left,  explosionRadius, explodedPositions);
         Explode(explosionPos, Vector2.right, explosionRadius, explodedPositions);
 
-        // Tüm patlama noktalarına yakın SecretRoomWall'ları tetikle
         NotifySecretWalls(explodedPositions);
         UnlockDoorsInExplosion(explodedPositions);
 
@@ -137,27 +156,87 @@ public class BombController : MonoBehaviour
     }
 
     /// <summary>
-    /// Patlama noktaları listesine yakın tüm SecretRoomWall'ları bulur ve tetikler.
+    /// Oyuncunun bulunduğu hücreden başlayarak geçerli bir spawn pozisyonu bulur.
+    ///
+    /// Öncelik sırası:
+    ///   1. Oyuncunun tam hücresi
+    ///   2. Baktığı yönün TERSİ  ← duvara yapışıkken bomba karşı tarafa gider
+    ///   3. Dik eksenler (sol/sağ)
+    ///   4. Baktığı yönün kendisi (son çare)
     /// </summary>
+    private Vector3 FindValidBombPosition(Vector3Int originCell, Vector2 facingDir)
+    {
+        Vector3 originWorldPos = destructibleTiles.GetCellCenterWorld(originCell);
+
+        // Oyuncunun tam hücresi temizse direkt kullan
+        if (!IsCellBlocked(originWorldPos))
+            return originWorldPos;
+
+        // Baktığı yönü kardinal'e snap et
+        Vector2 snapped = SnapToCardinal(facingDir);
+
+        // Öncelikli arama sırası
+        Vector2[] priority = new Vector2[]
+        {
+            -snapped,                              // Baktığı yönün TERSİ
+            new Vector2(-snapped.y,  snapped.x),  // Sola dik
+            new Vector2( snapped.y, -snapped.x),  // Sağa dik
+             snapped,                              // Baktığı yön (son çare)
+        };
+
+        foreach (var dir in priority)
+        {
+            Vector3Int neighborCell = originCell + new Vector3Int(
+                Mathf.RoundToInt(dir.x),
+                Mathf.RoundToInt(dir.y),
+                0);
+
+            Vector3 candidatePos = destructibleTiles.GetCellCenterWorld(neighborCell);
+
+            if (!IsCellBlocked(candidatePos))
+                return candidatePos;
+        }
+
+        return Vector3.zero; // Hiçbir hücre uygun değil
+    }
+
+    /// <summary>
+    /// Verilen yönü en baskın eksene göre 4 kardinal yöne (Up/Down/Left/Right) snap eder.
+    /// </summary>
+    private Vector2 SnapToCardinal(Vector2 dir)
+    {
+        if (Mathf.Abs(dir.x) >= Mathf.Abs(dir.y))
+            return dir.x >= 0 ? Vector2.right : Vector2.left;
+        else
+            return dir.y >= 0 ? Vector2.up : Vector2.down;
+    }
+
+    /// <summary>
+    /// Verilen dünya pozisyonunda bomba koyulmasını engelleyen bir collider var mı?
+    /// </summary>
+    private bool IsCellBlocked(Vector3 worldPos)
+    {
+        Collider2D hit = Physics2D.OverlapBox(worldPos, Vector2.one * 0.4f, 0f, bombBlockingLayers);
+        if (hit == null) return false;
+
+        bool isBlockingLayer = ((1 << hit.gameObject.layer) & bombBlockingLayers) != 0;
+        bool isBlockingTag   = hit.CompareTag("Door") || hit.CompareTag("Wall");
+
+        return isBlockingLayer || isBlockingTag;
+    }
+
     private void NotifySecretWalls(System.Collections.Generic.List<Vector2> positions)
     {
-        // Sahnedeki tüm SecretRoomWall'ları bul
         var allWalls = FindObjectsByType<SecretRoomWall>(FindObjectsSortMode.None);
 
         foreach (var wall in allWalls)
         {
             if (wall == null) continue;
-
             Vector2 wallPos = wall.transform.position;
-
             foreach (var pos in positions)
             {
-                // Patlama noktasına yeterince yakınsa tetikle
-                // explosionRadius * ~oda tile boyutu — biraz toleranslı tut
                 if (Vector2.Distance(wallPos, pos) <= 1.5f)
                 {
-                    Debug.Log($"[BombController] SecretRoomWall tetiklendi → " +
-                              $"wall:{wall.gameObject.name}, wallPos:{wallPos}, explosionPos:{pos}");
                     wall.TriggerByExplosion();
                     break;
                 }
@@ -172,24 +251,18 @@ public class BombController : MonoBehaviour
         foreach (var door in allDoors)
         {
             if (door == null) continue;
-
-            // Gizli oda duvarlarını bu sistemle açma — onları SecretRoomWall yönetiyor
             if (door.GetComponent<SecretRoomWall>() != null) continue;
 
             Vector2 doorPos = door.transform.position;
-
             foreach (var pos in positions)
             {
                 if (Vector2.Distance(doorPos, pos) <= 1.5f)
                 {
-                    // Odanın RoomEnemyTracker'ını bul ve kapıyı listeden çıkar
                     var tracker = door.GetComponentInParent<RoomEnemyTracker>();
                     if (tracker != null)
                         tracker.ForceUnlockDoor(door);
                     else
                         door.SetLocked(false, null);
-
-                    Debug.Log($"[BombController] Kapı bombayla açıldı → {door.gameObject.name}");
                     break;
                 }
             }
