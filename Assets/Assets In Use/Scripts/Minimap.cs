@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Minimap : MonoBehaviour
@@ -10,12 +11,22 @@ public class Minimap : MonoBehaviour
     [Header("Display")]
     public float minimapScreenSize = 280f;
     public float screenMargin      = 10f;
-    public float cameraPadding     = 0.6f;
     public int   textureResolution = 256;
 
+    [Header("Focus Mode (varsayılan)")]
+    [Tooltip("Oyuncuya kilitli modda kamera kaç birim alanı göstersin")]
+    public float focusOrthoSize = 1.2f;
+
+    [Header("Overview Mode (Tab)")]
+    [Tooltip("Tüm harita görünümü kenar boşluğu")]
+    public float overviewPadding = 0.6f;
+    [Tooltip("Tab geçişinde zoom animasyon hızı")]
+    public float overviewLerpSpeed = 10f;
+
     [Header("Highlight")]
-    public Color highlightTint = Color.white;
-    public Color defaultTint   = new Color(0.6f, 0.6f, 0.6f, 1f);
+    public Color highlightTint  = Color.white;
+    public Color defaultTint    = new Color(0.6f, 0.6f, 0.6f, 1f);
+    public Color unexploredTint = new Color(0.25f, 0.25f, 0.3f, 1f);
 
     private const int MINIMAP_LAYER = 11;
 
@@ -29,8 +40,23 @@ public class Minimap : MonoBehaviour
     private Cell         highlightedCell;
     private int          lastHighlightedIndex = -1;
 
-    // Henüz açılmamış gizli odaların cell index'leri
-    private readonly HashSet<int> hiddenSecretCells = new();
+    private readonly HashSet<int> hiddenSecretCells   = new();
+    private readonly HashSet<int> visibleCellIndexes  = new();
+    private readonly HashSet<int> exploredCellIndexes = new();
+
+    private Vector3 overviewCenter;
+    private float   overviewOrthoSize;
+
+    // Tab toggle
+    private bool isOverviewMode  = false;
+    private bool tabWasPressed   = false;
+
+    // Kamera hedef değerleri (smooth geçiş için)
+    private Vector3 camTargetPos;
+    private float   camTargetSize;
+
+    // Başlangıç snap flag'i — ilk frame'de lerp yok
+    private bool cameraInitialized = false;
 
     private void Awake() => instance = this;
 
@@ -39,22 +65,35 @@ public class Minimap : MonoBehaviour
         trackedCells         = new List<Cell>(cells);
         lastHighlightedIndex = -1;
         highlightedCell      = null;
+        isOverviewMode       = false;
+        tabWasPressed        = false;
+        cameraInitialized    = false;
+
         hiddenSecretCells.Clear();
+        visibleCellIndexes.Clear();
+        exploredCellIndexes.Clear();
 
         foreach (var cell in cells)
         {
             SetLayerRecursive(cell.gameObject, MINIMAP_LAYER);
-
             if (cell.roomType == RoomType.Secret)
-            {
                 foreach (int idx in cell.cellList)
                     hiddenSecretCells.Add(idx);
-                HideCell(cell);
-            }
+            HideCell(cell);
         }
 
         ExcludeLayerFromMainCamera();
+        ComputeOverviewBounds(cells);
+        SetupCamera();
+        SetupUI();
 
+        // Başlangıç odasını aç — kamera hemen snap'lenecek
+        RevealRoomAndNeighbours(45);
+    }
+
+    // ─── Overview bounds ──────────────────────────────────────────────────────
+    private void ComputeOverviewBounds(List<Cell> cells)
+    {
         float minX = float.MaxValue, maxX = float.MinValue;
         float minY = float.MaxValue, maxY = float.MinValue;
         foreach (var cell in cells)
@@ -63,20 +102,49 @@ public class Minimap : MonoBehaviour
             minX = Mathf.Min(minX, p.x); maxX = Mathf.Max(maxX, p.x);
             minY = Mathf.Min(minY, p.y); maxY = Mathf.Max(maxY, p.y);
         }
-
-        float cx    = (minX + maxX) * 0.5f;
-        float cy    = (minY + maxY) * 0.5f;
-        float halfW = (maxX - minX) * 0.5f + cameraPadding;
-        float halfH = (maxY - minY) * 0.5f + cameraPadding;
-
-        SetupCamera(cx, cy, halfW, halfH);
-        SetupUI();
-        ApplyDefaultTint();
+        overviewCenter    = new Vector3((minX + maxX) * 0.5f, (minY + maxY) * 0.5f, -10f);
+        overviewOrthoSize = Mathf.Max((maxX - minX) * 0.5f, (maxY - minY) * 0.5f) + overviewPadding;
     }
 
-    /// <summary>
-    /// SecretRoomWall tarafından çağrılır — gizli odayı minimap'te gösterir.
-    /// </summary>
+    // ─── Isaac Fog-of-War ─────────────────────────────────────────────────────
+    private void RevealRoomAndNeighbours(int centerIndex)
+    {
+        exploredCellIndexes.Add(centerIndex);
+        visibleCellIndexes.Add(centerIndex);
+
+        int[] neighbours = { centerIndex - 1, centerIndex + 1, centerIndex - 10, centerIndex + 10 };
+        foreach (int n in neighbours)
+            if (n >= 0 && n < 100)
+                visibleCellIndexes.Add(n);
+
+        RefreshAllCellVisibility();
+    }
+
+    private void RefreshAllCellVisibility()
+    {
+        foreach (var cell in trackedCells)
+        {
+            bool isSecret = cell.cellList.Any(idx => hiddenSecretCells.Contains(idx));
+            if (isSecret) { HideCell(cell); continue; }
+
+            bool anyVisible  = cell.cellList.Any(idx => visibleCellIndexes.Contains(idx));
+            bool anyExplored = cell.cellList.Any(idx => exploredCellIndexes.Contains(idx));
+
+            if (!anyVisible)
+                HideCell(cell);
+            else if (anyExplored)
+            {
+                ShowCell(cell);
+                if (cell != highlightedCell) TintCell(cell, defaultTint);
+            }
+            else
+            {
+                ShowCell(cell);
+                TintCell(cell, unexploredTint);
+            }
+        }
+    }
+
     public void RevealSecretRoom(int secretCellIndex)
     {
         if (!hiddenSecretCells.Contains(secretCellIndex)) return;
@@ -85,54 +153,132 @@ public class Minimap : MonoBehaviour
         if (secretCell == null) return;
 
         foreach (int idx in secretCell.cellList)
+        {
             hiddenSecretCells.Remove(idx);
+            visibleCellIndexes.Add(idx);
+        }
 
         ShowCell(secretCell);
-        TintCell(secretCell, defaultTint);
-        Debug.Log($"[Minimap] Gizli oda gösterildi. CellIndex={secretCellIndex}");
+        TintCell(secretCell, unexploredTint);
     }
 
+    // ─── Update ───────────────────────────────────────────────────────────────
     private void Update()
     {
         if (RoomTransitionManager.instance == null) return;
 
-        int current = RoomTransitionManager.instance.CurrentRoomIndex;
-        if (current == lastHighlightedIndex) return;
+        HandleTabToggle();
 
-        // Oyuncu bomba olmadan da gizli odaya girerse otomatik aç
+        int current = RoomTransitionManager.instance.CurrentRoomIndex;
+        if (current != lastHighlightedIndex)
+            OnRoomChanged(current);
+
+        UpdateMinimapCamera();
+    }
+
+    private void HandleTabToggle()
+    {
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
+        bool tabDown = kb.tabKey.isPressed;
+
+        // Edge-trigger: sadece basış anında toggle
+        if (tabDown && !tabWasPressed)
+            isOverviewMode = !isOverviewMode;
+
+        tabWasPressed = tabDown;
+    }
+
+    private void OnRoomChanged(int current)
+    {
         if (hiddenSecretCells.Contains(current))
             RevealSecretRoom(current);
 
-        if (highlightedCell != null)
-            TintCell(highlightedCell, defaultTint);
+        if (!exploredCellIndexes.Contains(current))
+            RevealRoomAndNeighbours(current);
+        else
+            exploredCellIndexes.Add(current);
 
+        // Önceki odanın rengi
+        if (highlightedCell != null)
+        {
+            bool wasExplored = highlightedCell.cellList.Any(idx => exploredCellIndexes.Contains(idx));
+            TintCell(highlightedCell, wasExplored ? defaultTint : unexploredTint);
+        }
+
+        // Yeni oda highlight
         highlightedCell = null;
         foreach (var cell in trackedCells)
         {
             if (cell.cellList.Contains(current))
             {
                 highlightedCell = cell;
+                ShowCell(cell);
                 TintCell(cell, highlightTint);
                 break;
             }
         }
 
         lastHighlightedIndex = current;
+
+        // Oda değişince focus modunda kamera hedefini ANINDA güncelle (titreme yok)
+        if (!isOverviewMode)
+            SnapCameraToTarget();
     }
 
-    private void HideCell(Cell cell)
+    // ─── Kamera güncelleme ────────────────────────────────────────────────────
+    private void UpdateMinimapCamera()
     {
-        if (cell.spriteRenderer != null) cell.spriteRenderer.enabled = false;
-        if (cell.roomSprite     != null) cell.roomSprite.enabled     = false;
+        if (minimapCam == null) return;
+
+        // Hedef değerleri belirle
+        if (isOverviewMode)
+        {
+            camTargetPos  = overviewCenter;
+            camTargetSize = overviewOrthoSize;
+        }
+        else
+        {
+            Vector3 roomPos = GetCurrentRoomWorldPos();
+            roomPos.z      = -10f;
+            camTargetPos   = roomPos;
+            camTargetSize  = focusOrthoSize;
+        }
+
+        if (!cameraInitialized)
+        {
+            // İlk frame: sıfır gecikme ile tam hedefe snap
+            minimapCam.transform.position = camTargetPos;
+            minimapCam.orthographicSize   = camTargetSize;
+            cameraInitialized             = true;
+            return;
+        }
+
+        // Sadece mod geçişinde smooth (Tab basılınca), normal seyahat anlık
+        float lerpT = Time.deltaTime * overviewLerpSpeed;
+        minimapCam.transform.position = Vector3.Lerp(minimapCam.transform.position, camTargetPos,  lerpT);
+        minimapCam.orthographicSize   = Mathf.Lerp(minimapCam.orthographicSize,    camTargetSize, lerpT);
     }
 
-    private void ShowCell(Cell cell)
+    /// Focus modunda kamera hedefini sıfır gecikme ile odaya kilitle
+    private void SnapCameraToTarget()
     {
-        if (cell.spriteRenderer != null) cell.spriteRenderer.enabled = true;
-        if (cell.roomSprite     != null) cell.roomSprite.enabled     = true;
+        if (minimapCam == null || isOverviewMode) return;
+        Vector3 pos = GetCurrentRoomWorldPos();
+        pos.z = -10f;
+        minimapCam.transform.position = pos;
+        minimapCam.orthographicSize   = focusOrthoSize;
     }
 
-    private void SetupCamera(float cx, float cy, float halfW, float halfH)
+    private Vector3 GetCurrentRoomWorldPos()
+    {
+        if (highlightedCell != null) return highlightedCell.transform.position;
+        return overviewCenter;
+    }
+
+    // ─── Kamera kurulumu ─────────────────────────────────────────────────────
+    private void SetupCamera()
     {
         if (renderTexture != null) renderTexture.Release();
         renderTexture = new RenderTexture(textureResolution, textureResolution, 24);
@@ -145,14 +291,17 @@ public class Minimap : MonoBehaviour
             minimapCam = go.AddComponent<Camera>();
         }
 
-        minimapCam.orthographic      = true;
-        minimapCam.orthographicSize  = Mathf.Max(halfW, halfH);
-        minimapCam.transform.position = new Vector3(cx, cy, -10f);
-        minimapCam.cullingMask       = 1 << MINIMAP_LAYER;
-        minimapCam.clearFlags        = CameraClearFlags.SolidColor;
-        minimapCam.backgroundColor   = new Color(0.04f, 0.04f, 0.08f, 1f);
-        minimapCam.targetTexture     = renderTexture;
-        minimapCam.depth             = 10;
+        minimapCam.orthographic       = true;
+        minimapCam.orthographicSize   = focusOrthoSize;
+        minimapCam.cullingMask        = 1 << MINIMAP_LAYER;
+        minimapCam.clearFlags         = CameraClearFlags.SolidColor;
+        minimapCam.backgroundColor    = new Color(0.04f, 0.04f, 0.08f, 1f);
+        minimapCam.targetTexture      = renderTexture;
+        minimapCam.depth              = 10;
+
+        // Başlangıç konumunu overview'a koy — ilk snap BuildMinimap'in
+        // sonunda RevealRoomAndNeighbours → OnRoomChanged zinciriyle gelecek
+        minimapCam.transform.position = overviewCenter;
     }
 
     private void SetupUI()
@@ -166,7 +315,7 @@ public class Minimap : MonoBehaviour
             canvas.sortingOrder = 100;
 
             var scaler = canvasGO.GetComponent<CanvasScaler>();
-            scaler.uiScaleMode        = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.uiScaleMode         = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080);
             scaler.matchWidthOrHeight  = 0.5f;
 
@@ -194,13 +343,16 @@ public class Minimap : MonoBehaviour
         rawImage.texture = renderTexture;
     }
 
-    private void ApplyDefaultTint()
+    private void HideCell(Cell cell)
     {
-        foreach (var cell in trackedCells)
-        {
-            if (cell.cellList.Any(idx => hiddenSecretCells.Contains(idx))) continue;
-            TintCell(cell, defaultTint);
-        }
+        if (cell.spriteRenderer != null) cell.spriteRenderer.enabled = false;
+        if (cell.roomSprite     != null) cell.roomSprite.enabled     = false;
+    }
+
+    private void ShowCell(Cell cell)
+    {
+        if (cell.spriteRenderer != null) cell.spriteRenderer.enabled = true;
+        if (cell.roomSprite     != null) cell.roomSprite.enabled     = true;
     }
 
     private void TintCell(Cell cell, Color color)
@@ -212,14 +364,12 @@ public class Minimap : MonoBehaviour
     private void ExcludeLayerFromMainCamera()
     {
         Camera main = Camera.main;
-        if (main != null)
-            main.cullingMask &= ~(1 << MINIMAP_LAYER);
+        if (main != null) main.cullingMask &= ~(1 << MINIMAP_LAYER);
 
         if (RoomTransitionManager.instance?.cameraController != null)
         {
             var cam = RoomTransitionManager.instance.cameraController.GetComponent<Camera>();
-            if (cam != null)
-                cam.cullingMask &= ~(1 << MINIMAP_LAYER);
+            if (cam != null) cam.cullingMask &= ~(1 << MINIMAP_LAYER);
         }
     }
 

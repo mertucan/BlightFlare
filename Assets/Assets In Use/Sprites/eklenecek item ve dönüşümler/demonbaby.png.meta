@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: 3033648b8ab853c40846809a3c20a569
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -898652938974379207
+    second: demonbaby_0
+  - first:
+      213: -4735311321772425001
+    second: demonbaby_1
+  - first:
+      213: -4786444268109655981
+    second: demonbaby_2
+  - first:
+      213: -3492673234439489716
+    second: demonbaby_3
+  - first:
+      213: 2135587600715997887
+    second: demonbaby_4
+  - first:
+      213: 2244841902426299060
+    second: demonbaby_5
+  - first:
+      213: -551803228234601574
+    second: demonbaby_6
+  - first:
+      213: 7540691183586102154
+    second: demonbaby_7
+  - first:
+      213: -2282731077832871498
+    second: demonbaby_8
+  - first:
+      213: 4098688418191515991
+    second: demonbaby_9
+  - first:
+      213: -6211671509937347172
+    second: demonbaby_10
+  - first:
+      213: -7511027190921379577
+    second: demonbaby_11
+  - first:
+      213: -4476552924627382649
+    second: demonbaby_12
+  - first:
+      213: 2571551624475535032
+    second: demonbaby_13
+  - first:
+      213: -5705128393930574306
+    second: demonbaby_14
+  - first:
+      213: -6593646096847387162
+    second: demonbaby_15
+  - first:
+      213: 1070935798841884027
+    second: demonbaby_16
+  - first:
+      213: -3706249970329985121
+    second: demonbaby_17
+  - first:
+      213: 2832777964679758679
+    second: demonbaby_18
+  - first:
+      213: 2174687428430105956
+    second: demonbaby_19
+  - first:
+      213: -49244072116768737
+    second: demonbaby_20
+  - first:
+      213: 4623059692238459181
+    second: demonbaby_21
+  - first:
+      213: -8360843709206160235
+    second: demonbaby_22
+  - first:
+      213: -3007819271375146309
+    second: demonbaby_23
+  - first:
+      213: 4584703857078607833
+    second: demonbaby_24
+  - first:
+      213: 1609036769984921833
+    second: demonbaby_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: demonbaby_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 37
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933421cc9e75783f0800000000000000
+      internalID: -898652938974379207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 37
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d08edc017bc84eb0800000000000000
+      internalID: -4735311321772425001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 37
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3509e1e3c42239db0800000000000000
+      internalID: -4786444268109655981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 37
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4738b0c238878fc0800000000000000
+      internalID: -3492673234439489716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 37
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2e767ab9123ad10800000000000000
+      internalID: 2135587600715997887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 37
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba180b01d7472f10800000000000000
+      internalID: 2244841902426299060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 37
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ba92333e99758f0800000000000000
+      internalID: -551803228234601574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 37
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8bc19eddaae5a860800000000000000
+      internalID: 7540691183586102154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demonbaby_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1f60cdd2c1250e0800000000000000
+      internalID: -2282731077832871498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0e7494107dc46ec449925f320911498f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      demonbaby_0: -898652938974379207
+      demonbaby_1: -4735311321772425001
+      demonbaby_10: -6211671509937347172
+      demonbaby_11: -7511027190921379577
+      demonbaby_12: -4476552924627382649
+      demonbaby_13: 2571551624475535032
+      demonbaby_14: -5705128393930574306
+      demonbaby_15: -6593646096847387162
+      demonbaby_16: 1070935798841884027
+      demonbaby_17: -3706249970329985121
+      demonbaby_18: 2832777964679758679
+      demonbaby_19: 2174687428430105956
+      demonbaby_2: -4786444268109655981
+      demonbaby_20: -49244072116768737
+      demonbaby_21: 4623059692238459181
+      demonbaby_22: -8360843709206160235
+      demonbaby_23: -3007819271375146309
+      demonbaby_24: 4584703857078607833
+      demonbaby_25: 1609036769984921833
+      demonbaby_3: -3492673234439489716
+      demonbaby_4: 2135587600715997887
+      demonbaby_5: 2244841902426299060
+      demonbaby_6: -551803228234601574
+      demonbaby_7: 7540691183586102154
+      demonbaby_8: -2282731077832871498
+      demonbaby_9: 4098688418191515991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

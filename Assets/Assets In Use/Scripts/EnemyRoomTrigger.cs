@@ -11,12 +11,14 @@ public class EnemyRoomTrigger : MonoBehaviour
     private PooterAI[]  pooters;
     private BabyAI[]    babies;
     private DOF_AI[]    dofEnemies;
+    private SuckerAI[]  suckers;
 
     private void Awake()
     {
         pooters    = GetComponentsInChildren<PooterAI>(true);
         babies     = GetComponentsInChildren<BabyAI>(true);
         dofEnemies = GetComponentsInChildren<DOF_AI>(true);
+        suckers    = GetComponentsInChildren<SuckerAI>(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,5 +38,6 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var p in pooters)    if (p != null) p.SetActive(active);
         foreach (var b in babies)     if (b != null) b.SetActive(active);
         foreach (var d in dofEnemies) if (d != null) d.SetActive(active);
+        foreach (var s in suckers)    if (s != null) s.SetActive(active);
     }
 }

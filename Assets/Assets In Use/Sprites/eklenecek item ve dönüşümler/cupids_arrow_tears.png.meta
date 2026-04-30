@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 56ce8be68b1991f43a1abab9b43a4292
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1249315206825203460
+    second: cupids_arrow_tears_0
+  - first:
+      213: 5325710232716723376
+    second: cupids_arrow_tears_1
+  - first:
+      213: -1850151171997012560
+    second: cupids_arrow_tears_2
+  - first:
+      213: -4520864318134196469
+    second: cupids_arrow_tears_3
+  - first:
+      213: -44272312815519783
+    second: cupids_arrow_tears_4
+  - first:
+      213: -5690340466316973975
+    second: cupids_arrow_tears_5
+  - first:
+      213: -2341773863235961884
+    second: cupids_arrow_tears_6
+  - first:
+      213: -4927853355563673435
+    second: cupids_arrow_tears_7
+  - first:
+      213: 8336229221265040871
+    second: cupids_arrow_tears_8
+  - first:
+      213: -3021151613957573677
+    second: cupids_arrow_tears_9
+  - first:
+      213: -8102182761451721593
+    second: cupids_arrow_tears_10
+  - first:
+      213: 4707293217555423519
+    second: cupids_arrow_tears_11
+  - first:
+      213: -5767300421354707291
+    second: cupids_arrow_tears_12
+  - first:
+      213: 6831152978401480754
+    second: cupids_arrow_tears_13
+  - first:
+      213: -5506297717842767126
+    second: cupids_arrow_tears_14
+  - first:
+      213: 2861450328686440641
+    second: cupids_arrow_tears_15
+  - first:
+      213: 8772017838768561643
+    second: cupids_arrow_tears_16
+  - first:
+      213: 4626037484968328466
+    second: cupids_arrow_tears_17
+  - first:
+      213: -3631518881929809525
+    second: cupids_arrow_tears_18
+  - first:
+      213: -4081835674114639400
+    second: cupids_arrow_tears_19
+  - first:
+      213: -5018121822797082841
+    second: cupids_arrow_tears_20
+  - first:
+      213: -8265069255011539666
+    second: cupids_arrow_tears_21
+  - first:
+      213: 2523683135692047701
+    second: cupids_arrow_tears_22
+  - first:
+      213: -6758800838663253488
+    second: cupids_arrow_tears_23
+  - first:
+      213: 3976615735091895907
+    second: cupids_arrow_tears_24
+  - first:
+      213: 4569258210156618615
+    second: cupids_arrow_tears_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cupids_arrow_tears_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 105
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebb6812419508fd0800000000000000
+      internalID: -2341773863235961884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 765891cf8648b7f4dacba277bacb561a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cupids_arrow_tears_0: -1249315206825203460
+      cupids_arrow_tears_1: 5325710232716723376
+      cupids_arrow_tears_10: -8102182761451721593
+      cupids_arrow_tears_11: 4707293217555423519
+      cupids_arrow_tears_12: -5767300421354707291
+      cupids_arrow_tears_13: 6831152978401480754
+      cupids_arrow_tears_14: -5506297717842767126
+      cupids_arrow_tears_15: 2861450328686440641
+      cupids_arrow_tears_16: 8772017838768561643
+      cupids_arrow_tears_17: 4626037484968328466
+      cupids_arrow_tears_18: -3631518881929809525
+      cupids_arrow_tears_19: -4081835674114639400
+      cupids_arrow_tears_2: -1850151171997012560
+      cupids_arrow_tears_20: -5018121822797082841
+      cupids_arrow_tears_21: -8265069255011539666
+      cupids_arrow_tears_22: 2523683135692047701
+      cupids_arrow_tears_23: -6758800838663253488
+      cupids_arrow_tears_24: 3976615735091895907
+      cupids_arrow_tears_25: 4569258210156618615
+      cupids_arrow_tears_3: -4520864318134196469
+      cupids_arrow_tears_4: -44272312815519783
+      cupids_arrow_tears_5: -5690340466316973975
+      cupids_arrow_tears_6: -2341773863235961884
+      cupids_arrow_tears_7: -4927853355563673435
+      cupids_arrow_tears_8: 8336229221265040871
+      cupids_arrow_tears_9: -3021151613957573677
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
