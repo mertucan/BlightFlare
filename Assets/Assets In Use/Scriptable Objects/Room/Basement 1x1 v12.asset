@@ -16,4 +16,4 @@ MonoBehaviour:
   roomShape: 0
   occupiedTiles: 00000000
   roomDesignPrefabs:
-  - {fileID: 3822254578997936868, guid: f76b26ded099bb74fb8fd07f20268a6d, type: 3}
+  - {fileID: 3822254578997936868, guid: 97dc26774edef2641a940dbd0b0d47eb, type: 3}

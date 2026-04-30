@@ -645,6 +645,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c418453372ca124e8eb495fe11e2879, type: 2}
   - {fileID: 11400000, guid: 664b5ed65739f4b458f9b89da7eba028, type: 2}
   - {fileID: 11400000, guid: 78a1b35d313aca142ba8a1a622c5eb1f, type: 2}
+  - {fileID: 11400000, guid: ce75c5259df26bc47a11b72c739be70a, type: 2}
   closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
   openedShopDoorPrefab: {fileID: 7295604412751457430, guid: 0c187ca9bf9688f4d8af536b52884329, type: 3}
   openedSecretDoorPrefab: {fileID: 484832768564172559, guid: 9dddbdcf95a23a44885f4757fc08c9fb, type: 3}
@@ -1657,7 +1658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -64}
+  m_AnchoredPosition: {x: 0, y: -36}
   m_SizeDelta: {x: 80, y: 24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &619394800
@@ -6075,7 +6076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -36}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: 80, y: 24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1691015040
