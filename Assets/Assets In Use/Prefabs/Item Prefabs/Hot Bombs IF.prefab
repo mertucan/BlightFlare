@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9121828642307466151}
   - component: {fileID: 6969918574761431171}
   - component: {fileID: 8332396814379882844}
-  - component: {fileID: 7623087106100444558}
   m_Layer: 6
   m_Name: Item
   m_TagString: Untagged
@@ -121,32 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotBombs
   fireHazardPrefab: {fileID: 3753293821117044374, guid: 10fe8cf64b96610429a032c2715a82cc, type: 3}
-  overlaySprites: []
-  overlayFps: 8
-  overlayOrderInLayer: 5
-  overlayOffset: {x: 0, y: 0}
---- !u!114 &7623087106100444558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325471266289535920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128e618538135f645b94e0cc96d6d8da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HotBombOverlay
-  overlaySprites:
-  - {fileID: -6092762717211309422, guid: 05ad314b09cba5a4993063a63640c9f5, type: 3}
-  - {fileID: 479638827, guid: 05ad314b09cba5a4993063a63640c9f5, type: 3}
-  - {fileID: 1296277557, guid: 05ad314b09cba5a4993063a63640c9f5, type: 3}
-  - {fileID: 1458663870, guid: 05ad314b09cba5a4993063a63640c9f5, type: 3}
-  - {fileID: -571836889, guid: 05ad314b09cba5a4993063a63640c9f5, type: 3}
-  overlayFps: 8
-  overlayOrderInLayer: 2
-  overlayOffset: {x: 0, y: 0}
-  fuseTime: 3
 --- !u!1 &8434055760191881865
 GameObject:
   m_ObjectHideFlags: 0
