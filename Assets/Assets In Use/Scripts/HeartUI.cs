@@ -38,16 +38,25 @@ public class HeartUI : MonoBehaviour
     [Tooltip("HolyMantle ikonunun 2. satırda ne kadar aşağı ineceği.")]
     public float holyMantleRowOffsetY = -45f;
 
-    private void Start()
+    private IEnumerator Start()
     {
         BuildHeartSlots();
+        yield return null;
 
         PlayerHealth ph = FindFirstObjectByType<PlayerHealth>();
-        int currentHearts = ph != null ? ph.currentHearts : maxHalfHearts;
-        UpdateHearts(currentHearts);
+        if (ph != null)
+            UpdateHearts(ph.currentHearts);
 
-        UpdateKey(0);
-        UpdatePennies(0);
+        if (PlayerInventory.instance != null)
+        {
+            UpdateKey(PlayerInventory.instance.keys);
+            UpdatePennies(PlayerInventory.instance.pennies);
+        }
+        else
+        {
+            UpdateKey(0);
+            UpdatePennies(0);
+        }
     }
 
     public void UpdateHearts(int currentHalfHearts)

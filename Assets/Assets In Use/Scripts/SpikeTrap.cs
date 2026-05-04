@@ -5,19 +5,18 @@ public class SpikeTrap : MonoBehaviour
     [Tooltip("Her temasta kaç half-heart hasar verilsin?")]
     public int damageAmount = 1;
 
-    private void OnCollisionEnter2D(Collision2D temas)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!temas.collider.CompareTag("Player")) return;
+        if (!other.CompareTag("Player")) return;
 
-        // TrapImmunity kontrolü — item aktifse hasarı atla
-        var trapImmunity = temas.collider.GetComponent<TrapImmunity>();
+        var trapImmunity = other.GetComponent<TrapImmunity>();
         if (trapImmunity != null && trapImmunity.isActive)
         {
             Debug.Log("[SpikeTrap] TrapImmunity aktif, hasar engellendi.");
             return;
         }
 
-        IsaacMovement isaac = temas.collider.GetComponent<IsaacMovement>();
+        IsaacMovement isaac = other.GetComponent<IsaacMovement>();
         if (isaac != null) isaac.ApplyDamage(damageAmount);
     }
 }

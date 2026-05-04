@@ -31,6 +31,8 @@ public class RoomEnemyTracker : MonoBehaviour
             enemies.Add(s.gameObject);
         foreach (var h in GetComponentsInChildren<HostAI>(true))   // ← YENİ
             enemies.Add(h.gameObject);
+        foreach (var h in GetComponentsInChildren<BoomFlyAI>(true))   // ← YENİ
+            enemies.Add(h.gameObject);
 
         hasEnemies = enemies.Count > 0;
         initialized = true;

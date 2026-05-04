@@ -188,7 +188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BobbyBombBehaviour
   moveSpeed: 2.5
-  searchRadius: 0
+  searchRadius: 5
+  searchDelay: 0.15
+  searchRetries: 5
+  retryInterval: 0.1
   blockingTags:
   - Wall
   - Door

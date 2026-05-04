@@ -106,7 +106,7 @@ public class HostAI : MonoBehaviour
     private Coroutine  flashCoroutine;
     private Color      originalColor;
     private bool       isDead;
-    private bool       isActivated;
+    private bool       isActivated;   // ← PooterAI ile aynı pattern
 
     // Temas hasarı cooldown
     private float lastContactDamageTime = -999f;
@@ -155,20 +155,18 @@ public class HostAI : MonoBehaviour
         // Hız sınırı (TNT push mantığı)
         if (rb.linearVelocity.sqrMagnitude > maxPushSpeed * maxPushSpeed)
             rb.linearVelocity = rb.linearVelocity.normalized * maxPushSpeed;
+
+        // Aktif değilse hareketi durdur (PooterAI'dan alınan pattern)
+        if (!isActivated)
+            rb.linearVelocity = Vector2.zero;
     }
 
     // ═════════════════════════════════════════════════════════════════════════
     // BLOCKER COLLIDER — Açıkken içinden geçişi engeller + temas hasarı verir
     // ═════════════════════════════════════════════════════════════════════════
 
-    /// <summary>
-    /// Ana collider ile aynı şekil/boyutta ikinci bir collider oluşturur.
-    /// Bu collider HİÇBİR ZAMAN trigger olmaz → oyuncu içinden geçemez.
-    /// Open durumunda aktif + OnCollisionEnter2D ile temas hasarı verir.
-    /// </summary>
     private void CreateBlockerCollider()
     {
-        // Ana collider tipini kopyala
         if (col is CircleCollider2D mainCircle)
         {
             CircleCollider2D bc = gameObject.AddComponent<CircleCollider2D>();
@@ -194,32 +192,63 @@ public class HostAI : MonoBehaviour
 
         if (blockerCol != null)
         {
-            blockerCol.isTrigger = false; // Asla trigger değil
-            blockerCol.enabled   = false; // Başlangıçta kapalı (Closed'da ana collider yeterli)
+            blockerCol.isTrigger = false;
+            blockerCol.enabled   = false;
         }
     }
 
     // ═════════════════════════════════════════════════════════════════════════
-    // AKTİVASYON
+    // AKTİVASYON — PooterAI ile birebir aynı imza
     // ═════════════════════════════════════════════════════════════════════════
-
-    public void SetActive(bool active)
-    {
-        if (isDead) return;
-        if (active) { if (!isActivated) Activate(); }
-        else
-        {
-            if (stateCoroutine != null) { StopCoroutine(stateCoroutine); stateCoroutine = null; }
-            isActivated = false;
-        }
-    }
 
     public void Activate()
     {
-        if (isActivated) return;
+        if (isActivated || isDead) return;
         isActivated    = true;
         stateCoroutine = StartCoroutine(StateMachine());
         Log("Activate() çağrıldı.");
+    }
+
+    public void Activate(Vector2 spawnPosition)
+    {
+        rb.position        = spawnPosition;
+        transform.position = spawnPosition;
+        Activate();
+    }
+
+    /// <summary>
+    /// PooterAI ile aynı SetActive imzası.
+    /// false → tüm coroutine'ler durdurulur, rb durdurulur, isActivated=false.
+    /// true  → daha önce aktif değilse Activate() çağrılır.
+    /// </summary>
+    public void SetActive(bool active)
+    {
+        if (isDead) return;
+
+        if (active)
+        {
+            if (!isActivated) Activate();
+        }
+        else
+        {
+            // Tüm koşan coroutine'leri durdur
+            StopAllCoroutines();
+            stateCoroutine = null;
+            flashCoroutine = null;
+
+            isActivated = false;
+
+            // Rb'yi durdur (PooterAI pattern)
+            if (rb != null)
+                rb.linearVelocity = Vector2.zero;
+
+            // Collider'ları güvenli moda al (Open'dayken deaktif edilirse)
+            SetColliderMode(solid: true);
+            SetSprite(closedSprite);
+            state = State.Closed;
+
+            Log("SetActive(false): Host durduruldu.");
+        }
     }
 
     // ═════════════════════════════════════════════════════════════════════════
@@ -231,15 +260,16 @@ public class HostAI : MonoBehaviour
         while (!isDead)
         {
             yield return EnterClosed();
-            if (isDead) yield break;
+            if (isDead || !isActivated) yield break;
 
             yield return EnterOpening();
-            if (isDead) yield break;
+            if (isDead || !isActivated) yield break;
 
             yield return EnterOpen();
-            if (isDead) yield break;
+            if (isDead || !isActivated) yield break;
 
             yield return EnterClosing();
+            if (isDead || !isActivated) yield break;
         }
     }
 
@@ -251,11 +281,19 @@ public class HostAI : MonoBehaviour
         Log("State: CLOSED");
         float wait = Random.Range(closedWaitMin, closedWaitMax);
         Log($"Kapalı bekleme süresi: {wait:F1} sn");
-        yield return new WaitForSeconds(wait);
+
+        float elapsed = 0f;
+        while (elapsed < wait)
+        {
+            if (!isActivated || isDead) yield break;   // ← erken çıkış
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private IEnumerator EnterOpening()
     {
+        if (!isActivated || isDead) yield break;
         state = State.Opening;
         SetColliderMode(solid: true);
         Log("State: OPENING");
@@ -265,26 +303,46 @@ public class HostAI : MonoBehaviour
 
     private IEnumerator EnterOpen()
     {
+        if (!isActivated || isDead) yield break;
         state = State.Open;
         SetSprite(openSprite);
-        // Ana collider trigger olur (mermiler çarpsın)
-        // Blocker collider açılır (oyuncu geçemesin + temas hasarı)
         SetColliderMode(solid: false);
         Log("State: OPEN");
 
-        yield return new WaitForSeconds(openPreFireWait);
-        if (isDead) yield break;
+        // openPreFireWait — tick bazlı, erken çıkış destekli
+        float elapsed = 0f;
+        while (elapsed < openPreFireWait)
+        {
+            if (!isActivated || isDead) yield break;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
 
-        yield return new WaitForSeconds(openFireDelay);
-        if (isDead) yield break;
+        // openFireDelay
+        elapsed = 0f;
+        while (elapsed < openFireDelay)
+        {
+            if (!isActivated || isDead) yield break;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
 
+        if (!isActivated || isDead) yield break;
         FireAtPlayer();
 
-        yield return new WaitForSeconds(openPostFireWait);
+        // openPostFireWait
+        elapsed = 0f;
+        while (elapsed < openPostFireWait)
+        {
+            if (!isActivated || isDead) yield break;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private IEnumerator EnterClosing()
     {
+        if (!isActivated || isDead) yield break;
         state = State.Closing;
         SetColliderMode(solid: true);
         Log("State: CLOSING");
@@ -294,6 +352,7 @@ public class HostAI : MonoBehaviour
 
     private IEnumerator EnterDazed()
     {
+        // Dazed: önce mevcut state machine'i durdur
         if (stateCoroutine != null) { StopCoroutine(stateCoroutine); stateCoroutine = null; }
 
         state = State.Dazed;
@@ -302,9 +361,15 @@ public class HostAI : MonoBehaviour
         PlayClip(dazedClip);
         Log($"State: DAZED — {dazedDuration} sn beklenecek.");
 
-        yield return new WaitForSeconds(dazedDuration);
+        float elapsed = 0f;
+        while (elapsed < dazedDuration)
+        {
+            if (!isActivated || isDead) yield break;   // ← odadan çıkıldıysa dur
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
 
-        if (!isDead)
+        if (!isDead && isActivated)
         {
             Log("Dazed bitti, Closed'a dönülüyor.");
             stateCoroutine = StartCoroutine(StateMachine());
@@ -315,21 +380,17 @@ public class HostAI : MonoBehaviour
     // COLLIDER MODU
     // ═════════════════════════════════════════════════════════════════════════
 
-    /// <summary>
-    /// solid=true  → Ana collider katı (push alır), Blocker kapalı.
-    /// solid=false → Ana collider trigger (mermiler), Blocker açık (engel + hasar).
-    /// </summary>
     private void SetColliderMode(bool solid)
     {
         if (col != null)
             col.isTrigger = !solid;
 
         if (blockerCol != null)
-            blockerCol.enabled = !solid; // Sadece Open'da aktif
+            blockerCol.enabled = !solid;
     }
 
     // ═════════════════════════════════════════════════════════════════════════
-    // COLLISION — Oyuncudan push al (Closed/Dazed) veya temas hasarı ver (Open)
+    // COLLISION
     // ═════════════════════════════════════════════════════════════════════════
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -338,14 +399,9 @@ public class HostAI : MonoBehaviour
         if (!collision.gameObject.CompareTag(playerTag)) return;
 
         if (state == State.Open)
-        {
-            // Open: Blocker collider çarptı → temas hasarı ver + geri it
             GiveContactDamage(collision.gameObject, collision.contacts[0].normal);
-        }
         else
         {
-            // Closed / Opening / Closing / Dazed:
-            // Oyuncu Host'u itebilir; oyuncuyu hafifçe geri it
             BouncePlayer(collision.gameObject, collision.contacts[0].normal);
             Log("Closed: Oyuncu Host'u itti.");
         }
@@ -357,22 +413,16 @@ public class HostAI : MonoBehaviour
         if (state != State.Open) return;
         if (!collision.gameObject.CompareTag(playerTag)) return;
 
-        // Sürekli temas için cooldown kontrolü
         GiveContactDamage(collision.gameObject, collision.contacts[0].normal);
     }
 
-    /// <summary>
-    /// Oyuncuya temas hasarı ver (cooldown'a göre).
-    /// </summary>
     private void GiveContactDamage(GameObject playerGO, Vector2 contactNormal)
     {
         if (Time.time - lastContactDamageTime < contactDamageCooldown) return;
         lastContactDamageTime = Time.time;
 
-        // Oyuncuyu geri it
         BouncePlayer(playerGO, contactNormal);
 
-        // Oyuncunun hasar alma metodunu çağır (projenin mevcut player sağlık scriptine göre uyarla)
         var playerHealth = playerGO.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
@@ -381,15 +431,11 @@ public class HostAI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Oyuncuyu Host'tan uzaklaştır.
-    /// </summary>
     private void BouncePlayer(GameObject playerGO, Vector2 contactNormal)
     {
         var playerRb = playerGO.GetComponent<Rigidbody2D>();
         if (playerRb == null) return;
 
-        // contactNormal: çarpışma yüzeyinin normali (Host'tan oyuncuya doğru)
         Vector2 bounceDir = contactNormal.normalized;
         if (bounceDir.sqrMagnitude < 0.001f)
             bounceDir = ((Vector2)playerGO.transform.position - (Vector2)transform.position).normalized;
@@ -399,14 +445,13 @@ public class HostAI : MonoBehaviour
     }
 
     // ═════════════════════════════════════════════════════════════════════════
-    // TRIGGER — Mermi / Patlama hasarı (Ana collider trigger'dayken)
+    // TRIGGER — Mermi / Patlama hasarı
     // ═════════════════════════════════════════════════════════════════════════
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isDead) return;
 
-        // Sadece Explosion layer'ından gelen tetikleyiciler
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
         if (other.GetComponent<PooterProjectile>() != null) return;
         if (other.CompareTag(playerTag)) return;
@@ -453,6 +498,9 @@ public class HostAI : MonoBehaviour
 
     private void FireAtPlayer()
     {
+        // isActivated kontrolü — deaktifken ateş etme
+        if (!isActivated || isDead) return;
+
         if (bloodPrefab == null) { LogWarning("bloodPrefab atanmamış!"); return; }
         if (player == null) { TryFindPlayer(); if (player == null) return; }
 
@@ -511,9 +559,6 @@ public class HostAI : MonoBehaviour
         rb.simulated = false;
         if (blockerCol != null) blockerCol.enabled = false;
 
-        var tracker    = GetComponentInParent<RoomEnemyTracker>();
-        var roomTrigger = GetComponentInParent<EnemyRoomTrigger>();
-
         Destroy(gameObject, 0.05f);
     }
 
@@ -531,7 +576,6 @@ public class HostAI : MonoBehaviour
 
     private IEnumerator KnockbackRoutine(Vector2 dir)
     {
-        // Dynamic zaten, sadece kuvvet uygula
         rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.12f);
         rb.linearVelocity = Vector2.zero;

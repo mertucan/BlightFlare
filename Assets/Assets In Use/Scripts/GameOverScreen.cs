@@ -49,9 +49,15 @@ public class GameOverScreen : MonoBehaviour
     public void Show()
     {
         if (gameOverPanel == null) return;
+        StartCoroutine(ShowAfterDelay(1.5f));
+    }
+
+    private IEnumerator ShowAfterDelay(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);   // timeScale 0 olsa bile çalışır
 
         gameOverPanel.SetActive(true);
-        Time.timeScale = 0f; // Oyunu dondur
+        Time.timeScale = 0f;
 
         if (canvasGroup != null)
             StartCoroutine(FadeIn());

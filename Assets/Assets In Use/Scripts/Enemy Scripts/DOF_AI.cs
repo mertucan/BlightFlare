@@ -16,7 +16,6 @@ public class DOF_AI : MonoBehaviour
 
     [Header("Can & Hasar")]
     [SerializeField] private int bombsToKill = 5;
-    [SerializeField] private float knockbackForce = 5f;
     [SerializeField] private float hitFlashDuration = 0.15f;
     [SerializeField] private Color hitFlashColor = Color.red;
     [SerializeField] private GameObject deathEffectPrefab;
@@ -27,6 +26,10 @@ public class DOF_AI : MonoBehaviour
     [Header("Ölünce Aktif Olacaklar")]
     [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
     [SerializeField] private Collider2D tunnelCollider2D;
+
+    [Header("Hasar Koruması")]
+    [SerializeField] private float damageCooldown = 0.5f;
+    private float lastDamageTime = -999f;
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -80,6 +83,8 @@ public class DOF_AI : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isActivated || isAttacking || isDead) return;
+        
+        // Her frame moveDirection'ı uygula — knockback varsa bile üzerine yazar
         rb.linearVelocity = moveDirection * moveSpeed;
     }
 
@@ -120,6 +125,9 @@ public class DOF_AI : MonoBehaviour
         if (other.GetComponent<PooterProjectile>() != null) return;
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
 
+        if (Time.time - lastDamageTime < damageCooldown) return;
+        lastDamageTime = Time.time;
+
         Vector2 knockDir = ((Vector2)transform.position - (Vector2)other.transform.position).normalized;
         TakeDamage(knockDir);
     }
@@ -128,7 +136,8 @@ public class DOF_AI : MonoBehaviour
     {
         currentBombHits++;
 
-        rb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);
+        // knockback kaldırıldı — hareket yönü korunuyor
+        // rb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);
 
         if (flashRoutine != null) StopCoroutine(flashRoutine);
         flashRoutine = StartCoroutine(HitFlashRoutine());

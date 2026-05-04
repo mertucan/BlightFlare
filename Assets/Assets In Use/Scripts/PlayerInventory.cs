@@ -19,6 +19,7 @@ public class PlayerInventory : MonoBehaviour
             return;
         }
         instance = this;
+        DontDestroyOnLoad(gameObject); // ← bunu ekle
 
         if (!_initialized)
         {
