@@ -1,36 +1,62 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Oyuncunun anahtar ve para miktarını tutar.
-/// HeartUI üzerinden ekranı otomatik günceller.
-/// </summary>
 public class PlayerInventory : MonoBehaviour
 {
-    public int keys { get; private set; } = 1;
-    public int pennies { get; private set; } = 1;
+    public int keys { get; private set; }
+    public int pennies { get; private set; }
 
     private HeartUI _heartUI;
-
     public static PlayerInventory instance;
+    private bool _initialized = false;
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         instance = this;
+
+        if (!_initialized)
+        {
+            keys = 1;
+            pennies = 1;
+            _initialized = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
         _heartUI = FindFirstObjectByType<HeartUI>(FindObjectsInactive.Include);
+        if (_heartUI != null)
+        {
+            _heartUI.UpdateKey(keys);
+            _heartUI.UpdatePennies(pennies);
+        }
     }
 
     private IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
-
-        if (_heartUI == null)
-            Debug.LogError("HATA: HeartUI bulunamadı!");
-        else
-        {
-            _heartUI.UpdateKey(keys);
-            _heartUI.UpdatePennies(pennies);
-        }
+        RefreshUI();
     }
 
     public void AddKey(int amount = 1)
@@ -39,10 +65,6 @@ public class PlayerInventory : MonoBehaviour
         _heartUI?.UpdateKey(keys);
     }
 
-    /// <summary>
-    /// Pozitif: para ekler. Negatif: para düşer (shop harcamaları için).
-    /// Sonuç 0'ın altına düşmez.
-    /// </summary>
     public void AddPenny(int amount = 1)
     {
         pennies = Mathf.Max(0, pennies + amount);

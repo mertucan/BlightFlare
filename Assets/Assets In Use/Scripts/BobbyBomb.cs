@@ -4,7 +4,7 @@ public class BobbyBomb : MonoBehaviour, IItem
 {
     [Header("Bobby-Bomb Ayarları")]
     public float moveSpeed     = 2.5f;
-    public float searchRadius  = 15f;
+    public float searchRadius  = 5f;
     public float fuseTime      = 3f;
     public float searchDelay   = 0.15f;
     public int   searchRetries = 5;

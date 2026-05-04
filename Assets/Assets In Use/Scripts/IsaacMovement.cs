@@ -96,9 +96,23 @@ public class IsaacMovement : MonoBehaviour
 
     private void Awake()
     {
+        // Duplicate kontrolü
+        IsaacMovement[] existing = FindObjectsByType<IsaacMovement>(FindObjectsSortMode.None);
+        if (existing.Length > 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         rb = GetComponent<Rigidbody2D>();
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         activeSprites = spritesDown;
+
+        // Yeni sahnede RTM varsa kendini tanıt
+        if (RoomTransitionManager.instance != null && RoomTransitionManager.instance.player == null)
+            RoomTransitionManager.instance.player = this.transform;
     }
 
     private void OnEnable()

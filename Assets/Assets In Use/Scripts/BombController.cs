@@ -62,6 +62,38 @@ public class BombController : MonoBehaviour
         }
 
         isaacMovement = GetComponent<IsaacMovement>();
+        RefreshTilemap(); // Başlangıçta da bul
+    }
+
+    private void OnEnable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        RefreshTilemap();
+    }
+
+    private void RefreshTilemap()
+    {
+        // Sahnedeki Destructible tag'li veya isimli Tilemap'i bul
+        Tilemap[] allTilemaps = FindObjectsByType<Tilemap>(FindObjectsSortMode.None);
+        foreach (var tm in allTilemaps)
+        {
+            if (tm.CompareTag("Destructible") || tm.name.Contains("Destructible"))
+            {
+                destructibleTiles = tm;
+                Debug.Log($"[BombController] Tilemap bulundu: {tm.name}");
+                return;
+            }
+        }
+        Debug.LogWarning("[BombController] Destructible Tilemap bulunamadı! Tag veya isim 'Destructible' içermeli.");
     }
 
     private void Update()
@@ -79,6 +111,17 @@ public class BombController : MonoBehaviour
 
     private IEnumerator PlaceBomb()
     {
+
+        if (destructibleTiles == null)
+        {
+            RefreshTilemap();
+            if (destructibleTiles == null)
+            {
+                Debug.LogError("[BombController] Tilemap bulunamadı, bomba konulamadı.");
+                yield break;
+            }
+        }
+
         Vector3Int originCell = destructibleTiles.WorldToCell(transform.position);
         Vector3    spawnPos   = FindValidBombPosition(originCell, lastFacingDir);
 
@@ -252,6 +295,7 @@ public class BombController : MonoBehaviour
         {
             if (door == null) continue;
             if (door.GetComponent<SecretRoomWall>() != null) continue;
+            if (door.isIndestructible) continue; // ← Boss kapısını atla
 
             Vector2 doorPos = door.transform.position;
             foreach (var pos in positions)

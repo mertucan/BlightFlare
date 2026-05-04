@@ -75,21 +75,16 @@ public class GameOverScreen : MonoBehaviour
 
     private void OnTryAgain()
     {
-        Time.timeScale = 1f; // Önce zamanı normale al
+        Time.timeScale = 1f;
         gameOverPanel.SetActive(false);
 
-        // Haritayı sıfırdan oluştur
-        if (MapGenerator.instance != null)
-        {
-            // MapGenerator'ın SetupDungeon metodunu reflection olmadan çağır.
-            // SetupDungeon private olduğu için public bir wrapper ekledik (aşağıya bak)
-            // ya da doğrudan sahneyi yeniden yükle:
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        // DontDestroyOnLoad ile gelen Isaac'ı yok et
+        // Sahne yeniden yüklenince Level1'deki prefab'dan taze başlayacak
+        GameObject isaac = GameObject.FindWithTag("Player");
+        if (isaac != null) Destroy(isaac);
+
+        // Level1'e dön (Build index 1)
+        SceneManager.LoadScene(1);
     }
 
     private void OnQuit()

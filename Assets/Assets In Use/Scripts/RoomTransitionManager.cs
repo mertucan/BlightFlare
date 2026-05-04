@@ -39,6 +39,17 @@ public class RoomTransitionManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        // Player referansı atanmamışsa sahnede tag ile bul
+        // (DontDestroyOnLoad ile gelen Isaac'ı yakalar)
+        if (player == null)
+        {
+            GameObject found = GameObject.FindWithTag("Player");
+            if (found != null)
+                player = found.transform;
+            else
+                Debug.LogError("[RTM] Player bulunamadı! 'Player' tag'i atanmış mı?");
+        }
     }
 
     public void RegisterMultiCellRoom(List<int> cellIndices, Vector2 worldPosition, RoomShape shape, Room room)

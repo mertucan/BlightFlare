@@ -85,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5325436450344638756, guid: eef43535cd68a2342b247de5e4e96cfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,7 +207,8 @@ MonoBehaviour:
   deathEffectPrefab: {fileID: 0}
   spriteRenderer: {fileID: 7170731224489788779}
   playerTag: Player
-  deathActivateObjects: []
+  tunnelSpriteRenderer: {fileID: 0}
+  tunnelCollider2D: {fileID: 0}
 --- !u!1 &6763808362857353971
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2330238333535534941, guid: c17e7235ff6d5a24899760404d260b3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

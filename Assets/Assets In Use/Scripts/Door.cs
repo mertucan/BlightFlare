@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     [HideInInspector] public EdgeDirection direction;
     [HideInInspector] public int targetCellIndex = -1;
     [HideInInspector] public RoomType targetRoomType = RoomType.Regular;
+    [HideInInspector] public bool isIndestructible = false;
 
     private GameObject closedDoorInstance;
     private GameObject openedDoorInstance;

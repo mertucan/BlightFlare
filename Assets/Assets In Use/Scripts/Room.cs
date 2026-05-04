@@ -341,7 +341,7 @@ public class Room : MonoBehaviour
     }
 
     private void TryPlaceDoor(int fromIndex, Vector2 positionOffset, EdgeDirection direction,
-        int[] floorplan, List<Cell> cellList, Cell currentCell)
+    int[] floorplan, List<Cell> cellList, Cell currentCell)
     {
         int neighbourIndex = fromIndex + GetOffset(direction);
         if (neighbourIndex < 0 || neighbourIndex >= floorplan.Length) return;
@@ -359,6 +359,10 @@ public class Room : MonoBehaviour
         SetupDoor(door, direction, displayType);
         door.SetupTransition(direction, neighbourIndex);
         door.targetRoomType = foundCell.roomType;
+
+        // Boss odasına giden kapılar bombayla açılamasın
+        if (foundCell.roomType == RoomType.Boss || currentCell.roomType == RoomType.Boss)
+            door.isIndestructible = true;
 
         placedDoorInfos.Add((positionOffset, direction));
     }
