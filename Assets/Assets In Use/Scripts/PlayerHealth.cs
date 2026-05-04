@@ -56,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHearts <= 0)
         {
+            GameOverScreen.instance?.Show();
             // Fizigi hemen durdur
             var rb = GetComponent<Rigidbody2D>();
             if (rb != null)

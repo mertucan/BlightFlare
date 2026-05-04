@@ -13,6 +13,7 @@ TagManager:
   - PlayerBomb
   - Trap
   - Heart
+  - 'BackgroundMusic '
   layers:
   - Default
   - TransparentFX
