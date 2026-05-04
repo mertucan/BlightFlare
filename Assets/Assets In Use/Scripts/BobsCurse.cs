@@ -91,10 +91,8 @@ public class BobsCurse : MonoBehaviour, IItem
     private void ReplaceHeadSprites(AnimatedSpriteRenderer asr, Sprite[] newSprites)
     {
         if (asr == null || newSprites == null || newSprites.Length == 0) return;
-
-        // Eski diziyi null'a çekip GC'ye bırak, yenisini ata
-        asr.animationSprites = null;
         asr.animationSprites = newSprites;
+        asr.ResetAnimation(); // ← bunu ekle
     }
 
     private void ForceRefreshHead(AnimatedSpriteRenderer asr)

@@ -52,8 +52,8 @@ public class TrapImmunity : MonoBehaviour, IItem
     {
         if (asr == null || newSprites == null || newSprites.Length == 0) return;
 
-        asr.animationSprites = null;
         asr.animationSprites = newSprites;
+        asr.ResetAnimation(); // ← bunu ekle
     }
 
     private void ForceRefreshHead(AnimatedSpriteRenderer asr)

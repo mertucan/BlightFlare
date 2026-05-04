@@ -78,4 +78,26 @@ public class AnimatedSpriteRenderer : MonoBehaviour
         if (walkFrame >= 0 && walkFrame < animationSprites.Length)
             spriteRenderer.sprite = animationSprites[walkFrame];
     }
+
+    public void ResetAnimation()
+    {
+        walkFrame      = 0;
+        idleFrame      = 0;
+        animationTimer = 0f;
+        wasIdle        = !idle; // transition'ı zorla
+
+        // İlk frame'i anında göster
+        if (idle)
+        {
+            if (idleAnimationSprites != null && idleAnimationSprites.Length > 0)
+                spriteRenderer.sprite = idleAnimationSprites[0];
+            else if (idleSprite != null)
+                spriteRenderer.sprite = idleSprite;
+        }
+        else
+        {
+            if (animationSprites != null && animationSprites.Length > 0)
+                spriteRenderer.sprite = animationSprites[0];
+        }
+    }
 }

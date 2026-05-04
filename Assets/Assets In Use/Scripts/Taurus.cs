@@ -87,8 +87,8 @@ public class Taurus : MonoBehaviour, IItem
     private void ReplaceHeadSprites(AnimatedSpriteRenderer asr, Sprite[] newSprites)
     {
         if (asr == null || newSprites == null || newSprites.Length == 0) return;
-        asr.animationSprites = null;
         asr.animationSprites = newSprites;
+        asr.ResetAnimation(); // ← bunu ekle
     }
 
     private void ForceRefreshHead(AnimatedSpriteRenderer asr)

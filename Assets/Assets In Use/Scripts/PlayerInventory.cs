@@ -17,23 +17,17 @@ public class PlayerInventory : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        // Eğer HeartUI inaktifse bile bulabilmesi için parametre ekledik:
         _heartUI = FindFirstObjectByType<HeartUI>(FindObjectsInactive.Include);
     }
 
     private IEnumerator Start()
     {
-        // Diğer tüm scriptlerin (özellikle HeartUI'ın) Start metotlarının bitmesini bekle
         yield return new WaitForEndOfFrame();
 
-        // HeartUI bulundu mu diye kontrol et
         if (_heartUI == null)
-        {
-            Debug.LogError("HATA: HeartUI bulunamadı! Sahnede HeartUI scripti olan bir obje olduğundan emin ol.");
-        }
+            Debug.LogError("HATA: HeartUI bulunamadı!");
         else
         {
-            Debug.Log("Başarı: HeartUI bulundu, değerler güncelleniyor...");
             _heartUI.UpdateKey(keys);
             _heartUI.UpdatePennies(pennies);
         }
@@ -45,9 +39,13 @@ public class PlayerInventory : MonoBehaviour
         _heartUI?.UpdateKey(keys);
     }
 
+    /// <summary>
+    /// Pozitif: para ekler. Negatif: para düşer (shop harcamaları için).
+    /// Sonuç 0'ın altına düşmez.
+    /// </summary>
     public void AddPenny(int amount = 1)
     {
-        pennies += amount;
+        pennies = Mathf.Max(0, pennies + amount);
         _heartUI?.UpdatePennies(pennies);
     }
 
