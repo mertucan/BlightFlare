@@ -15,6 +15,8 @@ public class EnemyRoomTrigger : MonoBehaviour
     private HostAI[]    hosts;      // ← YENİ
     private BoomFlyAI[] boomflies; // ← YENİ
 
+    private LokiAI[] lokis;
+
     private void Awake()
     {
         pooters    = GetComponentsInChildren<PooterAI>(true);
@@ -23,6 +25,7 @@ public class EnemyRoomTrigger : MonoBehaviour
         suckers    = GetComponentsInChildren<SuckerAI>(true);
         hosts      = GetComponentsInChildren<HostAI>(true);   // ← YENİ
         boomflies  = GetComponentsInChildren<BoomFlyAI>(true); // ← YENİ
+        lokis = GetComponentsInChildren<LokiAI>(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,5 +48,6 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var s in suckers)    if (s != null) s.SetActive(active);
         foreach (var h in hosts)      if (h != null) h.SetActive(active);  // ← YENİ
         foreach (var bf in boomflies) if (bf != null) bf.SetActive(active); // ← YENİ
+        foreach (var l in lokis) if (l != null) l.SetActive(active);
     }
 }

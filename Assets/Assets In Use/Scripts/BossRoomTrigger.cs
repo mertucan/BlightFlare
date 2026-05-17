@@ -6,25 +6,18 @@ public class BossRoomTrigger : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
 
     [Header("Tunnel Nesneleri")]
-    [SerializeField] private GameObject tunnelSprite;
-    [SerializeField] private GameObject tunnelCollider;
-
-    private DOF_AI dofAI;
-    private Collider2D[] doorColliders;
-    private bool triggered = false;
-
     [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
     [SerializeField] private Collider2D tunnelCollider2D;
 
-    private void Start()
-    {
-        if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = false;
-        if (tunnelCollider2D != null)     tunnelCollider2D.enabled = false;
-    }
+    private DOF_AI   dofAI;
+    private LokiAI   lokiAI;
+    private Collider2D[] doorColliders;
+    private bool triggered = false;
 
     private void Awake()
     {
-        dofAI = GetComponentInChildren<DOF_AI>();
+        dofAI  = GetComponentInChildren<DOF_AI>();
+        lokiAI = GetComponentInChildren<LokiAI>();
 
         doorColliders = new Collider2D[4];
         string[] doorNames = { "TopLeft", "TopRight", "BottomLeft", "BottomRight" };
@@ -35,6 +28,12 @@ public class BossRoomTrigger : MonoBehaviour
             if (door != null)
                 doorColliders[i] = door.GetComponent<Collider2D>();
         }
+    }
+
+    private void Start()
+    {
+        if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = false;
+        if (tunnelCollider2D     != null) tunnelCollider2D.enabled     = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,7 +48,9 @@ public class BossRoomTrigger : MonoBehaviour
 
         if (dofAI != null)
             dofAI.Activate();
+        else if (lokiAI != null)
+            lokiAI.Activate();
         else
-            Debug.LogWarning("BossRoomTrigger: Duke of Flies bulunamadı!");
+            Debug.LogWarning("BossRoomTrigger: Ne DOF_AI ne de LokiAI bulunamadı!");
     }
 }

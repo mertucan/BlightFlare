@@ -1,0 +1,669 @@
+fileFormatVersion: 2
+guid: fcdd8f721217de9479b531c1099cb01a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7630322761751873989
+    second: loki_boss_0
+  - first:
+      213: 6465080475393723907
+    second: loki_boss_1
+  - first:
+      213: -8818823006594639444
+    second: loki_boss_2
+  - first:
+      213: -2015636408433998726
+    second: loki_boss_3
+  - first:
+      213: 4209829759208207401
+    second: loki_boss_4
+  - first:
+      213: -4816128956586305125
+    second: loki_boss_5
+  - first:
+      213: 1601873480813522418
+    second: loki_boss_6
+  - first:
+      213: 4987230046391236981
+    second: loki_boss_7
+  - first:
+      213: -8514583725907336596
+    second: loki_boss_8
+  - first:
+      213: -351676187431535549
+    second: loki_boss_9
+  - first:
+      213: 1194304088907428473
+    second: loki_boss_10
+  - first:
+      213: -8966864942357767528
+    second: loki_boss_11
+  - first:
+      213: 2043896588008120536
+    second: loki_boss_12
+  - first:
+      213: -6300648602926759749
+    second: loki_boss_13
+  - first:
+      213: -6472677056982639592
+    second: loki_boss_14
+  - first:
+      213: 6392969841932181314
+    second: loki_boss_15
+  - first:
+      213: 3569024000088023999
+    second: loki_boss_16
+  - first:
+      213: 1785174417600644976
+    second: loki_boss_17
+  - first:
+      213: -7233003933750883066
+    second: loki_boss_18
+  - first:
+      213: -4448488542525765572
+    second: loki_boss_19
+  - first:
+      213: -8682129930234832474
+    second: loki_boss_20
+  - first:
+      213: 1673973441415106677
+    second: loki_boss_21
+  - first:
+      213: 738942042506572518
+    second: loki_boss_22
+  - first:
+      213: 8163113729529658085
+    second: loki_boss_23
+  - first:
+      213: -258911580861419474
+    second: loki_boss_24
+  - first:
+      213: -4778851916511720744
+    second: loki_boss_25
+  - first:
+      213: 8818701658422098335
+    second: loki_boss_26
+  - first:
+      213: -8969560935533723985
+    second: loki_boss_27
+  - first:
+      213: 5994543414007488989
+    second: loki_boss_28
+  - first:
+      213: -3369405913859116991
+    second: loki_boss_29
+  - first:
+      213: 4547434307001468948
+    second: loki_boss_30
+  - first:
+      213: 5006112020640340231
+    second: loki_boss_31
+  - first:
+      213: 7984081848339196068
+    second: loki_boss_32
+  - first:
+      213: -155058560727904715
+    second: loki_boss_33
+  - first:
+      213: 8166599821681254683
+    second: loki_boss_34
+  - first:
+      213: -6157834331357590924
+    second: loki_boss_35
+  - first:
+      213: 77915942356362850
+    second: loki_boss_36
+  - first:
+      213: 8023290585681812960
+    second: loki_boss_37
+  - first:
+      213: 8741846434997790033
+    second: loki_boss_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: loki_boss_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 243
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c94cc7ef1a54e960800000000000000
+      internalID: 7630322761751873989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 243
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e082c507498b950800000000000000
+      internalID: 6465080475393723907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 242
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca952ea133f3d9580800000000000000
+      internalID: -8818823006594639444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 246
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7482f6ad550704e0800000000000000
+      internalID: -2015636408433998726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 243
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92439728cd15c6a30800000000000000
+      internalID: 4209829759208207401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_5
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 243
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99533e1b3ca92db0800000000000000
+      internalID: -4816128956586305125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 192
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd2207917ffa3610800000000000000
+      internalID: 1601873480813522418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_7
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 195
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579fd40cd43363540800000000000000
+      internalID: 4987230046391236981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_8
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 199
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62a8f6a63f16d980800000000000000
+      internalID: -8514583725907336596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 197
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cfd2cee589e1bf0800000000000000
+      internalID: -351676187431535549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 199
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972bf1dbd35039010800000000000000
+      internalID: 1194304088907428473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_11
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 194
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a9cd9e7db4f8380800000000000000
+      internalID: -8966864942357767528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 147
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d06bd52e116d5c10800000000000000
+      internalID: 2043896588008120536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_13
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 147
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb04df75a799f88a0800000000000000
+      internalID: -6300648602926759749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 147
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c9ab8a28e6c26a0800000000000000
+      internalID: -6472677056982639592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_15
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 146
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f1728233468b850800000000000000
+      internalID: 6392969841932181314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 145
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb327182b68b78130800000000000000
+      internalID: 3569024000088023999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loki_boss_17
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 151
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077833faca636c810800000000000000
+      internalID: 1785174417600644976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0447f4e4517414f41a8adea528125ee2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      loki_boss_0: 7630322761751873989
+      loki_boss_1: 6465080475393723907
+      loki_boss_10: 1194304088907428473
+      loki_boss_11: -8966864942357767528
+      loki_boss_12: 2043896588008120536
+      loki_boss_13: -6300648602926759749
+      loki_boss_14: -6472677056982639592
+      loki_boss_15: 6392969841932181314
+      loki_boss_16: 3569024000088023999
+      loki_boss_17: 1785174417600644976
+      loki_boss_18: -7233003933750883066
+      loki_boss_19: -4448488542525765572
+      loki_boss_2: -8818823006594639444
+      loki_boss_20: -8682129930234832474
+      loki_boss_21: 1673973441415106677
+      loki_boss_22: 738942042506572518
+      loki_boss_23: 8163113729529658085
+      loki_boss_24: -258911580861419474
+      loki_boss_25: -4778851916511720744
+      loki_boss_26: 8818701658422098335
+      loki_boss_27: -8969560935533723985
+      loki_boss_28: 5994543414007488989
+      loki_boss_29: -3369405913859116991
+      loki_boss_3: -2015636408433998726
+      loki_boss_30: 4547434307001468948
+      loki_boss_31: 5006112020640340231
+      loki_boss_32: 7984081848339196068
+      loki_boss_33: -155058560727904715
+      loki_boss_34: 8166599821681254683
+      loki_boss_35: -6157834331357590924
+      loki_boss_36: 77915942356362850
+      loki_boss_37: 8023290585681812960
+      loki_boss_38: 8741846434997790033
+      loki_boss_4: 4209829759208207401
+      loki_boss_5: -4816128956586305125
+      loki_boss_6: 1601873480813522418
+      loki_boss_7: 4987230046391236981
+      loki_boss_8: -8514583725907336596
+      loki_boss_9: -351676187431535549
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
