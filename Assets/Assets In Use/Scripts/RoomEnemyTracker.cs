@@ -35,6 +35,8 @@ public class RoomEnemyTracker : MonoBehaviour
             enemies.Add(h.gameObject);
         foreach (var l in GetComponentsInChildren<LokiAI>(true))
             enemies.Add(l.gameObject);
+        foreach (var h in GetComponentsInChildren<HollowHead>(true))
+            enemies.Add(h.gameObject);
 
         hasEnemies = enemies.Count > 0;
         initialized = true;

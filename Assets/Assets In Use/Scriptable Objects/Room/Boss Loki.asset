@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbb95e612cc46004cb25f53976e832d8, type: 3}
-  m_Name: Bloody Boss Loki
+  m_Name: Boss Loki
   m_EditorClassIdentifier: 
   roomType: 3
   roomShape: 0

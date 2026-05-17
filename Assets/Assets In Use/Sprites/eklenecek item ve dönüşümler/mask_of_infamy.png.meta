@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: ae248fc390fc23d48b4a581f2140e546
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -658614174478394123
+    second: mask_of_infamy_0
+  - first:
+      213: -7816359343468268797
+    second: mask_of_infamy_1
+  - first:
+      213: -2813052835199948758
+    second: mask_of_infamy_2
+  - first:
+      213: -1394323225208315088
+    second: mask_of_infamy_3
+  - first:
+      213: 9130730536508549537
+    second: mask_of_infamy_4
+  - first:
+      213: -3738067296081952525
+    second: mask_of_infamy_5
+  - first:
+      213: -416165018660699873
+    second: mask_of_infamy_6
+  - first:
+      213: -5185841819384690711
+    second: mask_of_infamy_7
+  - first:
+      213: 3987017317748738304
+    second: mask_of_infamy_8
+  - first:
+      213: -7494172174358095550
+    second: mask_of_infamy_9
+  - first:
+      213: -5190669440368925557
+    second: mask_of_infamy_10
+  - first:
+      213: -6548280444235113234
+    second: mask_of_infamy_11
+  - first:
+      213: 842232561747432485
+    second: mask_of_infamy_12
+  - first:
+      213: -5906261001695178733
+    second: mask_of_infamy_13
+  - first:
+      213: 6241677243370479396
+    second: mask_of_infamy_14
+  - first:
+      213: 943335840189256092
+    second: mask_of_infamy_15
+  - first:
+      213: 1338908681103932624
+    second: mask_of_infamy_16
+  - first:
+      213: -8427678947795698793
+    second: mask_of_infamy_17
+  - first:
+      213: -9011831532761444978
+    second: mask_of_infamy_18
+  - first:
+      213: 9220841670180650877
+    second: mask_of_infamy_19
+  - first:
+      213: 4979600560496298746
+    second: mask_of_infamy_20
+  - first:
+      213: -7973342085531980108
+    second: mask_of_infamy_21
+  - first:
+      213: 7879346279016924853
+    second: mask_of_infamy_22
+  - first:
+      213: -8039470953497409900
+    second: mask_of_infamy_23
+  - first:
+      213: -1313590039283124474
+    second: mask_of_infamy_24
+  - first:
+      213: 5506325746785294641
+    second: mask_of_infamy_25
+  - first:
+      213: 6082109704744160757
+    second: mask_of_infamy_26
+  - first:
+      213: -5546665085104748456
+    second: mask_of_infamy_27
+  - first:
+      213: 6652934404219332381
+    second: mask_of_infamy_28
+  - first:
+      213: 4833273823326484517
+    second: mask_of_infamy_29
+  - first:
+      213: 3518805409275446168
+    second: mask_of_infamy_30
+  - first:
+      213: 828553204287574543
+    second: mask_of_infamy_31
+  - first:
+      213: -3405887049274027696
+    second: mask_of_infamy_32
+  - first:
+      213: -6787654195579674730
+    second: mask_of_infamy_33
+  - first:
+      213: -1878503494890119840
+    second: mask_of_infamy_34
+  - first:
+      213: 2179380393526798795
+    second: mask_of_infamy_35
+  - first:
+      213: 7956595302875883769
+    second: mask_of_infamy_36
+  - first:
+      213: 7573090994693756329
+    second: mask_of_infamy_37
+  - first:
+      213: 2575671847607297570
+    second: mask_of_infamy_38
+  - first:
+      213: -6648958270019526317
+    second: mask_of_infamy_39
+  - first:
+      213: 1305384258091362235
+    second: mask_of_infamy_40
+  - first:
+      213: 8371749344294026366
+    second: mask_of_infamy_41
+  - first:
+      213: 4212475049326380398
+    second: mask_of_infamy_42
+  - first:
+      213: 1357637811206743098
+    second: mask_of_infamy_43
+  - first:
+      213: -405375659365614916
+    second: mask_of_infamy_44
+  - first:
+      213: -2701302786156851879
+    second: mask_of_infamy_45
+  - first:
+      213: 1801091382936354263
+    second: mask_of_infamy_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mask_of_infamy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253
+        width: 259
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc9d26d5e12cd6f0800000000000000
+      internalID: -658614174478394123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303b4c70796b68390800000000000000
+      internalID: -7816359343468268797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 46
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28608fb95706f8d0800000000000000
+      internalID: -2813052835199948758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033a1630a6e56ace0800000000000000
+      internalID: -1394323225208315088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a96768db0fd6be70800000000000000
+      internalID: 9130730536508549537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 45
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0c78e6997bf1cc0800000000000000
+      internalID: -3738067296081952525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1109c6de1c793af0800000000000000
+      internalID: -416165018660699873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_7
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7c53e47503808b0800000000000000
+      internalID: -5185841819384690711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_8
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0098eb9502bb45730800000000000000
+      internalID: 3987017317748738304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_9
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249d4cdfc1a5ff790800000000000000
+      internalID: -7494172174358095550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_10
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84a55435a907f7b0800000000000000
+      internalID: -5190669440368925557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_11
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec9ab751a5df15a0800000000000000
+      internalID: -6548280444235113234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_12
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52419357d0630bb00800000000000000
+      internalID: 842232561747432485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310573369eeb80ea0800000000000000
+      internalID: -5906261001695178733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f9cbd0264ee9650800000000000000
+      internalID: 6241677243370479396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_15
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 47
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91106ad2f6671d00800000000000000
+      internalID: 943335840189256092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_16
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 46
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcf2e30a52c49210800000000000000
+      internalID: 1338908681103932624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_17
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 43
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b799316aeda0b80800000000000000
+      internalID: -8427678947795698793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_18
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d071ab7fa8fe280800000000000000
+      internalID: -9011831532761444978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_19
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 30
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fbc3915a207ff70800000000000000
+      internalID: 9220841670180650877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_20
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 27
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afac7b3a3581b1540800000000000000
+      internalID: 4979600560496298746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_21
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 27
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bea1372e9ff85190800000000000000
+      internalID: -7973342085531980108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 30
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b68917b1bf095d60800000000000000
+      internalID: 7879346279016924853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_23
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49647b243cf0e6090800000000000000
+      internalID: -8039470953497409900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_24
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607b908a1d035cde0800000000000000
+      internalID: -1313590039283124474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_25
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 27
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13999bac7166a6c40800000000000000
+      internalID: 5506325746785294641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_26
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd4b345d8ef76450800000000000000
+      internalID: 6082109704744160757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_27
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 27
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858054a1e794603b0800000000000000
+      internalID: -5546665085104748456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_28
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 31
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17e7758798f35c50800000000000000
+      internalID: 6652934404219332381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_29
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 30
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528b19d3fec331340800000000000000
+      internalID: 4833273823326484517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_30
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 30
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893069550ee45d030800000000000000
+      internalID: 3518805409275446168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_31
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 30
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02921bdfbc9f7b00800000000000000
+      internalID: 828553204287574543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_32
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 15
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0511bea16cbdbb0d0800000000000000
+      internalID: -3405887049274027696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_33
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f984eb8786dc1a0800000000000000
+      internalID: -6787654195579674730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_34
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d9ebd26073ee5e0800000000000000
+      internalID: -1878503494890119840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_35
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9ad9acbe6be3e10800000000000000
+      internalID: 2179380393526798795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_36
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f86579a5418b6e60800000000000000
+      internalID: 7956595302875883769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 15
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a55e6eb226091960800000000000000
+      internalID: 7573090994693756329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_38
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 14
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2266b9e16ef9eb320800000000000000
+      internalID: 2575671847607297570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_39
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 15
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351271d5ea72ab3a0800000000000000
+      internalID: -6648958270019526317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_40
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb72ce60118ad1210800000000000000
+      internalID: 1305384258091362235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_41
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c31475cad6e2470800000000000000
+      internalID: 8371749344294026366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_42
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e658b4c1db7b57a30800000000000000
+      internalID: 4212475049326380398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_43
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 15
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34ed9e656c47d210800000000000000
+      internalID: 1357637811206743098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 14
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba3cee4cf0df5af0800000000000000
+      internalID: -405375659365614916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_45
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 15
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d09589d6b038ad0800000000000000
+      internalID: -2701302786156851879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mask_of_infamy_46
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 14
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd30f7f113cef810800000000000000
+      internalID: 1801091382936354263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mask_of_infamy_0: -658614174478394123
+      mask_of_infamy_1: -7816359343468268797
+      mask_of_infamy_10: -5190669440368925557
+      mask_of_infamy_11: -6548280444235113234
+      mask_of_infamy_12: 842232561747432485
+      mask_of_infamy_13: -5906261001695178733
+      mask_of_infamy_14: 6241677243370479396
+      mask_of_infamy_15: 943335840189256092
+      mask_of_infamy_16: 1338908681103932624
+      mask_of_infamy_17: -8427678947795698793
+      mask_of_infamy_18: -9011831532761444978
+      mask_of_infamy_19: 9220841670180650877
+      mask_of_infamy_2: -2813052835199948758
+      mask_of_infamy_20: 4979600560496298746
+      mask_of_infamy_21: -7973342085531980108
+      mask_of_infamy_22: 7879346279016924853
+      mask_of_infamy_23: -8039470953497409900
+      mask_of_infamy_24: -1313590039283124474
+      mask_of_infamy_25: 5506325746785294641
+      mask_of_infamy_26: 6082109704744160757
+      mask_of_infamy_27: -5546665085104748456
+      mask_of_infamy_28: 6652934404219332381
+      mask_of_infamy_29: 4833273823326484517
+      mask_of_infamy_3: -1394323225208315088
+      mask_of_infamy_30: 3518805409275446168
+      mask_of_infamy_31: 828553204287574543
+      mask_of_infamy_32: -3405887049274027696
+      mask_of_infamy_33: -6787654195579674730
+      mask_of_infamy_34: -1878503494890119840
+      mask_of_infamy_35: 2179380393526798795
+      mask_of_infamy_36: 7956595302875883769
+      mask_of_infamy_37: 7573090994693756329
+      mask_of_infamy_38: 2575671847607297570
+      mask_of_infamy_39: -6648958270019526317
+      mask_of_infamy_4: 9130730536508549537
+      mask_of_infamy_40: 1305384258091362235
+      mask_of_infamy_41: 8371749344294026366
+      mask_of_infamy_42: 4212475049326380398
+      mask_of_infamy_43: 1357637811206743098
+      mask_of_infamy_44: -405375659365614916
+      mask_of_infamy_45: -2701302786156851879
+      mask_of_infamy_46: 1801091382936354263
+      mask_of_infamy_5: -3738067296081952525
+      mask_of_infamy_6: -416165018660699873
+      mask_of_infamy_7: -5185841819384690711
+      mask_of_infamy_8: 3987017317748738304
+      mask_of_infamy_9: -7494172174358095550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 73f424a40052f8c43b9d0ed7f83b91d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7906953053471037967
+    second: bumbino_0
+  - first:
+      213: 1622607319246189694
+    second: bumbino_1
+  - first:
+      213: 4178512297715921379
+    second: bumbino_2
+  - first:
+      213: 3044642777052709373
+    second: bumbino_3
+  - first:
+      213: 7377102710836071553
+    second: bumbino_4
+  - first:
+      213: -4963638083373910055
+    second: bumbino_5
+  - first:
+      213: 4900954011165349652
+    second: bumbino_6
+  - first:
+      213: -2888257684369680940
+    second: bumbino_7
+  - first:
+      213: 8722063901491257214
+    second: bumbino_8
+  - first:
+      213: -5179801011770910577
+    second: bumbino_9
+  - first:
+      213: 3812805598942893210
+    second: bumbino_10
+  - first:
+      213: 5339169274215917425
+    second: bumbino_11
+  - first:
+      213: -5643544326643626725
+    second: bumbino_12
+  - first:
+      213: 6614906639313775401
+    second: bumbino_13
+  - first:
+      213: -136593390039387550
+    second: bumbino_14
+  - first:
+      213: -6534165316161015266
+    second: bumbino_15
+  - first:
+      213: 1292048677838117931
+    second: bumbino_16
+  - first:
+      213: -2232843106690723113
+    second: bumbino_17
+  - first:
+      213: -3305747202428206765
+    second: bumbino_18
+  - first:
+      213: 6852269432394915621
+    second: bumbino_19
+  - first:
+      213: 507721738201534577
+    second: bumbino_20
+  - first:
+      213: 6264091542168067413
+    second: bumbino_21
+  - first:
+      213: 5616039307085581554
+    second: bumbino_22
+  - first:
+      213: -1334336628241200000
+    second: bumbino_23
+  - first:
+      213: -2022861117615343037
+    second: bumbino_24
+  - first:
+      213: -634095724366057638
+    second: bumbino_25
+  - first:
+      213: 3868789085359853026
+    second: bumbino_26
+  - first:
+      213: 2403268900116734864
+    second: bumbino_27
+  - first:
+      213: -574929584461449278
+    second: bumbino_28
+  - first:
+      213: 1746965950103720732
+    second: bumbino_29
+  - first:
+      213: 7927778778079901674
+    second: bumbino_30
+  - first:
+      213: 5724249004248409937
+    second: bumbino_31
+  - first:
+      213: 3469221324416889579
+    second: bumbino_32
+  - first:
+      213: -6994935061392161273
+    second: bumbino_33
+  - first:
+      213: 9031564277284200693
+    second: bumbino_34
+  - first:
+      213: -3911047255259991459
+    second: bumbino_35
+  - first:
+      213: -5902772592538923809
+    second: bumbino_36
+  - first:
+      213: -7981982430589664347
+    second: bumbino_37
+  - first:
+      213: -5487633382985366261
+    second: bumbino_38
+  - first:
+      213: -6070989292922101507
+    second: bumbino_39
+  - first:
+      213: -8554866411620946353
+    second: bumbino_40
+  - first:
+      213: -3183819737492705625
+    second: bumbino_41
+  - first:
+      213: 7479879601080517914
+    second: bumbino_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bumbino_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 453
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f52b28371cd44290800000000000000
+      internalID: -7906953053471037967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 453
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e743e9982c8a48610800000000000000
+      internalID: 1622607319246189694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 453
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e175facbce0df930800000000000000
+      internalID: 4178512297715921379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 454
+        width: 73
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df18f2a797eb04a20800000000000000
+      internalID: 3044642777052709373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 456
+        width: 63
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c84f674dbb06660800000000000000
+      internalID: 7377102710836071553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_5
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 454
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7b5ee267d9d1bb0800000000000000
+      internalID: -4963638083373910055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_6
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 455
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4175900f4bfa30440800000000000000
+      internalID: 4900954011165349652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 375
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d55a5f40f8dae7d0800000000000000
+      internalID: -2888257684369680940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 367
+        width: 107
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fd4ac28eefa0970800000000000000
+      internalID: 8722063901491257214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_9
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 368
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f889f2e6c66ad18b0800000000000000
+      internalID: -5179801011770910577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_10
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 377
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a949c9abd7ec9e430800000000000000
+      internalID: 3812805598942893210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_11
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 377
+        width: 58
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177e151ba2a881a40800000000000000
+      internalID: 5339169274215917425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_12
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 377
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d4c30f55a1ea1b0800000000000000
+      internalID: -5643544326643626725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 297
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92babaa8a8edccb50800000000000000
+      internalID: 6614906639313775401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_14
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 293
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26239041909ba1ef0800000000000000
+      internalID: -136593390039387550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 302
+        width: 73
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e127b82b34bf155a0800000000000000
+      internalID: -6534165316161015266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_16
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 287
+        width: 58
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cdd0b4d674ee110800000000000000
+      internalID: 1292048677838117931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_17
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 308
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2158a46095301e0800000000000000
+      internalID: -2232843106690723113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_18
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 310
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351860a1f60af12d0800000000000000
+      internalID: -3305747202428206765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f9a2f6eb6281f50800000000000000
+      internalID: 6852269432394915621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_20
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 209
+        width: 52
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1701f3a1b3acb0700800000000000000
+      internalID: 507721738201534577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 212
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dd47ba1168ee650800000000000000
+      internalID: 6264091542168067413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_22
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 214
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc8777aefd20fd40800000000000000
+      internalID: 5616039307085581554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_23
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 248
+        width: 74
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c04eef7eb7b7de0800000000000000
+      internalID: -1334336628241200000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_24
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 211
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a7696f78a5de3e0800000000000000
+      internalID: -2022861117615343037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_25
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 218
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f219b5c4d3337f0800000000000000
+      internalID: -634095724366057638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_26
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 223
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed48c7ec23b0b530800000000000000
+      internalID: 3868789085359853026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_27
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 216
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093a333e4502a5120800000000000000
+      internalID: 2403268900116734864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_28
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 213
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7ff4bc6907508f0800000000000000
+      internalID: -574929584461449278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 215
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1392aa96487e3810800000000000000
+      internalID: 1746965950103720732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_30
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 223
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae73555abc0250e60800000000000000
+      internalID: 7927778778079901674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_31
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 215
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1572c18142e907f40800000000000000
+      internalID: 5724249004248409937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_32
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 213
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be23411f966252030800000000000000
+      internalID: 3469221324416889579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_33
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 226
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7068bc65f9ffcee90800000000000000
+      internalID: -6994935061392161273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_34
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 135
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0e1a1ebdf865d70800000000000000
+      internalID: 9031564277284200693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 134
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5236723e3b29b9c0800000000000000
+      internalID: -3911047255259991459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_36
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 134
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc4ecfe993251ea0800000000000000
+      internalID: -5902772592538923809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_37
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 120
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a34b4d054d4a3190800000000000000
+      internalID: -7981982430589664347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_38
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 124
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05059d438208d3b0800000000000000
+      internalID: -5487633382985366261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_39
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 151
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0ad2057638fbba0800000000000000
+      internalID: -6070989292922101507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_40
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 133
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ea9620352074980800000000000000
+      internalID: -8554866411620946353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_41
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 130
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aeaedd31dcc0d3d0800000000000000
+      internalID: -3183819737492705625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bumbino_42
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1
+        width: 139
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a154819fddeddc760800000000000000
+      internalID: 7479879601080517914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bumbino_0: -7906953053471037967
+      bumbino_1: 1622607319246189694
+      bumbino_10: 3812805598942893210
+      bumbino_11: 5339169274215917425
+      bumbino_12: -5643544326643626725
+      bumbino_13: 6614906639313775401
+      bumbino_14: -136593390039387550
+      bumbino_15: -6534165316161015266
+      bumbino_16: 1292048677838117931
+      bumbino_17: -2232843106690723113
+      bumbino_18: -3305747202428206765
+      bumbino_19: 6852269432394915621
+      bumbino_2: 4178512297715921379
+      bumbino_20: 507721738201534577
+      bumbino_21: 6264091542168067413
+      bumbino_22: 5616039307085581554
+      bumbino_23: -1334336628241200000
+      bumbino_24: -2022861117615343037
+      bumbino_25: -634095724366057638
+      bumbino_26: 3868789085359853026
+      bumbino_27: 2403268900116734864
+      bumbino_28: -574929584461449278
+      bumbino_29: 1746965950103720732
+      bumbino_3: 3044642777052709373
+      bumbino_30: 7927778778079901674
+      bumbino_31: 5724249004248409937
+      bumbino_32: 3469221324416889579
+      bumbino_33: -6994935061392161273
+      bumbino_34: 9031564277284200693
+      bumbino_35: -3911047255259991459
+      bumbino_36: -5902772592538923809
+      bumbino_37: -7981982430589664347
+      bumbino_38: -5487633382985366261
+      bumbino_39: -6070989292922101507
+      bumbino_4: 7377102710836071553
+      bumbino_40: -8554866411620946353
+      bumbino_41: -3183819737492705625
+      bumbino_42: 7479879601080517914
+      bumbino_5: -4963638083373910055
+      bumbino_6: 4900954011165349652
+      bumbino_7: -2888257684369680940
+      bumbino_8: 8722063901491257214
+      bumbino_9: -5179801011770910577
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbb95e612cc46004cb25f53976e832d8, type: 3}
-  m_Name: Bloody Boss
+  m_Name: Boss Hollow
   m_EditorClassIdentifier: 
   roomType: 3
   roomShape: 0
   occupiedTiles: 00000000
   roomDesignPrefabs:
-  - {fileID: 3822254578997936868, guid: c20abf9bb973c634cbc4d4d2e4ce4408, type: 3}
+  - {fileID: 3822254578997936868, guid: 4560e1222b20ff049addc2189bc37fbf, type: 3}

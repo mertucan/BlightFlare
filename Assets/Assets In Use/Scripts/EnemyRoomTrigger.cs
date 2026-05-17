@@ -8,14 +8,16 @@ public class EnemyRoomTrigger : MonoBehaviour
     [Header("Kapı Collider'ları (opsiyonel)")]
     [SerializeField] private Collider2D[] doorColliders;
 
-    private PooterAI[]  pooters;
-    private BabyAI[]    babies;
-    private DOF_AI[]    dofEnemies;
-    private SuckerAI[]  suckers;
-    private HostAI[]    hosts;      // ← YENİ
-    private BoomFlyAI[] boomflies; // ← YENİ
+    private PooterAI[]    pooters;
+    private BabyAI[]      babies;
+    private DOF_AI[]      dofEnemies;
+    private SuckerAI[]    suckers;
+    private HostAI[]      hosts;
+    private BoomFlyAI[]   boomflies;
+    private LokiAI[]      lokis;
+    private HollowHead[]  hollows;   // ← YENİ
 
-    private LokiAI[] lokis;
+    private bool activated = false;  // ← Sadece bir kez Activate() çağır
 
     private void Awake()
     {
@@ -23,20 +25,35 @@ public class EnemyRoomTrigger : MonoBehaviour
         babies     = GetComponentsInChildren<BabyAI>(true);
         dofEnemies = GetComponentsInChildren<DOF_AI>(true);
         suckers    = GetComponentsInChildren<SuckerAI>(true);
-        hosts      = GetComponentsInChildren<HostAI>(true);   // ← YENİ
-        boomflies  = GetComponentsInChildren<BoomFlyAI>(true); // ← YENİ
-        lokis = GetComponentsInChildren<LokiAI>(true);
+        hosts      = GetComponentsInChildren<HostAI>(true);
+        boomflies  = GetComponentsInChildren<BoomFlyAI>(true);
+        lokis      = GetComponentsInChildren<LokiAI>(true);
+        hollows    = GetComponentsInChildren<HollowHead>(true); // ← YENİ
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag(playerTag)) return;
+
+        if (!activated)
+        {
+            activated = true;
+            // İlk girişte Activate() — hareketi başlatır
+            foreach (var h in hollows) if (h != null) h.Activate();
+        }
+        else
+        {
+            // Odaya geri dönünce sadece aç
+            foreach (var h in hollows) if (h != null) h.SetActive(true);
+        }
+
         SetEnemiesActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag(playerTag)) return;
+        foreach (var h in hollows) if (h != null) h.SetActive(false);
         SetEnemiesActive(false);
     }
 
@@ -46,8 +63,8 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var b in babies)     if (b != null) b.SetActive(active);
         foreach (var d in dofEnemies) if (d != null) d.SetActive(active);
         foreach (var s in suckers)    if (s != null) s.SetActive(active);
-        foreach (var h in hosts)      if (h != null) h.SetActive(active);  // ← YENİ
-        foreach (var bf in boomflies) if (bf != null) bf.SetActive(active); // ← YENİ
-        foreach (var l in lokis) if (l != null) l.SetActive(active);
+        foreach (var h in hosts)      if (h != null) h.SetActive(active);
+        foreach (var bf in boomflies) if (bf != null) bf.SetActive(active);
+        foreach (var l in lokis)      if (l != null) l.SetActive(active);
     }
 }

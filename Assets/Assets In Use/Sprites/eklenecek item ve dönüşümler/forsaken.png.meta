@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: a6fb6c97a215c8a4c8f241020e9c5400
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7732968602002863569
+    second: forsaken_0
+  - first:
+      213: -3612122633274333535
+    second: forsaken_1
+  - first:
+      213: -2152642718236179223
+    second: forsaken_2
+  - first:
+      213: -5681359940064364509
+    second: forsaken_3
+  - first:
+      213: -627870059774067375
+    second: forsaken_4
+  - first:
+      213: 2888049233701492219
+    second: forsaken_5
+  - first:
+      213: -1810546863299313988
+    second: forsaken_6
+  - first:
+      213: 7615525458299873980
+    second: forsaken_7
+  - first:
+      213: 6059110423531809235
+    second: forsaken_8
+  - first:
+      213: -8525385833458371291
+    second: forsaken_9
+  - first:
+      213: -8066032780321818293
+    second: forsaken_10
+  - first:
+      213: 4776447321730563634
+    second: forsaken_11
+  - first:
+      213: 3882152438484068292
+    second: forsaken_12
+  - first:
+      213: -8640085460827522192
+    second: forsaken_13
+  - first:
+      213: -8299261759913101014
+    second: forsaken_14
+  - first:
+      213: 7471744311705919492
+    second: forsaken_15
+  - first:
+      213: -2489604456928017117
+    second: forsaken_16
+  - first:
+      213: 6675863051921036623
+    second: forsaken_17
+  - first:
+      213: -4687285271650408808
+    second: forsaken_18
+  - first:
+      213: 4068035964640607291
+    second: forsaken_19
+  - first:
+      213: -5808789350555146719
+    second: forsaken_20
+  - first:
+      213: -993757653809311091
+    second: forsaken_21
+  - first:
+      213: -423260681337198265
+    second: forsaken_22
+  - first:
+      213: -773899225089525650
+    second: forsaken_23
+  - first:
+      213: 5843260675188958832
+    second: forsaken_24
+  - first:
+      213: 5327643276793537074
+    second: forsaken_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: forsaken_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 303
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d531a5f8f5015b60800000000000000
+      internalID: 7732968602002863569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 305
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6e8865a992fddc0800000000000000
+      internalID: -3612122633274333535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 304
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4833b5ad64022e0800000000000000
+      internalID: -2152642718236179223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 304
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32834535c31c721b0800000000000000
+      internalID: -5681359940064364509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 207
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d301ad18b5947f0800000000000000
+      internalID: -627870059774067375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 209
+        width: 73
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5dd9cf979641820800000000000000
+      internalID: 2888049233701492219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 206
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbeb8d37835afd6e0800000000000000
+      internalID: -1810546863299313988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_7
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 208
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba68e73e08cfa960800000000000000
+      internalID: 7615525458299873980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 112
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9ea71e3d8461450800000000000000
+      internalID: 6059110423531809235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_9
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 112
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525f09ff0cebfa980800000000000000
+      internalID: -8525385833458371291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 112
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49f2460ce1bf0090800000000000000
+      internalID: -8066032780321818293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 62
+        width: 173
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ebd1c4889594240800000000000000
+      internalID: 4776447321730563634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_12
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 59
+        width: 67
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c762c3031d20e530800000000000000
+      internalID: 3882152438484068292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 87
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bbb5eec00481880800000000000000
+      internalID: -8640085460827522192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 55
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a297566966913dc80800000000000000
+      internalID: -8299261759913101014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 57
+        width: 51
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400e6cf4dd7f0b760800000000000000
+      internalID: 7471744311705919492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_16
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 51
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3258399dfe5237dd0800000000000000
+      internalID: -2489604456928017117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_17
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 48
+        width: 95
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4598e2531e65ac50800000000000000
+      internalID: 6675863051921036623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8966b5631ea63feb0800000000000000
+      internalID: -4687285271650408808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cbaed0821947830800000000000000
+      internalID: 4068035964640607291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_20
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126a619acd8036fa0800000000000000
+      internalID: -5808789350555146719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_21
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82ded3dda67532f0800000000000000
+      internalID: -993757653809311091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_22
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749a18127a6402af0800000000000000
+      internalID: -423260681337198265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_23
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68b69c41ce8245f0800000000000000
+      internalID: -773899225089525650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_24
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076a5aa00ae671150800000000000000
+      internalID: 5843260675188958832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forsaken_25
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232e64b45579fe940800000000000000
+      internalID: 5327643276793537074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      forsaken_0: 7732968602002863569
+      forsaken_1: -3612122633274333535
+      forsaken_10: -8066032780321818293
+      forsaken_11: 4776447321730563634
+      forsaken_12: 3882152438484068292
+      forsaken_13: -8640085460827522192
+      forsaken_14: -8299261759913101014
+      forsaken_15: 7471744311705919492
+      forsaken_16: -2489604456928017117
+      forsaken_17: 6675863051921036623
+      forsaken_18: -4687285271650408808
+      forsaken_19: 4068035964640607291
+      forsaken_2: -2152642718236179223
+      forsaken_20: -5808789350555146719
+      forsaken_21: -993757653809311091
+      forsaken_22: -423260681337198265
+      forsaken_23: -773899225089525650
+      forsaken_24: 5843260675188958832
+      forsaken_25: 5327643276793537074
+      forsaken_3: -5681359940064364509
+      forsaken_4: -627870059774067375
+      forsaken_5: 2888049233701492219
+      forsaken_6: -1810546863299313988
+      forsaken_7: 7615525458299873980
+      forsaken_8: 6059110423531809235
+      forsaken_9: -8525385833458371291
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

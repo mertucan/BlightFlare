@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 570b28781d50bdf42872005c0117b859
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4589927882935949122
+    second: fistula_0
+  - first:
+      213: 155867561378647292
+    second: fistula_1
+  - first:
+      213: -5710634801576178930
+    second: fistula_2
+  - first:
+      213: -8788660862095724283
+    second: fistula_3
+  - first:
+      213: -5478305107816782367
+    second: fistula_4
+  - first:
+      213: 2349028419781916224
+    second: fistula_5
+  - first:
+      213: -820701576082206607
+    second: fistula_6
+  - first:
+      213: 6010395829011485793
+    second: fistula_7
+  - first:
+      213: -3254246125620167828
+    second: fistula_8
+  - first:
+      213: -6469149612479446574
+    second: fistula_9
+  - first:
+      213: 5587915492969647983
+    second: fistula_10
+  - first:
+      213: -3556314944878894697
+    second: fistula_11
+  - first:
+      213: -3263157995725860254
+    second: fistula_12
+  - first:
+      213: -331175432286840600
+    second: fistula_13
+  - first:
+      213: 9030568028022837729
+    second: fistula_14
+  - first:
+      213: -1023645412074535721
+    second: fistula_15
+  - first:
+      213: 6224497876304235752
+    second: fistula_16
+  - first:
+      213: -8730406893035023548
+    second: fistula_17
+  - first:
+      213: 8833839651368273509
+    second: fistula_18
+  - first:
+      213: -8837595595071174860
+    second: fistula_19
+  - first:
+      213: 5790141211180095295
+    second: fistula_20
+  - first:
+      213: -2611132020373205913
+    second: fistula_21
+  - first:
+      213: 8120170605807340344
+    second: fistula_22
+  - first:
+      213: -3538678705853156933
+    second: fistula_23
+  - first:
+      213: 6468142480748828249
+    second: fistula_24
+  - first:
+      213: -9140352358686319135
+    second: fistula_25
+  - first:
+      213: 1692492567427932716
+    second: fistula_26
+  - first:
+      213: -3569869839015988043
+    second: fistula_27
+  - first:
+      213: -1722317868410924186
+    second: fistula_28
+  - first:
+      213: 6796431533789535634
+    second: fistula_29
+  - first:
+      213: -2006891975911797167
+    second: fistula_30
+  - first:
+      213: -4378934306894588372
+    second: fistula_31
+  - first:
+      213: 5074882378558848532
+    second: fistula_32
+  - first:
+      213: 98987826237975994
+    second: fistula_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fistula_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 728
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247de0f4713b2bf30800000000000000
+      internalID: 4589927882935949122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 677
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc0bf3a8b0c92200800000000000000
+      internalID: 155867561378647292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 646
+        width: 78
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b811a77efbfb0b0800000000000000
+      internalID: -5710634801576178930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 674
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501f76f9287680680800000000000000
+      internalID: -8788660862095724283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 650
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e56f5d978629f3b0800000000000000
+      internalID: -5478305107816782367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 672
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046f560f6ec699020800000000000000
+      internalID: 2349028419781916224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 615
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170540bc3484c94f0800000000000000
+      internalID: -820701576082206607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 603
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16418bb7927396350800000000000000
+      internalID: 6010395829011485793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 572
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bf7b6f36896d2d0800000000000000
+      internalID: -3254246125620167828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 499
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d18e45d3b6f836a0800000000000000
+      internalID: -6469149612479446574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 496
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f8b59e8834c8d40800000000000000
+      internalID: 5587915492969647983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 518
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791a419566e65aec0800000000000000
+      internalID: -3556314944878894697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 524
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262d8c2871fe6b2d0800000000000000
+      internalID: -3263157995725860254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_13
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 459
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8d430f2bd676bf0800000000000000
+      internalID: -331175432286840600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_14
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 456
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e11d4686c5035d70800000000000000
+      internalID: 9030568028022837729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 373
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4c655dbe74bc1f0800000000000000
+      internalID: -1023645412074535721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 395
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec8946f6dbd16650800000000000000
+      internalID: 6224497876304235752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_17
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 336
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443960cbf2d57d680800000000000000
+      internalID: -8730406893035023548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 250
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5660196fb5a189a70800000000000000
+      internalID: 8833839651368273509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 272
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437c93f31ad8a5580800000000000000
+      internalID: -8837595595071174860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 253
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f375dbb01c6ba5050800000000000000
+      internalID: 5790141211180095295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 278
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cc108034563cbd0800000000000000
+      internalID: -2611132020373205913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 213
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b07bab424a0b070800000000000000
+      internalID: 8120170605807340344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_23
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 210
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1326b377614eec0800000000000000
+      internalID: -3538678705853156933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 65
+        width: 136
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956d5a9015573c950800000000000000
+      internalID: 6468142480748828249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_25
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 54
+        width: 131
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed199a15f1f62180800000000000000
+      internalID: -9140352358686319135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22e78ad501fc7710800000000000000
+      internalID: 1692492567427932716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_27
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 35
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4321f9b46457ec0800000000000000
+      internalID: -3569869839015988043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_28
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 9
+        width: 88
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6631f0f16091918e0800000000000000
+      internalID: -1722317868410924186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_29
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 15
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29dd9cf8876c15e50800000000000000
+      internalID: 6796431533789535634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_30
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 16
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e023181661624e0800000000000000
+      internalID: -2006891975911797167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_31
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 11
+        width: 100
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26d6cec276ea33c0800000000000000
+      internalID: -4378934306894588372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_32
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 12
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41eb3eaa2aa9d6640800000000000000
+      internalID: 5074882378558848532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_33
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 12
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abda00c47ecaf5100800000000000000
+      internalID: 98987826237975994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fistula_0: 4589927882935949122
+      fistula_1: 155867561378647292
+      fistula_10: 5587915492969647983
+      fistula_11: -3556314944878894697
+      fistula_12: -3263157995725860254
+      fistula_13: -331175432286840600
+      fistula_14: 9030568028022837729
+      fistula_15: -1023645412074535721
+      fistula_16: 6224497876304235752
+      fistula_17: -8730406893035023548
+      fistula_18: 8833839651368273509
+      fistula_19: -8837595595071174860
+      fistula_2: -5710634801576178930
+      fistula_20: 5790141211180095295
+      fistula_21: -2611132020373205913
+      fistula_22: 8120170605807340344
+      fistula_23: -3538678705853156933
+      fistula_24: 6468142480748828249
+      fistula_25: -9140352358686319135
+      fistula_26: 1692492567427932716
+      fistula_27: -3569869839015988043
+      fistula_28: -1722317868410924186
+      fistula_29: 6796431533789535634
+      fistula_3: -8788660862095724283
+      fistula_30: -2006891975911797167
+      fistula_31: -4378934306894588372
+      fistula_32: 5074882378558848532
+      fistula_33: 98987826237975994
+      fistula_4: -5478305107816782367
+      fistula_5: 2349028419781916224
+      fistula_6: -820701576082206607
+      fistula_7: 6010395829011485793
+      fistula_8: -3254246125620167828
+      fistula_9: -6469149612479446574
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

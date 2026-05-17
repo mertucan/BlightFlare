@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 3875764820221052594}
   - component: {fileID: 2373673752567175273}
   m_Layer: 0
-  m_Name: BloodyBoss
+  m_Name: Boss DOF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

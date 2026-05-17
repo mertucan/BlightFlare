@@ -11,6 +11,7 @@ public class BossRoomTrigger : MonoBehaviour
 
     private DOF_AI   dofAI;
     private LokiAI   lokiAI;
+    private HollowHead hollowAI;   // ← YENİ
     private Collider2D[] doorColliders;
     private bool triggered = false;
 
@@ -18,6 +19,7 @@ public class BossRoomTrigger : MonoBehaviour
     {
         dofAI  = GetComponentInChildren<DOF_AI>();
         lokiAI = GetComponentInChildren<LokiAI>();
+        hollowAI = GetComponentInChildren<HollowHead>();
 
         doorColliders = new Collider2D[4];
         string[] doorNames = { "TopLeft", "TopRight", "BottomLeft", "BottomRight" };
@@ -50,6 +52,8 @@ public class BossRoomTrigger : MonoBehaviour
             dofAI.Activate();
         else if (lokiAI != null)
             lokiAI.Activate();
+        else if (hollowAI != null)       // ← YENİ
+            hollowAI.Activate();
         else
             Debug.LogWarning("BossRoomTrigger: Ne DOF_AI ne de LokiAI bulunamadı!");
     }
