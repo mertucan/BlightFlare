@@ -5,8 +5,8 @@ using UnityEngine;
 public class HollowHead : MonoBehaviour
 {
     [Header("Hareket")]
-    [SerializeField] private float moveSpeed      = 4f;
-    [SerializeField] private float aloneSpeedMult = 0.8f;
+    [SerializeField] private float moveSpeed      = 3f;   // 4'ten 3'e düşürüldü
+    [SerializeField] private float aloneSpeedMult = 0.75f;
     [SerializeField] private float followStrength = 3f;
 
     [Header("Segmentler")]
@@ -66,9 +66,18 @@ public class HollowHead : MonoBehaviour
     private List<Vector2> posHistory = new();
     private int           historyCapacity;
 
+    // Sıkışma tespiti
+    private float   stuckCheckTime  = 0.4f;
+    private float   stuckThreshold  = 0.3f;
+    private float   stuckTimer      = 0f;
+    private Vector2 lastCheckedPos;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // Rotasyonu tamamen dondur — kafa kendi etrafında dönmesin
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -91,6 +100,8 @@ public class HollowHead : MonoBehaviour
 
         var player = GameObject.FindGameObjectWithTag(playerTag);
         if (player != null) isaacTransform = player.transform;
+
+        lastCheckedPos = rb.position;
 
         UpdateSprite();
         StartCoroutine(InitSegments());
@@ -125,6 +136,9 @@ public class HollowHead : MonoBehaviour
     {
         if (!isActivated || isDead) return;
 
+        // Rotasyonu sürekli sıfırla (fizik motoru zorlarsa diye)
+        transform.rotation = Quaternion.identity;
+
         trapTimer -= Time.deltaTime;
         if (trapTimer <= 0f)
         {
@@ -142,12 +156,30 @@ public class HollowHead : MonoBehaviour
             moveDir = Vector2.Lerp(moveDir, toIsaac, followStrength * Time.deltaTime).normalized;
         }
 
+        // Sıkışma kontrolü
+        stuckTimer += Time.deltaTime;
+        if (stuckTimer >= stuckCheckTime)
+        {
+            float moved = Vector2.Distance(rb.position, lastCheckedPos);
+            if (moved < stuckThreshold)
+            {
+                // Sıkışmış — rastgele çapraz yöne fırlat
+                EscapeStuck();
+            }
+            lastCheckedPos = rb.position;
+            stuckTimer = 0f;
+        }
+
         UpdateSprite();
     }
 
     private void FixedUpdate()
     {
         if (!isActivated || isDead) return;
+
+        // Rotasyonu fizik adımında da dondur
+        rb.angularVelocity = 0f;
+        rb.rotation = 0f;
 
         posHistory.Add(rb.position);
         if (posHistory.Count > historyCapacity)
@@ -177,11 +209,7 @@ public class HollowHead : MonoBehaviour
         }
 
         if (col.gameObject.CompareTag(playerTag))
-        {
             TryDamagePlayer(col.gameObject);
-            Vector2 away = ((Vector2)transform.position - (Vector2)col.transform.position).normalized;
-            moveDir = away;
-        }
     }
 
     private void OnCollisionStay2D(Collision2D col)
@@ -200,12 +228,47 @@ public class HollowHead : MonoBehaviour
         TakeHit();
     }
 
+    // Segment duvarla çarpışınca bu çağrılır — kafa yönünü yansıtır (DOF mantığı, anında)
+    public void BounceHead(Vector2 wallNormal)
+    {
+        if (isDead || !isActivated) return;
+        moveDir = Vector2.Reflect(moveDir, wallNormal).normalized;
+    }
+
     public void TakeTearDamage(int amount)
     {
         if (isDead) return;
         if (Time.time - lastTearDamTime < tearDamageCooldown) return;
         lastTearDamTime = Time.time;
         TakeHit();
+    }
+
+    private void EscapeStuck()
+    {
+        // 4 çapraz yönden en uygununu seç (duvardan en uzak)
+        Vector2[] candidates = {
+            new Vector2( 1,  1).normalized,
+            new Vector2(-1,  1).normalized,
+            new Vector2( 1, -1).normalized,
+            new Vector2(-1, -1).normalized,
+        };
+
+        // Mevcut yöne en az benzeyen yönü seç (180'e yakın)
+        Vector2 best = -moveDir;
+        float minDot = float.MaxValue;
+        foreach (var c in candidates)
+        {
+            float dot = Vector2.Dot(moveDir, c);
+            if (dot < minDot)
+            {
+                minDot = best.sqrMagnitude < 0.01f ? dot : minDot;
+                minDot = dot;
+                best = c;
+            }
+        }
+
+        moveDir = best;
+        Debug.Log("[HollowHead] Sıkışmadan kaçıldı → " + moveDir);
     }
 
     // Hasar alınca en arkadaki segmenti sil, segment yoksa öl
@@ -218,13 +281,11 @@ public class HollowHead : MonoBehaviour
 
         if (segments.Count > 0)
         {
-            // En arkadaki segmenti bul ve sil
             HollowSegment last = segments[segments.Count - 1];
             segments.RemoveAt(segments.Count - 1);
             PlayClip(segmentDieClip);
             if (last != null) last.ForceKill();
 
-            // Segment bitti mi? → isAlone modu
             if (segments.Count == 0)
             {
                 isAlone = true;
@@ -233,7 +294,6 @@ public class HollowHead : MonoBehaviour
         }
         else
         {
-            // Segment kalmadı, kafa da hasar aldı → öl
             Die();
         }
     }
@@ -265,14 +325,13 @@ public class HollowHead : MonoBehaviour
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated      = false;
+        rb.linearVelocity  = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.simulated       = false;
 
         Destroy(gameObject);
     }
 
-    // Segment kendi kendine ölürse (bomba vs) bu çağrılır — burada TakeHit mantığı yok,
-    // sadece listeden çıkar
     public void OnSegmentDied(HollowSegment seg)
     {
         segments.Remove(seg);

@@ -36,15 +36,21 @@ public class HollowSegment : MonoBehaviour
     private Color     originalColor;
     private Coroutine flashRoutine;
 
-    private List<Vector2> posHistory     = new();
+    private List<Vector2> posHistory      = new();
     private int           historyCapacity = 40;
     private int           stepPerSeg      = 10;
-    private float         moveSpeed       = 4f;
+    private float         moveSpeed       = 3f;
+
+    // Son hareket yönü — sprite yönlendirmesi için
+    private Vector2 lastMoveDir = Vector2.right;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.simulated = false;
+
+        // Rotasyonu tamamen dondur — segment kendi etrafında dönmesin
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -73,6 +79,8 @@ public class HollowSegment : MonoBehaviour
         rb.position        = startPos;
         transform.position = startPos;
         rb.linearVelocity  = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.rotation        = 0f;
         rb.simulated       = true;
 
         initialized = true;
@@ -82,7 +90,11 @@ public class HollowSegment : MonoBehaviour
     {
         if (isDead || !initialized) return;
 
-        // Gerçek pozisyonu history'e kaydet
+        // Rotasyonu fizik adımında sıfırla
+        rb.angularVelocity = 0f;
+        rb.rotation        = 0f;
+
+        // Mevcut pozisyonu history'e kaydet
         posHistory.Add(rb.position);
         if (posHistory.Count > historyCapacity)
             posHistory.RemoveAt(0);
@@ -94,9 +106,50 @@ public class HollowSegment : MonoBehaviour
         else
             target = prevSegment.GetHistoryPosition(stepPerSeg);
 
-        // Fizik yerine direkt pozisyon ata — sallanma yok
+        // Hareket yönünü hesapla (sprite flip için)
+        Vector2 delta = target - rb.position;
+        if (delta.sqrMagnitude > 0.0001f)
+            lastMoveDir = delta.normalized;
+
+        // Fizik yerine direkt pozisyon ata
         rb.MovePosition(target);
         rb.linearVelocity = Vector2.zero;
+
+        // Transform rotasyonunu da sıfırla (parent vs. kaynaklı kayma olursa)
+        transform.rotation = Quaternion.identity;
+    }
+
+    private void Update()
+    {
+        // Update'te de rotasyonu sabitle
+        transform.rotation = Quaternion.identity;
+
+        // Hareket yönüne göre sprite'ı çevir (kendi etrafında dönmek yerine)
+        UpdateSpriteDirection();
+    }
+
+    /// <summary>
+    /// Segmentin sprite'ını hareket yönüne göre yatay flip ile ayarlar.
+    /// Rotasyon kullanmaz — sadece flipX/flipY.
+    /// </summary>
+    private void UpdateSpriteDirection()
+    {
+        if (spriteRenderer == null) return;
+
+        // Yatay bileşen baskınsa: sola/sağa bak
+        if (Mathf.Abs(lastMoveDir.x) >= Mathf.Abs(lastMoveDir.y))
+        {
+            spriteRenderer.flipX = lastMoveDir.x < 0f;
+            spriteRenderer.flipY = false;
+        }
+        else
+        {
+            // Dikey bileşen baskınsa: yukarı/aşağı
+            // Eğer segmentlerin ayrı yukarı/aşağı sprite'ı varsa buraya ekle.
+            // Şimdilik yatay flip korunuyor, dikey flip ile yukarı/aşağı ayırt ediliyor.
+            spriteRenderer.flipX = false;
+            spriteRenderer.flipY = lastMoveDir.y < 0f;
+        }
     }
 
     public Vector2 GetHistoryPosition(int stepsBack)
@@ -112,6 +165,15 @@ public class HollowSegment : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (isDead) return;
+
+        // Duvar veya kapıya çarpınca kafanın yönünü de yansıt
+        if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Door"))
+        {
+            Vector2 normal = col.contacts[0].normal;
+            if (head != null) head.BounceHead(normal);
+            return;
+        }
+
         if (col.gameObject.CompareTag(playerTag))
             TryDamagePlayer(col.gameObject);
     }
@@ -129,7 +191,6 @@ public class HollowSegment : MonoBehaviour
         if (other.gameObject.layer != LayerMask.NameToLayer("Explosion")) return;
         if (Time.time - lastDamageTime < damageCooldown) return;
         lastDamageTime = Time.time;
-        // Segment bomba yerse kafaya ilet — en son segment silinsin
         if (head != null) head.TakeTearDamage(1);
     }
 
@@ -138,7 +199,6 @@ public class HollowSegment : MonoBehaviour
         if (isDead) return;
         if (Time.time - lastTearDamTime < tearDamageCooldown) return;
         lastTearDamTime = Time.time;
-        // Kafaya ilet — en son segment silinsin
         if (head != null) head.TakeTearDamage(amount);
     }
 
@@ -170,8 +230,9 @@ public class HollowSegment : MonoBehaviour
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated      = false;
+        rb.linearVelocity  = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.simulated       = false;
 
         if (head != null) head.OnSegmentDied(this);
 
