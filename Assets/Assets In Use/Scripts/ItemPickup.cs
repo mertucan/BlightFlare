@@ -27,8 +27,19 @@ public class ItemPickup : MonoBehaviour
     public float pushForce = 4f;
     public float friction   = 3f;   // itildikten sonra yavaşlama katsayısı
 
+    [Header("Knockback (Bomb)")]
+    [Tooltip("Bomba knockback'i için bu tipler etkilenir: Key, Penny, Heart, HalfHeart")]
+    public float knockbackForce = 6f;
+
     private Rigidbody2D _rb;
     private bool _isHeart => type == ItemType.Heart || type == ItemType.HalfHeart;
+
+    // Knockback alabilecek tipler
+    private bool _isKnockbackable =>
+        type == ItemType.Key      ||
+        type == ItemType.Penny    ||
+        type == ItemType.Heart    ||
+        type == ItemType.HalfHeart;
 
     private void Awake()
     {
@@ -37,11 +48,45 @@ public class ItemPickup : MonoBehaviour
         if (_isHeart && _rb != null)
         {
             _rb.gravityScale   = 0f;
-            _rb.linearDamping  = friction;   // sürtünme etkisi
-            _rb.angularDamping = 10f;        // dönmeyi engelle
+            _rb.linearDamping  = friction;
+            _rb.angularDamping = 10f;
             _rb.freezeRotation = true;
             _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
+
+        // Key ve Penny'nin de fizik alabilmesi için Rigidbody2D ve ayarlar
+        if ((type == ItemType.Key || type == ItemType.Penny) && _rb == null)
+        {
+            _rb = gameObject.AddComponent<Rigidbody2D>();
+            _rb.gravityScale   = 0f;
+            _rb.linearDamping  = friction;
+            _rb.angularDamping = 10f;
+            _rb.freezeRotation = true;
+            _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        }
+        else if ((type == ItemType.Key || type == ItemType.Penny) && _rb != null)
+        {
+            _rb.gravityScale   = 0f;
+            _rb.linearDamping  = friction;
+            _rb.angularDamping = 10f;
+            _rb.freezeRotation = true;
+        }
+    }
+
+    /// <summary>
+    /// Bomba patlaması tarafından çağrılır.
+    /// Pickup'ı <paramref name="toward"/> pozisyonuna doğru fırlatır.
+    /// </summary>
+    public void ApplyKnockbackToward(Vector2 toward)
+    {
+        if (!_isKnockbackable) return;
+        if (_rb == null) return;
+
+        Vector2 dir = (toward - (Vector2)transform.position).normalized;
+        if (dir == Vector2.zero) dir = Vector2.up;
+
+        _rb.linearVelocity = Vector2.zero;
+        _rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
     }
 
     // ── Trigger: sadece Player ile (pickup) ─────────────────────────────
@@ -56,22 +101,16 @@ public class ItemPickup : MonoBehaviour
     }
 
     // ── Collision: Wall / Door → sekme / dur ────────────────────────────
-    // Kalp objesinin Collider2D'si:
-    //   • IsTrigger = FALSE  olan bir Collider2D olmalı (duvarla fiziksel çarpışma için)
-    //   • IsTrigger = TRUE   olan bir Collider2D Player pickup için
-    // Yani prefab'a 2 ayrı Collider2D ekle:
-    //   1) CircleCollider2D  – IsTrigger: true  (pickup)
-    //   2) CircleCollider2D  – IsTrigger: false (duvar/kapı engeli) — biraz daha küçük radius
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (!_isHeart || _rb == null) return;
+        if (_rb == null) return;
+        if (!_isKnockbackable) return;
 
         if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Door"))
         {
-            // Duvardan yansıt: mevcut hızın normal doğrultusundaki bileşenini ters çevir
             Vector2 normal    = col.contacts[0].normal;
             Vector2 reflected = Vector2.Reflect(_rb.linearVelocity, normal);
-            _rb.linearVelocity = reflected * 0.4f;   // 0.4 → sekme enerjisi (0 = dur, 1 = tam sekme)
+            _rb.linearVelocity = reflected * 0.4f;
         }
     }
 
@@ -87,8 +126,8 @@ public class ItemPickup : MonoBehaviour
             return;
         }
 
-        int healsFor  = (type == ItemType.Heart) ? 2 : 1;
-        int missing   = ph.maxHearts - ph.currentHearts;
+        int healsFor   = (type == ItemType.Heart) ? 2 : 1;
+        int missing    = ph.maxHearts - ph.currentHearts;
         int actualHeal = Mathf.Min(healsFor, missing);
 
         ph.Heal(actualHeal);
@@ -103,7 +142,7 @@ public class ItemPickup : MonoBehaviour
         Vector2 dir = (transform.position - player.transform.position).normalized;
         if (dir == Vector2.zero) dir = Vector2.right;
 
-        _rb.linearVelocity = Vector2.zero;               // önceki hızı sıfırla
+        _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(dir * pushForce, ForceMode2D.Impulse);
     }
 
@@ -121,7 +160,6 @@ public class ItemPickup : MonoBehaviour
                 {
                     if (bombRadiusController.explosionRadius < 3)
                         bombRadiusController.explosionRadius++;
-                    // 3'e ulaşmışsa hiçbir şey yapma (item yine de yok olur)
                 }
                 break;
 

@@ -7,6 +7,15 @@ public class SpikeTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Bomba bu tuzaktan geçemesin
+        if (other.CompareTag("Bomb") && CompareTag("BombBlockerTrap"))
+        {
+            // Fiziksel durdurmak için Trigger yerine solid collider gerekir
+            // Ama en azından bomba interaction'ını buradan yönetebiliriz
+            var bomb = other.GetComponent<BombController>();
+            return;
+        }
+
         if (!other.CompareTag("Player")) return;
 
         var trapImmunity = other.GetComponent<TrapImmunity>();

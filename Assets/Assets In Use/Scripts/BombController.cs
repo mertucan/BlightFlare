@@ -46,11 +46,14 @@ public class BombController : MonoBehaviour
     [Tooltip("Wall ve Door layer'larını buraya ekleyin. Bomba bu layer'larla çakışan hücreye konmaz.")]
     public LayerMask bombBlockingLayers;
 
+    [Header("Pickup Knockback")]
+    [Tooltip("Patlama merkezinden bu yarıçap içindeki Key/Penny/Heart pickup'ları oyuncuya doğru fırlatılır.")]
+    public float pickupKnockbackRadius = 5f;
+
     private int bombsRemaining;
     private bool initialized = false;
     private IsaacMovement isaacMovement;
 
-    // Idle'da da doğru yönü bilmek için son geçerli hareket yönü
     private Vector2 lastFacingDir = Vector2.down;
 
     private void Start()
@@ -62,7 +65,7 @@ public class BombController : MonoBehaviour
         }
 
         isaacMovement = GetComponent<IsaacMovement>();
-        RefreshTilemap(); // Başlangıçta da bul
+        RefreshTilemap();
     }
 
     private void OnEnable()
@@ -82,7 +85,6 @@ public class BombController : MonoBehaviour
 
     private void RefreshTilemap()
     {
-        // Sahnedeki Destructible tag'li veya isimli Tilemap'i bul
         Tilemap[] allTilemaps = FindObjectsByType<Tilemap>(FindObjectsSortMode.None);
         foreach (var tm in allTilemaps)
         {
@@ -98,7 +100,6 @@ public class BombController : MonoBehaviour
 
     private void Update()
     {
-        // IsaacMovement.direction sıfır olmadığında güncelle
         if (isaacMovement != null && isaacMovement.direction != Vector2.zero)
             lastFacingDir = isaacMovement.direction;
 
@@ -111,7 +112,6 @@ public class BombController : MonoBehaviour
 
     private IEnumerator PlaceBomb()
     {
-
         if (destructibleTiles == null)
         {
             RefreshTilemap();
@@ -187,6 +187,10 @@ public class BombController : MonoBehaviour
         NotifySecretWalls(explodedPositions);
         UnlockDoorsInExplosion(explodedPositions);
 
+        // ── Pickup Knockback ──────────────────────────────────────────────
+        KnockbackNearbyPickups(explosionPos);
+        // ─────────────────────────────────────────────────────────────────
+
         Destroy(bomb);
 
         if (hasHotBomb && fireHazardPrefab != null)
@@ -199,32 +203,42 @@ public class BombController : MonoBehaviour
     }
 
     /// <summary>
-    /// Oyuncunun bulunduğu hücreden başlayarak geçerli bir spawn pozisyonu bulur.
-    ///
-    /// Öncelik sırası:
-    ///   1. Oyuncunun tam hücresi
-    ///   2. Baktığı yönün TERSİ  ← duvara yapışıkken bomba karşı tarafa gider
-    ///   3. Dik eksenler (sol/sağ)
-    ///   4. Baktığı yönün kendisi (son çare)
+    /// Patlama merkezine <see cref="pickupKnockbackRadius"/> içindeki
+    /// Key / Penny / Heart / HalfHeart pickup'larını oyuncuya doğru fırlatır.
     /// </summary>
+    private void KnockbackNearbyPickups(Vector2 explosionPos)
+    {
+        Vector2 playerPos = transform.position;
+
+        ItemPickup[] allPickups = FindObjectsByType<ItemPickup>(FindObjectsSortMode.None);
+        foreach (var pickup in allPickups)
+        {
+            if (pickup == null) continue;
+
+            float dist = Vector2.Distance(explosionPos, pickup.transform.position);
+            if (dist > pickupKnockbackRadius) continue;
+
+            pickup.ApplyKnockbackToward(playerPos);
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+
     private Vector3 FindValidBombPosition(Vector3Int originCell, Vector2 facingDir)
     {
         Vector3 originWorldPos = destructibleTiles.GetCellCenterWorld(originCell);
 
-        // Oyuncunun tam hücresi temizse direkt kullan
         if (!IsCellBlocked(originWorldPos))
             return originWorldPos;
 
-        // Baktığı yönü kardinal'e snap et
         Vector2 snapped = SnapToCardinal(facingDir);
 
-        // Öncelikli arama sırası
         Vector2[] priority = new Vector2[]
         {
-            -snapped,                              // Baktığı yönün TERSİ
-            new Vector2(-snapped.y,  snapped.x),  // Sola dik
-            new Vector2( snapped.y, -snapped.x),  // Sağa dik
-             snapped,                              // Baktığı yön (son çare)
+            -snapped,
+            new Vector2(-snapped.y,  snapped.x),
+            new Vector2( snapped.y, -snapped.x),
+             snapped,
         };
 
         foreach (var dir in priority)
@@ -240,12 +254,9 @@ public class BombController : MonoBehaviour
                 return candidatePos;
         }
 
-        return Vector3.zero; // Hiçbir hücre uygun değil
+        return Vector3.zero;
     }
 
-    /// <summary>
-    /// Verilen yönü en baskın eksene göre 4 kardinal yöne (Up/Down/Left/Right) snap eder.
-    /// </summary>
     private Vector2 SnapToCardinal(Vector2 dir)
     {
         if (Mathf.Abs(dir.x) >= Mathf.Abs(dir.y))
@@ -254,9 +265,6 @@ public class BombController : MonoBehaviour
             return dir.y >= 0 ? Vector2.up : Vector2.down;
     }
 
-    /// <summary>
-    /// Verilen dünya pozisyonunda bomba koyulmasını engelleyen bir collider var mı?
-    /// </summary>
     private bool IsCellBlocked(Vector3 worldPos)
     {
         Collider2D hit = Physics2D.OverlapBox(worldPos, Vector2.one * 0.4f, 0f, bombBlockingLayers);
@@ -295,7 +303,7 @@ public class BombController : MonoBehaviour
         {
             if (door == null) continue;
             if (door.GetComponent<SecretRoomWall>() != null) continue;
-            if (door.isIndestructible) continue; // ← Boss kapısını atla
+            if (door.isIndestructible) continue;
 
             Vector2 doorPos = door.transform.position;
             foreach (var pos in positions)
