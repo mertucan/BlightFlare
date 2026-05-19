@@ -14,46 +14,44 @@ using UnityEngine;
 public class PoisonCloud : MonoBehaviour
 {
     [Header("Cloud Settings")]
-    public float duration      = 5f;
+    public float duration       = 5f;
     public float damageInterval = 1f;
     public int   damagePerTick  = 1;
     public Color poisonTint     = new Color(0.4f, 1f, 0.4f, 1f);
 
-    [Header("Enemy Layer / Tag")]
-    [Tooltip("Bu layer'daki nesneler hasar alır. Boş bırakırsanız tag kontrolü kullanılır.")]
-    public LayerMask enemyLayers;
+    [Header("Tags")]
     [Tooltip("Player tag'i — bu tag'e sahip nesneler hasar almaz.")]
     public string playerTag = "Player";
 
+    // ── İç durum ─────────────────────────────────────────────────────────
     private SpriteRenderer cloudRenderer;
-    private float elapsed;
+    private float          elapsed;
 
-    // Düşman takip yapıları
-    private readonly Dictionary<GameObject, List<SpriteRenderer>> tintedObjects = new();
-    // BabyAI listesi
-    private readonly Dictionary<BabyAI,   float> babyTimers   = new();
-    // PooterAI listesi
-    private readonly Dictionary<PooterAI, float> pooterTimers = new();
-    // DOF_AI listesi (varsa)
-    // DOF_AI TakeDamage public değil; ona sadece tint uygularız.
+    // Hasar takibi — FireHazard ile aynı yapı
+    private readonly Dictionary<GameObject, float>                  damageTimers  = new();
 
+    // Tint rengi uygulanan nesneler
+    private readonly Dictionary<GameObject, List<SpriteRenderer>>   tintedObjects = new();
+
+    // ─────────────────────────────────────────────────────────────────────
     private void Awake()
     {
         cloudRenderer = GetComponent<SpriteRenderer>();
-        var col = GetComponent<Collider2D>();
+
+        var col = GetComponent<CircleCollider2D>();
         col.isTrigger = true;
     }
 
     private void Start()
     {
-        StartCoroutine(FadeAndDestroy());
+        StartCoroutine(LifetimeRoutine());
     }
 
     private void Update()
     {
         elapsed += Time.deltaTime;
 
-        // Solma efekti (son 2 saniyede)
+        // ── Solma (son 2 saniyede) ────────────────────────────────────────
         float fadeStart = duration - 2f;
         if (elapsed >= fadeStart)
         {
@@ -62,58 +60,40 @@ public class PoisonCloud : MonoBehaviour
             cloudRenderer.color = new Color(c.r, c.g, c.b, alpha);
         }
 
-        // BabyAI hasar
-        foreach (var key in new List<BabyAI>(babyTimers.Keys))
+        // ── Periyodik hasar (FireHazard ile birebir aynı döngü) ───────────
+        foreach (var key in new List<GameObject>(damageTimers.Keys))
         {
-            if (key == null) { babyTimers.Remove(key); continue; }
-            if (Time.time - babyTimers[key] >= damageInterval)
-            {
-                key.TakeDamage(damagePerTick, Vector2.zero);
-                babyTimers[key] = Time.time;
-            }
-        }
+            if (key == null) { damageTimers.Remove(key); continue; }
+            if (Time.time - damageTimers[key] < damageInterval) continue;
 
-        // PooterAI hasar
-        foreach (var key in new List<PooterAI>(pooterTimers.Keys))
-        {
-            if (key == null) { pooterTimers.Remove(key); continue; }
-            if (Time.time - pooterTimers[key] >= damageInterval)
-            {
-                key.TakeDamage(damagePerTick, Vector2.zero);
-                pooterTimers[key] = Time.time;
-            }
+            DealDamageTo(key);
+            damageTimers[key] = Time.time;
         }
     }
 
-    private IEnumerator FadeAndDestroy()
+    // ─────────────────────────────────────────────────────────────────────
+    private IEnumerator LifetimeRoutine()
     {
         yield return new WaitForSeconds(duration);
         CleanupAllTints();
         Destroy(gameObject);
     }
 
+    // ─────────────────────────────────────────────────────────────────────
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Player'ı kesinlikle atla
         if (other.CompareTag(playerTag)) return;
 
-        ApplyTint(other.gameObject);
+        GameObject go = other.gameObject;
 
-        // BabyAI
-        var baby = other.GetComponent<BabyAI>();
-        if (baby != null && !babyTimers.ContainsKey(baby))
-        {
-            baby.TakeDamage(damagePerTick, Vector2.zero);
-            babyTimers[baby] = Time.time;
-            return;
-        }
+        ApplyTint(go);
 
-        // PooterAI
-        var pooter = other.GetComponent<PooterAI>();
-        if (pooter != null && !pooterTimers.ContainsKey(pooter))
+        // İlk temas hasarı + timer kayıt
+        if (!damageTimers.ContainsKey(go))
         {
-            pooter.TakeDamage(damagePerTick, Vector2.zero);
-            pooterTimers[pooter] = Time.time;
+            DealDamageTo(go);
+            damageTimers[go] = Time.time;
         }
     }
 
@@ -122,14 +102,47 @@ public class PoisonCloud : MonoBehaviour
         if (other.CompareTag(playerTag)) return;
 
         RemoveTint(other.gameObject);
-
-        var baby   = other.GetComponent<BabyAI>();
-        if (baby   != null) babyTimers.Remove(baby);
-
-        var pooter = other.GetComponent<PooterAI>();
-        if (pooter != null) pooterTimers.Remove(pooter);
+        damageTimers.Remove(other.gameObject);
     }
 
+    // ─────────────────────────────────────────────────────────────────────
+    /// <summary>
+    /// FireHazard'daki DealDamageTo ile aynı mantık —
+    /// tek fark: Player bloğu hiç hasar vermeden return eder.
+    /// </summary>
+    private void DealDamageTo(GameObject go)
+    {
+        // ── Player → hasar YOK ───────────────────────────────────────────
+        if (go.CompareTag(playerTag)) return;
+
+        // ── BabyAI ───────────────────────────────────────────────────────
+        var baby = go.GetComponent<BabyAI>();
+        if (baby != null)
+        {
+            baby.TakeDamage(damagePerTick, Vector2.zero);
+            return;
+        }
+
+        // ── PooterAI ─────────────────────────────────────────────────────
+        var pooter = go.GetComponent<PooterAI>();
+        if (pooter != null)
+        {
+            pooter.TakeDamage(damagePerTick, Vector2.zero);
+            return;
+        }
+
+        // ── DOF_AI — FireHazard ile aynı reflection yaklaşımı ────────────
+        var dof = go.GetComponent<DOF_AI>();
+        if (dof != null)
+        {
+            var method = typeof(DOF_AI).GetMethod(
+                "TakeDamage",
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            method?.Invoke(dof, new object[] { Vector2.zero });
+        }
+    }
+
+    // ── Tint ─────────────────────────────────────────────────────────────
     private void ApplyTint(GameObject target)
     {
         var renderers = new List<SpriteRenderer>(
@@ -158,7 +171,6 @@ public class PoisonCloud : MonoBehaviour
                 if (sr != null) sr.color = Color.white;
         }
         tintedObjects.Clear();
-        babyTimers.Clear();
-        pooterTimers.Clear();
+        damageTimers.Clear();
     }
 }

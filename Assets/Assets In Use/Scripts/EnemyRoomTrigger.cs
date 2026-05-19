@@ -16,6 +16,7 @@ public class EnemyRoomTrigger : MonoBehaviour
     private BoomFlyAI[]   boomflies;
     private LokiAI[]      lokis;
     private HollowHead[]  hollows;   // ← YENİ
+    private NightWatchAI[] nightWatches; // ← YENİ
 
     private bool activated = false;  // ← Sadece bir kez Activate() çağır
 
@@ -29,6 +30,7 @@ public class EnemyRoomTrigger : MonoBehaviour
         boomflies  = GetComponentsInChildren<BoomFlyAI>(true);
         lokis      = GetComponentsInChildren<LokiAI>(true);
         hollows    = GetComponentsInChildren<HollowHead>(true); // ← YENİ
+        nightWatches = GetComponentsInChildren<NightWatchAI>(true); // ← YENİ
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,6 +42,7 @@ public class EnemyRoomTrigger : MonoBehaviour
             activated = true;
             // İlk girişte Activate() — hareketi başlatır
             foreach (var h in hollows) if (h != null) h.Activate();
+            foreach (var nw in nightWatches) if (nw != null) nw.Activate();
         }
         else
         {
@@ -66,5 +69,7 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var h in hosts)      if (h != null) h.SetActive(active);
         foreach (var bf in boomflies) if (bf != null) bf.SetActive(active);
         foreach (var l in lokis)      if (l != null) l.SetActive(active);
+        foreach (var h in hollows)    if (h != null) h.SetActive(active); // ← YENİ
+        foreach (var nw in nightWatches) if (nw != null) nw.SetActive(active); // ← YENİ
     }
 }

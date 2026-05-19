@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 
 public class BossRoomTrigger : MonoBehaviour
 {
@@ -9,27 +10,30 @@ public class BossRoomTrigger : MonoBehaviour
     [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
     [SerializeField] private Collider2D tunnelCollider2D;
 
-    private DOF_AI   dofAI;
-    private LokiAI   lokiAI;
-    private HollowHead hollowAI;   // ← YENİ
-    private Collider2D[] doorColliders;
+    private DOF_AI       dofAI;
+    private LokiAI       lokiAI;
+    private HollowHead   hollowAI;
+    private NightWatchAI nightWatchAI;
     private bool triggered = false;
+
+    // Kapı yönetimi RoomEnemyTracker üzerinden
+    private RoomEnemyTracker roomTracker;
 
     private void Awake()
     {
-        dofAI  = GetComponentInChildren<DOF_AI>();
-        lokiAI = GetComponentInChildren<LokiAI>();
-        hollowAI = GetComponentInChildren<HollowHead>();
+        dofAI        = GetComponentInChildren<DOF_AI>();
+        lokiAI       = GetComponentInChildren<LokiAI>();
+        hollowAI     = GetComponentInChildren<HollowHead>();
+        nightWatchAI = GetComponentInChildren<NightWatchAI>();
 
-        doorColliders = new Collider2D[4];
-        string[] doorNames = { "TopLeft", "TopRight", "BottomLeft", "BottomRight" };
+        // BossRoomTrigger bir Room'un child'ı olarak spawn ediliyor,
+        // RoomEnemyTracker aynı Room objesinde
+        roomTracker = GetComponentInParent<RoomEnemyTracker>();
+        if (roomTracker == null)
+            roomTracker = FindFirstObjectByType<RoomEnemyTracker>();
 
-        for (int i = 0; i < doorNames.Length; i++)
-        {
-            Transform door = transform.Find(doorNames[i]);
-            if (door != null)
-                doorColliders[i] = door.GetComponent<Collider2D>();
-        }
+        if (nightWatchAI != null)
+            nightWatchAI.SetManagedDoors(null, this);
     }
 
     private void Start()
@@ -42,19 +46,32 @@ public class BossRoomTrigger : MonoBehaviour
     {
         if (triggered) return;
         if (!other.CompareTag(playerTag)) return;
-
         triggered = true;
 
-        foreach (var door in doorColliders)
-            if (door != null) door.enabled = true;
+        // Kapıları RoomEnemyTracker üzerinden kilitle
+        if (roomTracker != null)
+            roomTracker.OnPlayerEntered();
 
         if (dofAI != null)
             dofAI.Activate();
         else if (lokiAI != null)
             lokiAI.Activate();
-        else if (hollowAI != null)       // ← YENİ
+        else if (hollowAI != null)
             hollowAI.Activate();
+        else if (nightWatchAI != null)
+            nightWatchAI.Activate();
         else
-            Debug.LogWarning("BossRoomTrigger: Ne DOF_AI ne de LokiAI bulunamadı!");
+            Debug.LogWarning("BossRoomTrigger: Hiçbir boss AI bulunamadı!");
+    }
+
+    // NightWatchAI ölünce çağrılır
+    public void OnBossDefeated()
+    {
+        if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = true;
+        if (tunnelCollider2D     != null) tunnelCollider2D.enabled     = true;
+
+        // Kapıları RoomEnemyTracker üzerinden aç
+        if (roomTracker != null)
+            roomTracker.OnPlayerExited(); // hasEnemies false olduğu için kapılar açılır
     }
 }

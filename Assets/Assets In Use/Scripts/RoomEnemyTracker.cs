@@ -37,6 +37,8 @@ public class RoomEnemyTracker : MonoBehaviour
             enemies.Add(l.gameObject);
         foreach (var h in GetComponentsInChildren<HollowHead>(true))
             enemies.Add(h.gameObject);
+        foreach (var nw in GetComponentsInChildren<NightWatchAI>(true))
+            enemies.Add(nw.gameObject);
 
         hasEnemies = enemies.Count > 0;
         initialized = true;
