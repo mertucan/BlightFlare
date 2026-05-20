@@ -275,9 +275,9 @@ MonoBehaviour:
   maxHP: 1
   closedWaitMin: 3
   closedWaitMax: 8
-  openPreFireWait: 3
-  openFireDelay: 2
-  openPostFireWait: 3
+  openPreFireWait: 2
+  openFireDelay: 1
+  openPostFireWait: 2
   dazedDuration: 3
   bloodPrefab: {fileID: 5781911556398316290, guid: 40122cc4508774f4f83577d72fc1bcf1, type: 3}
   firePoint: {fileID: 3309335459083729711}

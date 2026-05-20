@@ -143,9 +143,37 @@ public class HostAI : MonoBehaviour
         CreateBlockerCollider();
     }
 
+    private void IgnoreDestructibleColliders()
+    {
+        var allDestructibles = GameObject.FindGameObjectsWithTag("Destructible");
+        foreach (var obj in allDestructibles)
+        {
+            // Child collider'ları da yakala
+            var objCols = obj.GetComponentsInChildren<Collider2D>();
+            foreach (var objCol in objCols)
+            {
+                Physics2D.IgnoreCollision(col, objCol, true);
+                if (blockerCol != null)
+                    Physics2D.IgnoreCollision(blockerCol, objCol, true);
+            }
+        }
+        Log($"Destructible ignore ayarlandı: {allDestructibles.Length} obje");
+    }
+
     private void Start()
     {
         TryFindPlayer();
+        IgnoreDestructibleColliders();
+        
+        // DEBUG — sil sonra
+        var allDestructibles = GameObject.FindGameObjectsWithTag("Destructible");
+        foreach (var obj in allDestructibles)
+        {
+            Debug.Log($"Taş: {obj.name} | Layer: {LayerMask.LayerToName(obj.layer)} | Host Layer: {LayerMask.LayerToName(gameObject.layer)}");
+            var cols = obj.GetComponentsInChildren<Collider2D>();
+            foreach (var c in cols)
+                Debug.Log($"  Collider: {c.GetType().Name} | isTrigger: {c.isTrigger} | enabled: {c.enabled}");
+        }
     }
 
     private void FixedUpdate()

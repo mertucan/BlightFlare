@@ -25,16 +25,18 @@ public class ItemPickup : MonoBehaviour
 
     [Header("Physics (Heart push)")]
     public float pushForce = 4f;
-    public float friction   = 3f;   // itildikten sonra yavaşlama katsayısı
+    public float friction   = 3f;
 
     [Header("Knockback (Bomb)")]
     [Tooltip("Bomba knockback'i için bu tipler etkilenir: Key, Penny, Heart, HalfHeart")]
     public float knockbackForce = 6f;
 
-    private Rigidbody2D _rb;
+    private Rigidbody2D  _rb;
+    private Collider2D   _col;
+    private bool         _isMoving = false; // knockback/push aktif mi?
+
     private bool _isHeart => type == ItemType.Heart || type == ItemType.HalfHeart;
 
-    // Knockback alabilecek tipler
     private bool _isKnockbackable =>
         type == ItemType.Key      ||
         type == ItemType.Penny    ||
@@ -43,7 +45,8 @@ public class ItemPickup : MonoBehaviour
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        _col = GetComponent<Collider2D>();
+        _rb  = GetComponent<Rigidbody2D>();
 
         if (_isHeart && _rb != null)
         {
@@ -54,7 +57,6 @@ public class ItemPickup : MonoBehaviour
             _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
 
-        // Key ve Penny'nin de fizik alabilmesi için Rigidbody2D ve ayarlar
         if ((type == ItemType.Key || type == ItemType.Penny) && _rb == null)
         {
             _rb = gameObject.AddComponent<Rigidbody2D>();
@@ -73,17 +75,31 @@ public class ItemPickup : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // Hareket durduğunda collider'ı tekrar trigger'a çevir (pickup alınabilsin)
+        if (_isMoving && _rb != null && _rb.linearVelocity.magnitude < 0.05f)
+        {
+            _isMoving = false;
+            if (_col != null) _col.isTrigger = true;
+        }
+    }
+
     /// <summary>
-    /// Bomba patlaması tarafından çağrılır.
-    /// Pickup'ı <paramref name="toward"/> pozisyonuna doğru fırlatır.
+    /// Pickup'ı <paramref name="explosionPos"/> patlamadan UZAĞA fırlatır.
     /// </summary>
-    public void ApplyKnockbackToward(Vector2 toward)
+    public void ApplyKnockbackToward(Vector2 explosionPos)
     {
         if (!_isKnockbackable) return;
         if (_rb == null) return;
 
-        Vector2 dir = (toward - (Vector2)transform.position).normalized;
-        if (dir == Vector2.zero) dir = Vector2.up;
+        // Patlamadan uzağa doğru (tersine)
+        Vector2 dir = ((Vector2)transform.position - explosionPos).normalized;
+        if (dir == Vector2.zero) dir = Random.insideUnitCircle.normalized;
+
+        // Hareket sırasında collider'ı solid yap → duvarlarla çarpışır
+        if (_col != null) _col.isTrigger = false;
+        _isMoving = true;
 
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
@@ -100,7 +116,7 @@ public class ItemPickup : MonoBehaviour
             OnItemPickup(other.gameObject);
     }
 
-    // ── Collision: Wall / Door → sekme / dur ────────────────────────────
+    // ── Collision: Wall / Door → sek ────────────────────────────────────
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (_rb == null) return;
@@ -110,7 +126,23 @@ public class ItemPickup : MonoBehaviour
         {
             Vector2 normal    = col.contacts[0].normal;
             Vector2 reflected = Vector2.Reflect(_rb.linearVelocity, normal);
-            _rb.linearVelocity = reflected * 0.4f;
+
+            if (reflected.magnitude < 1.5f)
+                reflected = normal * 1.5f;
+
+            _rb.linearVelocity = reflected * 0.6f;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        if (_rb == null) return;
+        if (!_isKnockbackable) return;
+
+        if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Door"))
+        {
+            Vector2 normal = col.contacts[0].normal;
+            _rb.linearVelocity += normal * 2f;
         }
     }
 
@@ -141,6 +173,9 @@ public class ItemPickup : MonoBehaviour
 
         Vector2 dir = (transform.position - player.transform.position).normalized;
         if (dir == Vector2.zero) dir = Vector2.right;
+
+        if (_col != null) _col.isTrigger = false;
+        _isMoving = true;
 
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(dir * pushForce, ForceMode2D.Impulse);
