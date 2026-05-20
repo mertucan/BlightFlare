@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: a46d0645db88d2c4d9f1e8f833585ae4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7515790144396345867
+    second: isaac-with hat-Photoroom_0
+  - first:
+      213: -9117365415715669436
+    second: isaac-with hat-Photoroom_1
+  - first:
+      213: 1058704484490252836
+    second: isaac-with hat-Photoroom_2
+  - first:
+      213: -2634521102037584314
+    second: isaac-with hat-Photoroom_3
+  - first:
+      213: 2002209561325120711
+    second: isaac-with hat-Photoroom_4
+  - first:
+      213: -8991804620615360167
+    second: isaac-with hat-Photoroom_5
+  - first:
+      213: 7369899643258079052
+    second: isaac-with hat-Photoroom_6
+  - first:
+      213: 4539854084201188911
+    second: isaac-with hat-Photoroom_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 251
+        width: 244
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdbfdc1fac82b790800000000000000
+      internalID: -7515790144396345867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 249
+        width: 232
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44af5d4d57c987180800000000000000
+      internalID: -9117365415715669436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 251
+        width: 243
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42297209e1641be00800000000000000
+      internalID: 1058704484490252836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 247
+        width: 242
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64677c7140d407bd0800000000000000
+      internalID: -2634521102037584314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 251
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ccaca4ecf649cb10800000000000000
+      internalID: 2002209561325120711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 250
+        width: 222
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95161829651b63380800000000000000
+      internalID: -8991804620615360167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 251
+        width: 244
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c470daa9da4274660800000000000000
+      internalID: 7369899643258079052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-with hat-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 251
+        width: 244
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e0be48c3dc00f30800000000000000
+      internalID: 4539854084201188911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 26f3a6ee4fc6ab149a557ab1b1906b12
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      isaac-with hat-Photoroom_0: -7515790144396345867
+      isaac-with hat-Photoroom_1: -9117365415715669436
+      isaac-with hat-Photoroom_2: 1058704484490252836
+      isaac-with hat-Photoroom_3: -2634521102037584314
+      isaac-with hat-Photoroom_4: 2002209561325120711
+      isaac-with hat-Photoroom_5: -8991804620615360167
+      isaac-with hat-Photoroom_6: 7369899643258079052
+      isaac-with hat-Photoroom_7: 4539854084201188911
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

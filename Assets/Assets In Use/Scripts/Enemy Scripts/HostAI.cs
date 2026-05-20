@@ -44,9 +44,9 @@ public class HostAI : MonoBehaviour
     [Header("Timing")]
     public float closedWaitMin  = 5f;
     public float closedWaitMax  = 12f;
-    public float openPreFireWait  = 2f;
-    public float openFireDelay    = 1f;
-    public float openPostFireWait = 2f;
+    public float openPreFireWait  = 3f;
+    public float openFireDelay    = 2f;
+    public float openPostFireWait = 5f;
     public float dazedDuration  = 5f;
 
     [Header("Attack")]

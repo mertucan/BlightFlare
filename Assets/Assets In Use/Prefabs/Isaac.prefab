@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6682810932111838233, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  m_Sprite: {fileID: 2002209561325120711, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,15 +105,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites:
-  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
-  - {fileID: -6682810932111838233, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: -3413229030585691211, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  - {fileID: 2002209561325120711, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
+  - {fileID: -8991804620615360167, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   animationTime: 0.25
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &1507305476386270651
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +229,8 @@ MonoBehaviour:
   selectedClipIndex: 0
   bombBlockingLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
+  pickupKnockbackRadius: 5
 --- !u!58 &7792630423502160976
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -520,7 +525,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  m_Sprite: {fileID: 4539854084201188911, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -543,15 +548,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites:
-  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
-  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: -2869675492435608873, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  - {fileID: 4539854084201188911, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
+  - {fileID: -9117365415715669436, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   animationTime: 0.25
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &2541861280917294178
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,8 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites:
-  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
   - {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -3651131777281703602, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -735,6 +743,11 @@ MonoBehaviour:
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &5263817891255508304
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,8 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites:
-  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
   - {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -7031906294235522722, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -923,6 +935,11 @@ MonoBehaviour:
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &6547175326304144966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1022,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2314508145580795660, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  m_Sprite: {fileID: -1935425264053210113, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1027,16 +1044,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fd141a6cdb32d40876d52672683416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
-  idleSprite: {fileID: -2314508145580795660, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleSprite: {fileID: -1935425264053210113, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
   idleAnimationSprites: []
   animationSprites:
-  - {fileID: -2314508145580795660, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: 6556262717884759704, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: -4374383999699900138, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  - {fileID: -1935425264053210113, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
+  - {fileID: 8296752130684266715, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
+  - {fileID: -3365665510332657518, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
   animationTime: 0.25
   idleAnimationTime: 0.5
   loop: 0
   idle: 0
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 2
+  blinkIntervalMax: 5
+  blinkDuration: 0.12
 --- !u!1 &6828654328664794019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,8 +1164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites:
-  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
   - {fileID: -7794698181749873378, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: -7031906294235522722, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -1159,6 +1180,11 @@ MonoBehaviour:
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &8269777808088763968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,8 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: -1865210538116204083, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  idleAnimationSprites:
-  - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
   - {fileID: -5717059946914043569, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
   - {fileID: 8872296099691320452, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
@@ -1276,6 +1301,11 @@ MonoBehaviour:
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &8536825282414228714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1388,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7320452250680286590, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  m_Sprite: {fileID: 1058704484490252836, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1381,15 +1411,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites:
-  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
-  - {fileID: 7320452250680286590, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: -1387014017998403522, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  - {fileID: 1058704484490252836, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
+  - {fileID: -2634521102037584314, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   animationTime: 0.25
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12
 --- !u!1 &8803791365019410367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,7 +1538,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3619280217375235411, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  m_Sprite: {fileID: 7369899643258079052, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1527,12 +1561,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
   idleSprite: {fileID: 0}
-  idleAnimationSprites:
-  - {fileID: -8264119394952374800, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  idleAnimationSprites: []
   animationSprites:
-  - {fileID: -3619280217375235411, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
-  - {fileID: -6259973333095471497, guid: cb433fad45c61654b9556ddafd008dd0, type: 3}
+  - {fileID: 7369899643258079052, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
+  - {fileID: -7515790144396345867, guid: a46d0645db88d2c4d9f1e8f833585ae4, type: 3}
   animationTime: 0.25
   idleAnimationTime: 10
   loop: 1
   idle: 1
+  isHeadRenderer: 0
+  blinkClosedIndex: 1
+  blinkIntervalMin: 5
+  blinkIntervalMax: 10
+  blinkDuration: 0.12

@@ -1,112 +1,67 @@
 fileFormatVersion: 2
-guid: 9ae690905ef4ef440856661e51c4cedc
+guid: 3d168db6f3d657842948886cf45fb80c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4374023408788203322
-    second: newisaac-Photoroom_0
+      213: 7096823524309215053
+    second: isaac-walk-Photoroom_0
   - first:
-      213: -6679255492991530048
-    second: newisaac-Photoroom_1
+      213: 6687196823174304250
+    second: isaac-walk-Photoroom_1
   - first:
-      213: 2060892880934103976
-    second: newisaac-Photoroom_2
+      213: -555893263853839668
+    second: isaac-walk-Photoroom_2
   - first:
-      213: -4731924574763639745
-    second: newisaac-Photoroom_3
+      213: -7738558094233872366
+    second: isaac-walk-Photoroom_3
   - first:
-      213: -2605888511239483282
-    second: newisaac-Photoroom_4
+      213: -2036917761464927010
+    second: isaac-walk-Photoroom_4
   - first:
-      213: -3359295958008957250
-    second: newisaac-Photoroom_5
+      213: -5576410139453103531
+    second: isaac-walk-Photoroom_5
   - first:
-      213: -8617093991538088193
-    second: newisaac-Photoroom_6
+      213: 4434145522463946512
+    second: isaac-walk-Photoroom_6
   - first:
-      213: -8713628216879482738
-    second: newisaac-Photoroom_7
+      213: -836481762777543505
+    second: isaac-walk-Photoroom_7
   - first:
-      213: -450639177618217057
-    second: newisaac-Photoroom_8
+      213: 5577903505411463331
+    second: isaac-walk-Photoroom_8
   - first:
-      213: -4785100216068527104
-    second: newisaac-Photoroom_9
+      213: -7512537401635849402
+    second: isaac-walk-Photoroom_9
   - first:
-      213: 665901731921013125
-    second: newisaac-Photoroom_10
+      213: -2958790239411180934
+    second: isaac-walk-Photoroom_10
   - first:
-      213: -5562263432174599382
-    second: newisaac-Photoroom_11
+      213: -8277038782598813
+    second: isaac-walk-Photoroom_11
   - first:
-      213: -1221835456688288184
-    second: newisaac-Photoroom_12
+      213: 2648608249553045699
+    second: isaac-walk-Photoroom_12
   - first:
-      213: -1497405449311253893
-    second: newisaac-Photoroom_13
+      213: -9125519797422129958
+    second: isaac-walk-Photoroom_13
   - first:
-      213: 7495323802767025229
-    second: newisaac-Photoroom_14
+      213: -7795950350115822938
+    second: isaac-walk-Photoroom_14
   - first:
-      213: 6343775297461184080
-    second: newisaac-Photoroom_15
+      213: 8697752052197989405
+    second: isaac-walk-Photoroom_15
   - first:
-      213: 4046954174723213399
-    second: newisaac-Photoroom_16
+      213: 6131801917921088544
+    second: isaac-walk-Photoroom_16
   - first:
-      213: -8777193737503745195
-    second: newisaac-Photoroom_17
+      213: -6598636949984019294
+    second: isaac-walk-Photoroom_17
   - first:
-      213: 2016648086652589870
-    second: newisaac-Photoroom_18
+      213: 1615530015396199860
+    second: isaac-walk-Photoroom_18
   - first:
-      213: 4254059285590908082
-    second: newisaac-Photoroom_19
-  - first:
-      213: -6459132357789674009
-    second: newisaac-Photoroom_20
-  - first:
-      213: -3479236632050558507
-    second: newisaac-Photoroom_21
-  - first:
-      213: -7539358290829076400
-    second: newisaac-Photoroom_22
-  - first:
-      213: 3673225344350477282
-    second: newisaac-Photoroom_23
-  - first:
-      213: 4985486946167102061
-    second: newisaac-Photoroom_24
-  - first:
-      213: 2624616618472599133
-    second: newisaac-Photoroom_25
-  - first:
-      213: 2959852220951174169
-    second: newisaac-Photoroom_26
-  - first:
-      213: 7796952529799346969
-    second: newisaac-Photoroom_27
-  - first:
-      213: -5245026977885504130
-    second: newisaac-Photoroom_28
-  - first:
-      213: -1845695699954945771
-    second: newisaac-Photoroom_29
-  - first:
-      213: -5489675779020628338
-    second: newisaac-Photoroom_30
-  - first:
-      213: 2662596974880443195
-    second: newisaac-Photoroom_31
-  - first:
-      213: -2782509674547322124
-    second: newisaac-Photoroom_32
-  - first:
-      213: -2410844495717410819
-    second: newisaac-Photoroom_33
-  - first:
-      213: -7179279379476895722
-    second: newisaac-Photoroom_34
+      213: -7144485064242556543
+    second: isaac-walk-Photoroom_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -153,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -202,13 +157,255 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newisaac-Photoroom_14
+      name: isaac-walk-Photoroom_1
       rect:
         serializedVersion: 2
-        x: 416
-        y: 198
+        x: 1851
+        y: 442
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1dc649412bdcc50800000000000000
+      internalID: 6687196823174304250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 446
+        width: 133
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca95f295021948f0800000000000000
+      internalID: -555893263853839668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 442
+        width: 130
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2185777f96e1b9490800000000000000
+      internalID: -7738558094233872366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 443
+        width: 127
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcf237861a6bb3e0800000000000000
+      internalID: -2036917761464927010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 442
+        width: 127
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552e204f58c9c92b0800000000000000
+      internalID: -5576410139453103531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 442
+        width: 122
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0173adc0cdf398d30800000000000000
+      internalID: 4434145522463946512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 442
+        width: 129
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac4d84c4483464f0800000000000000
+      internalID: -836481762777543505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 443
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8d4776fa1b86d40800000000000000
+      internalID: 5577903505411463331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 442
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bb8ad490b1eb790800000000000000
+      internalID: -7512537401635849402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 105
+        width: 112
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361329bb31892eff0800000000000000
+      internalID: -8277038782598813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 105
+        width: 112
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c847c78b2fb1c420800000000000000
+      internalID: 2648608249553045699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac-walk-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 105
         width: 121
-        height: 161
+        height: 143
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +414,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d446574694db40860800000000000000
-      internalID: 7495323802767025229
+      spriteID: adcfbd3e714ab5180800000000000000
+      internalID: -9125519797422129958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_15
+      name: isaac-walk-Photoroom_14
       rect:
         serializedVersion: 2
-        x: 547
-        y: 198
-        width: 120
-        height: 164
+        x: 730
+        y: 105
+        width: 131
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +436,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0566214b50e990850800000000000000
-      internalID: 6343775297461184080
+      spriteID: 6a2a3c616783fc390800000000000000
+      internalID: -7795950350115822938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_16
+      name: isaac-walk-Photoroom_15
       rect:
         serializedVersion: 2
-        x: 669
-        y: 200
-        width: 121
-        height: 169
+        x: 1105
+        y: 104
+        width: 107
+        height: 143
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75849a6516ba92830800000000000000
-      internalID: 4046954174723213399
+      spriteID: d1c9fa7a86f94b870800000000000000
+      internalID: 8697752052197989405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_17
+      name: isaac-walk-Photoroom_16
       rect:
         serializedVersion: 2
-        x: 798
-        y: 200
-        width: 121
-        height: 163
+        x: 1312
+        y: 104
+        width: 103
+        height: 140
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55b5e4f9cc4213680800000000000000
-      internalID: -8777193737503745195
+      spriteID: 024debe4b59881550800000000000000
+      internalID: 6131801917921088544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_18
+      name: isaac-walk-Photoroom_17
       rect:
         serializedVersion: 2
-        x: 924
-        y: 202
-        width: 119
-        height: 160
+        x: 1536
+        y: 105
+        width: 118
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2716e900c29cfb10800000000000000
-      internalID: 2016648086652589870
+      spriteID: 2ac7f62b7aeec64a0800000000000000
+      internalID: -6598636949984019294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_19
+      name: isaac-walk-Photoroom_18
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 201
-        width: 120
-        height: 158
+        x: 1750
+        y: 105
+        width: 109
+        height: 142
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +524,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bc191b9164790b30800000000000000
-      internalID: 4254059285590908082
+      spriteID: 4bdfba35df38b6610800000000000000
+      internalID: 1615530015396199860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newisaac-Photoroom_20
+      name: isaac-walk-Photoroom_19
       rect:
         serializedVersion: 2
-        x: 1180
-        y: 199
-        width: 100
-        height: 159
+        x: 1966
+        y: 105
+        width: 109
+        height: 142
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,162 +546,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e517b0b75d8c56a0800000000000000
-      internalID: -6459132357789674009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_25
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 3
-        width: 124
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5e65af98e28c6420800000000000000
-      internalID: 2624616618472599133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_26
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 1
-        width: 123
-        height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91c1279b9e1831920800000000000000
-      internalID: 2959852220951174169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_27
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 1
-        width: 116
-        height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91bf54d0407543c60800000000000000
-      internalID: 7796952529799346969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_28
-      rect:
-        serializedVersion: 2
-        x: 796
-        y: 2
-        width: 123
-        height: 181
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7d3bc1c0cbe537b0800000000000000
-      internalID: -5245026977885504130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_29
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 2
-        width: 123
-        height: 181
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51138b03a85c266e0800000000000000
-      internalID: -1845695699954945771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_30
-      rect:
-        serializedVersion: 2
-        x: 1053
-        y: 3
-        width: 123
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8ed86be6f0c0d3b0800000000000000
-      internalID: -5489675779020628338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: newisaac-Photoroom_31
-      rect:
-        serializedVersion: 2
-        x: 1182
-        y: 0
-        width: 98
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3b47c377d173f420800000000000000
-      internalID: 2662596974880443195
+      spriteID: 1811dbaefa0b9dc90800000000000000
+      internalID: -7144485064242556543
       vertices: []
       indices: 
       edges: []
@@ -513,7 +556,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6802d8caf406c174c8a2b05e1abfeeac
+    spriteID: 5f6016ece1096d444b84eb5e08762b32
     internalID: 0
     vertices: []
     indices: 
@@ -523,41 +566,26 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      newisaac-Photoroom_0: -4374023408788203322
-      newisaac-Photoroom_1: -6679255492991530048
-      newisaac-Photoroom_10: 665901731921013125
-      newisaac-Photoroom_11: -5562263432174599382
-      newisaac-Photoroom_12: -1221835456688288184
-      newisaac-Photoroom_13: -1497405449311253893
-      newisaac-Photoroom_14: 7495323802767025229
-      newisaac-Photoroom_15: 6343775297461184080
-      newisaac-Photoroom_16: 4046954174723213399
-      newisaac-Photoroom_17: -8777193737503745195
-      newisaac-Photoroom_18: 2016648086652589870
-      newisaac-Photoroom_19: 4254059285590908082
-      newisaac-Photoroom_2: 2060892880934103976
-      newisaac-Photoroom_20: -6459132357789674009
-      newisaac-Photoroom_21: -3479236632050558507
-      newisaac-Photoroom_22: -7539358290829076400
-      newisaac-Photoroom_23: 3673225344350477282
-      newisaac-Photoroom_24: 4985486946167102061
-      newisaac-Photoroom_25: 2624616618472599133
-      newisaac-Photoroom_26: 2959852220951174169
-      newisaac-Photoroom_27: 7796952529799346969
-      newisaac-Photoroom_28: -5245026977885504130
-      newisaac-Photoroom_29: -1845695699954945771
-      newisaac-Photoroom_3: -4731924574763639745
-      newisaac-Photoroom_30: -5489675779020628338
-      newisaac-Photoroom_31: 2662596974880443195
-      newisaac-Photoroom_32: -2782509674547322124
-      newisaac-Photoroom_33: -2410844495717410819
-      newisaac-Photoroom_34: -7179279379476895722
-      newisaac-Photoroom_4: -2605888511239483282
-      newisaac-Photoroom_5: -3359295958008957250
-      newisaac-Photoroom_6: -8617093991538088193
-      newisaac-Photoroom_7: -8713628216879482738
-      newisaac-Photoroom_8: -450639177618217057
-      newisaac-Photoroom_9: -4785100216068527104
+      isaac-walk-Photoroom_0: 7096823524309215053
+      isaac-walk-Photoroom_1: 6687196823174304250
+      isaac-walk-Photoroom_10: -2958790239411180934
+      isaac-walk-Photoroom_11: -8277038782598813
+      isaac-walk-Photoroom_12: 2648608249553045699
+      isaac-walk-Photoroom_13: -9125519797422129958
+      isaac-walk-Photoroom_14: -7795950350115822938
+      isaac-walk-Photoroom_15: 8697752052197989405
+      isaac-walk-Photoroom_16: 6131801917921088544
+      isaac-walk-Photoroom_17: -6598636949984019294
+      isaac-walk-Photoroom_18: 1615530015396199860
+      isaac-walk-Photoroom_19: -7144485064242556543
+      isaac-walk-Photoroom_2: -555893263853839668
+      isaac-walk-Photoroom_3: -7738558094233872366
+      isaac-walk-Photoroom_4: -2036917761464927010
+      isaac-walk-Photoroom_5: -5576410139453103531
+      isaac-walk-Photoroom_6: 4434145522463946512
+      isaac-walk-Photoroom_7: -836481762777543505
+      isaac-walk-Photoroom_8: 5577903505411463331
+      isaac-walk-Photoroom_9: -7512537401635849402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
