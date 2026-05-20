@@ -32,6 +32,8 @@ public class Pyromaniac : MonoBehaviour, IItem
 
     [Tooltip("Sağ yön head sprite dizisi (öncekinin YERİNE geçer).")]
     public Sprite[] headSpritesRight;
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     // Bomba scripti bu flag'i kontrol eder
     [HideInInspector] public bool isActive = false;
@@ -98,6 +100,7 @@ public class Pyromaniac : MonoBehaviour, IItem
 
         pyroOnPlayer.ApplyBombUpgrade(player);
         pyroOnPlayer.ApplyHeadSprites(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "Pyromaniac");
     }
 
     [HideInInspector] public bool hasHealedThisExplosion = false;

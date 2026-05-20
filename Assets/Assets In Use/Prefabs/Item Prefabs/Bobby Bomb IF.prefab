@@ -119,7 +119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8581f51f59b16f64388af46836fb4aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BobbyBomb
-  bobbyBombPrefab: {fileID: 3939017888894637700, guid: c3af2b7cae682b948978e22f6718498e, type: 3}
+  moveSpeed: 2.5
+  searchRadius: 5
+  fuseTime: 3
+  searchDelay: 0.15
+  searchRetries: 5
+  retryInterval: 0.1
+  iconSprite: {fileID: 6871975214743837415, guid: 4d87a75dcb769b942b61a361bcfbf2be, type: 3}
 --- !u!1 &8434055760191881865
 GameObject:
   m_ObjectHideFlags: 0

@@ -132,6 +132,7 @@ MonoBehaviour:
   shieldBreakClips:
   - {fileID: 8300000, guid: 9899ed55212f50f4680f5a3f6815ba71, type: 3}
   selectedClipIndex: 0
+  iconSprite: {fileID: -2817642328477022762, guid: 77cf480169d45684787a77f34aed1209, type: 3}
 --- !u!82 &3152154851856900301
 AudioSource:
   m_ObjectHideFlags: 0

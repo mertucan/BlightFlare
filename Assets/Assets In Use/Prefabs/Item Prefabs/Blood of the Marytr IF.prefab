@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eda6d5f532d86b4da09418399aa2c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapImmunity
+  iconSprite: {fileID: 3623456089048840555, guid: c7f4c172ac4af024483fcabbf008d3b3, type: 3}
   headSpritesUp:
   - {fileID: -8337106295864254287, guid: c7f4c172ac4af024483fcabbf008d3b3, type: 3}
   headSpritesDown:

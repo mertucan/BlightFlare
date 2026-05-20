@@ -4,6 +4,8 @@ public class CeremonialRobe : MonoBehaviour, IItem
 {
     [Header("Heal Amount")]
     public int healHalfHearts = 4;
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     [Header("Character Overlay — Aşağı (Order: 7)")]
     public Sprite[] overlaySpritesDown;
@@ -63,6 +65,7 @@ public class CeremonialRobe : MonoBehaviour, IItem
         effect.glowOffset          = glowOffset;
 
         effect.Activate();
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "CeremonialRobe");
         Destroy(gameObject);
     }
 

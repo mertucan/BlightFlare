@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697654e5de702e7439ca93ed98c68154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Taurus
+  iconSprite: {fileID: -6541733775929675393, guid: 2666ca426fb31ab40840eb3d97d38d4c, type: 3}
   headSpritesUp:
   - {fileID: -288097275, guid: 79c49813e74643c4a9dbbd4a798f71cc, type: 3}
   - {fileID: -1564787661, guid: 79c49813e74643c4a9dbbd4a798f71cc, type: 3}

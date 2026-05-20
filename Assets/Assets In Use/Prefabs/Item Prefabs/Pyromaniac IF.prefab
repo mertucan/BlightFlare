@@ -132,7 +132,9 @@ MonoBehaviour:
   headSpritesRight:
   - {fileID: -1429394151, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
   - {fileID: 1848192242, guid: 46b8fd7b8f00a2c4fb7ef9693f0431a8, type: 3}
+  iconSprite: {fileID: 8373805363917326335, guid: 76e7937c34b261147998d6c2b9af8d9a, type: 3}
   isActive: 0
+  hasHealedThisExplosion: 0
 --- !u!1 &8434055760191881865
 GameObject:
   m_ObjectHideFlags: 0

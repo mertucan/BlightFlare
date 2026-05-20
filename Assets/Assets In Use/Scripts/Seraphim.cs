@@ -19,6 +19,8 @@ using UnityEngine;
 /// </summary>
 public class Seraphim : MonoBehaviour, IItem
 {
+    [Header("UI Icon")]
+    public Sprite iconSprite;
     // ── Aşağı yön ────────────────────────────────────────────────────────────
     [Header("Down — Body Sprites (7 adet, body'nin yerini alır)")]
     public Sprite[] bodySpritesDown;
@@ -95,6 +97,7 @@ public class Seraphim : MonoBehaviour, IItem
 
         comp.Activate(player);
         Debug.Log("[Seraphim] Pickup tamamlandı.");
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "Seraphim");
     }
 
     // ─────────────────────────────────────────────────────────────────────────

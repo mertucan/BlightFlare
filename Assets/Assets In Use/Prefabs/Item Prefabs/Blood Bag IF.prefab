@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodBag
   halfHeartsToAdd: 2
+  iconSprite: {fileID: 2409934984381817930, guid: 39609eed6671fae468b4ffc9683b580d, type: 3}
   pickupSoundClips: []
   selectedPickupClipIndex: 0
 --- !u!1 &8434055760191881865

@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CeremonialRobe
   healHalfHearts: 4
+  iconSprite: {fileID: 2026868347363109891, guid: c91581b1b3ca21b49a81ed5d6641a240, type: 3}
   overlaySpritesDown:
   - {fileID: 5253643939005287565, guid: c91581b1b3ca21b49a81ed5d6641a240, type: 3}
   - {fileID: -2261662637355057051, guid: c91581b1b3ca21b49a81ed5d6641a240, type: 3}

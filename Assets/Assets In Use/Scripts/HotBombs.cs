@@ -4,6 +4,8 @@ public class HotBombs : MonoBehaviour, IItem
 {
     [Header("Hot Bomb Ayarları")]
     public GameObject fireHazardPrefab;   // Patlama sonrası ateş alanı prefabı
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     public void Pickup(GameObject player)
     {
@@ -18,6 +20,7 @@ public class HotBombs : MonoBehaviour, IItem
         bombCtrl.fireHazardPrefab = fireHazardPrefab;
 
         Debug.Log("[HotBomb] Aktif.");
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "HotBombs");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

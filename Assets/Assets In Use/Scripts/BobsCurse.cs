@@ -20,6 +20,8 @@ public class BobsCurse : MonoBehaviour, IItem
 
     [Tooltip("+1 bomba ekler — aynı anda 2 bomba kullanılabilir olur.")]
     public int bonusBombs = 1;
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     [Header("Head Sprites (Bob's Curse versiyonu)")]
     [Tooltip("Yukarı yön head sprite dizisi (öncekinin YERİNE geçer).")]
@@ -39,6 +41,7 @@ public class BobsCurse : MonoBehaviour, IItem
     {
         ApplyBombUpgrade(player);
         ApplyHeadSprites(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "BobbyBomb");
     }
 
     // ── Bomba yükseltmesi ─────────────────────────────────────────────────

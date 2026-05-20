@@ -14,6 +14,8 @@ public class HolyMantle : MonoBehaviour, IItem
     [Header("Shield Break Sound")]
     public AudioClip[] shieldBreakClips;
     public int selectedClipIndex = 0;
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     // ─────────────────────────────────────────
     public void Pickup(GameObject player)
@@ -41,6 +43,7 @@ public class HolyMantle : MonoBehaviour, IItem
         // Konumlandırmayı HeartUI üzerinden yap
         HeartUI heartUI = Object.FindFirstObjectByType<HeartUI>();
         heartUI?.RepositionHolyMantleAfterFrame();
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "HolyMantle");
     }
 
     // ─────────────────────────────────────────

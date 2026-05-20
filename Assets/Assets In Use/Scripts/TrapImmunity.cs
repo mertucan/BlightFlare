@@ -15,6 +15,8 @@ using UnityEngine;
 /// </summary>
 public class TrapImmunity : MonoBehaviour, IItem
 {
+    [Header("UI Icon")]
+    public Sprite iconSprite;
     [Header("Head Sprites (TrapImmunity versiyonu)")]
     [Tooltip("Yukarı yön head sprite dizisi (öncekinin YERİNE geçer).")]
     public Sprite[] headSpritesUp;
@@ -81,5 +83,6 @@ public class TrapImmunity : MonoBehaviour, IItem
         Debug.Log($"[TrapImmunity] Pickup çağrıldı. isActive={immunityOnPlayer.isActive}, player={player.name}");
 
         immunityOnPlayer.ApplyHeadSprites(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "TrapImmunity");
     }
 }

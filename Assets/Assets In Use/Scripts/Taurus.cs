@@ -21,6 +21,8 @@ using UnityEngine;
 /// </summary>
 public class Taurus : MonoBehaviour, IItem
 {
+    [Header("UI Icon")]
+    public Sprite iconSprite;
     [Header("Head Sprites (Taurus versiyonu)")]
     [Tooltip("Yukarı yön head sprite dizisi.")]
     public Sprite[] headSpritesUp;
@@ -126,6 +128,7 @@ public class Taurus : MonoBehaviour, IItem
 
         // Head sprite uygula
         taurusOnPlayer.ApplyHeadSprites(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "Taurus");
     }
 
     // ── Oda olayları (RoomEnemyTracker veya oda trigger'ı tarafından çağrılır) ─

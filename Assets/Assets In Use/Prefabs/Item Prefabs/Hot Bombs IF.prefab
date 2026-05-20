@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotBombs
   fireHazardPrefab: {fileID: 3753293821117044374, guid: 10fe8cf64b96610429a032c2715a82cc, type: 3}
+  iconSprite: {fileID: -8802682024482322321, guid: 39ed084af520a3447ac40f589cc078bc, type: 3}
 --- !u!1 &8434055760191881865
 GameObject:
   m_ObjectHideFlags: 0

@@ -122,6 +122,7 @@ MonoBehaviour:
   bobsCurseBombPrefab: {fileID: 3939017888894637700, guid: efbc8aeb783ca5641ad4539bb4b84334, type: 3}
   poisonCloudPrefab: {fileID: 1904695668465121277, guid: bae2e2adb7f0b5e499d054e1078e4164, type: 3}
   bonusBombs: 1
+  iconSprite: {fileID: 531679483, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
   headSpritesUp:
   - {fileID: -793073331, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}
   - {fileID: 1865128645, guid: 86df9a697c7e69f4a915772b513b6bf3, type: 3}

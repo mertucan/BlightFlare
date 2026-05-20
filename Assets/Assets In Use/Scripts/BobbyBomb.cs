@@ -10,6 +10,9 @@ public class BobbyBomb : MonoBehaviour, IItem
     public int   searchRetries = 5;
     public float retryInterval = 0.1f;
 
+    [Header("UI Icon")]
+    public Sprite iconSprite;           // ← EKLE
+
     public void Pickup(GameObject player)
     {
         var bombCtrl = player.GetComponent<BombController>();
@@ -27,5 +30,6 @@ public class BobbyBomb : MonoBehaviour, IItem
         bombCtrl.bobbyRetryInterval = retryInterval;
 
         Debug.Log($"[BobbyBomb] Aktif. searchRadius={searchRadius}");
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "BobbyBomb");
     }
 }

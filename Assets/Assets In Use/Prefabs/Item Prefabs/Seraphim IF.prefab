@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9e87068c45d3d43863c8f29567043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Seraphim
+  iconSprite: {fileID: -2082690812626470491, guid: 33634cae2ea2830468db1cb4dcaef1f6, type: 3}
   bodySpritesDown:
   - {fileID: 2826360965658912827, guid: cfe5211472b11064dab6d71f243d97d2, type: 3}
   - {fileID: -4992463238234949179, guid: cfe5211472b11064dab6d71f243d97d2, type: 3}

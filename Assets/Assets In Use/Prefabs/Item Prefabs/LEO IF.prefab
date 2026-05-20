@@ -130,6 +130,7 @@ MonoBehaviour:
   - {fileID: 5815517205344101970, guid: 74db028dfa1bcc94caed1ad15402ebf6, type: 3}
   headSpritesRight:
   - {fileID: -5967600132646104843, guid: 74db028dfa1bcc94caed1ad15402ebf6, type: 3}
+  iconSprite: {fileID: 4117363993859357139, guid: ae3049802a03c9046be65759e8e89b01, type: 3}
   isActive: 0
 --- !u!1 &8434055760191881865
 GameObject:

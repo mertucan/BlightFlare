@@ -33,6 +33,8 @@ public class Leo : MonoBehaviour, IItem
 
     [Tooltip("Sağ yön head sprite dizisi (öncekinin YERİNE geçer).")]
     public Sprite[] headSpritesRight;
+    [Header("UI Icon")]
+    public Sprite iconSprite;
 
     /// <summary>
     /// BombController ya da başka sistemler bu flag'i kontrol edebilir.
@@ -93,6 +95,7 @@ public class Leo : MonoBehaviour, IItem
 
         // Head sprite'larını uygula
         leoOnPlayer.ApplyHeadSprites(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "Leo");
     }
 
     // ── Taş / Destructible çarpma mekaniği ───────────────────────────────

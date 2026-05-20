@@ -8,6 +8,8 @@ public class BloodBag : MonoBehaviour, IItem
     [Header("Blood Bag Settings")]
     [Tooltip("Kaç yarım kalp slotu ekleneceği (varsayılan 2 = 1 tam kalp).")]
     public int halfHeartsToAdd = 2;
+    [Header("UI Icon")]
+    public Sprite iconSprite;           // ← EKLE
 
     // ─────────────────────────────────────────
     // PICKUP SOUND
@@ -43,6 +45,7 @@ public class BloodBag : MonoBehaviour, IItem
         }
 
         PlayPickupSound(player);
+        ItemIconUI.Instance?.AddItemIcon(iconSprite, "BloodBag");
         Destroy(gameObject);
     }
 
