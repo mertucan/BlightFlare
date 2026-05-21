@@ -46,6 +46,9 @@ public class BoomFlyAI : MonoBehaviour
     [Header("Tag'ler")]
     [SerializeField] private string playerTag = "Player";
 
+    [Header("Layer'lar")]
+    [SerializeField] private string enemyLayerName = "Enemy";
+
     // ─────────────────────────────────────────────────────────────────────────
     // Private değişkenler
     // ─────────────────────────────────────────────────────────────────────────
@@ -60,6 +63,8 @@ public class BoomFlyAI : MonoBehaviour
 
     private Color    originalColor;
     private Coroutine flashRoutine;
+
+    private int enemyLayer = -1;
 
     // ─────────────────────────────────────────────────────────────────────────
     // Unity yaşam döngüsü
@@ -78,6 +83,8 @@ public class BoomFlyAI : MonoBehaviour
 
         rb.gravityScale   = 0f;
         rb.freezeRotation = true;
+
+        enemyLayer = LayerMask.NameToLayer(enemyLayerName);
     }
 
     private void Start()
@@ -120,9 +127,10 @@ public class BoomFlyAI : MonoBehaviour
     {
         if (isDead) return;
 
-        // Duvar ve kapıdan sekme (DOF_AI mekaniği)
+        // Duvar, kapı veya Enemy layer'ındaki nesnelerden sekme
         if (collision.gameObject.CompareTag("Wall") ||
-            collision.gameObject.CompareTag("Door"))
+            collision.gameObject.CompareTag("Door") ||
+            (enemyLayer != -1 && collision.gameObject.layer == enemyLayer))
         {
             Vector2 normal = collision.contacts[0].normal;
             moveDirection = Vector2.Reflect(moveDirection, normal).normalized;

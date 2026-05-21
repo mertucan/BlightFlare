@@ -14,6 +14,8 @@ public class BossRoomTrigger : MonoBehaviour
     private LokiAI       lokiAI;
     private HollowHead   hollowAI;
     private NightWatchAI nightWatchAI;
+    private MaskAI  maskAI;
+    private HeartAI heartAI;
     private bool triggered = false;
 
     // Kapı yönetimi RoomEnemyTracker üzerinden
@@ -25,6 +27,8 @@ public class BossRoomTrigger : MonoBehaviour
         lokiAI       = GetComponentInChildren<LokiAI>();
         hollowAI     = GetComponentInChildren<HollowHead>();
         nightWatchAI = GetComponentInChildren<NightWatchAI>();
+        maskAI  = GetComponentInChildren<MaskAI>();
+        heartAI = GetComponentInChildren<HeartAI>();
 
         // BossRoomTrigger bir Room'un child'ı olarak spawn ediliyor,
         // RoomEnemyTracker aynı Room objesinde
@@ -60,6 +64,10 @@ public class BossRoomTrigger : MonoBehaviour
             hollowAI.Activate();
         else if (nightWatchAI != null)
             nightWatchAI.Activate();
+        else if (maskAI != null)
+            maskAI.Activate();
+        else if (heartAI != null)
+            heartAI.Activate();
         else
             Debug.LogWarning("BossRoomTrigger: Hiçbir boss AI bulunamadı!");
     }

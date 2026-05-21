@@ -149,6 +149,27 @@ public class MapGenerator : MonoBehaviour
         endRooms.RemoveAll(item => bigRoomIndexes.Contains(item) || GetNeighbourCount(item) > 1);
     }
 
+    int PickShopRoom()
+    {
+        // Sadece sol veya sağ komşusu olan (üst/alt komşusu OLMAYAN) end room'ları bul
+        var candidates = endRooms.FindAll(index =>
+        {
+            bool hasLeft  = index % 10 > 0  && floorPlan[index - 1]  == 1;
+            bool hasRight = index % 10 < 9  && floorPlan[index + 1]  == 1;
+            bool hasUp    = index - 10 >= 0 && floorPlan[index - 10] == 1;
+            bool hasDown  = index + 10 < floorPlan.Length && floorPlan[index + 10] == 1;
+
+            // End room zaten tek komşuya sahip; o komşunun sol/sağ olmasını istiyoruz
+            return (hasLeft || hasRight) && !hasUp && !hasDown;
+        });
+
+        if (candidates.Count == 0) return -1;
+
+        int chosen = candidates[Random.Range(0, candidates.Count)];
+        endRooms.Remove(chosen);
+        return chosen;
+    }
+
     void SetupSpecialRooms()
     {
         bossRoomIndex = endRooms.Count > 0 ? endRooms[endRooms.Count - 1] : -1;
@@ -157,7 +178,7 @@ public class MapGenerator : MonoBehaviour
             endRooms.RemoveAt(endRooms.Count - 1);
 
         itemRoomIndex   = RandomEndRoom();
-        shopRoomIndex   = RandomEndRoom();
+        shopRoomIndex = PickShopRoom();
         secretRoomIndex = PickSecretRoom();
 
         if (itemRoomIndex == -1 || shopRoomIndex == -1 || bossRoomIndex == -1 || secretRoomIndex == -1)

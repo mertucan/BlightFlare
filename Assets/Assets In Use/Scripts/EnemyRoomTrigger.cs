@@ -17,6 +17,8 @@ public class EnemyRoomTrigger : MonoBehaviour
     private LokiAI[]      lokis;
     private HollowHead[]  hollows;   // ← YENİ
     private NightWatchAI[] nightWatches; // ← YENİ
+    private MaskAI[]  masks;
+    private HeartAI[] hearts;
 
     private bool activated = false;  // ← Sadece bir kez Activate() çağır
 
@@ -31,6 +33,8 @@ public class EnemyRoomTrigger : MonoBehaviour
         lokis      = GetComponentsInChildren<LokiAI>(true);
         hollows    = GetComponentsInChildren<HollowHead>(true); // ← YENİ
         nightWatches = GetComponentsInChildren<NightWatchAI>(true); // ← YENİ
+        masks  = GetComponentsInChildren<MaskAI>(true);
+        hearts = GetComponentsInChildren<HeartAI>(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,11 +47,15 @@ public class EnemyRoomTrigger : MonoBehaviour
             // İlk girişte Activate() — hareketi başlatır
             foreach (var h in hollows) if (h != null) h.Activate();
             foreach (var nw in nightWatches) if (nw != null) nw.Activate();
+            foreach (var m in masks)  if (m != null) m.Activate();
+            foreach (var h in hearts) if (h != null) h.Activate();
         }
         else
         {
             // Odaya geri dönünce sadece aç
             foreach (var h in hollows) if (h != null) h.SetActive(true);
+            foreach (var m in masks)  if (m != null) m.SetActive(true);
+            foreach (var h in hearts) if (h != null) h.SetActive(true);
         }
 
         SetEnemiesActive(true);
@@ -57,6 +65,8 @@ public class EnemyRoomTrigger : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
         foreach (var h in hollows) if (h != null) h.SetActive(false);
+        foreach (var m in masks)  if (m != null) m.SetActive(false);
+        foreach (var h in hearts) if (h != null) h.SetActive(false);
         SetEnemiesActive(false);
     }
 
@@ -71,5 +81,7 @@ public class EnemyRoomTrigger : MonoBehaviour
         foreach (var l in lokis)      if (l != null) l.SetActive(active);
         foreach (var h in hollows)    if (h != null) h.SetActive(active); // ← YENİ
         foreach (var nw in nightWatches) if (nw != null) nw.SetActive(active); // ← YENİ
+        foreach (var m in masks)  if (m != null) m.SetActive(active);
+        foreach (var h in hearts) if (h != null) h.SetActive(active);
     }
 }
