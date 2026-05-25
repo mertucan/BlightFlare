@@ -424,6 +424,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e82ea346dc5df445b4c89679d0b7cb0, type: 2}
   - {fileID: 11400000, guid: 9b93a2f4888b11b4a83c30a4f8047a26, type: 2}
   - {fileID: 11400000, guid: d0472842f60683944b62ea495d1ec5d9, type: 2}
+  - {fileID: 11400000, guid: cd757f9d571f48c38f9eb72a1aec428f, type: 2}
   closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
   openedShopDoorPrefab: {fileID: 7295604412751457430, guid: 0c187ca9bf9688f4d8af536b52884329, type: 3}
   openedSecretDoorPrefab: {fileID: 484832768564172559, guid: 9dddbdcf95a23a44885f4757fc08c9fb, type: 3}
