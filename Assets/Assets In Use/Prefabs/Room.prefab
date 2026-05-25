@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  blownUpDoorPrefab: {fileID: 484832768564172559, guid: 9dddbdcf95a23a44885f4757fc08c9fb, type: 3}
 --- !u!114 &6866638527072194787
 MonoBehaviour:
   m_ObjectHideFlags: 0

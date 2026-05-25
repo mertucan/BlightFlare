@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 6f18cff6e64efeb4caadd5adf8b071fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2147721954522901629
+    second: naked_body_new-Photoroom_0
+  - first:
+      213: -8865101260783173599
+    second: naked_body_new-Photoroom_1
+  - first:
+      213: -7728979498164752032
+    second: naked_body_new-Photoroom_2
+  - first:
+      213: -7892227838960701206
+    second: naked_body_new-Photoroom_3
+  - first:
+      213: -4965158380877871419
+    second: naked_body_new-Photoroom_4
+  - first:
+      213: 2446030897074409094
+    second: naked_body_new-Photoroom_5
+  - first:
+      213: 3655672284874609226
+    second: naked_body_new-Photoroom_6
+  - first:
+      213: 4164383300811530789
+    second: naked_body_new-Photoroom_7
+  - first:
+      213: -2485778563822161528
+    second: naked_body_new-Photoroom_8
+  - first:
+      213: -7365046332595224358
+    second: naked_body_new-Photoroom_9
+  - first:
+      213: -5832426181475193967
+    second: naked_body_new-Photoroom_10
+  - first:
+      213: 8414250192014819949
+    second: naked_body_new-Photoroom_11
+  - first:
+      213: -6539844663707362485
+    second: naked_body_new-Photoroom_12
+  - first:
+      213: 2913241058971615698
+    second: naked_body_new-Photoroom_13
+  - first:
+      213: 1386055305474623830
+    second: naked_body_new-Photoroom_14
+  - first:
+      213: -7133596034719977293
+    second: naked_body_new-Photoroom_15
+  - first:
+      213: -8610412108850592276
+    second: naked_body_new-Photoroom_16
+  - first:
+      213: 4640239813978139816
+    second: naked_body_new-Photoroom_17
+  - first:
+      213: -8861059053373952167
+    second: naked_body_new-Photoroom_18
+  - first:
+      213: -161728991083345352
+    second: naked_body_new-Photoroom_19
+  - first:
+      213: -4925291381881269378
+    second: naked_body_new-Photoroom_20
+  - first:
+      213: 945628247975120134
+    second: naked_body_new-Photoroom_21
+  - first:
+      213: 7614038861312826082
+    second: naked_body_new-Photoroom_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 579
+        width: 600
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c25af0dbd3ecd10800000000000000
+      internalID: 2147721954522901629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 593
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120c6256f55d8f480800000000000000
+      internalID: -8865101260783173599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 421
+        width: 175
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061fc97a8162db490800000000000000
+      internalID: -7728979498164752032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 428
+        width: 124
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae07c44689c297290800000000000000
+      internalID: -7892227838960701206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 428
+        width: 123
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6883652c6381bb0800000000000000
+      internalID: -4965158380877871419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 428
+        width: 123
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e00c9242c02f120800000000000000
+      internalID: 2446030897074409094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 415
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a421133139e8bb230800000000000000
+      internalID: 3655672284874609226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 421
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522a0795c8cdac930800000000000000
+      internalID: 4164383300811530789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 428
+        width: 123
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8817911019db08dd0800000000000000
+      internalID: -2485778563822161528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 428
+        width: 122
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad04e57d1691ac990800000000000000
+      internalID: -7365046332595224358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 428
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bab7a1a4f0f0fa0800000000000000
+      internalID: -5832426181475193967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 415
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d624e4218fb65c470800000000000000
+      internalID: 8414250192014819949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 279
+        width: 555
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b1d7d8dedcd35a0800000000000000
+      internalID: -6539844663707362485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d10611ee49ed6820800000000000000
+      internalID: 2913241058971615698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 121
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6594cd9e4f14c3310800000000000000
+      internalID: 1386055305474623830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 121
+        width: 112
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0716ba330600d90800000000000000
+      internalID: -7133596034719977293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 121
+        width: 118
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce50d329ecba18880800000000000000
+      internalID: -8610412108850592276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 121
+        width: 118
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acaac89681756040800000000000000
+      internalID: 4640239813978139816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 121
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95fe2e52db1370580800000000000000
+      internalID: -8861059053373952167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 121
+        width: 103
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a4898e65c61cdf0800000000000000
+      internalID: -161728991083345352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 121
+        width: 124
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e739caf5599d5abb0800000000000000
+      internalID: -4925291381881269378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 121
+        width: 124
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dc122a1eb8f1d00800000000000000
+      internalID: 945628247975120134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naked_body_new-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 0
+        width: 175
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea1292e0008aa960800000000000000
+      internalID: 7614038861312826082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      naked_body_new-Photoroom_0: 2147721954522901629
+      naked_body_new-Photoroom_1: -8865101260783173599
+      naked_body_new-Photoroom_10: -5832426181475193967
+      naked_body_new-Photoroom_11: 8414250192014819949
+      naked_body_new-Photoroom_12: -6539844663707362485
+      naked_body_new-Photoroom_13: 2913241058971615698
+      naked_body_new-Photoroom_14: 1386055305474623830
+      naked_body_new-Photoroom_15: -7133596034719977293
+      naked_body_new-Photoroom_16: -8610412108850592276
+      naked_body_new-Photoroom_17: 4640239813978139816
+      naked_body_new-Photoroom_18: -8861059053373952167
+      naked_body_new-Photoroom_19: -161728991083345352
+      naked_body_new-Photoroom_2: -7728979498164752032
+      naked_body_new-Photoroom_20: -4925291381881269378
+      naked_body_new-Photoroom_21: 945628247975120134
+      naked_body_new-Photoroom_22: 7614038861312826082
+      naked_body_new-Photoroom_3: -7892227838960701206
+      naked_body_new-Photoroom_4: -4965158380877871419
+      naked_body_new-Photoroom_5: 2446030897074409094
+      naked_body_new-Photoroom_6: 3655672284874609226
+      naked_body_new-Photoroom_7: 4164383300811530789
+      naked_body_new-Photoroom_8: -2485778563822161528
+      naked_body_new-Photoroom_9: -7365046332595224358
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

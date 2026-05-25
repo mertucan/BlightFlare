@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 570b28781d50bdf42872005c0117b859
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4589927882935949122
+    second: fistula_0
+  - first:
+      213: 155867561378647292
+    second: fistula_1
+  - first:
+      213: -5710634801576178930
+    second: fistula_2
+  - first:
+      213: -8788660862095724283
+    second: fistula_3
+  - first:
+      213: -5478305107816782367
+    second: fistula_4
+  - first:
+      213: 2349028419781916224
+    second: fistula_5
+  - first:
+      213: -820701576082206607
+    second: fistula_6
+  - first:
+      213: 6010395829011485793
+    second: fistula_7
+  - first:
+      213: -3254246125620167828
+    second: fistula_8
+  - first:
+      213: -6469149612479446574
+    second: fistula_9
+  - first:
+      213: 5587915492969647983
+    second: fistula_10
+  - first:
+      213: -3556314944878894697
+    second: fistula_11
+  - first:
+      213: -3263157995725860254
+    second: fistula_12
+  - first:
+      213: -331175432286840600
+    second: fistula_13
+  - first:
+      213: 9030568028022837729
+    second: fistula_14
+  - first:
+      213: -1023645412074535721
+    second: fistula_15
+  - first:
+      213: 6224497876304235752
+    second: fistula_16
+  - first:
+      213: -8730406893035023548
+    second: fistula_17
+  - first:
+      213: 8833839651368273509
+    second: fistula_18
+  - first:
+      213: -8837595595071174860
+    second: fistula_19
+  - first:
+      213: 5790141211180095295
+    second: fistula_20
+  - first:
+      213: -2611132020373205913
+    second: fistula_21
+  - first:
+      213: 8120170605807340344
+    second: fistula_22
+  - first:
+      213: -3538678705853156933
+    second: fistula_23
+  - first:
+      213: 6468142480748828249
+    second: fistula_24
+  - first:
+      213: -9140352358686319135
+    second: fistula_25
+  - first:
+      213: 1692492567427932716
+    second: fistula_26
+  - first:
+      213: -3569869839015988043
+    second: fistula_27
+  - first:
+      213: -1722317868410924186
+    second: fistula_28
+  - first:
+      213: 6796431533789535634
+    second: fistula_29
+  - first:
+      213: -2006891975911797167
+    second: fistula_30
+  - first:
+      213: -4378934306894588372
+    second: fistula_31
+  - first:
+      213: 5074882378558848532
+    second: fistula_32
+  - first:
+      213: 98987826237975994
+    second: fistula_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fistula_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 646
+        width: 78
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b811a77efbfb0b0800000000000000
+      internalID: -5710634801576178930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 674
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501f76f9287680680800000000000000
+      internalID: -8788660862095724283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 650
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e56f5d978629f3b0800000000000000
+      internalID: -5478305107816782367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 672
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046f560f6ec699020800000000000000
+      internalID: 2349028419781916224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 616
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170540bc3484c94f0800000000000000
+      internalID: -820701576082206607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fistula_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 603
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16418bb7927396350800000000000000
+      internalID: 6010395829011485793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 25545afb937784e428835fdf5b4a840a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fistula_0: 4589927882935949122
+      fistula_1: 155867561378647292
+      fistula_10: 5587915492969647983
+      fistula_11: -3556314944878894697
+      fistula_12: -3263157995725860254
+      fistula_13: -331175432286840600
+      fistula_14: 9030568028022837729
+      fistula_15: -1023645412074535721
+      fistula_16: 6224497876304235752
+      fistula_17: -8730406893035023548
+      fistula_18: 8833839651368273509
+      fistula_19: -8837595595071174860
+      fistula_2: -5710634801576178930
+      fistula_20: 5790141211180095295
+      fistula_21: -2611132020373205913
+      fistula_22: 8120170605807340344
+      fistula_23: -3538678705853156933
+      fistula_24: 6468142480748828249
+      fistula_25: -9140352358686319135
+      fistula_26: 1692492567427932716
+      fistula_27: -3569869839015988043
+      fistula_28: -1722317868410924186
+      fistula_29: 6796431533789535634
+      fistula_3: -8788660862095724283
+      fistula_30: -2006891975911797167
+      fistula_31: -4378934306894588372
+      fistula_32: 5074882378558848532
+      fistula_33: 98987826237975994
+      fistula_4: -5478305107816782367
+      fistula_5: 2349028419781916224
+      fistula_6: -820701576082206607
+      fistula_7: 6010395829011485793
+      fistula_8: -3254246125620167828
+      fistula_9: -6469149612479446574
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
