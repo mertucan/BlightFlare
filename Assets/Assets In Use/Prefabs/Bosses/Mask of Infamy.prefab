@@ -539,6 +539,8 @@ MonoBehaviour:
   attackClip: {fileID: 8300000, guid: 91315e4b5b759c1488ecf1591e09410d, type: 3}
   hitClip: {fileID: 8300000, guid: 91315e4b5b759c1488ecf1591e09410d, type: 3}
   deathClip: {fileID: 8300000, guid: 0319818d789a56945a64343e455b5859, type: 3}
+  deathMusic: {fileID: 8300000, guid: 5a9278f4c170eff44be29765035d6697, type: 3}
+  deathMusicVolume: 1
   spriteRenderer: {fileID: 5404068296323868271}
   currentBombHits: 0
   isDead: 0

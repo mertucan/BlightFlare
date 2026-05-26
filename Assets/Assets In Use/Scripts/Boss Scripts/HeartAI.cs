@@ -100,6 +100,10 @@ public class HeartAI : MonoBehaviour
     [Tooltip("Ölünce çalınır (isteğe bağlı).")]
     public AudioClip   deathClip;
 
+    [Header("Death Music")]
+    public AudioClip deathMusic;
+    [Range(0f, 1f)] public float deathMusicVolume = 1f;
+
     // ─────────────────────────────────────────────
     // GÖRSEL
     // ─────────────────────────────────────────────
@@ -406,8 +410,8 @@ public class HeartAI : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.simulated      = false;
 
-        if (audioSource != null && deathClip != null)
-            AudioSource.PlayClipAtPoint(deathClip, transform.position);
+        BossAudioUtility.Play2D(deathClip);
+        BackgroundMusicManager.instance?.PlayBossDeathMusicThenResume(deathMusic, deathMusicVolume);
 
         if (maskAI != null)
             Destroy(maskAI.gameObject);

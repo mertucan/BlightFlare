@@ -9,6 +9,16 @@ public class BossRoomTrigger : MonoBehaviour
     [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
     [SerializeField] private Collider2D tunnelCollider2D;
 
+    [Header("Boss Intro")]
+    [SerializeField] private Sprite introPhoto;
+    [SerializeField] private AudioClip introMusic;
+    [SerializeField] [Range(0f, 1f)] private float introMusicVolume = 1f;
+    [SerializeField] private float introFadeToBlackDuration = 2f;
+
+    [Header("Boss Music")]
+    [SerializeField] private AudioClip bossMusic;
+    [SerializeField] [Range(0f, 1f)] private float bossMusicVolume = 1f;
+
     private DOF_AI       dofAI;
     private LokiAI       lokiAI;
     private HollowHead   hollowAI;
@@ -60,7 +70,16 @@ public class BossRoomTrigger : MonoBehaviour
         if (roomTracker != null)
             roomTracker.OnPlayerEntered();
 
+        BackgroundMusicManager.instance?.PauseForBossIntro();
+        BossIntroOverlay.Play(introPhoto, introMusic, introMusicVolume, introFadeToBlackDuration, ActivateBoss);
+
         // Boss'ları aktive et
+    }
+
+    private void ActivateBoss()
+    {
+        BackgroundMusicManager.instance?.PlayBossMusic(bossMusic, bossMusicVolume);
+
         if (dofAI != null)
             dofAI.Activate();
         else if (lokiAI != null)

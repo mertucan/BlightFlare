@@ -119,3 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomEnemyTracker
   closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
+  roomClearDoorOpenClip: {fileID: 0}
+  roomClearDoorOpenVolume: 1

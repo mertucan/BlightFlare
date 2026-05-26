@@ -47,6 +47,10 @@ public class HollowHead : MonoBehaviour
     [SerializeField] private AudioClip   segmentDieClip;
     [SerializeField] private AudioClip   activateClip;
 
+    [Header("Death Music")]
+    [SerializeField] private AudioClip deathMusic;
+    [SerializeField] [Range(0f, 1f)] private float deathMusicVolume = 1f;
+
     // ── Private ──
     private Rigidbody2D rb;
     private Vector2     moveDir;
@@ -314,7 +318,8 @@ public class HollowHead : MonoBehaviour
         foreach (var seg in segments)
             if (seg != null) seg.ForceKill();
 
-        PlayClip(deathClip);
+        BossAudioUtility.Play2D(deathClip);
+        BackgroundMusicManager.instance?.PlayBossDeathMusicThenResume(deathMusic, deathMusicVolume);
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);

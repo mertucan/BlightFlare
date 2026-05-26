@@ -285,6 +285,12 @@ MonoBehaviour:
   playerTag: Player
   tunnelSpriteRenderer: {fileID: 4485404724100007624}
   tunnelCollider2D: {fileID: 1208941684731358461}
+  introPhoto: {fileID: -5026250291351006109, guid: 3ce1ca9c59715c44fb44dcdf812996c7, type: 3}
+  introMusic: {fileID: 8300000, guid: beec171b0b873294fbbe28314211f900, type: 3}
+  introMusicVolume: 1
+  introFadeToBlackDuration: 2
+  bossMusic: {fileID: 8300000, guid: 48247b5d1577ca94abde557d249dd1e3, type: 3}
+  bossMusicVolume: 1
 --- !u!1 &3887212063005625064
 GameObject:
   m_ObjectHideFlags: 0

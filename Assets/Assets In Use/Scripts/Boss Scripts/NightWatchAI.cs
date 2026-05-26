@@ -140,6 +140,10 @@ public class NightWatchAI : MonoBehaviour
     public AudioClip[] deathClips;
     public int selectedDeathClip = 0;
 
+    [Header("  -> Death Music")]
+    public AudioClip deathMusic;
+    [Range(0f, 1f)] public float deathMusicVolume = 1f;
+
     [Header("  → Işınlanma Sesi")]
     public AudioClip[] teleportClips;
     public int selectedTeleportClip = 0;
@@ -692,7 +696,13 @@ public class NightWatchAI : MonoBehaviour
         OpenDoors();
 
         SetColor(originalColor);
-        PlaySound(deathClips, selectedDeathClip);
+        if (deathClips != null &&
+            selectedDeathClip >= 0 &&
+            selectedDeathClip < deathClips.Length)
+        {
+            BossAudioUtility.Play2D(deathClips[selectedDeathClip]);
+        }
+        BackgroundMusicManager.instance?.PlayBossDeathMusicThenResume(deathMusic, deathMusicVolume);
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);

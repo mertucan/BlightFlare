@@ -49,7 +49,10 @@ public class Room : MonoBehaviour
         {
             var tracker = gameObject.AddComponent<RoomEnemyTracker>();
             Debug.Log($"[Room] openedShopDoorPrefab null mu: {RoomManager.instance.openedShopDoorPrefab == null}");
-            tracker.Initialize(RoomManager.instance.closedDoorPrefab);
+            tracker.Initialize(
+                RoomManager.instance.closedDoorPrefab,
+                RoomManager.instance.roomClearDoorOpenClip,
+                RoomManager.instance.roomClearDoorOpenVolume);
         }
     }
 

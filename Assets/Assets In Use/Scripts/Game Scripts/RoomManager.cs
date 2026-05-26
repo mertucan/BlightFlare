@@ -29,6 +29,10 @@ public class RoomManager : MonoBehaviour
     [Header("Shop Door")]
     public GameObject openedShopDoorPrefab;
 
+    [Header("Room Clear Door Sound")]
+    public AudioClip roomClearDoorOpenClip;
+    [Range(0f, 1f)] public float roomClearDoorOpenVolume = 1f;
+
     // ──────────────────────────────────────────────────────────────────────────
     //  GİZLİ ODA AYARLARI
     //  Inspector'da şunları doldurun:

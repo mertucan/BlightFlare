@@ -222,7 +222,7 @@ public class HollowSegment : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        PlayClip(deathClip);
+        BossAudioUtility.Play2D(deathClip);
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
@@ -244,7 +244,7 @@ public class HollowSegment : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        PlayClip(deathClip);
+        BossAudioUtility.Play2D(deathClip);
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

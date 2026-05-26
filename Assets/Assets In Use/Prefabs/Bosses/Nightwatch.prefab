@@ -370,6 +370,8 @@ MonoBehaviour:
   deathClips:
   - {fileID: 8300000, guid: 133df25da0805284fbb70bab2dfce528, type: 3}
   selectedDeathClip: 0
+  deathMusic: {fileID: 8300000, guid: 5a9278f4c170eff44be29765035d6697, type: 3}
+  deathMusicVolume: 1
   teleportClips:
   - {fileID: 8300000, guid: 248482cee83f9e449b5dc52cadde7c22, type: 3}
   selectedTeleportClip: 0

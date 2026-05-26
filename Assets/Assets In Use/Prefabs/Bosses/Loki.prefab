@@ -225,7 +225,9 @@ MonoBehaviour:
   audioSource: {fileID: 4187658493134857910}
   attackClip: {fileID: 8300000, guid: 91315e4b5b759c1488ecf1591e09410d, type: 3}
   idleClip: {fileID: 0}
-  currentBombHits: 5
+  deathClip: {fileID: 0}
+  deathMusic: {fileID: 8300000, guid: 5a9278f4c170eff44be29765035d6697, type: 3}
+  deathMusicVolume: 1
   isDead: 0
   isAttacking: 0
   isTeleporting: 0

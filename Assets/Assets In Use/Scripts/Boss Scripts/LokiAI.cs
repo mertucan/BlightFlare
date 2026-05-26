@@ -142,6 +142,9 @@ public class LokiAI : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip attackClip;
     public AudioClip idleClip;
+    public AudioClip deathClip;
+    public AudioClip deathMusic;
+    [Range(0f, 1f)] public float deathMusicVolume = 1f;
 
     // ─────────────────────────────────────────────
     // RUNTIME DEBUG
@@ -746,6 +749,9 @@ public class LokiAI : MonoBehaviour
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+
+        BossAudioUtility.Play2D(deathClip);
+        BackgroundMusicManager.instance?.PlayBossDeathMusicThenResume(deathMusic, deathMusicVolume);
 
         // Tunnel aç
         if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = true;

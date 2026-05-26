@@ -1039,12 +1039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fd141a6cdb32d40876d52672683416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedSpriteRenderer
-  idleSprite: {fileID: -1935425264053210113, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
+  idleSprite: {fileID: 2628981469987526553, guid: 6db11f2252682aa4a983577d3f38896a, type: 3}
   idleAnimationSprites: []
   animationSprites:
-  - {fileID: -1935425264053210113, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
-  - {fileID: 8296752130684266715, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
-  - {fileID: -3365665510332657518, guid: 12fa2826d25c73e4ba366cf9a368aaff, type: 3}
+  - {fileID: 2628981469987526553, guid: 6db11f2252682aa4a983577d3f38896a, type: 3}
+  - {fileID: 1400101082340581445, guid: 6db11f2252682aa4a983577d3f38896a, type: 3}
+  - {fileID: 6631727837515538388, guid: 6db11f2252682aa4a983577d3f38896a, type: 3}
   animationTime: 0.25
   idleAnimationTime: 0.5
   loop: 0

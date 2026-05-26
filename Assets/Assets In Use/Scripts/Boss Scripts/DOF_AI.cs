@@ -27,6 +27,14 @@ public class DOF_AI : MonoBehaviour
     [SerializeField] private SpriteRenderer tunnelSpriteRenderer;
     [SerializeField] private Collider2D tunnelCollider2D;
 
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathClip;
+    [SerializeField] [Range(0f, 1f)] private float deathClipVolume = 1f;
+
+    [Header("Death Music")]
+    [SerializeField] private AudioClip deathMusic;
+    [SerializeField] [Range(0f, 1f)] private float deathMusicVolume = 1f;
+
     [Header("Hasar Koruması")]
     [SerializeField] private float damageCooldown = 0.5f;
     private float lastDamageTime = -999f;
@@ -161,6 +169,9 @@ public class DOF_AI : MonoBehaviour
 
         if (deathEffectPrefab != null)
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+
+        BossAudioUtility.Play2D(deathClip, deathClipVolume);
+        BackgroundMusicManager.instance?.PlayBossDeathMusicThenResume(deathMusic, deathMusicVolume);
 
         if (tunnelSpriteRenderer != null) tunnelSpriteRenderer.enabled = true;
         if (tunnelCollider2D != null)     tunnelCollider2D.enabled = true;

@@ -208,6 +208,10 @@ MonoBehaviour:
   playerTag: Player
   tunnelSpriteRenderer: {fileID: 0}
   tunnelCollider2D: {fileID: 0}
+  deathClip: {fileID: 0}
+  deathClipVolume: 1
+  deathMusic: {fileID: 8300000, guid: 5a9278f4c170eff44be29765035d6697, type: 3}
+  deathMusicVolume: 1
   damageCooldown: 0.5
 --- !u!1 &6763808362857353971
 GameObject:

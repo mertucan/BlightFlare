@@ -5,6 +5,8 @@ using UnityEngine;
 public class RoomEnemyTracker : MonoBehaviour
 {
     public GameObject closedDoorPrefab;
+    public AudioClip roomClearDoorOpenClip;
+    [Range(0f, 1f)] public float roomClearDoorOpenVolume = 1f;
 
     private List<Door> doors = new();
     private List<GameObject> enemies = new();
@@ -12,9 +14,11 @@ public class RoomEnemyTracker : MonoBehaviour
     private bool playerInRoom = false;
     private bool initialized = false;
 
-    public void Initialize(GameObject prefab)
+    public void Initialize(GameObject prefab, AudioClip doorOpenClip = null, float doorOpenVolume = 1f)
     {
         closedDoorPrefab = prefab;
+        roomClearDoorOpenClip = doorOpenClip;
+        roomClearDoorOpenVolume = Mathf.Clamp01(doorOpenVolume);
     }
 
     private void Start()
@@ -68,6 +72,7 @@ public class RoomEnemyTracker : MonoBehaviour
         {
             hasEnemies = false;
             UpdateDoorLocks();
+            PlayRoomClearDoorOpenSound();
             Debug.Log("[RoomEnemyTracker] Tüm düşmanlar öldü, kapılar açıldı.");
         }
     }
@@ -130,6 +135,20 @@ public class RoomEnemyTracker : MonoBehaviour
 
             door.SetLocked(shouldLock, closedDoorPrefab);
         }
+    }
+
+    private void PlayRoomClearDoorOpenSound()
+    {
+        if (roomClearDoorOpenClip == null) return;
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0f;
+        audioSource.volume = roomClearDoorOpenVolume;
+        audioSource.PlayOneShot(roomClearDoorOpenClip, roomClearDoorOpenVolume);
     }
 
     public void ForceUnlockDoor(Door door)
