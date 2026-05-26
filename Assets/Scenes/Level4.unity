@@ -341,8 +341,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94184e651d72cf04da2f811d7e8f5423, type: 2}
   - {fileID: 11400000, guid: 2e82ea346dc5df445b4c89679d0b7cb0, type: 2}
   - {fileID: 11400000, guid: 9b93a2f4888b11b4a83c30a4f8047a26, type: 2}
-  - {fileID: 11400000, guid: f4b717ee45ca3274a9bfaf05626aceed, type: 2}
   - {fileID: 11400000, guid: cd757f9d571f48c38f9eb72a1aec428f, type: 2}
+  - {fileID: 11400000, guid: 6f8209ca23cb59b4a9fca6e9bf64e118, type: 2}
   closedDoorPrefab: {fileID: 7295604412751457430, guid: 3b685aff0e74fb14c8e0793aaa5c592b, type: 3}
   openedShopDoorPrefab: {fileID: 7295604412751457430, guid: 0c187ca9bf9688f4d8af536b52884329, type: 3}
   roomClearDoorOpenClip: {fileID: 8300000, guid: 294cf902682764f49a382943f800a329, type: 3}

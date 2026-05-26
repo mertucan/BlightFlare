@@ -5,6 +5,7 @@ public class TunnelEnter : MonoBehaviour
 {
     [Header("Ayarlar")]
     [SerializeField] private string playerTag = "Player";
+    [SerializeField] private float sceneFadeOutDuration = 1.5f;
 
     private bool isTransitioning = false;
 
@@ -29,6 +30,6 @@ public class TunnelEnter : MonoBehaviour
     {
         isTransitioning = true;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(index);
+        SceneTransitionFade.LoadSceneWithBlackFade(index, sceneFadeOutDuration);
     }
 }
