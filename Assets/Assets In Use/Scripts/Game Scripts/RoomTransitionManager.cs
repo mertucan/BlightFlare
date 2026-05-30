@@ -39,6 +39,7 @@ public class RoomTransitionManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        TryFindPlayer();
 
         // Player referansı atanmamışsa sahnede tag ile bul
         // (DontDestroyOnLoad ile gelen Isaac'ı yakalar)
@@ -49,6 +50,31 @@ public class RoomTransitionManager : MonoBehaviour
                 player = found.transform;
             else
                 Debug.LogError("[RTM] Player bulunamadı! 'Player' tag'i atanmış mı?");
+        }
+    }
+
+    private void Start()
+    {
+        TryFindPlayer();
+    }
+
+    private void TryFindPlayer()
+    {
+        if (player != null && player.GetComponent<IsaacMovement>() != null) return;
+
+        GameObject[] foundPlayers = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < foundPlayers.Length; i++)
+        {
+            IsaacMovement movement = foundPlayers[i].GetComponent<IsaacMovement>();
+            if (movement == null)
+            {
+                movement = foundPlayers[i].GetComponentInParent<IsaacMovement>();
+            }
+
+            if (movement == null) continue;
+
+            player = movement.transform;
+            return;
         }
     }
 
@@ -75,6 +101,7 @@ public class RoomTransitionManager : MonoBehaviour
 
     public void PlacePlayerAtStart()
     {
+        TryFindPlayer();
         if (player == null) return;
         if (!roomPositions.ContainsKey(45)) return;
 

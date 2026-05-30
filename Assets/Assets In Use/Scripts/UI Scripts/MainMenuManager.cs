@@ -1,23 +1,63 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuManager:MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
-    // Start butonuna tıklandığında çalışacak fonksiyon
+    [Header("Audio")]
+    [SerializeField] private AudioClip buttonClickClip;
+    [SerializeField, Range(0f, 1f)] private float buttonClickVolume = 1f;
+
     public void StartGame()
     {
-        // "GameScene" yazan yere asıl oyun sahnenin tam adını yazmalısın
-        SceneManager.LoadScene("Level1"); 
+        PlayButtonClick();
+        SceneManager.LoadScene("Level1");
     }
 
-    // Quit butonuna tıklandığında çalışacak fonksiyon
+    public void LoadPreviousScene()
+    {
+        PlayButtonClick();
+
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int previousIndex = currentIndex - 1;
+
+        if (previousIndex < 0)
+        {
+            Debug.LogWarning("Bir onceki sahne yok.");
+            return;
+        }
+
+        SceneManager.LoadScene(previousIndex);
+    }
+
+    public void LoadNextScene()
+    {
+        PlayButtonClick();
+
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentIndex + 1;
+
+        if (nextIndex >= SceneManager.sceneCountInBuildSettings)
+        {
+            Debug.LogWarning("Bir sonraki sahne yok.");
+            return;
+        }
+
+        SceneManager.LoadScene(nextIndex);
+    }
+
     public void QuitGame()
     {
-        Debug.Log("Oyun kapatılıyor..."); // Editörde çalıştığını görmek için
-        Application.Quit(); 
-        
-        #if UNITY_EDITOR
+        PlayButtonClick();
+        Debug.Log("Oyun kapatiliyor...");
+        Application.Quit();
+
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
+    }
+
+    private void PlayButtonClick()
+    {
+        UIButtonSound.Play(buttonClickClip, buttonClickVolume);
     }
 }

@@ -40,10 +40,21 @@ public class HeartUI : MonoBehaviour
 
     private IEnumerator Start()
     {
+        PlayerHealth ph = FindFirstObjectByType<PlayerHealth>();
+        if (ph != null)
+        {
+            maxHalfHearts = ph.maxHearts;
+        }
+
         BuildHeartSlots();
         yield return null;
 
-        PlayerHealth ph = FindFirstObjectByType<PlayerHealth>();
+        ph = FindFirstObjectByType<PlayerHealth>();
+        if (ph != null)
+        {
+            maxHalfHearts = ph.maxHearts;
+        }
+
         if (ph != null)
             UpdateHearts(ph.currentHearts);
 

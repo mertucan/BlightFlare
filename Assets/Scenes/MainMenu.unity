@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1985913085}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -805,6 +805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c657bd2c42cfe5f43a316edda83b7d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
+  buttonClickClip: {fileID: 8300000, guid: bf79de77f16518e4c95364d392ca8dfd, type: 3}
+  buttonClickVolume: 1
 --- !u!1 &2046984170
 GameObject:
   m_ObjectHideFlags: 0

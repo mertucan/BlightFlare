@@ -1,0 +1,861 @@
+fileFormatVersion: 2
+guid: 7d14a0e0b9de8d54495812852c6faae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1800489306994205635
+    second: bomberman_bodies-Photoroom_0
+  - first:
+      213: -4089862675520677920
+    second: bomberman_bodies-Photoroom_1
+  - first:
+      213: 8703935104040227314
+    second: bomberman_bodies-Photoroom_2
+  - first:
+      213: -543951891939127068
+    second: bomberman_bodies-Photoroom_3
+  - first:
+      213: 9105211130158727364
+    second: bomberman_bodies-Photoroom_4
+  - first:
+      213: 8329599897514194385
+    second: bomberman_bodies-Photoroom_5
+  - first:
+      213: -4432528446624612780
+    second: bomberman_bodies-Photoroom_6
+  - first:
+      213: -5003547706380755411
+    second: bomberman_bodies-Photoroom_7
+  - first:
+      213: -1438665711097502025
+    second: bomberman_bodies-Photoroom_8
+  - first:
+      213: -227399064280594170
+    second: bomberman_bodies-Photoroom_9
+  - first:
+      213: -2896209018382034156
+    second: bomberman_bodies-Photoroom_10
+  - first:
+      213: 5463179665490900136
+    second: bomberman_bodies-Photoroom_11
+  - first:
+      213: 4692527877311392324
+    second: bomberman_bodies-Photoroom_12
+  - first:
+      213: 8640767036475685382
+    second: bomberman_bodies-Photoroom_13
+  - first:
+      213: 4312003902493770513
+    second: bomberman_bodies-Photoroom_14
+  - first:
+      213: -5590552707738004138
+    second: bomberman_bodies-Photoroom_15
+  - first:
+      213: -8637257731703700168
+    second: bomberman_bodies-Photoroom_16
+  - first:
+      213: 8415062115108006141
+    second: bomberman_bodies-Photoroom_17
+  - first:
+      213: 8110789667587611037
+    second: bomberman_bodies-Photoroom_18
+  - first:
+      213: -7967236949213630078
+    second: bomberman_bodies-Photoroom_19
+  - first:
+      213: 1247125022501456804
+    second: bomberman_bodies-Photoroom_20
+  - first:
+      213: 8149663133242506670
+    second: bomberman_bodies-Photoroom_21
+  - first:
+      213: -8095470816497936165
+    second: bomberman_bodies-Photoroom_22
+  - first:
+      213: -8884923684320568143
+    second: bomberman_bodies-Photoroom_23
+  - first:
+      213: -225847194412244674
+    second: bomberman_bodies-Photoroom_24
+  - first:
+      213: -7412669125058827036
+    second: bomberman_bodies-Photoroom_25
+  - first:
+      213: -4930938907789673296
+    second: bomberman_bodies-Photoroom_26
+  - first:
+      213: 3803685634819988796
+    second: bomberman_bodies-Photoroom_27
+  - first:
+      213: -6710158448961818866
+    second: bomberman_bodies-Photoroom_28
+  - first:
+      213: 5923829326310203877
+    second: bomberman_bodies-Photoroom_29
+  - first:
+      213: -129036233369396195
+    second: bomberman_bodies-Photoroom_30
+  - first:
+      213: 1949751058657803799
+    second: bomberman_bodies-Photoroom_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 725
+        width: 107
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c98b2c3806307e0800000000000000
+      internalID: -1800489306994205635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 726
+        width: 107
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7167dc093ed37c0800000000000000
+      internalID: -4089862675520677920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 724
+        width: 109
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1de589cd69ac870800000000000000
+      internalID: 8703935104040227314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 712
+        width: 108
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e01112e2ae7378f0800000000000000
+      internalID: -543951891939127068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 718
+        width: 108
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c04b0a08453c5e70800000000000000
+      internalID: 9105211130158727364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 532
+        width: 101
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e5478fed3df8ab0800000000000000
+      internalID: -5003547706380755411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 532
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6af7b7825d80ce0800000000000000
+      internalID: -1438665711097502025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 533
+        width: 98
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6098c4f71cd18dcf0800000000000000
+      internalID: -227399064280594170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 533
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b5e081e399ec7d0800000000000000
+      internalID: -2896209018382034156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 533
+        width: 103
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4f8b9e5fc11db40800000000000000
+      internalID: 5463179665490900136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 379
+        width: 110
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1134d3e04b057db30800000000000000
+      internalID: 4312003902493770513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 379
+        width: 107
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6559d2daeed5a62b0800000000000000
+      internalID: -5590552707738004138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 380
+        width: 108
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8350e4ceadb422880800000000000000
+      internalID: -8637257731703700168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 368
+        width: 108
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df82cd5a86e48c470800000000000000
+      internalID: 8415062115108006141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 373
+        width: 108
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99d778da305f8070800000000000000
+      internalID: 8110789667587611037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 187
+        width: 109
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28131c8f430be6190800000000000000
+      internalID: -7967236949213630078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 187
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab43b4b99dae4110800000000000000
+      internalID: 1247125022501456804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 187
+        width: 109
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead3400e07b691170800000000000000
+      internalID: 8149663133242506670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 186
+        width: 109
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8591d1f2c17af80800000000000000
+      internalID: -8095470816497936165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 186
+        width: 110
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc1e93cbf862b480800000000000000
+      internalID: -8884923684320568143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 228
+        width: 156
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e312a8b5c21addcf0800000000000000
+      internalID: -225847194412244674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 227
+        width: 158
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecec5b64b8e02990800000000000000
+      internalID: -7412669125058827036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 228
+        width: 157
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc3b084039c19bb0800000000000000
+      internalID: -4930938907789673296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 227
+        width: 161
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d93bc9ee769c430800000000000000
+      internalID: 3803685634819988796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 65
+        width: 155
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f6b0f417ab0e2a0800000000000000
+      internalID: -6710158448961818866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 64
+        width: 157
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1e2c0f26ba53250800000000000000
+      internalID: 5923829326310203877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 66
+        width: 157
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cdcdaba32953ef0800000000000000
+      internalID: -129036233369396195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomberman_bodies-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 62
+        width: 162
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e7db3f148ee0b10800000000000000
+      internalID: 1949751058657803799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1e87a5efe0d3dfe47a72837f57e202b8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bomberman_bodies-Photoroom_0: -1800489306994205635
+      bomberman_bodies-Photoroom_1: -4089862675520677920
+      bomberman_bodies-Photoroom_10: -2896209018382034156
+      bomberman_bodies-Photoroom_11: 5463179665490900136
+      bomberman_bodies-Photoroom_12: 4692527877311392324
+      bomberman_bodies-Photoroom_13: 8640767036475685382
+      bomberman_bodies-Photoroom_14: 4312003902493770513
+      bomberman_bodies-Photoroom_15: -5590552707738004138
+      bomberman_bodies-Photoroom_16: -8637257731703700168
+      bomberman_bodies-Photoroom_17: 8415062115108006141
+      bomberman_bodies-Photoroom_18: 8110789667587611037
+      bomberman_bodies-Photoroom_19: -7967236949213630078
+      bomberman_bodies-Photoroom_2: 8703935104040227314
+      bomberman_bodies-Photoroom_20: 1247125022501456804
+      bomberman_bodies-Photoroom_21: 8149663133242506670
+      bomberman_bodies-Photoroom_22: -8095470816497936165
+      bomberman_bodies-Photoroom_23: -8884923684320568143
+      bomberman_bodies-Photoroom_24: -225847194412244674
+      bomberman_bodies-Photoroom_25: -7412669125058827036
+      bomberman_bodies-Photoroom_26: -4930938907789673296
+      bomberman_bodies-Photoroom_27: 3803685634819988796
+      bomberman_bodies-Photoroom_28: -6710158448961818866
+      bomberman_bodies-Photoroom_29: 5923829326310203877
+      bomberman_bodies-Photoroom_3: -543951891939127068
+      bomberman_bodies-Photoroom_30: -129036233369396195
+      bomberman_bodies-Photoroom_31: 1949751058657803799
+      bomberman_bodies-Photoroom_4: 9105211130158727364
+      bomberman_bodies-Photoroom_5: 8329599897514194385
+      bomberman_bodies-Photoroom_6: -4432528446624612780
+      bomberman_bodies-Photoroom_7: -5003547706380755411
+      bomberman_bodies-Photoroom_8: -1438665711097502025
+      bomberman_bodies-Photoroom_9: -227399064280594170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
