@@ -37,6 +37,11 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public void PauseForBossIntro()
     {
+        PauseCurrentMusic();
+    }
+
+    public void PauseCurrentMusic()
+    {
         if (audioSource == null) return;
 
         previousClip = audioSource.clip;

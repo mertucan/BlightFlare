@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,19 +10,43 @@ public class SceneTransitionFade : MonoBehaviour
 
     public static void LoadSceneWithBlackFade(int sceneBuildIndex, float fadeOutDuration)
     {
+        LoadSceneWithBlackFade(sceneBuildIndex, 0f, fadeOutDuration);
+    }
+
+    public static void LoadSceneWithBlackFade(int sceneBuildIndex, float fadeToBlackDuration, float fadeFromBlackDuration)
+    {
         GameObject fadeObject = new GameObject("Scene Transition Fade");
         DontDestroyOnLoad(fadeObject);
 
         SceneTransitionFade transitionFade = fadeObject.AddComponent<SceneTransitionFade>();
-        transitionFade.StartCoroutine(transitionFade.LoadAndFadeOut(sceneBuildIndex, fadeOutDuration));
+        transitionFade.StartCoroutine(transitionFade.LoadAndFade(sceneBuildIndex, fadeToBlackDuration, fadeFromBlackDuration));
+    }
+
+    public static void LoadSceneWithBlackFade(string sceneName, float fadeToBlackDuration, float fadeFromBlackDuration)
+    {
+        LoadSceneWithBlackFade(sceneName, fadeToBlackDuration, fadeFromBlackDuration, null);
+    }
+
+    public static void LoadSceneWithBlackFade(string sceneName, float fadeToBlackDuration, float fadeFromBlackDuration, Action onSceneLoaded)
+    {
+        GameObject fadeObject = new GameObject("Scene Transition Fade");
+        DontDestroyOnLoad(fadeObject);
+
+        SceneTransitionFade transitionFade = fadeObject.AddComponent<SceneTransitionFade>();
+        transitionFade.StartCoroutine(transitionFade.LoadAndFade(sceneName, fadeToBlackDuration, fadeFromBlackDuration, onSceneLoaded));
     }
 
     private IEnumerator LoadAndFadeOut(int sceneBuildIndex, float fadeOutDuration)
     {
-        CreateOverlay();
-        SetAlpha(1f);
+        yield return LoadAndFade(sceneBuildIndex, 0f, fadeOutDuration);
+    }
 
-        yield return null;
+    private IEnumerator LoadAndFade(int sceneBuildIndex, float fadeToBlackDuration, float fadeFromBlackDuration)
+    {
+        CreateOverlay();
+        SetAlpha(0f);
+
+        yield return FadeToBlack(fadeToBlackDuration);
 
         AsyncOperation load = SceneManager.LoadSceneAsync(sceneBuildIndex);
         while (load != null && !load.isDone)
@@ -29,7 +54,26 @@ public class SceneTransitionFade : MonoBehaviour
             yield return null;
         }
 
-        yield return FadeToClear(Mathf.Max(0.05f, fadeOutDuration));
+        yield return FadeToClear(Mathf.Max(0.05f, fadeFromBlackDuration));
+        Destroy(gameObject);
+    }
+
+    private IEnumerator LoadAndFade(string sceneName, float fadeToBlackDuration, float fadeFromBlackDuration, Action onSceneLoaded)
+    {
+        CreateOverlay();
+        SetAlpha(0f);
+
+        yield return FadeToBlack(fadeToBlackDuration);
+
+        AsyncOperation load = SceneManager.LoadSceneAsync(sceneName);
+        while (load != null && !load.isDone)
+        {
+            yield return null;
+        }
+
+        onSceneLoaded?.Invoke();
+
+        yield return FadeToClear(Mathf.Max(0.05f, fadeFromBlackDuration));
         Destroy(gameObject);
     }
 
@@ -72,6 +116,26 @@ public class SceneTransitionFade : MonoBehaviour
         }
 
         SetAlpha(0f);
+    }
+
+    private IEnumerator FadeToBlack(float duration)
+    {
+        if (duration <= 0f)
+        {
+            SetAlpha(1f);
+            yield break;
+        }
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            SetAlpha(Mathf.Lerp(0f, 1f, elapsed / duration));
+            yield return null;
+        }
+
+        SetAlpha(1f);
     }
 
     private void SetAlpha(float alpha)
