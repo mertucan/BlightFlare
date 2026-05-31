@@ -6,7 +6,7 @@ public class MovementController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 direction = Vector2.zero;
-    public float speed = 5f;
+    public float speed = IsaacMovement.DefaultSpeed;
 
     [Header("Input")]
     public Key moveUp = Key.W;
@@ -26,6 +26,7 @@ public class MovementController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        speed = Mathf.Min(speed, IsaacMovement.MaxNormalSpeed);
         activeSpriteRenderer = spriteRendererDown;
     }
 

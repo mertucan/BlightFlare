@@ -287,6 +287,9 @@ MonoBehaviour:
   tunnelSpriteRenderer: {fileID: 4485404724100007624}
   tunnelCollider2D: {fileID: 1208941684731358461}
   introPhoto: {fileID: -5026250291351006109, guid: 3ce1ca9c59715c44fb44dcdf812996c7, type: 3}
+  isaacIntroPhoto: {fileID: -5026250291351006109, guid: 3ce1ca9c59715c44fb44dcdf812996c7, type: 3}
+  maggyIntroPhoto: {fileID: 7904766271592863424, guid: 6d1cb0d6e1a367f49b4a48abd69c0b09, type: 3}
+  bombermanIntroPhoto: {fileID: -936917802162095726, guid: 9d3d8ec6a3c5a774e9c8d36a7183da2c, type: 3}
   introMusic: {fileID: 8300000, guid: beec171b0b873294fbbe28314211f900, type: 3}
   introMusicVolume: 1
   introFadeToBlackDuration: 2

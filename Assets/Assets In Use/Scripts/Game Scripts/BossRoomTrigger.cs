@@ -11,6 +11,9 @@ public class BossRoomTrigger : MonoBehaviour
 
     [Header("Boss Intro")]
     [SerializeField] private Sprite introPhoto;
+    [SerializeField] private Sprite isaacIntroPhoto;
+    [SerializeField] private Sprite maggyIntroPhoto;
+    [SerializeField] private Sprite bombermanIntroPhoto;
     [SerializeField] private AudioClip introMusic;
     [SerializeField] [Range(0f, 1f)] private float introMusicVolume = 1f;
     [SerializeField] private float introFadeToBlackDuration = 2f;
@@ -71,9 +74,24 @@ public class BossRoomTrigger : MonoBehaviour
             roomTracker.OnPlayerEntered();
 
         BackgroundMusicManager.instance?.PauseForBossIntro();
-        BossIntroOverlay.Play(introPhoto, introMusic, introMusicVolume, introFadeToBlackDuration, ActivateBoss);
+        BossIntroOverlay.Play(GetSelectedCharacterIntroPhoto(), introMusic, introMusicVolume, introFadeToBlackDuration, ActivateBoss);
 
         // Boss'ları aktive et
+    }
+
+    private Sprite GetSelectedCharacterIntroPhoto()
+    {
+        int selectedCharacterIndex = PlayerPrefs.GetInt(CharacterSelectionManager.SelectedCharacterKey, 0);
+
+        Sprite selectedPhoto = selectedCharacterIndex switch
+        {
+            0 => isaacIntroPhoto,
+            1 => maggyIntroPhoto,
+            2 => bombermanIntroPhoto,
+            _ => null
+        };
+
+        return selectedPhoto != null ? selectedPhoto : introPhoto;
     }
 
     private void ActivateBoss()

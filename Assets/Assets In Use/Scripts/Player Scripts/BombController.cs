@@ -10,6 +10,7 @@ public class BombController : MonoBehaviour
     public GameObject bombPrefab;
     public float bombFuseTime = 3f;
     public int bombAmount = 1;
+    public int maxBombAmount = 5;
 
     [Header("Bobby Bomb")]
     public bool hasBobbyBomb = false;
@@ -58,6 +59,8 @@ public class BombController : MonoBehaviour
 
     private void Start()
     {
+        bombAmount = Mathf.Clamp(bombAmount, 0, maxBombAmount);
+
         if (!initialized)
         {
             bombsRemaining = bombAmount;
@@ -374,6 +377,9 @@ public class BombController : MonoBehaviour
 
     public void AddBomb()
     {
+        if (bombAmount >= maxBombAmount)
+            return;
+
         bombAmount++;
         bombsRemaining++;
     }

@@ -5,9 +5,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class IsaacMovement : MonoBehaviour
 {
+    public const float DefaultSpeed = 5f;
+    public const float MaxNormalSpeed = 8f;
+    public const float MaxTaurusSpeed = 8f;
+
     private Rigidbody2D rb;
     public Vector2 direction = Vector2.zero;
-    public float speed = 5f;
+    public float speed = DefaultSpeed;
 
     [Header("Input")]
     public Key moveUp = Key.W;
@@ -108,6 +112,7 @@ public class IsaacMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        speed = Mathf.Min(speed, MaxNormalSpeed);
         activeSprites = spritesDown;
 
         // Yeni sahnede RTM varsa kendini tanıt

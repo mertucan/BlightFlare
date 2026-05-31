@@ -49,6 +49,7 @@ public class GameOverScreen : MonoBehaviour
     public void Show()
     {
         if (gameOverPanel == null) return;
+        BackgroundMusicManager.instance?.ResumePreviousMusic();
         StartCoroutine(ShowAfterDelay(1.5f));
     }
 
@@ -82,6 +83,7 @@ public class GameOverScreen : MonoBehaviour
     private void OnTryAgain()
     {
         Time.timeScale = 1f;
+        BackgroundMusicManager.instance?.ResumePreviousMusic();
         gameOverPanel.SetActive(false);
 
         // DontDestroyOnLoad ile gelen Isaac'ı yok et
@@ -90,7 +92,7 @@ public class GameOverScreen : MonoBehaviour
         if (isaac != null) Destroy(isaac);
 
         // Level1'e dön (Build index 1)
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
     }
 
     private void OnQuit()

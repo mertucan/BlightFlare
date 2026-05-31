@@ -104,7 +104,7 @@ public class ShopItem : MonoBehaviour
             case ItemPickup.ItemType.SpeedIncrease:
                 if (player.TryGetComponent<IsaacMovement>(out IsaacMovement mv))
                 {
-                    mv.speed++;
+                    mv.speed = Mathf.Min(mv.speed + 1f, IsaacMovement.MaxNormalSpeed);
                     var taurus = player.GetComponent<Taurus>();
                     if (taurus != null) taurus.OnSpeedPickup(mv.speed);
                 }

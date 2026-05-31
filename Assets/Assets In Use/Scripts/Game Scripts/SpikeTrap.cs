@@ -25,6 +25,13 @@ public class SpikeTrap : MonoBehaviour
             return;
         }
 
+        var seraphim = other.GetComponent<Seraphim>();
+        if (seraphim != null && seraphim.IsActive)
+        {
+            Debug.Log("[SpikeTrap] Seraphim aktif, hasar engellendi.");
+            return;
+        }
+
         IsaacMovement isaac = other.GetComponent<IsaacMovement>();
         if (isaac != null) isaac.ApplyDamage(damageAmount);
     }

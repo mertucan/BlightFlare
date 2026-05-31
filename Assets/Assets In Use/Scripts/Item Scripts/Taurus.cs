@@ -41,7 +41,7 @@ public class Taurus : MonoBehaviour, IItem
     public float speedPerSecond = 0.05f;
 
     [Tooltip("Base'e eklenebilecek maksimum hız artışı (SpeedIncrease pickup'larından bağımsız tavan).")]
-    public float maxSpeedBonus = 2.5f;
+    public float maxSpeedBonus = 3f;
 
     /// <summary>
     /// Diğer sistemler bu flag'i kontrol edebilir.
@@ -121,8 +121,11 @@ public class Taurus : MonoBehaviour, IItem
         // Bileşen referanslarını kur
         taurusOnPlayer.movement  = player.GetComponent<IsaacMovement>();
         taurusOnPlayer.baseSpeed = taurusOnPlayer.movement != null
-            ? taurusOnPlayer.movement.speed
-            : 5f;
+            ? Mathf.Min(taurusOnPlayer.movement.speed, IsaacMovement.MaxNormalSpeed)
+            : IsaacMovement.DefaultSpeed;
+
+        if (taurusOnPlayer.movement != null)
+            taurusOnPlayer.movement.speed = taurusOnPlayer.baseSpeed;
 
         Debug.Log($"[Taurus] Pickup → player={player.name}, baseSpeed={taurusOnPlayer.baseSpeed}");
 
@@ -175,15 +178,16 @@ public class Taurus : MonoBehaviour, IItem
 
     private IEnumerator SpeedRampRoutine()
     {
-        while (inEnemyRoom && currentBonus < maxSpeedBonus)
+        while (inEnemyRoom && currentBonus < GetCurrentMaxSpeedBonus())
         {
             yield return new WaitForSeconds(1f);
 
-            float add = Mathf.Min(speedPerSecond, maxSpeedBonus - currentBonus);
+            float maxBonus = GetCurrentMaxSpeedBonus();
+            float add = Mathf.Min(speedPerSecond, maxBonus - currentBonus);
             currentBonus += add;
 
             if (movement != null)
-                movement.speed = baseSpeed + currentBonus;
+                movement.speed = Mathf.Min(baseSpeed + currentBonus, IsaacMovement.MaxTaurusSpeed);
 
             ApplySpeedTint();
 
@@ -212,7 +216,8 @@ public class Taurus : MonoBehaviour, IItem
     {
         if (movement == null) return;
 
-        float t = maxSpeedBonus > 0f ? currentBonus / maxSpeedBonus : 0f; // 0..1
+        float maxBonus = GetCurrentMaxSpeedBonus();
+        float t = maxBonus > 0f ? currentBonus / maxBonus : 0f; // 0..1
 
         // Beyazdan kırmızıya: R=1 sabit, G ve B azalır
         Color tintColor = Color.Lerp(Color.white, new Color(1f, 0.15f, 0.15f, 1f), t);
@@ -246,6 +251,11 @@ public class Taurus : MonoBehaviour, IItem
         if (sr != null) sr.color = color;
     }
 
+    private float GetCurrentMaxSpeedBonus()
+    {
+        return Mathf.Max(0f, Mathf.Min(maxSpeedBonus, IsaacMovement.MaxTaurusSpeed - baseSpeed));
+    }
+
     // ── SpeedIncrease pickup desteği ──────────────────────────────────────────
 
     /// <summary>
@@ -254,10 +264,10 @@ public class Taurus : MonoBehaviour, IItem
     /// </summary>
     public void OnSpeedPickup(float newBaseSpeed)
     {
-        baseSpeed = newBaseSpeed;
+        baseSpeed = Mathf.Min(newBaseSpeed, IsaacMovement.MaxNormalSpeed);
         // Mevcut bonus geçerliliğini koru; maxSpeedBonus sabit kalır
         if (movement != null)
-            movement.speed = baseSpeed + currentBonus;
+            movement.speed = Mathf.Min(baseSpeed + currentBonus, IsaacMovement.MaxTaurusSpeed);
 
         Debug.Log($"[Taurus] SpeedPickup → yeni baseSpeed={baseSpeed}, speed={movement?.speed}");
     }

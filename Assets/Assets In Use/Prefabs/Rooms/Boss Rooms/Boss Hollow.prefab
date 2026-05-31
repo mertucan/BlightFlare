@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   playerTag: Player
+  sceneFadeOutDuration: 1.5
 --- !u!1 &3822254578997936868
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +287,9 @@ MonoBehaviour:
   tunnelSpriteRenderer: {fileID: 4485404724100007624}
   tunnelCollider2D: {fileID: 1208941684731358461}
   introPhoto: {fileID: -8901680563403738359, guid: 762bbf8d9dd913d46b20f04277fa6472, type: 3}
+  isaacIntroPhoto: {fileID: -8901680563403738359, guid: 762bbf8d9dd913d46b20f04277fa6472, type: 3}
+  maggyIntroPhoto: {fileID: 4961529352941090450, guid: 11c4402454965c14b91e6e45b78197cb, type: 3}
+  bombermanIntroPhoto: {fileID: 3584308851166005877, guid: 1966d17a41ada7a45a33b276c1d9dcee, type: 3}
   introMusic: {fileID: 8300000, guid: beec171b0b873294fbbe28314211f900, type: 3}
   introMusicVolume: 1
   introFadeToBlackDuration: 2

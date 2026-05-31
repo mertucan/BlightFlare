@@ -77,6 +77,8 @@ public class Seraphim : MonoBehaviour, IItem
     private AnimatedSpriteRenderer _leftBodyASR;
     private bool                   _active;
 
+    public bool IsActive => _active;
+
     // ─────────────────────────────────────────────────────────────────────────
     //  IItem
     // ─────────────────────────────────────────────────────────────────────────
