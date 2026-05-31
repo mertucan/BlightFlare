@@ -8,6 +8,8 @@ public class BossIntroOverlay : MonoBehaviour
 {
     private static BossIntroOverlay instance;
 
+    public static bool IsPlaying { get; private set; }
+
     private Canvas canvas;
     private Image photoImage;
     private Image blackImage;
@@ -19,6 +21,7 @@ public class BossIntroOverlay : MonoBehaviour
     {
         if (photo == null && music == null)
         {
+            IsPlaying = false;
             onComplete?.Invoke();
             return;
         }
@@ -100,6 +103,7 @@ public class BossIntroOverlay : MonoBehaviour
 
     private IEnumerator Sequence(Sprite photo, AudioClip music, float volume, float fadeToBlackDuration, Action onComplete)
     {
+        IsPlaying = true;
         skipRequested = false;
         canvas.gameObject.SetActive(true);
 
@@ -159,6 +163,7 @@ public class BossIntroOverlay : MonoBehaviour
 
         canvas.gameObject.SetActive(false);
         sequenceRoutine = null;
+        IsPlaying = false;
         onComplete?.Invoke();
     }
 }

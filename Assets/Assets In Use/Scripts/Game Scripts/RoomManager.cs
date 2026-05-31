@@ -6,6 +6,7 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
     private List<Room> createdRooms;
+    private static readonly HashSet<RoomScriptable> usedTreasureRooms = new();
 
     [Header("Room Spacing")]
     [Tooltip("Odalar arası ekstra boşluk (oda boyutuna eklenir)")]
@@ -81,15 +82,7 @@ public class RoomManager : MonoBehaviour
 
         foreach (var currentCell in spawnedCells)
         {
-            var matchingRooms = rooms
-                .Where(x => x.roomShape == currentCell.roomShape
-                         && x.roomType  == currentCell.roomType
-                         && DoesTileMatchCell(x.occupiedTiles, currentCell))
-                .ToArray();
-
-            var foundRoom = matchingRooms.Length > 0
-                ? matchingRooms[UnityEngine.Random.Range(0, matchingRooms.Length)]
-                : null;
+            var foundRoom = PickRoomForCell(currentCell);
 
             var currentPosition = currentCell.transform.position;
 
@@ -115,6 +108,51 @@ public class RoomManager : MonoBehaviour
 
         if (RoomTransitionManager.instance != null)
             RoomTransitionManager.instance.PlacePlayerAtStart();
+    }
+
+    private RoomScriptable PickRoomForCell(Cell currentCell)
+    {
+        RoomScriptable[] matchingRooms = GetMatchingRooms(currentCell);
+
+        if (currentCell.roomType == RoomType.Item)
+        {
+            RoomScriptable[] unusedTreasureRooms = matchingRooms
+                .Where(room => !usedTreasureRooms.Contains(room))
+                .ToArray();
+
+            if (unusedTreasureRooms.Length == 0 && matchingRooms.Length > 0)
+            {
+                usedTreasureRooms.Clear();
+                unusedTreasureRooms = matchingRooms;
+            }
+
+            RoomScriptable treasureRoom = PickRandomRoom(unusedTreasureRooms);
+            if (treasureRoom != null)
+            {
+                usedTreasureRooms.Add(treasureRoom);
+            }
+
+            return treasureRoom;
+        }
+
+        return PickRandomRoom(matchingRooms);
+    }
+
+    private RoomScriptable[] GetMatchingRooms(Cell currentCell)
+    {
+        return rooms
+            .Where(x => x != null
+                     && x.roomShape == currentCell.roomShape
+                     && x.roomType == currentCell.roomType
+                     && DoesTileMatchCell(x.occupiedTiles, currentCell))
+            .ToArray();
+    }
+
+    private RoomScriptable PickRandomRoom(RoomScriptable[] matchingRooms)
+    {
+        return matchingRooms.Length > 0
+            ? matchingRooms[UnityEngine.Random.Range(0, matchingRooms.Length)]
+            : null;
     }
 
     private Vector2 MeasureRoomDesignSize()

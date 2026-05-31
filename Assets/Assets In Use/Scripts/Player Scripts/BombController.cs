@@ -100,6 +100,9 @@ public class BombController : MonoBehaviour
 
     private void Update()
     {
+        if (BossIntroOverlay.IsPlaying)
+            return;
+
         if (isaacMovement != null && isaacMovement.direction != Vector2.zero)
             lastFacingDir = isaacMovement.direction;
 
